@@ -12,20 +12,19 @@
         <div class="bg-zinc-800 h-[3px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
       </div>
     </button>
-
     <ul class="md:flex text-xl md:text-base gap-y-7 items-center hidden group-focus-within:flex flex-col md:flex-row md:divide-y-0 divide-zinc-800 absolute justify-center md:justify-end md:relative focus-within:flex top-0 right-0 h-full w-full bg-teal-400 md:bg-inherit ">
       <li class="contents">
-        <a href="/" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+        <a href="/{{ locale }}" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
           {{ 'about' | i18n }}
         </a>
       </li>
       <li class="contents">
-        <a href="/projects" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+        <a href="/{{ locale }}/projects" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
           {{ 'projects' | i18n }}
         </a>
       </li>
       <li class="contents">
-        <a href="/skills" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+        <a href="/{{ locale }}/skills" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
           {{ 'skills' | i18n }}
         </a>
       </li>
