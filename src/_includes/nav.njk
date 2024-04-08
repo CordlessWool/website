@@ -1,0 +1,34 @@
+
+<nav class="flex my-3 mb-7 gap-3" role="navigation" aria-label="main navigation">
+  <h1 class="text-xl font-bold my-3">
+      {{ title }}
+  </h1>
+  <div class="flex grow justify-end group top-0">
+    <div class="z-50 top-0 right-0 w-14 group-focus-within:h-14 absolute cursor-pointer"></div>
+    <button class="relative justify-end md:hidden group focus:z-10">
+      <div class="flex flex-col justify-between w-[1.5rem] h-[1.5rem] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+        <div class="bg-zinc-800 h-[3px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
+        <div class="bg-zinc-800 h-[1px] rounded"></div>
+        <div class="bg-zinc-800 h-[3px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+      </div>
+    </button>
+
+    <ul class="md:flex text-xl md:text-base gap-y-7 items-center hidden group-focus-within:flex flex-col md:flex-row md:divide-y-0 divide-zinc-800 absolute justify-center md:justify-end md:relative focus-within:flex top-0 right-0 h-full w-full bg-teal-400 md:bg-inherit ">
+      <li class="contents">
+        <a href="/" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+          {{ 'about' | i18n }}
+        </a>
+      </li>
+      <li class="contents">
+        <a href="/projects" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+          {{ 'projects' | i18n }}
+        </a>
+      </li>
+      <li class="contents">
+        <a href="/skills" class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2">
+          {{ 'skills' | i18n }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
