@@ -1,0 +1,15 @@
+---
+title: Projects
+layout: layouts/projects.njk
+---
+
+<ul>
+	{%- for project in collections.project -%}
+		<li>
+			<section>
+				<h3>{{ project.data.name }}</h2>
+				<div>{{ content | safe }}</div>
+			</section>
+		</li>
+	{%- endfor -%}
+</ul>

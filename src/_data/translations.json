@@ -1,7 +1,7 @@
 {
 	"about": {
-		"de-DE": "Über Wolfgang Rathgeb",
-		"en-GB": "About Wolfgang Rathgeb"
+		"de-DE": "Intro",
+		"en-GB": "Intro"
 	},
 	"skills": {
 		"de-DE": "Fähigkeiten",
@@ -10,5 +10,21 @@
 	"projects": {
 		"de-DE": "Projekte",
 		"en-GB": "Projects"
+	},
+	"since": {
+		"de-DE": "seit",
+		"en-GB": "since"
+	},
+	"tools": {
+		"de-DE": "Werkzeuge",
+		"en-GB": "Tools"
+	},
+	"languages": {
+		"de-DE": "Sprachen",
+		"en-GB": "Languages"
+	},
+	"frameworks": {
+		"de-DE": "Frameworks",
+		"en-GB": "Frameworks"
 	}
 }

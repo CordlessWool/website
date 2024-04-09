@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+eleventyImport:
+  collections: ["project"]
+---
+
+<div class="border-b-2 pb-12 border-zinc-400">
+{{ content | safe }}
+</div>
+
+<ul class="divide-y-2 div divide-zinc-400">
+	{%- for project in collections.project | reverse -%}
+		{% if locale == project.data.locale %}
+			<li>
+				<section class="my-7 py-3 grid grid-flow-row">
+					<header class="mb-3">
+						<div class="flow items-center">
+							<h3 class="m-0 inline-block">{{ project.data.name }}</h3>
+							{% if project.data['company-website'] %}
+								<a href="{{ project.data["company-website"] }}" target="_blank" rel="external">
+									<span class="text-zinc-500 hover:text-teal-800 pointer">
+										{{ project.data.company }}
+									</span>
+								</a>
+							{% elseif project.data.company %}
+								<span class="text-zinc-500">{{ project.data.company }}</span>
+							{% endif %}
+						</div>
+						{% if project.data.end %}
+							<small>{{ project.data.start }} -  {{ project.data.end }}</small>
+						{% else %}
+							<small>{{ 'since' | i18n }} {{ project.data.start }}</small>
+						{% endif %}
+					</header>
+					<div class="markdown mb-7">{{ project.content | safe }}</div>
+					<div class="grid gap-y-7 sm:grid-cols-2 content-center">
+						<small class="grow">
+							<ul>
+								{% for key in ['languages', 'frameworks', 'databases',  'tools'] %}
+									{% if project.data[key] %}
+										<li class="flex flex-row gap-1 items-center">
+											{{ key | i18n }}:
+											<ul class="flex">
+												{% for item in project.data[key] %}
+													<li class="before:content-[','] first-of-type:before:content-['']">
+														{{ item }}
+													</li>
+												{% endfor %}
+											</ul>
+										</li>
+									{% endif %}
+								{%- endfor -%}
+							</ul>
+						</small>
+						{% if project.data.links %}
+							<div class="links sm:justify-self-end sm:mr-7">
+								{% for link in project.data.links %}
+									<a href="{{ link.link }}" target="_blank" rel="external" title="{{link.name}}" class="social-icon text-2xl">
+										{% if link.icon %}
+											<i class="ri-{{ link.icon }}"></i>
+										{% elseif link.name | lower  == 'github' %}
+											<i class="ri-github-fill"></i>
+										{% elseif link.name | lower == 'npm' %}
+											<i class="ri-npmjs-fill"></i>
+										{% elseif link.name | lower == 'website' %}
+											<i class="ri-global-line"></i>
+										{% endif %}
+									</a>
+								{% endfor %}
+							</div>
+						{% endif %}
+					</div >
+				</section>
+			</li>
+		{% endif %}
+	{%- endfor -%}
+</ul>

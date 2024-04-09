@@ -41,3 +41,7 @@ h4 {
 .markdown p {
 	@apply my-4;
 }
+
+.social-icon {
+	@apply cursor-pointer border-2 hover:text-teal-600 border-hidden focus:border-teal-600 focus:border-dotted;
+}
