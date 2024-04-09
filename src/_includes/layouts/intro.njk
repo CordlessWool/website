@@ -13,12 +13,12 @@ layout: layouts/base.njk
 ---
 
 <section class="grid grid-cols-2 grid-flow-row mb-7 items-start justify-around">
-  <h2 class="md:m-10 md:ml-16 sm:mt-18 my-3">{{ description }}</h2>
+  <h2 class="md:m-10 md:ml-0 sm:mt-18 my-3">{{ description }}</h2>
 
   <div class="justify-self-center self-center row-span-2">
     <img class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid" width="400px" src="/images/wolfgang-rathgeb.jpeg" alt="The author Wolfgang Rathgeb" />
   </div>
-  <ul class="flex flex-row gap-4 md:ml-16  sm:col-auto">
+  <ul class="flex flex-row gap-4  sm:col-auto">
     {% for social in socials %}
     <li title="{{ social.name }}" class="social-icon">
       <a href="{{ social.link }}" target="_blank" rel="external">
@@ -30,6 +30,6 @@ layout: layouts/base.njk
   </ul>
 </section>
 
-<section class="markdown md:m-16">
+<section class="markdown ">
 	{{ content | safe }}
 </section>
