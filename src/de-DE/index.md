@@ -1,6 +1,17 @@
 ---
 title: Über Wolfgang Rathgeb
-description: Hier finden Sie einen erfahrenden Software Ingenieur
+typewriter:
+  separator: ";"
+description: hi, ich bin freiberuflicher Software Ingenieur
+descriptions:
+  - hi,
+  - Hi, meine Name ist Wolfgang
+  - Ich bin Software Ingenieur
+  - Ich bin Chefentwickler (lead developer)
+  - Manchmal auch DevOps
+  - Arbeite gern im Team
+  - Vor allem bin ich aber Freiberufler
+  - Schon vergessen wer ich bin?
 layout: layouts/intro.njk
 ---
 
