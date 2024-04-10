@@ -9,9 +9,6 @@ export class Queue {
 
 	add(item: () => Promise<unknown>){
 		this.queue.push(item);
-		if(!this.isRunning) {
-			this.next();
-		}
 	}
 
 	get(): () => Promise<unknown>{
@@ -29,6 +26,10 @@ export class Queue {
 		}
 		this.isRunning = true;
 		await this.get()();
+		await this.next();
+	}
+
+	async run() {
 		await this.next();
 	}
 
