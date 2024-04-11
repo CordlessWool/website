@@ -40,7 +40,7 @@ describe("Typewriter", () => {
 		const typewriter = new TypeWriter(element);
 
 		typewriter.currentPosition = 6;
-		typewriter._previous();
+		typewriter._stepBackward();
 
 		expect(typewriter.currentPosition).toBe(5);
 	});
@@ -51,7 +51,7 @@ describe("Typewriter", () => {
 
 		typewriter.currentPosition = 14;
 		expect(typewriter._html.at(14)).toBe('W');
-		typewriter._previous();
+		typewriter._stepBackward();
 
 		expect(typewriter.currentPosition).toBe(5);
 		expect(typewriter._html.at(typewriter.currentPosition)).toBe(' ');
@@ -64,7 +64,7 @@ describe("Typewriter", () => {
 		const typewriter = new TypeWriter(element);
 
 		typewriter.currentPosition = 6;
-		typewriter._next();
+		typewriter._stepForward();
 
 		expect(typewriter.currentPosition).toBe(7);
 	});
@@ -75,7 +75,7 @@ describe("Typewriter", () => {
 
 		typewriter.currentPosition = 5;
 		expect(typewriter._html.at(5)).toBe(' ');
-		typewriter._next();
+		typewriter._stepForward();
 
 		expect(typewriter.currentPosition).toBe(14);
 		expect(typewriter._html.at(typewriter.currentPosition)).toBe('W');
@@ -138,7 +138,7 @@ describe("Typewriter", () => {
 		expect(element.innerHTML).toBe('Hello World!<span class="typewriter-cursor">&nbsp;</span>');
 	});
 
-	test('move cursor to start', async () => {
+	test.only('move cursor to start', async () => {
 		const element = createHtmlElementMock("Hello World!");
 		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
 		typewriter.currentPosition = 12;
@@ -148,11 +148,36 @@ describe("Typewriter", () => {
 	});
 
 
-	test.skip('clean', () => {
+	test('delete', async () => {
 		const element = createHtmlElementMock("Some other random text!");
-		const typewriter = new TypeWriter(element);
-		typewriter.clean(-7).removeCursor().go();
+		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
+		await typewriter.delete(-7).go();
+		typewriter.removeFocus();
 		expect(element.innerHTML).toBe('Some other rando');
 	});
+
+	test('write', async () => {
+		const element = createHtmlElementMock("Some other random text!");
+		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
+		await typewriter.write('m').go();
+		typewriter.removeFocus();
+		expect(element.innerHTML).toBe('Some other random text!m');
+	});
+
+	test('write long text', async () => {
+		const element = createHtmlElementMock("Some other random text!");
+		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
+		await typewriter.write(' Hello World!').go();
+		typewriter.removeFocus();
+		expect(element.innerHTML).toBe('Some other random text! Hello World!');
+	});
+
+	test('delete all', async () => {
+		const element = createHtmlElementMock("Some other random text!");
+		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
+		await typewriter.deleteAll().go();
+		typewriter.removeFocus();
+		expect(element.innerHTML).toBe('');
+	})
 
 });

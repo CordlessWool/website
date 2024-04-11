@@ -8,7 +8,7 @@ export interface TypeWriterOptions {
 export class TypeWriter {
 
 	queue: Queue;
-	element: HTMLElement;
+	element: Element;
 	currentPosition: number;
 	currentLetter: string;
 	delay: number;
@@ -18,10 +18,10 @@ export class TypeWriter {
 
 	virtualContent = '';
 
-	constructor(element: HTMLElement, options: TypeWriterOptions = {}) {
+	constructor(element: Element, options: TypeWriterOptions = {}) {
 		this.element = element;
-		this.delay = options.delay ?? 100;
-		this.variety = options.variety ?? 100;
+		this.delay = options.delay ?? 300;
+		this.variety = options.variety ?? 150;
 		this.currentLetter = '';
 		this.virtualContent = this.element.innerHTML;
 
@@ -54,6 +54,7 @@ export class TypeWriter {
 
 	removeFocus() {
 		this.element.innerHTML = this._html;
+		return this;
 	}
 
 	setFocus() {
@@ -64,11 +65,11 @@ export class TypeWriter {
 		return this._html.length === this.currentPosition;
 	}
 
-	_previous() {
+	_stepBackward() {
 		const previous = this._html.at(this.currentPosition - 1);
 		if (previous === '>') {
 			this.currentPosition = this._html.lastIndexOf('<', this.currentPosition);
-			this._previous();
+			this._stepBackward();
 			return;
 		} else if (previous === ';') {
 			const special = this._html.substring(this.currentPosition - 5, 5).match(/&[a-z]+;/);
@@ -82,11 +83,11 @@ export class TypeWriter {
 		this.currentPosition--;
 	}
 
-	_next() {
+	_stepForward() {
 		const next = this._html.at(this.currentPosition + 1);
 		if (next === '<') {
 			this.currentPosition = this._html.indexOf('>', this.currentPosition);
-			this._next();
+			this._stepForward();
 			return;
 		} else if (next === '&') {
 			const special = this._html.substring(this.currentPosition, 5).match(/&[a-z]+;/);
@@ -104,16 +105,20 @@ export class TypeWriter {
 
 	_removeCurrentLetter() {
 		const before = this._html.substring(0, this.currentPosition);
-		const after = this._html.substring(this.currentPosition+1);
+		const after = this._html.substring(this.currentPosition+this.currentLetter.length);
 		this._html = `${before}${after}`;
 	}
 
-	_stepForward() {
-		this._next();
+	_addLetter(letter: string) {
+		const before = this._html.substring(0, this.currentPosition);
+		const after = this._html.substring(this.currentPosition);
+		this._html = `${before}${letter}${after}`;
 	}
 
-	_stepBackward() {
-		this._previous();
+	_addHtmlTag(tag: string) {
+		const before = this._html.substring(0, this.currentPosition);
+		const after = this._html.substring(this.currentPosition);
+		this._html = `${before}${tag}${after}`;
 	}
 
 	_step(singes: number) {
@@ -126,14 +131,6 @@ export class TypeWriter {
 		return direction;
 	}
 
-
-	addToQueue<T = unknown>(fn: (resolve: (value?: T) => void) => void, delay = this.delay + (Math.random() * this.variety)) {
-		this.queue.add(() => new Promise((resolve) => {
-			setTimeout(() =>
-			fn(resolve), delay);
-		}));
-	}
-
 	_isLoopEndReached(singes: number) {
 		if (singes === 0) {
 			return this;
@@ -144,21 +141,17 @@ export class TypeWriter {
 		}
 	}
 
-
 	move(singes: number) {
 		if(this._isLoopEndReached(singes)) {
 			return this;
 		}
 
 		const direction = this._step(singes);
-		this.addToQueue((resolve) => {
-			const next = this.virtualContent;
-			const pos = this.currentPosition;
-			const length = this.currentLetter.length;
-			this._writeToElement(next, pos, length);
-			resolve();
+		this.queue.add({
+			html: this.virtualContent,
+			position: this.currentPosition,
+			length: this.currentLetter.length
 		});
-
 
 		this.move(singes + direction)
 
@@ -166,57 +159,66 @@ export class TypeWriter {
 
 	}
 
-	clean(singes: number): this {
+	delete(singes: number): this {
 		if(this._isLoopEndReached(singes)) {
 			return this;
 		}
-		const direction = this._step(singes);
-		this.addToQueue((resolve) => {
 
-			this._removeCurrentLetter();
+		const direction = singes > 0 ? -1 : 1;
 
-			resolve();
-		});
-		return this.clear(amount-1);
+		if(direction === 1) {
+			this._stepBackward();
+		}
+		this._removeCurrentLetter();
+
+		this.queue.add({
+			html: this.virtualContent,
+			position: this.currentPosition,
+			length: this.currentLetter.length
+		})
+
+		return this.delete(singes + direction);
 	}
 
-	cleanAll(): this {
-		if(this._html === '&nbsp;') {
+	deleteAll() {
+		this.delete(this._html.length - this.currentPosition)
+		this.delete(-this.currentPosition)
+		return this;
+	}
+
+	write(text: string): this {
+		const next = text.at(0);
+		if(next === undefined){
 			return this;
-		} else if(this.currentLetter === '&nbsp;') {
-			this.addToQueue((resolve) => {
-				this._removeCursor();
-				this._previous();
-				this._removeCurrentLetter();
-				this._setCursor();
-				resolve();
-			});
-			return this.clearAll();
-		} else {
-			this.addToQueue((resolve) => {
-				this._removeCursor();
-				this._next()
-				this._removeCurrentLetter();
-				this._setCursor();
-				resolve();
-			});
-			return this.clearAll();
 		}
+
+		this._addLetter(next);
+		this._stepForward();
+
+		this.queue.add({
+			html: this.virtualContent,
+			position: this.currentPosition,
+			length: this.currentLetter.length
+		})
+
+		return this.write(text.substring(1));
 	}
 
 	async go(){
-		await this.queue.run();
+		await new Promise((resolve) => {
+			const interval = setInterval(() => {
+				if(!this.queue.isLast()) {
+					const {html, position, length} = this.queue.next();
+					this._writeToElement(html, position, length);
+				} else {
+					clearInterval(interval);
+					resolve('done');
+				}
+			}, this.delay + Math.random() * this.variety);
+		})
+
 	}
 
-	removeCursor() {
-		this._removeCursor();
-		this.addToQueue((resolve) => {
-			this._writeToElement(this._html);
-			resolve();
-		});
-
-		return this;
-	}
 
 
 

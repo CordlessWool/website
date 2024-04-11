@@ -1,36 +1,50 @@
+export interface QueueData {
+	html: string;
+	position: number;
+	length: number;
+}
+
 export class Queue {
 
 	isRunning = false;
-	queue: (() => Promise<unknown>)[];
+	queue: QueueData[] = [];
+	current: number = 0;
 
 	constructor() {
 		this.queue = [];
 	}
 
-	add(item: () => Promise<unknown>){
+	reset() {
+		this.current = 0;
+	}
+
+	add(item: QueueData){
 		this.queue.push(item);
 	}
 
-	get(): () => Promise<unknown>{
-		return this.queue.shift() ?? (() => Promise.resolve());
-	}
-
-	isEmpty() {
-		return this.queue.length === 0;
-	}
-
-	async next() {
-		if (this.isEmpty()) {
-			this.isRunning = false;
-			return;
+	next(): QueueData {
+		this.current++;
+		if(this.current === this.queue.length) {
+			this.reset();
 		}
-		this.isRunning = true;
-		await this.get()();
-		await this.next();
+		return this.queue[this.current];
 	}
 
-	async run() {
-		await this.next();
+	isFirst(): boolean {
+		return this.current === 0;
 	}
+
+	isLast(): boolean {
+		return this.queue.length-1 === this.current;
+	}
+
+	random(): QueueData | undefined {
+		const random = Math.floor(Math.random() * this.queue.length);
+		if(random === this.current) {
+			return this.random();
+		}
+		return this.queue[random];
+	}
+
 
 }
