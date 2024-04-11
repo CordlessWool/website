@@ -5,9 +5,15 @@ export interface TypeWriterOptions {
 	variety?: number;
 }
 
+export interface QueueData {
+	html: string;
+	position: number;
+	length: number;
+}
+
 export class TypeWriter {
 
-	queue: Queue;
+	queue: Queue<QueueData>;
 	element: Element;
 	currentPosition: number;
 	currentLetter: string;
@@ -205,18 +211,11 @@ export class TypeWriter {
 	}
 
 	async go(){
-		await new Promise((resolve) => {
-			const interval = setInterval(() => {
-				if(!this.queue.isLast()) {
-					const {html, position, length} = this.queue.next();
-					this._writeToElement(html, position, length);
-				} else {
-					clearInterval(interval);
-					resolve('done');
-				}
-			}, this.delay + Math.random() * this.variety);
-		})
-
+		while(!this.queue.isLast()) {
+			const {html, position, length} = this.queue.next();
+			this._writeToElement(html, position, length);
+			await new Promise(resolve => setTimeout(resolve, this.delay + Math.random() * this.variety));
+		}
 	}
 
 

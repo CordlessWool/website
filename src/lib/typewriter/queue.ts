@@ -1,28 +1,22 @@
-export interface QueueData {
-	html: string;
-	position: number;
-	length: number;
-}
-
-export class Queue {
+export class Queue<T> {
 
 	isRunning = false;
-	queue: QueueData[] = [];
+	queue: T[] = [];
 	current: number = 0;
 
-	constructor() {
-		this.queue = [];
+	constructor(initial: T[] = []) {
+		this.queue = initial;
 	}
 
 	reset() {
 		this.current = 0;
 	}
 
-	add(item: QueueData){
-		this.queue.push(item);
+	add(...item: T[]){
+		this.queue.push(...item);
 	}
 
-	next(): QueueData {
+	next(): T {
 		this.current++;
 		if(this.current === this.queue.length) {
 			this.reset();
@@ -38,13 +32,13 @@ export class Queue {
 		return this.queue.length-1 === this.current;
 	}
 
-	random(): QueueData | undefined {
-		const random = Math.floor(Math.random() * this.queue.length);
-		if(random === this.current) {
+	random(): T {
+		const index = Math.round(Math.random() * (this.queue.length-1));
+		if(index === this.current) {
 			return this.random();
 		}
-		return this.queue[random];
+		this.current = index;
+		return this.queue[this.current];
 	}
-
 
 }

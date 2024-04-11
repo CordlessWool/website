@@ -1,3 +1,4 @@
+import { Queue } from './lib/typewriter/queue.js';
 import { TypeWriter } from './lib/typewriter/typewriter.js';
 
 
@@ -11,16 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		const separator = element.getAttribute('data-typewriter-separator') || '';
 		if(text) {
 			const allText = text.split(separator);
-			const delay: number = Number(element.getAttribute('data-typewriter-delay') ?? 10);
+			const queue = new Queue<string>(allText);
+			const delay: number = Number(element.getAttribute('data-typewriter-delay') ?? 30);
 			const loop = element.getAttribute('data-typewriter-loop') || false;
 
 
 			const typewriter = new TypeWriter(element, {delay: delay});
 
-			for(let i = 0; i < allText.length; i++) {
-				await typewriter.deleteAll().write(allText[i]).go();
+			while(1) {
+				await typewriter.deleteAll().write(queue.random()).go();
 				await new Promise(resolve => setTimeout(resolve, 1000));
-			}
+			};
 
 		}
 
