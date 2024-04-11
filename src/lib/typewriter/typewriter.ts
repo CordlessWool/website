@@ -74,7 +74,7 @@ export class TypeWriter {
 	_stepBackward() {
 		const previous = this._html.at(this.currentPosition - 1);
 		if (previous === '>') {
-			this.currentPosition = this._html.lastIndexOf('<', this.currentPosition);
+			this.currentPosition = this._html.lastIndexOf('<', this.currentPosition-1);
 			this._stepBackward();
 			return;
 		} else if (previous === ';') {
@@ -92,7 +92,7 @@ export class TypeWriter {
 	_stepForward() {
 		const next = this._html.at(this.currentPosition + 1);
 		if (next === '<') {
-			this.currentPosition = this._html.indexOf('>', this.currentPosition);
+			this.currentPosition = this._html.indexOf('>', this.currentPosition+1);
 			this._stepForward();
 			return;
 		} else if (next === '&') {
@@ -208,6 +208,26 @@ export class TypeWriter {
 		})
 
 		return this.write(text.substring(1));
+	}
+
+	removeWithSave(signs: number, cut: boolean = false): this {
+		if(this._isLoopEndReached(signs)) {
+			if(cut) {
+				this._writeToElement();
+			}
+			return this;
+		}
+
+		const direction = this._step(signs);
+		this._removeCurrentLetter();
+
+		this.queue.add({
+			html: this.virtualContent,
+			position: this.currentPosition,
+			length: this.currentLetter.length
+		})
+
+		return this.removeWithSave(signs + direction, cut);
 	}
 
 	async go(){
