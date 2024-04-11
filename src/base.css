@@ -46,10 +46,6 @@ h4 {
 	@apply my-4;
 }
 
-.markdown.typewriter p:last-of-type {
-	@apply inline;
-}
-
 .social-icon {
 	@apply cursor-pointer border-2 hover:text-teal-600 border-hidden focus:border-teal-600 focus:border-dotted;
 }
