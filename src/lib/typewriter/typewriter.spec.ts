@@ -213,14 +213,6 @@ describe("Typewriter", () => {
 		expect(element.innerHTML).toBe('Some other <strong>rando</strong>');
 	});
 
-	test.skip('delete empty tags', async () => {
-		const element = createHtmlElementMock("Some other <strong>random</strong> text!");
-		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});
-		await typewriter.delete(-13).go();
-		typewriter.removeFocus();
-		expect(element.innerHTML).toBe('Some other');
-	});
-
 	test('delete all', async () => {
 		const element = createHtmlElementMock("Some other random text!");
 		const typewriter = new TypeWriter(element, {delay: 0, variety: 1});

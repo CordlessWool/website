@@ -32,6 +32,10 @@ export class Queue<T> {
 		return this.queue.length-1 === this.current;
 	}
 
+	reverse(): void {
+		this.queue.reverse();
+	}
+
 	random(): T {
 		const index = Math.round(Math.random() * (this.queue.length-1));
 		if(index === this.current) {

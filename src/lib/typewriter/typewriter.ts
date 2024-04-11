@@ -65,6 +65,7 @@ export class TypeWriter {
 
 	setFocus() {
 		this._writeToElement();
+		return this;
 	}
 
 	isCursorAtEnd() {
@@ -210,16 +211,24 @@ export class TypeWriter {
 		return this.write(text.substring(1));
 	}
 
+	/**
+	 * TODO: rewrite it
+	 * Spezial method for recording for writing text later
+	 */
 	removeWithSave(signs: number, cut: boolean = false): this {
 		if(this._isLoopEndReached(signs)) {
 			if(cut) {
 				this._writeToElement();
 			}
+			this.queue.reverse();
 			return this;
 		}
 
-		const direction = this._step(signs);
-		this._removeCurrentLetter();
+		const direction = signs > 0 ? -1 : 1;
+
+		if(direction === 1) {
+			this._stepBackward();
+		}
 
 		this.queue.add({
 			html: this.virtualContent,
@@ -227,6 +236,10 @@ export class TypeWriter {
 			length: this.currentLetter.length
 		})
 
+		//delete Empty tags
+		this._html = this._html.replace(/<\w*><\/\w*>/, '');
+
+		this._removeCurrentLetter();
 		return this.removeWithSave(signs + direction, cut);
 	}
 

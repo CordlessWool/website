@@ -2,10 +2,8 @@ import { Queue } from './lib/typewriter/queue.js';
 import { TypeWriter } from './lib/typewriter/typewriter.js';
 
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-	const elements = [...document.querySelectorAll(`[data-typewriter="true"]`)];
+function typewriterDefault () {
+	const elements = [...document.querySelectorAll(`.typewriter:not(.markdown)`)];
 
 	elements.forEach(async element => {
 		const text = element.getAttribute('data-typewriter-text');
@@ -27,4 +25,40 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 	});
+}
+
+function createWriteButton (text: string): HTMLButtonElement {
+	const button = document.createElement('button');
+	button.classList.add('write-more');
+	button.innerText = text;
+	return button;
+}
+
+function typewriterMarkdown () {
+	const elements = [...document.querySelectorAll(`.markdown.typewriter`)];
+
+	elements.forEach(element => {
+		const typewriter = new TypeWriter(element, {delay: 5, variety: 50});
+		const signsToRemove = 300;
+		typewriter.removeWithSave(-signsToRemove, true)
+		typewriter.removeFocus();
+		const addButton = createWriteButton('write more');
+
+		element.appendChild(addButton);
+		addButton.addEventListener('click', async () => {
+			typewriter.setFocus().go();
+			typewriter.removeFocus();
+		});
+
+	});
+
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	typewriterDefault();
+	typewriterMarkdown();
+
 });
