@@ -1,9 +1,10 @@
 // .eleventy.js
-const i18n = require('eleventy-plugin-i18n');
-const translations = require('./src/_data/translations.json');
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+import i18n from 'eleventy-plugin-i18n';
+import  translations from './src/_data/translations.json' assert { type: 'json' };
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(i18n, {
     translations,
     fallbackLocales: {
@@ -11,6 +12,7 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

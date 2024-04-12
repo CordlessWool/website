@@ -1,7 +1,7 @@
 {
 	"name": "website",
 	"module": "main.ts",
-	"type": "commonjs",
+	"type": "module",
 	"scripts": {
 		"build": "eleventy",
 		"watch": "eleventy --watch",
@@ -10,7 +10,7 @@
 		"start": "eleventy --serve"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0-alpha.5",
+		"@11ty/eleventy": "^3.0.0-alpha.6",
 		"@11ty/eleventy-img": "^4.0.2",
 		"@types/bun": "latest",
 		"eleventy-plugin-i18n": "^0.1.3",
