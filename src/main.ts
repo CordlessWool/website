@@ -38,7 +38,7 @@ function typewriterMarkdown () {
 	const elements = [...document.querySelectorAll(`.markdown.typewriter`)];
 
 	elements.forEach(element => {
-		const typewriter = new TypeWriter(element, {delay: 5, variety: 50});
+		const typewriter = new TypeWriter(element, {delay: 0, variety: 30});
 		const signsToRemove = 300;
 		typewriter.removeWithSave(-signsToRemove, true)
 		typewriter.removeFocus();
