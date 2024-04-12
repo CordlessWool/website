@@ -34,6 +34,10 @@ h4 {
 	@apply mt-8 mb-4;
 }
 
+.markdown {
+	@apply hyphens-auto;
+}
+
 .markdown a {
 	@apply text-blue-600 underline;
 }
@@ -44,4 +48,12 @@ h4 {
 
 .social-icon {
 	@apply cursor-pointer border-2 hover:text-teal-600 border-hidden focus:border-teal-600 focus:border-dotted;
+}
+
+.typewriter-cursor {
+	@apply animate-pulse bg-zinc-800 text-zinc-200;
+}
+
+.typewriter.markdown button.write-more {
+	@apply inline-block  text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
 }
