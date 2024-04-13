@@ -34,7 +34,8 @@ others:
   - Scrum Master
   - Architecture
   - Software Engineer
-image: "https://images.unsplash.com/photo-1578593139939-cccb1e98698c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=75"
+typewriter:
+  remove-letters: 305
 tags: project
 ---
 

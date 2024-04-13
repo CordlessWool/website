@@ -39,7 +39,7 @@ function typewriterMarkdown () {
 
 	elements.forEach(element => {
 		const typewriter = new TypeWriter(element, {delay: 0, variety: 30});
-		const signsToRemove = 300;
+		const signsToRemove = Number(element.getAttribute('data-typewriter-remove')) || 300;
 		typewriter.removeWithSave(-signsToRemove, true)
 		typewriter.removeFocus();
 		const addButton = createWriteButton('write more');

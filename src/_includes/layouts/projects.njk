@@ -32,19 +32,17 @@ eleventyImport:
 							<small>{{ 'since' | i18n }} {{ project.data.start }}</small>
 						{% endif %}
 					</header>
-					<div class="markdown typewriter mb-7">{{ project.content | safe }}</div>
-					<div class="grid gap-y-7 sm:grid-cols-2 content-center">
+					<div class="markdown typewriter mb-7" data-typewriter-remove="{{ project.data.typewriter["remove-letters"] }}">{{ project.content | safe }}</div>
+					<div class="grid gap-y-7 sm:grid-cols-[1fr_auto] content-center">
 						<small class="grow">
 							<ul>
 								{% for key in ['languages', 'frameworks', 'databases',  'tools'] %}
 									{% if project.data[key] %}
-										<li class="flex flex-row gap-1 items-center">
-											{{ key | i18n }}:
-											<ul class="flex">
+										<li class="grid grid-cols-[auto_1fr] gap-1 items-start">
+											<span class="auto-cols-fr">{{ key | i18n }}:</span>
+											<ul class="flex flex-row flex-wrap gap-x-1">
 												{% for item in project.data[key] %}
-													<li class="before:content-[','] first-of-type:before:content-['']">
-														{{ item }}
-													</li>
+													<li class="after:content-[','] last-of-type:after:content-[''] text-nowrap">{{ item }}</li>
 												{% endfor %}
 											</ul>
 										</li>
