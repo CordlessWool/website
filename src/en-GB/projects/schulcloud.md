@@ -5,7 +5,7 @@ start: 01.04.2019
 end: 31.05.2021
 company: Hasso Plattner Institute
 company-website: https://hpi.de/
-link:
+links:
   - name: Github
     link: https://github.com/hpi-schul-cloud/
   - name: Website dBildungcloud
@@ -16,7 +16,7 @@ languages:
   - YAML
   - HTML
   - CSS
-framework:
+frameworks:
   - Feathersjs
   - React
   - Vue
@@ -35,6 +35,7 @@ others:
   - Architecture
   - Software Engineer
 image: "https://images.unsplash.com/photo-1578593139939-cccb1e98698c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=75"
+tags: project
 ---
 
 In 2020 Schools in Germany are mostly analog, also if corona does not allow to meet lots of people. The digitalization of schools got more necessary than before. So the project leaves its pilot status and goes production.
