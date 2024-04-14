@@ -33,7 +33,7 @@ eleventyImport:
 						{% endif %}
 					</header>
 					<div class="markdown typewriter mb-7" data-typewriter-remove="{{ project.data.typewriter["remove-letters"] }}">{{ project.content | safe }}</div>
-					<div class="grid gap-y-7 sm:grid-cols-[1fr_auto] content-center">
+					<div class="grid gap-y-7 sm:grid-cols-[1fr_auto] content-center items-center">
 						<small class="grow">
 							<ul>
 								{% for key in ['languages', 'frameworks', 'databases',  'tools'] %}
