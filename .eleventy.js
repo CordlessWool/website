@@ -5,32 +5,32 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 const translations ={
 	"about": {
-		"de-DE": "Intro",
-		"en-GB": "Intro"
+		"de": "Intro",
+		"en": "Intro"
 	},
 	"skills": {
-		"de-DE": "Fähigkeiten",
-		"en-GB": "Skills"
+		"de": "Fähigkeiten",
+		"en": "Skills"
 	},
 	"projects": {
-		"de-DE": "Projekte",
-		"en-GB": "Projects"
+		"de": "Projekte",
+		"en": "Projects"
 	},
 	"since": {
-		"de-DE": "seit",
-		"en-GB": "since"
+		"de": "seit",
+		"en": "since"
 	},
 	"tools": {
-		"de-DE": "Werkzeuge",
-		"en-GB": "Tools"
+		"de": "Werkzeuge",
+		"en": "Tools"
 	},
 	"languages": {
-		"de-DE": "Sprachen",
-		"en-GB": "Languages"
+		"de": "Sprachen",
+		"en": "Languages"
 	},
 	"frameworks": {
-		"de-DE": "Frameworks",
-		"en-GB": "Frameworks"
+		"de": "Frameworks",
+		"en": "Frameworks"
 	}
 }
 
@@ -39,7 +39,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(i18n, {
     translations,
     fallbackLocales: {
-      '*': 'en-GB'
+      '*': 'en'
     }
   });
 

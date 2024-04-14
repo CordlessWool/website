@@ -74,12 +74,27 @@ function darkLightMode () {
 
 }
 
+function toggleLanguage () {
+	const languageButton = document.getElementById('toggle-language-button');
+	if(languageButton) {
+		const url = new URL(window.location.href);
+		const language = url.pathname.split('/')[1];
+		languageButton.addEventListener('click', () => {
+			const newLanguage = language === 'en' ? 'de' : 'en';
+			url.pathname = url.pathname.replace(language, newLanguage);
+			window.location.href = url.href;
+		});
+	}
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	typewriterDefault();
 	typewriterMarkdown();
 
+
 });
 
+toggleLanguage();
 darkLightMode();

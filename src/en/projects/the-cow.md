@@ -5,7 +5,7 @@ start: 01.01.2012
 end: 31.09.2013
 image: https://images.unsplash.com/photo-1546445317-29f4545e9d53?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&h=600&w=600&q=75
 tags: project
-lang: en-GB
+lang: en
 ---
 
 "Die Kuh bringt's" could be translated to the cow delivers. The base idea was an online shop for food directly from the farmer without another dealer between. The car should be covered in a cow look.

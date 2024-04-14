@@ -56,6 +56,6 @@ h4 {
 }
 
 .typewriter.markdown button.write-more {
-	@apply inline-block  text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
-	@apply dark:bg-zinc-700 dark:text-zinc-200 hover:bg-zinc-600;
+	@apply inline-block text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
+	@apply dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600;
 }
