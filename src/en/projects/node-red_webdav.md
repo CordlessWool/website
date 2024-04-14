@@ -3,12 +3,14 @@ name: Node-RED Webdav
 date: 2018-09-18
 end: 2019-10-02
 links:
-	- name: GitHub
-		link: https://github.com/CordlessWool/node-red-node-webdav
+  - name: GitHub
+    link: https://github.com/CordlessWool/node-red-node-webdav
+  - name: NPM
+    link: https://www.npmjs.com/package/node-red-node-webdav
 languages:
-	- JavaScript
+  - JavaScript
 frameworks:
-	- Node-RED
+  - Node-RED
 tags: project
 ---
 
