@@ -1,8 +1,7 @@
 ---
 name: HPI-Schul-Cloud
 date: 2019-04-01
-start: 01.04.2019
-end: 31.05.2021
+end: 2021-05-31
 company: Hasso Plattner Institute
 company-website: https://hpi.de/
 links:

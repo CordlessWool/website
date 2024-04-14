@@ -1,12 +1,14 @@
 ---
 name: loom-io
 date: 2024-01-09
-start: 09.01.2024
 languages:
   - Typescript
 tools:
   - pnpm
   - NodeJS
+  - Bun
+  - S3 Minio
+  - Dateisystem
 links:
   - name: GitHub
     link: https://github.com/cotton-coding/loom-io

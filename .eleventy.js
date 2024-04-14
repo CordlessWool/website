@@ -31,7 +31,11 @@ const translations ={
 	"frameworks": {
 		"de": "Frameworks",
 		"en": "Frameworks"
-	}
+	},
+	"databases": {
+		"de": "Datenbanken",
+		"en": "Databases"
+	},
 }
 
 
@@ -71,7 +75,6 @@ export default async function (eleventyConfig) {
     dir: {
       input: 'src'
     },
-		pathPrefix: "/website/",
     markdownTemplateEngine: 'njk'
   };
 };

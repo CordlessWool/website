@@ -1,5 +1,5 @@
 ---
-title: Projekte
+title: Projects
 layout: layouts/projects.njk
 ---
 

@@ -1,7 +1,19 @@
 ---
 name: loom-ui
 date: 2024-02-19
-start: 19.02.2024
-image: https://images.unsplash.com/photo-1546445317-29f4545e9d53?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&h=600&w=600&q=75
+links:
+  - name: Github
+
+languages:
+  - TypeScript
+  - Svelte
+frameworks:
+  - SvelteKit
+  - chart.js
+  - Storybook
 tags: project
 ---
+
+This is pretty new, to there is just to say that is still in creating phase, but some parts of it will be already useable. At least it is a collection of frontend components with the focus on sveltekit.
+
+The focus tends to making the components full style able via css variables.

@@ -1,7 +1,6 @@
 ---
 name: loom-ui
 date: 2024-02-19
-start: 19.02.2024
 languages:
   - TypeScript
 frameworks:

@@ -1,8 +1,7 @@
 ---
 name: Die Kuh bringt's
 date: 2012-01-01
-start: 01.01.2012
-end: 31.09.2013
+end: 2013-09-31
 languages:
   - JavaScript
   - PHP

@@ -27,9 +27,9 @@ eleventyImport:
 							{% endif %}
 						</div>
 						{% if project.data.end %}
-							<small>{{ project.data.start }} -  {{ project.data.end }}</small>
+							<small>{{ (project.data.start or project.data.date).toLocaleDateString() }} -  {{ project.data.end.toLocaleDateString() }}</small>
 						{% else %}
-							<small>{{ 'since' | i18n }} {{ project.data.start }}</small>
+							<small>{{ 'since' | i18n }} {{ (project.data.start or project.data.date).toLocaleDateString() }}</small>
 						{% endif %}
 					</header>
 					<div class="markdown typewriter mb-7" data-typewriter-remove="{{ project.data.typewriter["remove-letters"] }}">{{ project.content | safe }}</div>
@@ -58,6 +58,8 @@ eleventyImport:
 											<i class="ri-{{ link.icon }}"></i>
 										{% elseif link.name | lower  == 'github' %}
 											<i class="ri-github-fill"></i>
+										{% elseif link.name | lower  == 'gitlab' %}
+											<i class="ri-gitlab-fill"></i>
 										{% elseif link.name | lower == 'npm' %}
 											<i class="ri-npmjs-fill"></i>
 										{% elseif link.name | lower == 'website' %}
