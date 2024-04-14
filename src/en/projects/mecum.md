@@ -11,6 +11,8 @@ languages:
 frameworks:
   - Gridsome
   - Vue
+typewriter:
+  remove-letters: 140
 tags: project
 ---
 

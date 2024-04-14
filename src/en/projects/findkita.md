@@ -13,6 +13,8 @@ databases:
   - Redis
 tools:
   - here maps
+typewriter:
+  remove-letters: 283
 tags: project
 ---
 

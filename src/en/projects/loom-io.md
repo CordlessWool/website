@@ -16,6 +16,8 @@ links:
   - name: Dokumentation
     icon: booklet-fill
     link: https://loom-io.cotton-coding.com
+typewriter:
+  remove-letters: 194
 tags: project
 ---
 

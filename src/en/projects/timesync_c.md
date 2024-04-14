@@ -10,6 +10,8 @@ languages:
   - Python
 tools:
   - Raspberry PI
+typewriter:
+  remove-letters: 307
 tags: project
 ---
 

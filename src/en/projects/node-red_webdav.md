@@ -11,6 +11,8 @@ languages:
   - JavaScript
 frameworks:
   - Node-RED
+typewriter:
+  remove-letters: 290
 tags: project
 ---
 

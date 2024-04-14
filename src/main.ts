@@ -39,16 +39,18 @@ function typewriterMarkdown () {
 
 	elements.forEach(element => {
 		const typewriter = new TypeWriter(element, {delay: 0, variety: 30});
-		const signsToRemove = Number(element.getAttribute('data-typewriter-remove')) || 300;
-		typewriter.removeWithSave(-signsToRemove, true)
-		typewriter.removeFocus();
-		const addButton = createWriteButton('write more');
-
-		element.appendChild(addButton);
-		addButton.addEventListener('click', async () => {
-			typewriter.setFocus().go();
+		const signsToRemove = Number(element.getAttribute('data-typewriter-remove'));
+		if(signsToRemove > 0) {
+			typewriter.removeWithSave(-signsToRemove, true)
 			typewriter.removeFocus();
-		});
+			const addButton = createWriteButton('write more');
+
+			element.appendChild(addButton);
+			addButton.addEventListener('click', async () => {
+				typewriter.setFocus().go();
+				typewriter.removeFocus();
+			});
+		}
 
 	});
 
