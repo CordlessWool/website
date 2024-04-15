@@ -36,6 +36,10 @@ const translations ={
 		"de": "Datenbanken",
 		"en": "Databases"
 	},
+	"impressum": {
+		"de": "Impressum",
+		"en": "Imprint"
+	},
 }
 
 

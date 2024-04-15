@@ -10,6 +10,7 @@
 
 body {
 	@apply md:px-7 mx-auto my-0 px-3 max-w-7xl;
+	@apply min-h-screen;
 }
 
 h1 {
@@ -35,6 +36,10 @@ h4 {
 	@apply mt-8 mb-4;
 }
 
+/**
+ * Markdown styles
+ */
+
 .markdown {
 	@apply hyphens-auto;
 }
@@ -58,4 +63,14 @@ h4 {
 .typewriter.markdown button.write-more {
 	@apply inline-block text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
 	@apply dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600;
+}
+
+/**
+ * Buttons
+ */
+
+.light-clickable {
+	@apply text-zinc-400 dark:text-zinc-500;
+	@apply hover:text-zinc-800 focus:text-zinc-800 dark:hover:text-zinc-200 dark:focus:text-zinc-200  cursor-pointer;
+	@apply p-2;
 }

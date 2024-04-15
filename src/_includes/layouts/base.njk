@@ -11,12 +11,13 @@
   <script type="module" src="/assets/main.js" defer></script>
   <title>{{ title }}</title>
 </head>
-<body >
-  <header>
-    <header>{% include "nav.njk" %}</header>
+<body class="grid grid-rows-[auto_1fr_auto] grid-flow-row align-top">
+  <header class="">
+    {% include "nav.njk" %}
   </header>
-  <main class="mx-2 md:mx-16 sm:mx-8 lg:mx-32">
+  <main class=" mx-2 md:mx-16 sm:mx-8 lg:mx-32">
     {{ content | safe }}
   </main>
+  <footer class="w-full">{% include "footer-nav.njk" %}</footer>
 </body>
 </html>
