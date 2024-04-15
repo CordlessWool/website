@@ -15,8 +15,10 @@ descriptions:
 layout: layouts/intro.njk
 ---
 
-A Computer is a good tool to get ideas easy and cheap to live. But this also increases the number of ideas that are already implemented. Finally, there is mostly something, that isn't implemented or could be done in a better way.
+A computer is an excellent tool for easily and affordably starting new ideas. Although the actual implementation can turn out to be more challenging than anticipated, a prototype can quickly be created. Over the past 15 years of developing software, I have accumulated a wealth of experience that virtually sets no limits on my project executions. Yet, the **JavaScript/TypeScript environment** has become my predominant area of expertise. Despite having studied computer engineering and enjoyed writing assembly code, this feels miles away from my origins. Ultimately, I benefit from experiences across various fields, each with its pros and cons. Since I also find hardware programming fascinating, I would welcome project inquiries in this area, although my primary focus will likely remain on JavaScript/TypeScript.
 
-I already started to implement some ideas, but only two had the ability to get something big before they failed because of complications or time problems. Maybe failed is the wrong word, because the project itself failed, but I got a lot of experience and learned to find the gap between theory and practice. Both projects are already some years ago and I was able to increase my knowledge in other projects. Currently, I am working at the HPI-Schul-Cloud project, which gives me the opportunity to learn about processes in companies: How they change and what could go wrong (besides the programming stuff).
+Thanks to the flexibility my freelance career provides, I am able to continuously expand my knowledge by working on many of my own projects, never standing still—something which seems nearly impossible with all the new and exciting developments in the field. My ability to consider problems on a larger scale allows me to view projects not only with a focus on clean and efficient code but also with the aim of creating an excellent product. This attribute led me to spend several years as a technical project manager, though I always kept hands-on with coding.
 
-I also have some ideas in my mind, but not sure if they are worth to invest time. I am open to good ideas, co-founders, or only a good Open-Source project.
+I would be delighted to collaborate on a project in the JavaScript/TypeScript sphere, whether it's for an open-source initiative or through my **freelance work**. I am always eager to tackle new challenges, so bring me your problems!
+
+I prioritize **open-source, SvelteKit, or projects with significant general value.**
