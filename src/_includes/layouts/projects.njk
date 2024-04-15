@@ -36,7 +36,7 @@ eleventyImport:
 					<div class="grid gap-y-7 sm:grid-cols-[1fr_auto] content-center items-center">
 						<small class="grow">
 							<ul>
-								{% for key in ['languages', 'frameworks', 'databases',  'tools'] %}
+								{% for key in ['languages', 'frameworks', 'databases',  'tools', 'roles', 'other'] %}
 									{% if project.data[key] %}
 										<li class="grid grid-cols-[auto_1fr] gap-1 items-start">
 											<span class="auto-cols-fr">{{ key | i18n }}:</span>

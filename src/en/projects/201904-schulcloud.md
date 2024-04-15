@@ -29,7 +29,7 @@ tools:
   - Github
   - TravisCi
   - GitHub Actions
-others:
+roles:
   - Scrum Master
   - Architecture
   - Software Engineer

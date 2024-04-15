@@ -36,6 +36,14 @@ const translations ={
 		"de": "Datenbanken",
 		"en": "Databases"
 	},
+	"roles": {
+		"de": "Rollen",
+		"en": "Roles"
+	},
+	"other": {
+		"de": "Sonstiges",
+		"en": "Other"
+	},
 	"impressum": {
 		"de": "Impressum",
 		"en": "Imprint"
