@@ -11,7 +11,6 @@ descriptions:
   - Manchmal auch DevOps
   - Arbeite gern im Team
   - Vor allem bin ich aber Freiberufler
-  - Schon vergessen wer ich bin?
 layout: layouts/intro.njk
 ---
 

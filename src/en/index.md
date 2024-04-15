@@ -11,7 +11,6 @@ descriptions:
   - sometimes also devops
   - like to work in teams
   - But at least I am a freelancer
-  - Do you remember everything? Lets repeat
 layout: layouts/intro.njk
 ---
 

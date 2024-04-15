@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "build:eleventy": "eleventy",
-    "build:css": "tailwindcss -i ./src/base.css -o ./_site/base.css",
+    "build:css": "tailwindcss -i ./src/base.css -o ./_site/base.css --minify",
     "build:ts": "bun build ./src/main.ts --outfile=./_site/assets/main.js",
     "build": "bun run build:css && bun run build:ts && bun run build:eleventy",
     "watch": "eleventy --watch",
-    "watch:css": "bun run build:css -- --watch",
+    "watch:css": "tailwindcss -i ./src/base.css -o ./_site/base.css --watch",
     "watch:ts": "bun run build:ts --  --watch",
     "start": "eleventy --serve"
   },
