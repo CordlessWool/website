@@ -12,14 +12,12 @@ function typewriterDefault () {
 			const allText = text.split(separator);
 			const queue = new Queue<string>(allText);
 			const delay: number = Number(element.getAttribute('data-typewriter-delay') ?? 30);
-			const loop = element.getAttribute('data-typewriter-loop') || false;
-
 
 			const typewriter = new TypeWriter(element, {delay: delay});
 
 			while(1) {
 				await typewriter.deleteAll().write(queue.random()).go();
-				await new Promise(resolve => setTimeout(resolve, 1000));
+				await new Promise(resolve => setTimeout(resolve, 1500));
 			};
 
 		}
@@ -38,9 +36,9 @@ function typewriterMarkdown () {
 	const elements = [...document.querySelectorAll(`.markdown.typewriter`)];
 
 	elements.forEach(element => {
-		const typewriter = new TypeWriter(element, {delay: 0, variety: 30});
 		const signsToRemove = Number(element.getAttribute('data-typewriter-remove'));
-		if(signsToRemove > 0) {
+		if(signsToRemove && signsToRemove > 0) {
+			const typewriter = new TypeWriter(element, {delay: 0, variety: 30});
 			typewriter.removeWithSave(-signsToRemove, true)
 			typewriter.removeFocus();
 			const addButton = createWriteButton('write more');
