@@ -87,9 +87,18 @@ function toggleLanguage () {
 	}
 }
 
+function toggleMenu () {
+	const menuButton = document.getElementById('menu-button');
+	if(menuButton) {
+		menuButton.addEventListener('click', () => {
+			menuButton.classList.toggle('open');
+		});
+	}
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
-
+	toggleMenu();
 	typewriterDefault();
 	typewriterMarkdown();
 

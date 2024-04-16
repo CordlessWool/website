@@ -79,3 +79,24 @@ h4 {
 .light.clickable {
 	@apply hover:text-zinc-800 focus:text-zinc-800 dark:hover:text-zinc-200 dark:focus:text-zinc-200  cursor-pointer;
 }
+
+/**
+ * Menu
+ */
+
+button#menu-button:not(.open) + .menu {
+	@apply hidden;
+}
+
+button#menu-button.open + .menu {
+	@apply flex;
+}
+
+button.open > div {
+	@apply -rotate-45;
+}
+
+button#menu-button.open > div > div:first-child,
+button#menu-button.open > div > div:last-child {
+	@apply -rotate-90 h-[1px] -translate-y-[1px];
+}
