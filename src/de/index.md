@@ -5,7 +5,7 @@ typewriter:
 description: hi, ich bin freiberuflicher Software Ingenieur
 descriptions:
   - hi,
-  - Hi, meine Name ist Wolfgang
+  - Hi, meine Name ist Wolfgang Rathgeb
   - Ich bin Software Ingenieur
   - Manchmal bin ich auch DevOps
   - Arbeite gern im Team
