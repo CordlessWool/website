@@ -18,12 +18,12 @@ eleventyImport:
 							<h3 class="m-0 inline-block">{{ project.data.name }}</h3>
 							{% if project.data['company-website'] %}
 								<a href="{{ project.data["company-website"] }}" target="_blank" rel="external">
-									<span class="text-zinc-500 hover:text-teal-800 pointer">
+									<span class="light clickable">
 										{{ project.data.company }}
 									</span>
 								</a>
 							{% elseif project.data.company %}
-								<span class="text-zinc-500">{{ project.data.company }}</span>
+								<span class="light">{{ project.data.company }}</span>
 							{% endif %}
 						</div>
 						{% if project.data.end %}
