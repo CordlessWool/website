@@ -6,9 +6,8 @@ description: hi, I am a freelancing software engineer
 descriptions:
   - hi,
   - Hi, I am Wolfgang Rathgeb
-  - I am Software Engineer
-  - I am a Lead Developer
-  - sometimes also devops
+  - I am a Software Engineer
+  - sometimes I do devops stuff
   - like to work in teams
   - But at least I am a freelancer
 image: /images/wolfgang-rathgeb.jpeg

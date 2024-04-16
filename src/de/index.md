@@ -7,8 +7,7 @@ descriptions:
   - hi,
   - Hi, meine Name ist Wolfgang
   - Ich bin Software Ingenieur
-  - Ich bin Chefentwickler (lead developer)
-  - Manchmal auch DevOps
+  - Manchmal bin ich auch DevOps
   - Arbeite gern im Team
   - Vor allem bin ich aber Freiberufler
 image: /images/wolfgang-rathgeb.jpeg
