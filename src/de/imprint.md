@@ -7,7 +7,7 @@ layout: layouts/markdown.njk
 Wolfgang Rathgeb\
 Siemensstr. 14\
 10551 Berlin\
-E-Mail: ghost+impressum@dropanote.de
+E-Mail: ghost+imprint@dropanote.de
 
 **Umsatzsteuer-ID:**\
 Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:\

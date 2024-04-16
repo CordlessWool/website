@@ -1,5 +1,6 @@
 // .eleventy.js
 import i18n from 'eleventy-plugin-i18n';
+import * as path from 'node:path';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
@@ -44,7 +45,7 @@ const translations ={
 		"de": "Sonstiges",
 		"en": "Other"
 	},
-	"impressum": {
+	"imprint": {
 		"de": "Impressum",
 		"en": "Imprint"
 	},
@@ -73,13 +74,22 @@ export default async function (eleventyConfig) {
 		// formats: ["auto"],
 
 		// optional, output image widths
-		// widths: ["auto"],
+		widths: [300, 700, 1300],
 
 		// optional, attributes assigned on <img> override these values.
 		defaultAttributes: {
 			loading: "lazy",
 			decoding: "async",
 		},
+
+		filenameFormat: (id, src, width, format, options) => {
+			const extension = path.extname(src);
+			const name = path.basename(src, extension);
+
+			return `${name}-${id}${width}.${format}`;
+		},
+
+		sizes: "100vw",
 	});
 
   // Configuration

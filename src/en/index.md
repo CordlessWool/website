@@ -11,6 +11,8 @@ descriptions:
   - sometimes also devops
   - like to work in teams
   - But at least I am a freelancer
+image: /images/wolfgang-rathgeb.jpeg
+alt: The author Wolfgang Rathgeb
 layout: layouts/intro.njk
 ---
 

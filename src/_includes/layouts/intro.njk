@@ -20,7 +20,7 @@ layout: layouts/base.njk
   >{{ description }}</h2>
 
   <div class="justify-self-center self-center row-span-2">
-    <img class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 dark:shadow-zinc-600 border-teal-500 border-solid" width="400px" src="/images/wolfgang-rathgeb.jpeg" alt="The author Wolfgang Rathgeb" />
+    <img class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid" eleventy:widths="200,300,500" sizes="100vw" src="/images/wolfgang-rathgeb.jpeg" alt="The author Wolfgang Rathgeb" />
   </div>
   <ul class="flex flex-row gap-4  sm:col-auto">
     {% for social in socials %}
