@@ -53,17 +53,17 @@ eleventyImport:
 						{% if project.data.links %}
 							<div class="links sm:justify-self-end sm:mr-7">
 								{% for link in project.data.links %}
-									<a href="{{ link.link }}" target="_blank" rel="external" title="{{link.name}}" class="social-icon text-2xl">
+									<a href="{{ link.link }}" target="_blank" rel="external" title="{{link.name}}" class="social-icon">
 										{% if link.icon %}
-											<i class="ri-{{ link.icon }}"></i>
+											<i class="ri-{{ link.icon }} ri-xl"></i>
 										{% elseif link.name | lower  == 'github' %}
-											<i class="ri-github-fill"></i>
+											<i class="ri-github-fill ri-xl"></i>
 										{% elseif link.name | lower  == 'gitlab' %}
-											<i class="ri-gitlab-fill"></i>
+											<i class="ri-gitlab-fill ri-xl"></i>
 										{% elseif link.name | lower == 'npm' %}
-											<i class="ri-npmjs-fill"></i>
+											<i class="ri-npmjs-fill ri-xl"></i>
 										{% elseif link.name | lower == 'website' %}
-											<i class="ri-global-line"></i>
+											<i class="ri-global-line ri-xl"></i>
 										{% endif %}
 									</a>
 								{% endfor %}
