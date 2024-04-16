@@ -85,11 +85,11 @@ h4 {
  */
 
 button#menu-button:not(.open) + .menu {
-	@apply hidden;
+	@apply hidden md:flex;
 }
 
 button#menu-button.open + .menu {
-	@apply flex fixed;
+	@apply flex fixed md:relative;
 }
 
 button.open > div {

@@ -21,7 +21,7 @@
         <div class="bg-zinc-800 dark:bg-zinc-200 h-[3px] w-1/2 rounded self-end transform transition-all duration-300 origin-left delay-75"></div>
       </div>
     </button>
-    <ul class="menu md:flex text-xl md:text-base gap-y-7 items-center flex-col md:flex-row md:divide-y-0 absolute justify-center md:justify-end md:relative focus-within:flex top-0 right-0 h-full w-full bg-teal-400 dark:bg-teal-600 md:bg-inherit md:dark:bg-inherit ">
+    <ul class="menu text-xl md:text-base gap-y-7 items-center flex-col md:flex-row md:divide-y-0 absolute justify-center md:justify-end md:relative top-0 right-0 h-full w-full bg-teal-400 dark:bg-teal-600 md:bg-inherit md:dark:bg-inherit ">
       {%for text, link in [['about', ''], ['projects', '/projects']] %}
         {% if (link === '' and ((page.url === ["/", locale] | join) or (page.url === ["/", locale, "/"] | join))) or (link in page.url and link != '')  %}
           <li>
