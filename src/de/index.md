@@ -13,6 +13,7 @@ descriptions:
   - Vor allem bin ich aber Freiberufler
 image: /images/wolfgang-rathgeb.jpeg
 alt: Der Author Wolfgang Rathgeb
+meta: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript / TypeScript Umfeld, der eigentlich mal technische Informatik studiert hat.
 layout: layouts/intro.njk
 ---
 

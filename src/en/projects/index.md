@@ -1,5 +1,6 @@
 ---
 title: Projects
+meta: Beside my freelancing work I doing some project by my own, here you will find a list of all my projects.
 layout: layouts/projects.njk
 ---
 

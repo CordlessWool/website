@@ -13,6 +13,7 @@ descriptions:
   - But at least I am a freelancer
 image: /images/wolfgang-rathgeb.jpeg
 alt: The author Wolfgang Rathgeb
+meta: hi, I am Wolfgang Rathgeb a freelancing Software Engineer working mostly with JavaScript / TypeScript, but original I studied embedded systems.
 layout: layouts/intro.njk
 ---
 
