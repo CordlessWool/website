@@ -49,6 +49,10 @@ const translations ={
 		"de": "Impressum",
 		"en": "Imprint"
 	},
+	"link_to": {
+		"de": "Link zu",
+		"en": "Link to"
+	}
 }
 
 
@@ -82,7 +86,7 @@ export default async function (eleventyConfig) {
 			decoding: "async",
 		},
 
-		filenameFormat: (id, src, width, format, options) => {
+		filenameFormat: (id, src, width, format) => {
 			const extension = path.extname(src);
 			const name = path.basename(src, extension);
 

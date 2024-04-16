@@ -11,6 +11,8 @@ descriptions:
   - Manchmal auch DevOps
   - Arbeite gern im Team
   - Vor allem bin ich aber Freiberufler
+image: /images/wolfgang-rathgeb.jpeg
+alt: Der Author Wolfgang Rathgeb
 layout: layouts/intro.njk
 ---
 

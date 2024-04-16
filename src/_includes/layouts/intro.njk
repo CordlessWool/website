@@ -25,7 +25,7 @@ layout: layouts/base.njk
   <ul class="flex flex-row gap-4  sm:col-auto">
     {% for social in socials %}
     <li title="{{ social.name }}" class="social-icon">
-      <a href="{{ social.link }}" target="_blank" rel="external">
+      <a href="{{ social.link }}" aria-label="{{ 'link_to' | i18n }} {{ social.name }}" target="_blank" rel="external">
         <i class="ri-{{ social.icon }} ri-2x"></i>
       </a>
     </li>
