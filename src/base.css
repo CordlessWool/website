@@ -89,7 +89,7 @@ button#menu-button:not(.open) + .menu {
 }
 
 button#menu-button.open + .menu {
-	@apply flex;
+	@apply flex fixed;
 }
 
 button.open > div {
