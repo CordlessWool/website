@@ -40,6 +40,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: bun install
+      - name: Test
+        run: bun test
       - name: Build all for refernces
         run: bun run build
       - name: Upload artifact
