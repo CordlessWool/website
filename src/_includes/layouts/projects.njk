@@ -51,7 +51,7 @@ eleventyImport:
 							</ul>
 						</small>
 						{% if project.data.links %}
-							<div class="links sm:justify-self-end sm:mr-7">
+							<div class="flex gap-4 sm:justify-self-end sm:mr-7">
 								{% for link in project.data.links %}
 									<a href="{{ link.link }}" target="_blank" rel="external" title="{{link.name}}" class="social-icon">
 										{% if link.icon %}
