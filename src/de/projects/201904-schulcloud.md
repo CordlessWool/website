@@ -34,10 +34,10 @@ roles:
   - Architecture
   - Software Engineer
 typewriter:
-  remove-letters: 629
+  remove-letters: 599
 tags: project
 ---
 
-Nach dem Studium arbeitete ich für ein Projekt am HPI mit dem Ziel eine zentrale Platform für den Austausch und die Zusammenarbeit in Schulen zu vereinfachen. Zu Anfang lief das Projekt unter dem Namen Schul-Cloud, hat den Namen aber inzwischen gewechselt.
+Nach Abschluss meines Studiums war ich zunächst für ein Projekt am HPI tätig, dessen Ziel die Vereinfachung einer zentralen Plattform für den Austausch und die Zusammenarbeit in Schulen war. Zu Beginn des Projekts wurde hierfür der Name „Schul-Cloud” verwendet, der jedoch im weiteren Verlauf geändert wurde.
 
-Zu Anfang lief das Projekt als Pilot-Projekt und der erste Prototype wurde von Studenten entwickelt. Leider wurde der Prototype als basis genommen, so dass das Projekt mit vielen technischen Schulden zu kämpfen hatte. Währende der Pilotphase war dies aufgrund der geringen Nutzerzahl kein Problem. Mit Corona wurde es aber zum Verhängnis und wir mussten uns hauptsächlich auf die Lösung von Problemen konzentrieren, anstatt Projekte, die die alte Code Basis ersetzen sollte weiter zu verfolgen. Trotz aller Probleme und Schwierigkeiten, war es eines der Projekte an denen ich am meisten Spaß hatte und am meisten lernen konnte.
+Zu Beginn des Projekts handelte es sich um ein Pilotprojekt, bei dem ein erster Prototyp von Studenten entwickelt wurde. Leider wurde dieser Prototyp als Basis verwendet, sodass das Projekt mit zahlreichen technischen Schulden zu kämpfen hatte. Während der Pilotphase stellte dies aufgrund der geringen Nutzerzahl kein Problem dar. Mit Corona wurde es jedoch zum Verhängnis, sodass wir uns hauptsächlich auf die Lösung von Problemen konzentrieren mussten. Trotz aller Herausforderungen und Schwierigkeiten war es eines der Projekte, an denen ich am meisten Spaß hatte und am meisten lernen konnte.

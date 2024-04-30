@@ -13,4 +13,4 @@ tools:
 tags: project
 ---
 
-Started with a low-level university task to program a VGA transmission on an FPGA, we build up a Christmas tree in embedded C code. The size of the Tree and the amount of snow can be modified by switches.
+The project commenced with a basic university task, namely the programming of a VGA transmission on an FPGA. This was followed by the construction of a Christmas tree in embedded C code. The size of the tree and the quantity of snow can be altered by switches.

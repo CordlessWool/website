@@ -34,10 +34,10 @@ roles:
   - Architecture
   - Software Engineer
 typewriter:
-  remove-letters: 305
+  remove-letters: 345
 tags: project
 ---
 
-In 2020 Schools in Germany are mostly analog, also if corona does not allow to meet lots of people. The digitalization of schools got more necessary than before. So the project leaves its pilot status and goes production.
+In 2020, schools in Germany are mostly analogue, despite the challenges posed by the pandemic. The digitalisation of schools has become more crucial than ever. As a result, the project has transitioned from a pilot phase to a production phase.
 
-The HPI-Schul-Cloud should help schools to do this step and work together on distance. To solve this and do not reinvent the wheel, the project combines with other tools and finds a way to include them well. The most significant base is the management of consents and fulfilling the rules of German law.
+The HPI-Schul-Cloud is designed to assist schools in this transition and facilitate collaboration on distance learning. To streamline this process and avoid reinventing the wheel, the project has integrated with other tools to ensure seamless integration. The most significant base is the management of consents and compliance with German law.

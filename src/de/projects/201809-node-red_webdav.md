@@ -15,10 +15,10 @@ tools:
   - Webdav
   - Nextcloud
 typewriter:
-  remove-letters: 326
+  remove-letters: 364
 tags: project
 ---
 
-2018 wollte ich mir ein paar Alltags aufgaben abnehmen und mir mein privates Leben einfacher und gemütlicher gestalten. Dafür automatisierte ich eine Routinen die mir zusätzlich noch Energiesparen sollten mit Node-RED.
+Im Jahr 2018 hatte ich das Ziel, einige Alltagsaufgaben zu automatisieren und mein Privatleben einfacher und gemütlicher zu gestalten. Dafür habe ich eine Routine entwickelt, die mir zusätzlich noch Energiesparen sollte. Diese habe ich mit Node-RED automatisiert.
 
-Darunter sollte auch das automatische Speichern von Dokumenten aus E-Mails fallen. Leider konnte ich mit der OCR Erkennung zu diesem Zeitpunkt keine Ausreichend guten Ergebnisse erzielen um eine zuverlässige Lösung zu Implementieren. Übrig blieb das Plugin zu Speichern der Dokumente per Webdav auf meine Nextcloud Instance.
+Unter anderem sollte auch das automatische Speichern von Dokumenten aus E-Mails erfolgen. Leider konnte ich mit der OCR-Erkennung zu diesem Zeitpunkt keine ausreichend guten Ergebnisse erzielen, um eine zuverlässige Lösung zu implementieren. Als Ergebnis konnte das Plugin zum Speichern der Dokumente per Webdav auf meiner Nextcloud-Instanz implementiert werden.

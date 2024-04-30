@@ -14,8 +14,8 @@ databases:
 tools:
   - here maps
 typewriter:
-  remove-letters: 283
+  remove-letters: 322
 tags: project
 ---
 
-It is impossible how complicated it could be to find a kindergarten place. So I wanted to make this easier and started to develop a platform. At some point, I noticed that the government of Berlin itself also implemented something similar. I tried to connect to this and talked to those responsible and get a talk. Because of the restriction they made and the requirement that the kindergartens in berlin have to use their system, I stopped investing time in it, and finding and connect to a kindergarten stays complicate.
+The process of finding a kindergarten place is often complex. I recognized the need for a more streamlined solution and developed a platform to address this. I subsequently discovered that the government of Berlin had implemented a similar initiative. I sought to integrate with this system and engaged with the relevant authorities to gain insight. Due to the restrictions imposed and the requirement that kindergartens in Berlin must use their system, I have ceased investing time in this project. The process of finding and connecting to a kindergarten remains complex.

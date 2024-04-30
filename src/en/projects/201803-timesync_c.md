@@ -11,10 +11,10 @@ languages:
 tools:
   - Raspberry PI
 typewriter:
-  remove-letters: 307
+  remove-letters: 357
 tags: project
 ---
 
-While study time at Beuth University, we developed a project to find orientation in a Museum. The main goal was to get the position of a Person and give information about the locations. We thought about Wlan or Bluetooth beacons but decide to use a sound signal.
+While studying at Beuth University, two colleagues and I began developing a software to assist visitors in orienting themselves within a museum. Our objective was to determine the position of a person and provide information about the locations. We initially considered using WiFi or Bluetooth beacons, but ultimately opted for a sound signal.
 
-For getting the position a device have to measure the difference of three signals. To get the time gap it is needed to have the three speakers synchronized, so one important part was time sync between the speaker controllers. The first Implementation was done in python because of the jitter we moved to C.
+To determine the position, the device must measure the difference between three signals. To obtain the time gap, it is necessary to synchronise the three speakers. This required synchronising the time between the speaker controllers. The initial implementation was carried out in Python due to the jitter, and the software was subsequently rewritten in C.

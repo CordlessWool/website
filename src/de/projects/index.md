@@ -1,7 +1,7 @@
 ---
 title: Projekte
-meta: Neben meiner freiberuflichen Tätigkeit, arbeite ich noch an anderen Projekten. Hier findest du eine Liste all meiner Projekte
+meta: Neben meiner freiberuflichen Tätigkeit bin ich auch an anderen Projekten beteiligt. Eine Übersicht aller meiner Projekte finden Sie hier.
 layout: layouts/projects.njk
 ---
 
-Hier finden Sie eine Liste meiner Projekte die ich in den letzten Jahren in Angriff genommen habe. Dabei handelt es sich um eine Mischung aus Privaten, Beruflichen und Studien Projekten
+Hier finden Sie eine Liste meiner Projekte, die ich in den vergangenen Jahren umgesetzt habe. Dabei handelt es sich um eine Mischung aus privaten, beruflichen und Studienprojekten.

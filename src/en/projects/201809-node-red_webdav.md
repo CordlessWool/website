@@ -12,10 +12,10 @@ languages:
 frameworks:
   - Node-RED
 typewriter:
-  remove-letters: 290
+  remove-letters: 394
 tags: project
 ---
 
-2018 I started to make my life easier and energy-efficient with home automation, but I don't want to trust companies. I connected different devices with Node-RED to get the information if I am at home, turn on or off a Sonos speaker, and my heater up or down.
+In 2018, I began implementing home automation solutions to streamline my life and reduce energy consumption. However, I have reservations about entrusting these systems to third-party companies. I have connected various devices with Node-RED to obtain real-time data on my location, adjust the volume of a Sonos speaker, and control the temperature of my home.
 
-To go one step further, I started to get information from documents via OCR to rename and sort them in folders on my Nextcloud instance. Because of the low quality of the OCR, I decide to wait until it will be improved. As a result, there currently only stays a Webdave plugin for Node-RED
+To further enhance my automation capabilities, I have also started leveraging OCR technology to extract information from documents and organize them in folders on my Nextcloud instance. Due to the suboptimal quality of the OCR, I have chosen to defer further action until the technology improves. Consequently, the current state of affairs is that there is only a Webdave plugin for Node-RED.

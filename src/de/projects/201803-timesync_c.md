@@ -11,8 +11,8 @@ languages:
 tools:
   - Raspberry PI
 typewriter:
-  remove-letters: 580
+  remove-letters: 582
 tags: project
 ---
 
-Während meinem Master Studium haben zwei Kommilitonen und ich ein Projekt im Rahmen einer Vorlesung verfolgt, dass sich um die Lokalisierung durch Triangulation beschäftigte. Als Fiktiven schauplatz haben wir uns ein Museum herausgesucht. Das Ziel war eine Lokalisierung im Raum zu erreichen. Als einfachste Identifikator, erschien uns Geräusche zu verwenden. Zunächst war aber das Problem zu lösen alle Ton Quellen zu Synchronisieren. Die erste Version wurde von uns in Python entwickelt stellte sich aber als viel zu ungenau heraus. Also Implementierten wir eine Version in C die so Konfiguriert wurde, dass Sie in Echtzeit Operieren konnte und nicht durch andere Prozesse gestört wurde. Außerdem konnten sich die Clients selbst Synchronisieren. Leider ist uns die Lokalisierung dennoch nicht wie gewünscht gelungen.
+Im Rahmen einer Vorlesung während meines Master-Studiums haben zwei Kommilitonen und ich ein Projekt zur Lokalisierung durch Triangulation verfolgt. Als fiktiven Schauplatz haben wir uns ein Museum herausgesucht. Das Ziel war, eine Lokalisierung im Raum zu erreichen. Als einfachste Identifikatoren erschienen uns Geräusche. Zunächst war aber das Problem zu lösen, alle Tonquellen zu synchronisieren. Die erste Version wurde von uns in Python entwickelt, stellte sich aber als viel zu ungenau heraus. Daraufhin haben wir eine Version in C implementiert, die so konfiguriert wurde, dass sie in Echtzeit operieren konnte und nicht durch andere Prozesse gestört wurde. Außerdem konnten sich die Clients selbst synchronisieren. Leider ist uns die Lokalisierung dennoch nicht wie gewünscht gelungen.
