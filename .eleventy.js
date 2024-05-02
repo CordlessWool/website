@@ -70,6 +70,7 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPassthroughCopy("src/assets");
+	eleventyConfig.addPassthroughCopy({ "src/images/favicon.ico": "/" });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// which file extensions to process
