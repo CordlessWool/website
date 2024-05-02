@@ -1,7 +1,12 @@
-<ul class="flex gap-x-7 text-sm justify-center">
-	<li class="light clickable">
+<ul class="flex gap-x-5 text-sm justify-center items-center">
+	<li class="light clickable button">
 		<a href="/{{locale}}/imprint">{{ 'imprint' | i18n }}</a>
 	</li>
-	<li class="light clickable"><a href="/de">DE</a></li>
-	<li class="light clickable"><a href="/en">EN</a></li>
+	<li class="light clickable button"><a href="/de">DE</a></li>
+	<li class="light clickable button"><a href="/en">EN</a></li>
+	<li class="light clickable"><!--freelancermap-Badge White-->
+		<a href="https://www.freelancermap.de/profil/wolfgang-rathgeb" target="_blank" title="{{ 'freelancermap_title' | i18n }}">
+				<img loading="lazy" style="width:118px; height:24px" alt="freelancermap badge" sizes="100em" src="https://www.freelancermap.de/images/widgets/dashboard/fm-profile-badge-white.svg">
+		</a>
+	</li>
 </ul>

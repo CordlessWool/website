@@ -52,7 +52,11 @@ const translations ={
 	"link_to": {
 		"de": "Link zu",
 		"en": "Link to"
-	}
+	},
+	"freelancermap_title": {
+		"de": "Profil von Wolfgang Rathgeb auf www.freelancermap.de",
+		"en": "Profile of Wolfgang Rathgeb on www.freelancermap.de"
+	},
 }
 
 
