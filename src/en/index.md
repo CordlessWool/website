@@ -13,6 +13,14 @@ descriptions:
 image: /images/wolfgang-rathgeb.jpeg
 alt: The author Wolfgang Rathgeb
 meta: hi, my name is Wolfgang Rathgeb and I am a freelancing Software Engineer specialising in JavaScript / TypeScript. However, my original degree was in embedded systems.
+name: Wolfgang Rathgeb
+role: Freelancer
+degree: Master of Engineering
+location: Berlin, Moabit
+preferred_techs:
+  - SvelteKit
+  - TypeScript
+experience: 2009-05-01
 layout: layouts/intro.njk
 ---
 

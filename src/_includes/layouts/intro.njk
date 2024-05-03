@@ -33,6 +33,36 @@ layout: layouts/base.njk
 
   </ul>
 </section>
+<dl class="meta">
+  <div>
+    <dt>{{ 'name' | i18n }}</dt>
+    <dd>{{ name }}</dd>
+  </div>
+  <div>
+    <dt>{{ 'occupation' | i18n }}</dt>
+    <dd>{{ role }}</dd>
+  </div>
+  <div>
+    <dt>{{ 'degree' | i18n }}</dt>
+    <dd>{{ degree }}</dd>
+  </div>
+  <div>
+    <dt>{{ 'location' | i18n }}</dt>
+    <dd>{{ location }}</dd>
+  </div>
+  <div>
+    <dt>{{ 'current_tech' | i18n }}</dt>
+    <div class="list">
+      {% for tech in preferred_techs %}
+          <dd>{{ tech }}</dd>
+      {% endfor %}
+    </div>
+  </div>
+  <div>
+    <dt>{{ 'developing_experience' | i18n }}</dt>
+    <dd>{{ experience | age }}+ {{ 'years' | i18n }}</dd>
+  </div>
+</dl>
 
 <section class="markdown ">
 	{{ content | safe }}

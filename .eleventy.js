@@ -45,9 +45,45 @@ const translations ={
 		"de": "Sonstiges",
 		"en": "Other"
 	},
+	'developing': {
+		"de": "Entwicklung",
+		"en": "Developing"
+	},
+	'degree': {
+		"de": "Abschluss",
+		"en": "Degree"
+	},
+	'name': {
+		"de": "Name",
+		"en": "Name"
+	},
+	'years': {
+		"de": "Jahre",
+		"en": "years"
+	},
+	'occupation': {
+		"de": "Tätigkeit",
+		"en": "Occupation"
+	},
+	'location': {
+		"de": "Standort",
+		"en": "Location"
+	},
+	'experience': {
+		"de": "Erfahrung",
+		"en": "Experience"
+	},
 	"imprint": {
 		"de": "Impressum",
 		"en": "Imprint"
+	},
+	"developing_experience": {
+		"de": "Entwicklungserfahrung",
+		"en": "Developing experience"
+	},
+	"current_tech": {
+		"de": "Aktuell bevorzugte Technologien",
+		"en": "Currently preferred technologies"
 	},
 	"link_to": {
 		"de": "Link zu",
@@ -71,6 +107,17 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPassthroughCopy("src/assets");
 	eleventyConfig.addPassthroughCopy({ "src/images/favicon.ico": "/" });
+
+
+	eleventyConfig.addFilter("age", (date) => {
+		const now = new Date();
+		const birthDate = new Date(date);
+		const diff = now - birthDate;
+		const ageDate = new Date(diff);
+		return Math.abs(ageDate.getUTCFullYear() - 1970);
+	})
+
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// which file extensions to process

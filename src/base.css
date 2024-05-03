@@ -100,3 +100,24 @@ button#menu-button.open > div > div:first-child,
 button#menu-button.open > div > div:last-child {
 	@apply -rotate-90 h-[1px] -translate-y-[1px];
 }
+
+/**
+ * Meta
+ */
+
+dl.meta {
+	@apply grid grid-flow-row grid-cols-2 lg:grid-cols-3 gap-7 sm:text-nowrap my-14;
+}
+
+dl.meta dt {
+	@apply text-xs text-zinc-500 dark:text-zinc-400;
+}
+
+dl.meta .list {
+	@apply flex flex-row;
+}
+
+dl.meta dd {
+	@apply text-sm  text-zinc-600 dark:text-zinc-300;
+	@apply after:content-[',_'] last-of-type:after:content-[''];
+}

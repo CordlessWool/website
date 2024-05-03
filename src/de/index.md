@@ -13,6 +13,14 @@ descriptions:
 image: /images/wolfgang-rathgeb.jpeg
 alt: Der Author Wolfgang Rathgeb
 meta: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript/TypeScript Umfeld und habe ursprünglich technische Informatik studiert.
+name: Wolfgang Rathgeb
+role: Freiberufler
+degree: Master of Engineering
+location: Berlin, Moabit
+preferred_techs:
+  - SvelteKit
+  - TypeScript
+experience: 2009-05-01
 layout: layouts/intro.njk
 ---
 
