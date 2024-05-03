@@ -17,7 +17,7 @@ function typewriterDefault () {
 
 			while(queue.isLast() === false) {
 				await typewriter.deleteAll().write(queue.next()).go();
-				await new Promise(resolve => setTimeout(resolve, Math.random() * 1500 + 3000));
+				await new Promise(resolve => setTimeout(resolve, Math.random() * 1500 + 3500));
 			};
 		}
 

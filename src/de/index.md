@@ -10,7 +10,7 @@ descriptions:
   - Manchmal bin ich auch DevOps
   - Arbeite gern im Team
   - Vor allem bin ich aber Freiberufler
-  - Lass zusammen etwas Umsetzen
+  - Lass uns etwas kreieren
 image: /images/wolfgang-rathgeb.jpeg
 alt: Der Author Wolfgang Rathgeb
 meta: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript/TypeScript Umfeld und habe ursprünglich technische Informatik studiert.
