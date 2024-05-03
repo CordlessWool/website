@@ -114,7 +114,7 @@ dl.meta dt {
 }
 
 dl.meta .list {
-	@apply flex flex-row;
+	@apply flex flex-wrap;
 }
 
 dl.meta dd {
