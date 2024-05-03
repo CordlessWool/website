@@ -15,11 +15,10 @@ function typewriterDefault () {
 
 			const typewriter = new TypeWriter(element, {delay: delay});
 
-			while(1) {
-				await typewriter.deleteAll().write(queue.random()).go();
-				await new Promise(resolve => setTimeout(resolve, 1500));
+			while(queue.isLast() === false) {
+				await typewriter.deleteAll().write(queue.next()).go();
+				await new Promise(resolve => setTimeout(resolve, Math.random() * 1500 + 3000));
 			};
-
 		}
 
 	});

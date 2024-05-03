@@ -10,6 +10,7 @@ descriptions:
   - sometimes I do devops stuff
   - like to work in teams
   - But at least I am a freelancer
+  - Let us develop a project
 image: /images/wolfgang-rathgeb.jpeg
 alt: The author Wolfgang Rathgeb
 meta: hi, my name is Wolfgang Rathgeb and I am a freelancing Software Engineer specialising in JavaScript / TypeScript. However, my original degree was in embedded systems.

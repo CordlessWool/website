@@ -57,7 +57,7 @@ h4 {
 }
 
 .typewriter-cursor {
-	@apply animate-pulse bg-zinc-800 text-zinc-200;
+	@apply animate-pulse bg-zinc-700 text-zinc-200 dark:bg-zinc-300 dark:text-zinc-800;
 }
 
 .typewriter.markdown button.write-more {
