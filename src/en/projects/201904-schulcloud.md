@@ -12,7 +12,6 @@ links:
     icon: pages-fill
 languages:
   - JavaScript
-  - YAML
   - HTML
   - CSS
 frameworks:
@@ -21,6 +20,7 @@ frameworks:
   - Vue
   - Nuxt
   - Handlebars
+  - express.js
 tools:
   - Jira
   - Confluence
