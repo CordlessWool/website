@@ -29,6 +29,10 @@ tools:
   - Github
   - TravisCi
   - GitHub Actions
+databases:
+  - MongoDB
+  - Postgres
+  - Redis
 roles:
   - Scrum Master
   - Architecture
