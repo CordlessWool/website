@@ -9,17 +9,18 @@
     href="/assets/remixicon/remixicon.css"
     rel="stylesheet"
   />
+  <link href="/assets/print.css" rel="stylesheet" />
 
   <script type="module" src="/assets/main.js" defer></script>
   <title>{{ title }}</title>
 </head>
 <body class="grid grid-rows-[auto_1fr_auto] grid-flow-row align-top">
-  <header class="">
+  <header class="print:hidden">
     {% include "nav.njk" %}
   </header>
   <main class=" mx-2 md:mx-16 sm:mx-8 lg:mx-32">
     {{ content | safe }}
   </main>
-  <footer class="w-full mt-7">{% include "footer-nav.njk" %}</footer>
+  <footer class="w-full mt-7 print:hidden">{% include "footer-nav.njk" %}</footer>
 </body>
 </html>

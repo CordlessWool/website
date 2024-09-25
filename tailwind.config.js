@@ -2,10 +2,13 @@
 export default {
   content: ["./src/**/*.{html,js,njk,md}"],
   output: "./_site",
-  darkMode: 'selector',
+  darkMode: "selector",
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        print: { raw: "print" },
+      },
+    },
   },
   plugins: [],
-}
-
+};

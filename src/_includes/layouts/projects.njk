@@ -8,10 +8,10 @@ eleventyImport:
 {{ content | safe }}
 </div>
 
-<ul class="divide-y-2 div divide-zinc-400">
+<ul class="divide-y-2 div divide-zinc-400 print:divide-y-0">
 	{%- for project in collections.project | reverse -%}
 		{% if locale == project.data.locale %}
-			<li>
+			<li class="print:break-inside-avoid">
 				<section class="my-7 py-3 grid grid-flow-row">
 					<header class="mb-3">
 						<div class="flow items-center">
