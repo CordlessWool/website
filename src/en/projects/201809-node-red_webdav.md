@@ -11,6 +11,9 @@ languages:
   - JavaScript
 frameworks:
   - Node-RED
+tools:
+  - Webdav
+  - Nextcloud
 typewriter:
   remove-letters: 394
 tags: project

@@ -8,11 +8,15 @@ languages:
 frameworks:
   - express
   - mustache
+  - React
 databases:
   - Apache Cassandra
   - Redis
-tools:
-  - here maps
+others:
+  - here maps API
+  - Mapbox API
+  - Linux Server
+  - Docker
 typewriter:
   remove-letters: 420
 tags: project
