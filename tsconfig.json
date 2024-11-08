@@ -1,4 +1,6 @@
 {
+  "inlcude": ["."],
+  "exclude": ["node_modules", "dist", ".cache"],
   "compilerOptions": {
     // Enable latest features
     "lib": ["dom", "es6", "dom.iterable", "scripthost"],

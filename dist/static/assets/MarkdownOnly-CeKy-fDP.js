@@ -1,0 +1,1 @@
+import{p as n,c as o,r as d,d as i,j as l,k as m}from"./client-CgCvhXYi.js";import{B as p,b as c}from"./Base-Cn8xVudN.js";var u=m('<main class="markdown"><!></main>');function v(t,a){n(a,!0),p(t,{get data(){return a.data},children:(s,f)=>{var r=u(),e=o(r);c(e,()=>a.children),d(r),i(s,r)},$$slots:{default:!0}}),l()}export{v as M};

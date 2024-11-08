@@ -1,0 +1,1 @@
+const o={socials:[{name:"GitHub",icon:"github-fill",link:"https://github.com/CordlessWool"},{name:"Stack Overflow",icon:"stack-overflow-fill",link:"https://stackoverflow.com/users/6565711/cordlesswool"},{name:"LinkedIn",icon:"linkedin-box-fill",link:"https://www.linkedin.com/in/wolfgang-rathgeb/"}]};export{o as data};

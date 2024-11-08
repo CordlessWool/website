@@ -1,0 +1,3 @@
+const e={name:"Vally",date:"2018-06-02T00:00:00.000Z",end:"2018-08-17T00:00:00.000Z",links:[{name:"GitHub",link:"https://github.com/CordlessWool/vally"}],languages:["JavaScript","HTML","CSS"],tools:["EnduroJS"],tags:"project"},t=`<p>In 2018, I joined forces with another founder to establish a new company with the goal of developing machines compatible with the Industrie 4.0 standard. I was clear from the outset about my intentions, but we encountered significant difficulties.</p>
+<p>The outcome of this venture is a theme for EnduroJS, a small, user-friendly content management system (CMS) designed for one-page company websites. I have named it Vally.</p>
+`;export{e as data,t as html};

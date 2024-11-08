@@ -1,0 +1,3 @@
+const e={name:"Mecum",date:"2020-12-18T00:00:00.000Z",end:"2023-07-11T00:00:00.000Z",links:[{name:"GitLab",link:"https://gitlab.com/CordlessWool/mecum"}],languages:["JavaScript","CSS3","HTML5","Markdown"],frameworks:["Gridsome","Vue","GraphQL"],others:["GitLab Pages","GitLab CI/CD"],typewriter:{"remove-letters":140},tags:"project"},a=`<p>Translated to English, Mecum means &quot;with me&quot; and is the foundation of my former profile page, which is open to all. Unfortunately, the gridsome framework is no longer supported.</p>
+<p>Please feel free to clone and create your own page (all content is available for use). Text can be easily edited via Markdown files.</p>
+`;export{e as data,a as html};

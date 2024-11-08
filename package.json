@@ -1,26 +1,21 @@
 {
-  "name": "website",
-  "module": "main.ts",
+  "name": "website-dropanote",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "build:eleventy": "eleventy",
-    "build:css": "tailwindcss -i ./src/base.css -o ./_site/base.css --minify",
-    "build:ts": "bun build ./src/main.ts --outfile=./_site/assets/main.js",
-    "build": "bun run build:css && bun run build:ts && bun run build:eleventy",
-    "watch": "eleventy --watch --serve",
-    "watch:css": "tailwindcss -i ./src/base.css -o ./_site/base.css --watch",
-    "watch:ts": "bun run build:ts --  --watch",
-    "start": "eleventy --serve"
+    "dev": "embodi dev",
+    "build": "embodi generate",
+    "preview": "embodi preview"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-beta.1",
-    "@11ty/eleventy-img": "^4.0.2",
-    "@types/bun": "latest",
-    "eleventy-plugin-i18n": "^0.1.3",
-    "tailwindcss": "^3.4.13"
+    "autoprefixer": "^10.4.20",
+    "embodi": "file:../@embodi/generator/packages/embodi",
+    "postcss": "^8.4.47",
+    "svelte": "^5.1.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   },
-  "peerDependencies": {
-    "typescript": "^5.4.4"
-  },
-  "dependencies": {}
+  "dependencies": {
+    "i18next": "^23.16.4"
+  }
 }
