@@ -1,2 +1,0 @@
-const e={name:"loom-ui",date:"2024-02-19T00:00:00.000Z",links:[{name:"Github",link:"https://github.com/cotton-coding/loom-ui"}],languages:["TypeScript","Svelte"],frameworks:["SvelteKit","chart.js","Storybook"],tags:"project"},t=`<p>Das Projekt ist noch nicht ganz spruchreif und eher ein Nebenprodukt. Unter dem Namen „Loom-UI” entwickle ich aktuell UI-Komponenten für unterschiedliche Projekte auf Basis von SvelteKit. Im Besonderen für zukünftige Projekte.</p>
-`;export{e as data,t as html};

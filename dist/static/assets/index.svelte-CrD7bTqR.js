@@ -1,1 +1,0 @@
-import{p as o,ac as e,j as t}from"./client-CgCvhXYi.js";function s(i,a){o(a,!0),e(()=>{var n=navigator.language||navigator.userLanguage;n.indexOf("de")==0?window.location="/de/":window.location="/en/"}),t()}export{s as Component};

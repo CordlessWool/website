@@ -90,3 +90,5 @@ typings/
 _site/
 
 .DS_Store
+
+dist/
