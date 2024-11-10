@@ -1,14 +1,23 @@
 {
   "inlcude": ["."],
-  "exclude": ["node_modules", "dist", ".cache"],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    // Base configuration
+    "baseUrl": ".",
+    "paths": {
+      "$layout/*": ["./__layout/*"],
+      "$embodi/*": [
+        "./node_modules/embodi/dist/core/vite/virtual-modules/embodi/*"
+      ]
+    },
     // Enable latest features
-    "lib": ["dom", "es6", "dom.iterable", "scripthost"],
-    "target": "ES2020",
-    "module": "ES2020",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES2022",
+    "module": "ESNext",
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
+    "declaration": true,
 
     // Bundler mode
     "moduleResolution": "bundler",
