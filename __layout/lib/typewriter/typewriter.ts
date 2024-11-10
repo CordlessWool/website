@@ -250,7 +250,7 @@ export class TypeWriter {
    * TODO: rewrite it
    * Spezial method for recording for writing text later
    */
-  removeWithSave(signs: number, cut: boolean = false): this {
+  removeWithSave(signs: number): this {
     if (this._isLoopEndReached(signs)) {
       this.queue.reverse();
       return this;
@@ -272,7 +272,7 @@ export class TypeWriter {
     this._html = this._html.replace(/<\w*><\/\w*>/, "");
 
     this._removeCurrentLetter();
-    return this.removeWithSave(signs + direction, cut);
+    return this.removeWithSave(signs + direction);
   }
 
   async go() {
