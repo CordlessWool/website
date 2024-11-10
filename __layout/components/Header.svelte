@@ -3,7 +3,7 @@
     import ToggleLang from "./ToggleLang.svelte";
     import ToogleTheme from "./ToggleTheme.svelte";
 
-    const { title, locale, page } = $props();
+    const { title, locale } = $props();
 </script>
 
 <nav class="flex my-3 mb-7 gap-3" aria-label="main navigation">
@@ -18,5 +18,5 @@
             <ToggleLang />
         </li>
     </ul>
-    <Menu {locale} {page} />
+    <Menu {locale} />
 </nav>

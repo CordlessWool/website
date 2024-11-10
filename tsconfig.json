@@ -2,14 +2,9 @@
   "inlcude": ["."],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "types": ["embodi/client", "vite/client"],
     // Base configuration
     "baseUrl": ".",
-    "paths": {
-      "$layout/*": ["./__layout/*"],
-      "$embodi/*": [
-        "./node_modules/embodi/dist/core/vite/virtual-modules/embodi/*"
-      ]
-    },
     // Enable latest features
     "lib": ["ESNext", "DOM"],
     "target": "ES2022",

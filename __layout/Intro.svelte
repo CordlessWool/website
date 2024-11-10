@@ -1,7 +1,7 @@
 <script lang="ts">
     import { t } from "i18next";
     import Base from "./components/Base.svelte";
-    import { age } from "./utils/date.js";
+    import { age } from "./lib/date.js";
 
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
@@ -21,9 +21,7 @@
         experience: string;
         preferred_techs: string[];
         locale: string;
-        page: {
-          url: string;
-        }
+        meta: string;
         socials: {
           name: string;
           link: string;

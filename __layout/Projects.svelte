@@ -1,6 +1,6 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
-    import ProjectTile from "./components/ProjectTile.svelte";
+    import ProjectTile, {type Project, type Format} from "./components/ProjectTile.svelte";
     import type { Snippet } from "svelte";
 
 
@@ -9,12 +9,9 @@
         data: {
             locale: string;
             title: string;
-            page: string;
-            projects: {
-                data: {
-                    name: string;
-                }
-            }[];
+            meta: string;
+            projects: Project[];
+            format: Format;
             [x: string]: unknown;
         }
         children: Snippet
