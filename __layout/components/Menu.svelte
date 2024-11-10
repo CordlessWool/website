@@ -1,6 +1,7 @@
 <script lang="ts">
     import { t } from "i18next";
-    const { locale, page } = $props();
+    import { page } from "$embodi/stores";
+    const { locale } = $props();
     let isOpen = $state(false);
 </script>
 
@@ -26,8 +27,8 @@
     <ul
         class="menu text-xl md:text-base gap-y-7 items-center flex-col md:flex-row md:divide-y-0 absolute justify-center md:justify-end md:relative top-0 right-0 h-full w-full bg-teal-400 dark:bg-teal-600 md:bg-inherit md:dark:bg-inherit"
     >
-        {#each [["about", ""], ["projects", "/projects/"]] as [text, link]}
-            {#if (link === "" && (page.url === `/${locale}` || page.url === `/${locale}/`)) || (`/${locale}${link}` === page.url && link != "")}
+        {#each [["about", ""], ["projects", "/projects"]] as [text, link]}
+            {#if (link === "" && ($page.url === `/${locale}` || $page.url === `/${locale}/`)) || (`/${locale}${link}/` === $page.url && link != "")}
                 <li>
                     <span
                         class="relative underline font-bold underline-offset-2 p-2"
@@ -37,7 +38,7 @@
             {:else}
                 <li class="">
                     <a
-                        href="/{locale}{link}"
+                        href="/{locale}{link}/"
                         class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2"
                     >
                         {t(text)}

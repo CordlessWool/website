@@ -22,8 +22,6 @@
         await typeWriter.setFocus().go();
         typeWriter.removeFocus();
     };
-
-    typeWriter.subscribe(console.log);
 </script>
 
 <div class="markdown">
