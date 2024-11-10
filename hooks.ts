@@ -31,6 +31,7 @@ export const render: RenderHook = ({ data }) => {
           link_to: "Link zu",
           freelancermap_title:
             "Profil von Wolfgang Rathgeb auf www.freelancermap.de",
+          write_more: "schreib weiter",
         },
       },
       en: {
@@ -58,6 +59,7 @@ export const render: RenderHook = ({ data }) => {
           link_to: "Link to",
           freelancermap_title:
             "Profile of Wolfgang Rathgeb on www.freelancermap.de",
+          write_more: "write more",
         },
       },
     },
