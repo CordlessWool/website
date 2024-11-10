@@ -73,15 +73,6 @@ h4 {
     @apply cursor-pointer border-2 hover:text-teal-600 dark:hover:text-teal-500 border-hidden focus:border-teal-600 focus:border-dotted;
 }
 
-.typewriter-cursor {
-    @apply animate-pulse bg-zinc-700 text-zinc-200 dark:bg-zinc-300 dark:text-zinc-800;
-}
-
-.typewriter.markdown button.write-more {
-    @apply inline-block text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
-    @apply dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600;
-}
-
 /**
  * Buttons
  */
