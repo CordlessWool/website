@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { TagType } from "./typewriter";
-
     type Props = {
         snipped: string;
         delay?: number;
