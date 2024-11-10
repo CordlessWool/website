@@ -4,6 +4,8 @@
     import { age } from "./utils/date.js";
 
     import '../app.css';
+    import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
+    import type { Snippet } from "svelte";
 
     type Props = {
       children: Snippet;
@@ -11,13 +13,14 @@
         title: string;
         image: string;
         alt: string;
-        description: string;
+        descriptions: [string, ...string[]];
         name: string;
         role: string;
         degree: string;
         location: string;
         experience: string;
         preferred_techs: string[];
+        locale: string;
         page: {
           url: string;
         }
@@ -30,14 +33,14 @@
     }
 
     const { data, children }: Props = $props();
-    const { title, image, alt, page, description, name, role, degree, location, experience, preferred_techs, socials } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, socials } = $state(data);
 </script>
 
 <Base {data}>
     <main>
         <section class="grid grid-cols-2 grid-flow-row mb-7 items-start justify-around">
             <h2 class="typewriter md:m-10 md:ml-0 sm:mt-18 my-3 hyphens-auto min-h-36">
-                { description }
+                <TypeWriterQueue snippeds={descriptions} />
             </h2>
 
             <div class="justify-self-center self-center row-span-2">

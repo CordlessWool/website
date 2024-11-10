@@ -7,7 +7,9 @@
         data: {
             locale: string;
             title: string;
-            page: string;
+            page: {
+                url: string;
+            };
         }
         children: any;
     };

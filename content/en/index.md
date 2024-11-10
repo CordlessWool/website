@@ -1,9 +1,7 @@
 ---
 title: About Wolfgang Rathgeb
-typewriter:
-  separator: ";"
-description: hi, I am a freelancing software engineer
 descriptions:
+  - hi, I am a freelancing Software Engineer
   - hi,
   - Hi, I am Wolfgang Rathgeb
   - I am a Software Engineer
@@ -22,7 +20,7 @@ preferred_techs:
   - SvelteKit
   - TypeScript
 experience: 2009-05-01
-layout: Intro
+layout: $layout/Intro.svelte
 ---
 
 A computer is an excellent tool for easily and affordably starting new ideas. Although the actual implementation can be more challenging than anticipated, a prototype can be created quickly. Over the past 15 years of developing software, I have accumulated a wealth of experience that virtually sets no limits on my project executions. However, I have developed a particular expertise in the **JavaScript/TypeScript environment**. Despite having studied computer engineering and enjoyed writing assembly code, this feels miles away from my origins. I benefit from experiences across various fields, each with its pros and cons. Since I also find hardware programming fascinating, I would welcome project inquiries in this area, although my primary focus will likely remain on JavaScript/TypeScript.
