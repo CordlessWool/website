@@ -33,7 +33,7 @@
 
 <script lang="ts">
     import { t } from "i18next";
-    import TypeWriterHTML from './TypeWriterBox.svelte'
+    import TypeWriterMarkdown from './TypeWriterMarkdown.svelte'
 
     type Props = {
         project: Project;
@@ -82,7 +82,7 @@
         {/if}
     </header>
     <div class="markdown mb-7">
-        <TypeWriterHTML html={project.html} maxLetters={300} />
+        <TypeWriterMarkdown html={project.html} remove={project.typewriter?.['remove-letters']}/>
     </div>
     <div
         class="grid gap-y-7 sm:grid-cols-[1fr_auto] content-center items-center"

@@ -4,28 +4,17 @@
 
     type Props = {
         html: string;
-        maxChars?: number;
+        remove?: number;
     };
 
-    const { html, maxChars = 333 }: Props = $props();
-
-    const shortHTML = (text: string) => {
-        // const p = text.indexOf("</p>");
-        // const br = text.indexOf("<br/>");
-        // console.log(p, br);
-        // if (br === -1 && p === -1) {
-        //     return text;
-        // } else if (br > p || br === -1) {
-        //     return text.slice(0, p + 5);
-        // } else if (p > br || p === -1) {
-        //     return text.slice(0, br + 6);
-        // }
-    };
+    const { html, remove }: Props = $props();
 
     let typeWriter = new TypeWriter(html, { delay: 0, variety: 30 });
 
     $effect(() => {
-        typeWriter.removeWithSave(maxChars - html.length, true);
+        if (!isNaN(remove)) {
+            typeWriter.removeWithSave(-Number(remove));
+        }
         typeWriter.removeFocus();
     });
 
@@ -33,6 +22,8 @@
         await typeWriter.setFocus().go();
         typeWriter.removeFocus();
     };
+
+    typeWriter.subscribe(console.log);
 </script>
 
 <div class="markdown">
