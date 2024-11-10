@@ -39,6 +39,9 @@ export class TypeWriter {
     this.subscription.push(fu);
 
     fu(this._getCurrentHTML());
+    return () => {
+      this.subscription = this.subscription.filter((fn) => fn !== fu);
+    };
   }
 
   get _html(): string {

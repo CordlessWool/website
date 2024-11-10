@@ -22,18 +22,11 @@
         // }
     };
 
-    let snipped = $state(html);
     let typeWriter = new TypeWriter(html, { delay: 0, variety: 30 });
-    typeWriter.subscribe((html) => (snipped = html));
 
     $effect(() => {
         typeWriter.removeWithSave(maxChars - html.length, true);
         typeWriter.removeFocus();
-    });
-
-    $effect(() => {
-        console.log({ html, snipped });
-        console.log(html.length, snipped.length);
     });
 
     const typeMore = async () => {
@@ -43,18 +36,23 @@
 </script>
 
 <div class="markdown">
-    {@html snipped}
+    {@html $typeWriter}
 </div>
-{#if html !== snipped && !typeWriter.hasFocus}
+{#if html !== $typeWriter && !typeWriter.hasFocus}
     <button class="write-more" onclick={typeMore}>{t("write_more")}</button>
 {/if}
 
 <style lang="postcss">
     button.write-more {
         @apply inline-block text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
-        @apply dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600;
+    }
+    :global(.dark) .write-more {
+        @apply bg-zinc-700 text-zinc-200 hover:bg-zinc-600;
     }
     .markdown :global(.typewriter-cursor) {
-        @apply animate-pulse bg-zinc-700 text-zinc-200 dark:bg-zinc-300 dark:text-zinc-800;
+        @apply animate-pulse bg-zinc-700 text-zinc-200;
+    }
+    .markdown :global(.typewriter-cursor:where(.dark, .dark *)) {
+        @apply bg-zinc-300 text-zinc-800;
     }
 </style>
