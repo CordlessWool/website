@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,njk,md}"],
+  content: [
+    "./content/**/*.{html,js,njk,md,svelte}",
+    "./__layout/**/*.{html,js,njk,md,svelte}",
+    "./app.css",
+  ],
   output: "./_site",
   darkMode: "selector",
   theme: {

@@ -1,12 +1,18 @@
 {
+  "inlcude": ["."],
+  "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "types": ["embodi/client", "vite/client"],
+    // Base configuration
+    "baseUrl": ".",
     // Enable latest features
-    "lib": ["dom", "es6", "dom.iterable", "scripthost"],
-    "target": "ES2020",
-    "module": "ES2020",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES2022",
+    "module": "ESNext",
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
+    "declaration": true,
 
     // Bundler mode
     "moduleResolution": "bundler",
