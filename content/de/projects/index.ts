@@ -1,4 +1,4 @@
-import { collections } from "$embodi/collections?locale=de&tag=project";
+import { collections } from "$embodi/collections?locale=de&only=project";
 import type { LoadAction } from "embodi";
 
 export const load: LoadAction = ({ data }) => {

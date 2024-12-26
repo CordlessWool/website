@@ -6,6 +6,8 @@
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
     import type { Snippet } from "svelte";
+    import Tile from "./components/Tile.svelte";
+    import Calcom from "./components/Calcom.svelte";
 
     type Props = {
       children: Snippet;
@@ -27,11 +29,14 @@
           link: string;
           icon: string;
         }[];
+        offers: {
+          price: string;
+          html: string;
+        }[];
       };
     }
-
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, socials } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, socials, offers } = $state(data);
 </script>
 
 <Base {data}>
@@ -93,5 +98,25 @@
         <section class="markdown">
             {@render children()}
         </section>
+
+        <ul class="offers">
+            {#each offers as offer}
+            <li>
+                <Tile price={offer.price} class="h-full">
+                    {@html offer.html}
+                </Tile>
+            </li>
+            {/each}
+        </ul>
+        <Calcom />
     </main>
 </Base>
+
+<style lang="postcss">
+    .offers {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
