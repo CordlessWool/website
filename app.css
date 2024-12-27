@@ -53,6 +53,14 @@ h4 {
     @apply mt-8 mb-4;
 }
 
+a.link {
+    @apply text-teal-800 dark:text-teal-300;
+}
+
+a.link:hover {
+    @apply underline;
+}
+
 /**
  * Markdown styles
  */
@@ -86,25 +94,4 @@ h4 {
 
 .light.clickable {
     @apply hover:text-zinc-800 focus:text-zinc-800 dark:hover:text-zinc-200 dark:focus:text-zinc-200  cursor-pointer;
-}
-
-/**
- * Meta
- */
-
-dl.meta {
-    @apply grid grid-flow-row grid-cols-2 lg:grid-cols-3 gap-7 sm:text-nowrap my-14;
-}
-
-dl.meta dt {
-    @apply text-xs text-zinc-500 dark:text-zinc-400;
-}
-
-dl.meta .list {
-    @apply flex flex-wrap;
-}
-
-dl.meta dd {
-    @apply text-sm  text-zinc-600 dark:text-zinc-300;
-    @apply after:content-[',_'] last-of-type:after:content-[''];
 }

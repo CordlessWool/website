@@ -16,9 +16,14 @@ name: Wolfgang Rathgeb
 role: Freelancer
 degree: Master of Engineering
 location: Berlin, Moabit
+email: W.Rathgeb@dropanote.de
+preferred_roles:
+  - Team lead
+  - Project management
 preferred_techs:
   - SvelteKit
   - TypeScript
+  - Vite/Rollup
 experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
