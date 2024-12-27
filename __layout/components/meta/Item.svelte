@@ -34,7 +34,7 @@
     }
 
     dt {
-        @apply text-xs text-zinc-500 dark:text-zinc-400 w-full;
+        @apply text-xs text-zinc-500 w-full;
     }
 
     .list dd {
