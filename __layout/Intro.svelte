@@ -6,7 +6,7 @@
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
     import type { Snippet } from "svelte";
-    import Tile from "./components/Tile.svelte";
+    import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
 
     type Props = {
@@ -102,13 +102,16 @@
         <ul class="offers">
             {#each offers as offer}
             <li>
-                <Tile price={offer.price} class="h-full">
+                <Card price={offer.price} class="h-full">
                     {@html offer.html}
-                </Tile>
+                    {#snippet actions()}
+                    <Calcom />
+                    {/snippet}
+
+                </Card>
             </li>
             {/each}
         </ul>
-        <Calcom />
     </main>
 </Base>
 

@@ -17,17 +17,23 @@
     </div>
     {#if price}
         <div class="price">
-            <span>{price}</span></div>
+            <span>{price}</span>
+        </div>
     {/if}
-    {@render actions?.()}
+    {#if actions}
+        <div>
+            {@render actions()}
+        </div>
+    {/if}
 </section>
 
 <style lang="postcss">
     section {
-        @apply grid;
+        @apply grid gap-7;
         grid-template-rows: 1fr auto;
         @apply rounded-md border-2 border-solid px-3 py-7;
     }
+
 
     div.price {
         @apply text-2xl font-bold text-right;
