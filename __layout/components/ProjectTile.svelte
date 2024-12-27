@@ -32,7 +32,7 @@
 </script>
 
 <script lang="ts">
-    import { t } from "i18next";
+    import * as m from "../lib/paraglide/messages.js";
     import TypeWriterMarkdown from './TypeWriterMarkdown.svelte'
 
     type Props = {
@@ -76,7 +76,7 @@
             >
         {:else}
             <small
-                >{t("since")}
+                >{m.since()}
                 {formatDate(project.start || project.date)}</small
             >
         {/if}
@@ -92,7 +92,7 @@
                 {#each ["languages", "frameworks", "databases", "tools", "roles", "other"] as key}
                     {#if Object.hasOwnProperty.call(project, key)}
                         <li class="grid grid-cols-[auto_1fr] gap-1 items-start">
-                            <span class="auto-cols-fr">{ t(key) }:</span>
+                            <span class="auto-cols-fr">{ m[key]() }:</span>
                             <ul class="flex flex-row flex-wrap gap-x-1">
                                 {#each project[key] as item}
                                     <li

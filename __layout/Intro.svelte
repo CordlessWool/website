@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { t } from "i18next";
+    import * as m from './lib/paraglide/messages.js'
     import { Meta, Item } from "./components/meta";
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
@@ -53,7 +53,7 @@
             <ul class="flex flex-row gap-4 sm:col-auto">
                 {#each socials as social}
                     <li title="{ social.name }" class="social-icon">
-                    <a href="{ social.link }" aria-label="{t('link_to')} { social.name }" target="_blank" rel="external">
+                    <a href="{ social.link }" aria-label="{m.link_to()} { social.name }" target="_blank" rel="external">
                         <i class="ri-{ social.icon } ri-2x"></i>
                     </a>
                     </li>
@@ -61,20 +61,21 @@
             </ul>
         </section>
         <Meta>
-            <Item i18n="name" content={name} />
-            <Item i18n="occupation" content={role} />
-            <Item i18n="degree" content={degree} />
-            <Item i18n="developing_experience">
-                {age(experience)}+ {t("years")}
+            <Item label={m.name()}  content={name} />
+            <Item label={m.occupation()} labe content={role} />
+            <Item label={m.degree()} content={degree} />
+
+            <Item label={m.developing_experience()}>
+                {age(experience)}+ {m.years()}
             </Item>
-            <Item i18n="email">
+            <Item label={m.email()}>
                 <a class="link" href="mailto:{email}">{email}</a>
             </Item>
-            <Item i18n="location" content={location} />
+            <Item label={m.location()} content={location} />
 
 
-            <Item i18n="current_tech" content={preferred_techs} />
-            <Item i18n="current_role" content={preferred_roles} />
+                <Item label={m.current_tech()} content={preferred_techs} />
+            <Item label={m.current_role()} content={preferred_roles} />
         </Meta>
 
         <section class="markdown">
