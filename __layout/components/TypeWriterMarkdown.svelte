@@ -1,6 +1,6 @@
 <script lang="ts">
     import { TypeWriter } from "../lib/typewriter/typewriter";
-    import { t } from "i18next";
+    import * as m from "../lib/paraglide/messages.js";
 
     type Props = {
         html: string;
@@ -28,7 +28,7 @@
     {@html $typeWriter}
 </div>
 {#if html !== $typeWriter && !typeWriter.hasFocus}
-    <button class="write-more" onclick={typeMore}>{t("write_more")}</button>
+    <button class="write-more" onclick={typeMore}>{m.write_more()}</button>
 {/if}
 
 <style lang="postcss">

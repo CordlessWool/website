@@ -27,7 +27,7 @@
             content = text;
         }
         content = text.slice(0, cursor);
-        if (cursor === text.length) {
+        if (content === snipped) {
             ontyped?.();
         } else {
             ontyping?.();
@@ -49,7 +49,7 @@
                 setTyped(snipped, cursor);
             } else {
                 clearInterval(interval);
-                ontyped?.();
+                //ontyped?.();
             }
         }, delay);
 

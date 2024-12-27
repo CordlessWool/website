@@ -3,6 +3,7 @@
     import Footer from "./Footer.svelte";
 
     import '../../app.css';
+    import '../remixicon/remixicon.css'
 
     type Props = {
         data: {

@@ -26,7 +26,7 @@
     };
 
     const ontyped = () => {
-        if (toType < snippeds.length - 2) {
+        if (toType < snippeds.length - 1) {
             setTimeout(() => {
                 toType++;
                 currentSnipped = snippeds[toType];

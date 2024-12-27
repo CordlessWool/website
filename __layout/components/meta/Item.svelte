@@ -1,17 +1,15 @@
 <script lang="ts">
-    import { t } from "i18next";
-
     type Props = {
-        i18n: string;
+        label: string;
         content?: string | string[];
         children?: Snippet;
     };
 
-    const { i18n, content, children }: Props = $props();
+    const { label, content, children }: Props = $props();
 </script>
 
 <div class:list={Array.isArray(content)}>
-    <dt>{t(i18n)}</dt>
+    <dt>{label}</dt>
     {#if children}
         <dd>{@render children()}</dd>
     {:else if typeof content === 'string'}
@@ -34,7 +32,7 @@
     }
 
     dt {
-        @apply text-xs text-zinc-500 dark:text-zinc-400 w-full;
+        @apply text-xs text-zinc-500 w-full;
     }
 
     .list dd {

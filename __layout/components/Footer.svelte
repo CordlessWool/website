@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { t } from "i18next";
+    import * as m from "../lib/paraglide/messages.js";
     const currentYear = new Date().getFullYear();
 
     const { locale } = $props();
@@ -12,7 +12,7 @@
             href="https://www.freelancermap.de/profil/wolfgang-rathgeb"
             target="_blank"
             aria-label="freelancermap"
-            title={t("freelancermap_title")}
+            title={m.freelancermap_title()}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
     <li class="light clickable button"><a href="/de">DE</a></li>
     <li class="light clickable button"><a href="/en">EN</a></li>
     <li class="light clickable button">
-        <a href="/{locale}/imprint/">{t("imprint")}</a>
+        <a href="/{locale}/imprint/">{m.imprint()}</a>
     </li>
     <li class="light sm:ml-7 text-nowrap">© {currentYear}</li>
 </ul>
