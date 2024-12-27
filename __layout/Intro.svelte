@@ -1,5 +1,6 @@
 <script lang="ts">
     import { t } from "i18next";
+    import { Meta, Item } from "./components/meta";
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
 
@@ -36,7 +37,7 @@
       };
     }
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, socials, offers } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials } = $state(data);
 </script>
 
 <Base {data}>
@@ -64,36 +65,22 @@
                 {/each}
             </ul>
         </section>
-        <dl class="meta">
-            <div>
-                <dt>{t("name")}</dt>
-                <dd>{name}</dd>
-            </div>
-            <div>
-                <dt>{t("occupation")}</dt>
-                <dd>{role}</dd>
-            </div>
-            <div>
-                <dt>{t("degree")}</dt>
-                <dd>{degree}</dd>
-            </div>
-            <div>
-                <dt>{t("location")}</dt>
-                <dd>{location}</dd>
-            </div>
-            <div>
-                <dt>{t("current_tech")}</dt>
-                <div class="list">
-                    {#each preferred_techs as tech}
-                        <dd>{tech}</dd>
-                    {/each}
-                </div>
-            </div>
-            <div>
-                <dt>{t("developing_experience")}</dt>
-                <dd>{age(experience)}+ {t("years")}</dd>
-            </div>
-        </dl>
+        <Meta>
+            <Item i18n="name" content={name} />
+            <Item i18n="occupation" content={role} />
+            <Item i18n="degree" content={degree} />
+            <Item i18n="developing_experience">
+                {age(experience)}+ {t("years")}
+            </Item>
+            <Item i18n="email">
+                <a class="link" href="mailto:{email}">{email}</a>
+            </Item>
+            <Item i18n="location" content={location} />
+
+
+            <Item i18n="current_tech" content={preferred_techs} />
+            <Item i18n="current_role" content={preferred_roles} />
+        </Meta>
 
         <section class="markdown">
             {@render children()}

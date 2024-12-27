@@ -28,6 +28,8 @@ export const render: RenderHook = ({ data }) => {
           imprint: "Impressum",
           developing_experience: "Entwicklungserfahrung",
           current_tech: "Aktuell bevorzugte Technologien",
+          current_role: "Aktuell bevorzugte Rolen",
+          email: "E-Mail",
           link_to: "Link zu",
           freelancermap_title:
             "Profil von Wolfgang Rathgeb auf www.freelancermap.de",
@@ -56,6 +58,8 @@ export const render: RenderHook = ({ data }) => {
           imprint: "Imprint",
           developing_experience: "Developing experience",
           current_tech: "Currently preferred technologies",
+          current_role: "Currently preferred roles",
+          email: "E-Mail",
           link_to: "Link to",
           freelancermap_title:
             "Profile of Wolfgang Rathgeb on www.freelancermap.de",
