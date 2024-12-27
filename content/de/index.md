@@ -1,13 +1,13 @@
 ---
 title: Über Wolfgang Rathgeb
 descriptions:
-  - hi, ich bin freiberuflicher Software Ingenieur
-  - hi,
+  - Hi, ich bin freiberuflicher Software-Ingenieur
+  - Hi,
   - Hi, meine Name ist Wolfgang Rathgeb
-  - Ich bin Software Ingenieur
-  - Manchmal bin ich auch DevOps
-  - Arbeite gern im Team
-  - Vor allem bin ich aber Freiberufler
+  - Ich arbeite als Software-Ingenieur
+  - Ich arbeite manchmal auch als DevOps
+  - Ich arbeite freiberuflich
+  - Ich arbeite gern im Team
   - Lass uns etwas kreieren
 image: /images/wolfgang-rathgeb.webp
 alt: Der Author Wolfgang Rathgeb
