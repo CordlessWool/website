@@ -37,7 +37,7 @@
       };
     }
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers } = $state(data);
 </script>
 
 <Base {data}>
