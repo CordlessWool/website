@@ -1,6 +1,6 @@
 ---
 title: Schulungen
-price: Auf Anfrage
+price: ab 991€
 tags:
   - offer
 ---
