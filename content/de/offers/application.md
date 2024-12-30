@@ -14,6 +14,6 @@ Das heißt, ich kann Software aus der **Anwenderperspektive** betrachten und auf
 
 Wir reden also auf Augenhöhe, während ich mich um die technischen Details kümmere.
 
-- Kein technisches Chi Chi
+- Kein technisches Blabla
 - Keine Sorgen um Verfügbarkeit
 - Keine Sorgen um die Sicherheit
