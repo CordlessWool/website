@@ -1,18 +1,22 @@
 <script lang="ts">
+    import * as m from "../lib/paraglide/messages";
     import Button from "./Button.svelte";
     import { getCalApi } from "@calcom/embed-react";
     import { onMount } from "svelte";
 
     onMount(async () => {
         const cal = await getCalApi({
-            namespace: "berlin-based-lead-software-engineer",
+            namespace: "catchup",
+            embedLibUrl: "https://cal.dropanote.de/embed/embed.js",
         });
-        cal("ui", { hideEventTypeDetails: true, layout: "month_view" });
+        cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     });
 </script>
 
 <Button
-    data-cal-namespace="berlin-based-lead-software-engineer"
-    data-cal-link="drop-a-note/berlin-based-lead-software-engineer"
-    data-cal-config={{ layout: "month_view" }}>Schedual a call</Button
+    class="w-full"
+    data-cal-namespace="catchup"
+    data-cal-link="freelance/catchup"
+    data-cal-origin="https://cal.dropanote.de"
+    data-cal-config={{ layout: "month_view" }}>{m.schedule_call()}</Button
 >
