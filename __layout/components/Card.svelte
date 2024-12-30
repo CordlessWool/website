@@ -14,7 +14,7 @@
   const { actions, children, price, title, sub, ...props }: Props = $props();
 </script>
 
-<section {...props}>
+<section {...props} class:border={true}>
     <div class="markdown">
         {#if title}
         <header>

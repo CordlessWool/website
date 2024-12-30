@@ -58,11 +58,15 @@ h4 {
 }
 
 a.link {
-    @apply text-teal-800 dark:text-teal-300;
+    @apply text-teal-800 dark:text-teal-300 underline;
 }
 
 a.link:hover {
     @apply underline;
+}
+
+.border {
+    @apply border-2 dark:border-zinc-500 border-zinc-300;
 }
 
 /**
@@ -74,7 +78,7 @@ a.link:hover {
 }
 
 .markdown a {
-    @apply text-blue-600 underline;
+    @apply text-teal-800 dark:text-teal-300 underline;
 }
 
 .markdown p {
@@ -96,7 +100,7 @@ a.link:hover {
 }
 
 blockquote {
-    @apply border-l-4 border-gray-500 italic ml-1 mr-7 py-3 px-7 max-w-md;
+    @apply border-l-4 border-teal-300 dark:border-teal-700 italic ml-1 mr-7 py-3 px-7 max-w-md;
 }
 
 blockquote p {
