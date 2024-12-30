@@ -5,7 +5,9 @@
     const { locale } = $props();
 </script>
 
-<ul class="flex flex-wrap gap-x-3 text-sm justify-center items-center">
+<ul
+    class="flex flex-wrap gap-x-3 text-sm justify-center items-center mt-11 mb-3"
+>
     <li class="light clickable w-[118px]">
         <!--freelancermap-Badge White-->
         <a
