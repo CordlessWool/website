@@ -1,4 +1,4 @@
-import { collections } from "$embodi/collections?locale=en&tag=project";
+import { collections } from "$embodi/collections?locale=en&only=project";
 
 export const load = ({ data }) => {
   const projects = collections.map((project) => {

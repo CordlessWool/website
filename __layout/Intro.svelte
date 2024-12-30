@@ -7,6 +7,8 @@
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
     import type { Snippet } from "svelte";
+    import Card from "./components/Card.svelte";
+    import Calcom from "./components/Calcom.svelte";
 
     type Props = {
       children: Snippet;
@@ -28,16 +30,19 @@
           link: string;
           icon: string;
         }[];
+        offers: {
+          price: string;
+          html: string;
+        }[];
       };
     }
-
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers } = $state(data);
 </script>
 
 <Base {data}>
-    <main>
-        <section class="grid grid-cols-2 grid-flow-row mb-7 items-start justify-around">
+    <main class="pad">
+        <section class="teaser order-first">
             <h2 class="typewriter md:m-10 md:ml-0 sm:mt-18 my-3 hyphens-auto min-h-36">
                 <TypeWriterQueue snippeds={descriptions} />
             </h2>
@@ -60,7 +65,7 @@
                 {/each}
             </ul>
         </section>
-        <Meta>
+        <Meta class="lg:col-span-3">
             <Item label={m.name()}  content={name} />
             <Item label={m.occupation()} labe content={role} />
             <Item label={m.degree()} content={degree} />
@@ -78,8 +83,39 @@
             <Item label={m.current_role()} content={preferred_roles} />
         </Meta>
 
-        <section class="markdown">
+        <section class="markdown lg:col-span-2 lg:-order-1">
             {@render children()}
         </section>
+
+        <ul class="offers">
+            {#each offers as offer}
+            <li>
+                <Card price={offer.price} title={offer.title} sub={offer.subtitle} class="h-full">
+                    {@html offer.html}
+                    {#snippet actions()}
+                    <Calcom />
+                    {/snippet}
+
+                </Card>
+            </li>
+            {/each}
+        </ul>
     </main>
 </Base>
+
+<style lang="postcss">
+
+    main {
+        @apply grid lg:grid-cols-5 gap-y-11 gap-x-20 max-w-screen-2xl mx-auto;
+    }
+
+    .teaser {
+        @apply col-span-full;
+        @apply grid grid-cols-2 grid-flow-row mb-7 items-start justify-around w-full lg:max-w-5xl mx-auto;
+    }
+
+    .offers {
+        @apply grid gap-7 col-span-full grid-cols-[repeat(auto-fill,_minmax(410px,_1fr))];
+
+    }
+</style>

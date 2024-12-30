@@ -6,7 +6,10 @@
     const { title, locale } = $props();
 </script>
 
-<nav class="flex my-3 mb-7 gap-3" aria-label="main navigation">
+<nav
+    class="flex my-3 mb-7 gap-3 mx-auto px-1 md:px-3 lg:px-7 max-w-screen-2xl"
+    aria-label="main navigation"
+>
     <h1 class="text-xl grow font-bold my-3">
         {title}
     </h1>

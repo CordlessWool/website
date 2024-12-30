@@ -2,7 +2,7 @@
   "inlcude": ["."],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "types": ["embodi/client", "vite/client"],
+    "types": ["embodi/client"],
     // Base configuration
     "baseUrl": ".",
     // Enable latest features
