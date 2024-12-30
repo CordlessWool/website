@@ -1,14 +1,14 @@
 <script lang="ts">
-    const { children } = $props();
+    const { children, ...props } = $props();
 </script>
 
-<dl class="meta">
+<dl {...props}>
     {@render children()}
 </dl>
 
 
 <style lang="postcss">
-    dl.meta {
-        @apply grid grid-flow-row grid-cols-2 lg:grid-cols-3 gap-5 sm:text-nowrap my-14;
+    dl {
+        @apply grid grid-flow-row grid-cols-2 gap-5 sm:text-nowrap;
     }
-    </style>
+</style>
