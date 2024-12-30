@@ -4,10 +4,16 @@ tags:
   - offer
 ---
 
-## All-Inclusive-Paket
+## Einmal mit allem, bitte!
 
-Eine Anwendung zu Entwickeln und zu Betreiben ist ein komplexer Prozess, um den Sie sich nicht kümmern möchten? Kein Problem, ich übernehme das für Sie.
+Keine Lust auf technisches Blabla?
 
-- Keine technisches Chi Chi
-- Keine sorgen um die Verfügbarkeit
-- Keine sorgen um die Sicherheit
+Auch wenn ich sehr gerne Software entwickle,
+betrachte ich Software immer auch aus einer nicht-technischen Perspektive.
+Das heißt, ich kann Software aus der **Anwenderperspektive** betrachten und auf dieser Ebene **kommunizieren**.
+
+Wir reden also auf Augenhöhe, während ich mich um die technischen Details kümmere.
+
+- Kein technisches Chi Chi
+- Keine Sorgen um Verfügbarkeit
+- Keine Sorgen um die Sicherheit

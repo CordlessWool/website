@@ -1,10 +1,19 @@
 ---
-title: Stundenbasierte Beratung und Unterstützung
-price: 107€/h
+title: Arbeitspferd
+subtitle: Projektunterstützung
+price: 107 €/h
 tags:
   - offer
 ---
 
-## Stundenbasierte Beratung und Unterstützung
+> Schaffa Schaffa Häusle baua
 
-Sie haben ein Problem, eine Frage oder benötigen Unterstützung bei der Umsetzung eines Projektes? Ich biete Ihnen stundenbasierte Beratung und Unterstützung an.
+Wenn einem mal wieder alles über den Kopf wächst, braucht man einfach ein wenig Unterstützung bei der Umsetzung von Projekten.
+
+Oberste Prämisse ist dabei immer, einen langfristigen Mehrwert zu schaffen, auch wenn ich nur kurzfristig unterstütze.
+
+Gute Software ist für mich eine Herzensangelegenheit und für gute Open Source Projekte gebe ich gerne einen Rabatt.
+
+- Software Entwicklung
+- DevOps
+- Projektmanagement
