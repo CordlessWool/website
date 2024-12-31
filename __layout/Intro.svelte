@@ -31,9 +31,13 @@
           icon: string;
         }[];
         offers: {
-          price: string;
+          title?: string;
+          subtitle?: string;
+          price?: string;
           html: string;
         }[];
+        preferred_roles: string[];
+        email: string;
       };
     }
     const { data, children }: Props = $props();
@@ -67,7 +71,7 @@
         </section>
         <Meta class="lg:col-span-3">
             <Item label={m.name()}  content={name} />
-            <Item label={m.occupation()} labe content={role} />
+            <Item label={m.occupation()} content={role} />
             <Item label={m.degree()} content={degree} />
 
             <Item label={m.developing_experience()}>
@@ -115,7 +119,8 @@
     }
 
     .offers {
-        @apply grid gap-7 col-span-full grid-cols-[repeat(auto-fill,_minmax(410px,_1fr))];
+        @apply col-span-full;
+        @apply grid gap-7 grid-cols-1 sm:grid-cols-[repeat(auto-fill,_minmax(410px,_1fr))];
 
     }
 </style>
