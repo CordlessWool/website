@@ -58,15 +58,20 @@ h4 {
 }
 
 a.link {
-    @apply text-teal-800 dark:text-teal-300 underline;
+    @apply text-teal-800 dark:text-teal-300;
 }
 
-a.link:hover {
+a.link:hover,
+a.link:focus {
     @apply underline;
 }
 
 .border {
     @apply border-2 dark:border-zinc-500 border-zinc-300;
+}
+
+small {
+    @apply text-sm;
 }
 
 /**
@@ -78,7 +83,12 @@ a.link:hover {
 }
 
 .markdown a {
-    @apply text-teal-800 dark:text-teal-300 underline;
+    @apply text-teal-800 dark:text-teal-300;
+}
+
+.markdown a:hover,
+.markdown a:focus {
+    @apply underline;
 }
 
 .markdown p {
