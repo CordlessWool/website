@@ -7,7 +7,7 @@
     onMount(async () => {
         const cal = await getCalApi({
             namespace: "catchup",
-            embedLibUrl: "https://cal.dropanote.de/embed/embed.js",
+            embedJsUrl: "https://cal.dropanote.de/embed/embed.js",
         });
         cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     });
