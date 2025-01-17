@@ -22,10 +22,10 @@
     light
 >
     <main>
-        <h2>You wanna drop a note?</h2>
+        <h2>You wanna <b>drop a note</b>?</h2>
         <p>
-            You should be redirected automaticly. If you are not redirected
-            automaticly please select a language
+            You should be automatically redirected. If you are not automatically
+            redirected, please select a language.
         </p>
         <div>
             <a href="https://dropanote.de/de">Deutsch</a>
@@ -43,8 +43,16 @@
         @apply max-w-screen-sm mx-auto;
     }
 
+    h2 {
+        @apply text-3xl font-normal;
+    }
+
     a {
         @apply relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2;
+    }
+
+    b {
+        @apply font-bold;
     }
 
     div {
