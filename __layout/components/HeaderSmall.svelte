@@ -1,9 +1,7 @@
 <script lang="ts">
-    import Menu from "./Menu.svelte";
-    import ToggleLang from "./ToggleLang.svelte";
     import ToogleTheme from "./ToggleTheme.svelte";
 
-    const { title, locale } = $props();
+    const { title } = $props();
 </script>
 
 <nav
@@ -17,9 +15,5 @@
         <li aria-label="button" class="light clickable button">
             <ToogleTheme />
         </li>
-        <li class="light clickable button">
-            <ToggleLang />
-        </li>
     </ul>
-    <Menu {locale} />
 </nav>

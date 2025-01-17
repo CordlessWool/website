@@ -1,7 +1,53 @@
 <script>
-    $effect(() => {
+    import Base from "$layout/components/Base.svelte";
+
+    const { data } = $props();
+</script>
+
+<svelte:head>
+    <script type="text/javascript">
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         var lang = navigator.language || navigator.userLanguage;
         if (lang.indexOf("de") == 0) window.location = "/de/";
         else window.location = "/en/";
-    });
-</script>
+    </script>
+</svelte:head>
+
+<Base
+    data={{
+        ...data,
+        title: "Wolfgang Rathgeb",
+        meta: "Welcome! My name is Wolfgang Rathgeb and I am a freelancing Software Engineer",
+    }}
+    light
+>
+    <main>
+        <h2>You wanna drop a note?</h2>
+        <p>
+            You should be redirected automaticly. If you are not redirected
+            automaticly please select a language
+        </p>
+        <div>
+            <a href="https://dropanote.de/de">Deutsch</a>
+            /
+            <a href="https://dropanote.de/en">English</a>
+        </div>
+    </main>
+</Base>
+
+<style lang="postcss">
+    main {
+        @apply flex h-full flex-col items-center justify-center gap-3 p-3 md:p-7;
+        @apply text-center;
+        @apply flex-grow;
+        @apply max-w-screen-sm mx-auto;
+    }
+
+    a {
+        @apply relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2;
+    }
+
+    div {
+        @apply text-xl mt-11;
+    }
+</style>

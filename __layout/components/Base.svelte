@@ -1,5 +1,7 @@
 <script lang="ts">
     import Header from "./Header.svelte";
+    import HeaderSmall from "./HeaderSmall.svelte";
+
     import Footer from "./Footer.svelte";
 
     import '../../app.css';
@@ -11,10 +13,11 @@
             title: string;
             meta: string;
         }
+        light?: boolean;
         children: any;
     };
 
-    const { data, children }: Props = $props();
+    const { data, children, light }: Props = $props();
     const { locale, title } = $state(data);
 </script>
 
@@ -24,6 +27,11 @@
     <!-- <link rel="stylesheet" href='../../app.css'> -->
 </svelte:head>
 
-<Header {locale} {title} />
+{#if light}
+    <HeaderSmall {title} />
+{:else}
+    <Header {locale} {title} />
+{/if}
+
     {@render children()}
 <Footer {locale} />
