@@ -11,6 +11,10 @@
         });
         cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     });
+
+    const preventDefault = (event) => {
+        event.preventDefault();
+    };
 </script>
 
 <Button
@@ -18,5 +22,11 @@
     data-cal-namespace="catchup"
     data-cal-link="freelance/catchup"
     data-cal-origin="https://cal.dropanote.de"
-    data-cal-config={{ layout: "month_view" }}>{m.schedule_call()}</Button
+    data-cal-config={{ layout: "month_view" }}
+    href="https://cal.dropanote.de/freelance/catchup"
+    onclick={preventDefault}
+    onenter={preventDefault}
+    target="_blank"
+>
+    {m.schedule_call()}</Button
 >
