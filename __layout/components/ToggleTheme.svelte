@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Action } from "svelte/action";
-    import { THEME, themeStore } from "$layout/lib/themeStore";
+    import { THEME, themeStore } from "$layout/lib/theme";
 
     const darkLightModeAction: Action = (node) => {
         const getTheme = () => {
@@ -39,7 +39,6 @@
                 window.matchMedia("(prefers-color-scheme: dark)").matches)
         ) {
             document.documentElement.classList.add("dark");
-            themeStore.set(THEME.DARK);
         } else {
             document.documentElement.classList.remove("dark");
         }

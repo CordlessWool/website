@@ -28,6 +28,6 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-Ein Computer ist ein effizientes Werkzeug, um Ideen einfach und kostengünstig umzusetzen. Kein anderes Werkzeug bietet einen so einfachen Einstieg und gleichzeitig so viele Möglichkeiten.
+Ein Computer ist ein leistungsfähiges Werkzeug, um Ideen einfach und kostengünstig umzusetzen. Kein anderes Werkzeug ermöglicht einen so leichten Einstieg und bietet gleichzeitig so viele Möglichkeiten.
 
-Doch je tiefer man in diese Welt eintaucht, desto komplexer erscheint sie. Kaum jemand ist noch in der Lage, alle Facetten abzudecken. Mein Ziel ist es, mein Wissen auf eine breite Basis zu stellen, dennoch liegt mein Schwerpunkt in der **Softwareentwicklung**.
+Doch je tiefer man in diese Welt eintaucht, desto komplexer wird sie. Heute kann kaum jemand alle Facetten vollständig abdecken. Mein Ziel ist es, ein breites Wissen aufzubauen und interdisziplinär zu arbeiten – mit einem klaren Schwerpunkt auf Softwareentwicklung, der sich mit Management und Betrieb verzahnt.

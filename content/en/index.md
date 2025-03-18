@@ -28,6 +28,6 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-A computer is an efficient tool for implementing ideas easily and cost-effectively. No other tool offers such easy access and so many possibilities at the same time.
+A computer is a powerful tool for bringing ideas to life easily and cost-effectively. No other tool offers such a simple entry point while providing so many possibilities.
 
-But the deeper you delve into this world, the more complex it appears. Hardly anyone is still able to cover all facets. My aim is to provide a broad basis for my knowledge, but my main focus is on **software development**.
+But the deeper you dive into this world, the more complex it becomes. Today, hardly anyone can cover all aspects entirely. My goal is to build broad expertise and work across disciplines – with a strong focus on software development that seamlessly integrates with management and operations.

@@ -2,7 +2,7 @@
     lang="ts"
     generics="TType extends ChartType = ChartType, TData = DefaultDataPoint<TType>, TLabel= unknown "
 >
-    import { themeStore, THEME } from "$layout/lib/themeStore";
+    import { themeStore, THEME } from "$layout/lib/theme";
 
     import type {
         ChartData,
@@ -76,10 +76,11 @@
                     data: {
                         ...data,
                         datasets: data.datasets?.map((dataset: ChartData<TType, TData, TLabel>['datasets']) => ({
-                            backgroundColor: rgba(primaryColor, 0.2),
-                            borderColor: primaryColor,
-                            pointBackgroundColor: primaryColor,
-                            pointBorderColor: lightColor,
+                            fill: true,
+                            backgroundColor: rgba($state.snapshot(primaryColor), 0.7),
+                            borderColor: $state.snapshot(primaryColor),
+                            pointBackgroundColor: $state.snapshot(primaryColor),
+                            pointBorderColor: $state.snapshot(backgroundColor),
                             ...dataset,
                         })),
                     },
@@ -90,18 +91,18 @@
                             r: {
                                 angleLines: {
                                     display: true,
-                                    color: lightColor, // Angle line color for dark mode
+                                    color: $state.snapshot(lightColor), // Angle line color for dark mode
                                 },
                                 ticks: {
                                     beginAtZero: true,
                                     backdropColor: "transparent",
-                                    color: textColor, // Tick color for dark mode
-                                    background: backgroundColor, // Background color for dark mode
+                                    color: $state.snapshot(textColor), // Tick color for dark mode
+                                    background: $state.snapshot(backgroundColor), // Background color for dark mode
                                     stepSize: 20,
                                 },
                                 pointLabels: {
                                     // Labels around the edge of the radar chart
-                                    color: textColor,
+                                    color: $state.snapshot(textColor),
                                     font: {
                                         family: "Monospace",
                                         size: 14,
@@ -110,7 +111,7 @@
                                 },
                                 grid: {
                                     // Grid line color for the radial scale
-                                    color: lightColor,
+                                    color: $state.snapshot(lightColor),
                                 },
                                 ...(scale
                                     ? {
@@ -140,6 +141,6 @@
         position: relative;
         margin: auto;
         width: var(--chart-width, 100%);
-        height: var(--chart-height, 100%);
+        /* height: var(--chart-height, 100%); */
     }
 </style>

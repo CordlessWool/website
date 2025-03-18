@@ -42,7 +42,7 @@
       };
     }
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
 </script>
 
 <Base {data}>
@@ -88,25 +88,24 @@
             <Item label={m.current_role()} content={preferred_roles} />
         </Meta>
 
-        <section class="markdown lg:col-span-2 lg:-order-1">
+        <section class="markdown lg:col-span-2 lg:-order-1 -my-5">
             {@render children()}
         </section>
 
-        <PolarChart data={{
-            labels: ['Management', 'Dev', 'Ops'],
-            datasets: [{
-              data: [83, 91, 67],
-              fill: true,
-              backgroundColor: 'rgba(13, 148, 136, 0.23)',
-              borderColor: 'rgb(13, 148, 136)',
-              pointBackgroundColor: 'rgb(13, 148, 136)',
-              pointBorderColor: '#fff'
+        {#each radars as r, index (index) }
+            <PolarChart data={{
+                labels: r.labels,
+                datasets: [{
+                  data: [...r.data],
+                }]
+              }}
+              scale={[53, 100]}
+            />
+            <section class="markdown lg:col-span-3 -my-5">
+                {@html r.html}
+            </section>
+        {/each}
 
-            }]
-          }}
-          scale={[53, 100]}
-
-        />
 
 
 
