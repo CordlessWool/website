@@ -6,9 +6,10 @@
 
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
-    import type { Snippet } from "svelte";
+    import {  type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
+    import PolarChart from "./components/PolarChart.svelte";
 
     type Props = {
       children: Snippet;
@@ -41,7 +42,7 @@
       };
     }
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers } = $state(data);
+    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
 </script>
 
 <Base {data}>
@@ -87,9 +88,26 @@
             <Item label={m.current_role()} content={preferred_roles} />
         </Meta>
 
-        <section class="markdown lg:col-span-2 lg:-order-1">
+        <section class="markdown lg:col-span-2 lg:-order-1 -my-5">
             {@render children()}
         </section>
+
+        {#each radars as r, index (index) }
+            <PolarChart data={{
+                labels: r.labels,
+                datasets: [{
+                  data: [...r.data],
+                }]
+              }}
+              scale={[53, 100]}
+            />
+            <section class="markdown lg:col-span-3 -my-5">
+                {@html r.html}
+            </section>
+        {/each}
+
+
+
 
         <ul class="offers">
             {#each offers as offer}

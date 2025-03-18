@@ -1,4 +1,6 @@
 import { collections } from "$embodi/collections?locale=de&only=offer";
+import { collections as radarchartsCollection } from "$embodi/collections?locale=de&only=radarchart";
+
 import type { LoadAction } from "embodi";
 
 export const load: LoadAction = ({ data }) => {
@@ -6,5 +8,10 @@ export const load: LoadAction = ({ data }) => {
     ...offer.data,
     html: offer.html,
   }));
-  return { ...data, offers };
+  const radarcharts = radarchartsCollection.map((r) => ({
+    ...r.data,
+    html: r.html,
+  }));
+
+  return { ...data, offers, radarcharts };
 };
