@@ -1,17 +1,26 @@
 <script lang="ts">
     import type { Action } from "svelte/action";
+    import { THEME, themeStore } from "$layout/lib/themeStore";
 
     const darkLightModeAction: Action = (node) => {
+        const getTheme = () => {
+            return document.documentElement.classList.contains("dark")
+                ? THEME.DARK
+                : THEME.LIGHT;
+        };
+
         const toggle = () => {
             document.documentElement.classList.toggle("dark");
-            localStorage.theme = document.documentElement.classList.contains(
-                "dark",
-            )
-                ? "dark"
-                : "light";
+            const theme = getTheme();
+            themeStore.set(theme);
+            localStorage.theme = theme;
         };
 
         node.addEventListener("click", toggle);
+
+        const theme = getTheme();
+        themeStore.set(theme);
+        localStorage.theme = theme;
 
         $effect(() => {
             return () => {
@@ -30,6 +39,7 @@
                 window.matchMedia("(prefers-color-scheme: dark)").matches)
         ) {
             document.documentElement.classList.add("dark");
+            themeStore.set(THEME.DARK);
         } else {
             document.documentElement.classList.remove("dark");
         }

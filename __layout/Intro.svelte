@@ -6,9 +6,10 @@
 
     import '../app.css';
     import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
-    import type { Snippet } from "svelte";
+    import {  type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
+    import PolarChart from "./components/PolarChart.svelte";
 
     type Props = {
       children: Snippet;
@@ -90,6 +91,24 @@
         <section class="markdown lg:col-span-2 lg:-order-1">
             {@render children()}
         </section>
+
+        <PolarChart data={{
+            labels: ['Management', 'Dev', 'Ops'],
+            datasets: [{
+              data: [83, 91, 67],
+              fill: true,
+              backgroundColor: 'rgba(13, 148, 136, 0.23)',
+              borderColor: 'rgb(13, 148, 136)',
+              pointBackgroundColor: 'rgb(13, 148, 136)',
+              pointBorderColor: '#fff'
+
+            }]
+          }}
+          scale={[53, 100]}
+
+        />
+
+
 
         <ul class="offers">
             {#each offers as offer}
