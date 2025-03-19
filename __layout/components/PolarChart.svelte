@@ -140,7 +140,15 @@
     div {
         position: relative;
         margin: auto;
-        width: var(--chart-width, 100%);
-        /* height: var(--chart-height, 100%); */
+        overflow: hidden;
+    }
+
+    canvas {
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
     }
 </style>
