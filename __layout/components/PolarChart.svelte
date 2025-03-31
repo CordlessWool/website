@@ -77,7 +77,7 @@
                         ...data,
                         datasets: data.datasets?.map((dataset: ChartData<TType, TData, TLabel>['datasets']) => ({
                             fill: true,
-                            backgroundColor: rgba($state.snapshot(primaryColor), 0.7),
+                            backgroundColor: rgba($state.snapshot(primaryColor), 0.5),
                             borderColor: $state.snapshot(primaryColor),
                             pointBackgroundColor: $state.snapshot(primaryColor),
                             pointBorderColor: $state.snapshot(backgroundColor),

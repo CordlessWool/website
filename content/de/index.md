@@ -20,6 +20,4 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-Ein Computer ist ein leistungsfähiges Werkzeug, um Ideen einfach und kostengünstig umzusetzen. Kein anderes Werkzeug ermöglicht einen so leichten Einstieg und bietet gleichzeitig so viele Möglichkeiten.
-
-Doch je tiefer man in diese Welt eintaucht, desto komplexer wird sie. Heute kann kaum jemand alle Facetten vollständig abdecken. Mein Ziel ist es, ein breites Wissen aufzubauen und interdisziplinär zu arbeiten – mit einem klaren Schwerpunkt auf Softwareentwicklung, der sich mit Management und Betrieb verzahnt.
+Schlechte Planung, vage Anforderungen oder Kommunikationsprobleme zwischen Technik und Management kosten Zeit und Geld. Ich helfe, genau das zu vermeiden – mit technischem Projektmanagement, das klare Entscheidungen fördert, Teams ausrichtet und Ergebnisse liefert. Ob es um den Start eines neuen Produkts oder die Optimierung interner Systeme geht: Mein Ansatz verbindet Struktur mit Flexibilität, um Projekte effizient und ohne unnötigen Ballast voranzutreiben.

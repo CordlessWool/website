@@ -20,6 +20,4 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-A computer is a powerful tool for bringing ideas to life easily and cost-effectively. No other tool offers such a simple entry point while providing so many possibilities.
-
-But the deeper you dive into this world, the more complex it becomes. Today, hardly anyone can cover all aspects entirely. My goal is to build broad expertise and work across disciplines – with a strong focus on software development that seamlessly integrates with management and operations.
+Poor planning, vague requirements, or miscommunication between tech and management waste time and money. I help prevent exactly that – with technical project management that drives clear decisions, aligns teams, and ensures delivery. Whether it's launching a new product or streamlining an internal system, my approach combines structure with flexibility to keep projects moving forward without unnecessary overhead.

@@ -1,10 +1,8 @@
 ---
 labels: ["Management", "Dev", "Ops"]
-data: [81, 93, 67]
+data: [81, 93, 71]
 tags:
   - radarchart
 ---
 
-Software development is more than just code – it requires a balance of development, management, and operations. My focus is on seamlessly integrating these areas to enhance team productivity, streamline processes, and ensure long-term, sustainable solutions.
-
-I take responsibility at the intersection of technology and strategy. With my experience in technical leadership, I ensure that software is not only technically sound but also economically viable and scalable. The result: robust solutions that drive businesses forward.
+With experience in software development, project management, and operations, I bridge the gap between business goals and technical execution. I work closely with stakeholders, developers, and product teams to turn abstract goals into concrete results. When timelines are tight or teams need support, I can step in hands-on to keep things moving and ensure operational continuity.
