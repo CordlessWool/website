@@ -34,3 +34,11 @@
         </ul>
     </main>
 </Base>
+
+
+<style lang="postcss">
+    li {
+        display: block;
+        page-break-inside: avoid;
+    }
+</style>

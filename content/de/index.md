@@ -1,14 +1,6 @@
 ---
-title: Über Wolfgang Rathgeb
-descriptions:
-  - Hi, ich bin freiberuflicher Software-Ingenieur
-  - Hi,
-  - Hi, meine Name ist Wolfgang Rathgeb
-  - Ich arbeite als Software-Ingenieur
-  - Ich arbeite manchmal auch als DevOps
-  - Ich arbeite freiberuflich
-  - Ich arbeite gern im Team
-  - Lass uns etwas kreieren
+title: Effizientes IT-Projektmanagement & Webentwicklung
+subtitle: Projekte erfolgreich steuern und umsetzen – mit technischem Know-how
 image: /images/wolfgang-rathgeb.webp
 alt: Der Author Wolfgang Rathgeb
 meta: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript/TypeScript Umfeld und habe ursprünglich technische Informatik studiert.

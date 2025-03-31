@@ -15,6 +15,8 @@
       children: Snippet;
       data: {
         title: string;
+        subtitle: string;
+        company: string;
         image: string;
         alt: string;
         descriptions: [string, ...string[]];
@@ -42,17 +44,22 @@
       };
     }
     const { data, children }: Props = $props();
-    const { image, alt, descriptions, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
+    const { title, subtitle, image, alt, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
 </script>
 
 <Base {data}>
     <main class="pad">
         <section class="teaser order-first">
-            <h2 class="typewriter md:m-10 md:ml-0 sm:mt-18 my-3 hyphens-auto min-h-36">
-                <TypeWriterQueue snippeds={descriptions} />
-            </h2>
+            <div class="typewriter md:m-5 md:ml-0 ">
+                <h1 class="">
+                    {title}
+                </h1>
+                <h2 class="hyphens-auto">
+                    {subtitle}
+                </h2>
+            </div>
 
-            <div class="justify-self-center self-center row-span-2">
+            <div class="justify-self-center self-center row-span-2 my-3 md:my-10">
                 <img
                     class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
                     sizes="400em, 600em, 100vw"
@@ -60,7 +67,7 @@
                     alt="{ alt }"
                 />
             </div>
-            <ul class="flex flex-row gap-4 sm:col-auto">
+            <ul class="flex flex-row gap-4 col-auto content-center justify-center md:justify-start">
                 {#each socials as social}
                     <li title="{ social.name }" class="social-icon">
                     <a href="{ social.link }" aria-label="{m.link_to()} { social.name }" target="_blank" rel="external">
@@ -133,7 +140,11 @@
 
     .teaser {
         @apply col-span-full;
-        @apply grid grid-cols-2 grid-flow-row mb-7 items-start justify-around w-full lg:max-w-5xl mx-auto;
+        @apply grid md:grid-cols-2 sm:grid-cols-1 grid-flow-row mb-7 items-start justify-around w-full lg:max-w-5xl mx-auto;
+
+        h1, h2 {
+            @apply md:text-left text-center
+        }
     }
 
     .offers {

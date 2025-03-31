@@ -1,14 +1,6 @@
 ---
-title: About Wolfgang Rathgeb
-descriptions:
-  - hi, I am a freelancing Software Engineer
-  - hi, I am
-  - Hi, I am Wolfgang Rathgeb
-  - I work as a Software Engineer
-  - I sometimes work as a DevOps
-  - I am freelancer
-  - I like to work in teams
-  - Let's create something together
+title: Efficient IT Project Management & Web Development
+subtitle: Successfully managing and delivering projects – with deep technical expertise
 image: /images/wolfgang-rathgeb.webp
 alt: The author Wolfgang Rathgeb
 meta: hi, my name is Wolfgang Rathgeb and I am a freelancing Software Engineer specialising in JavaScript / TypeScript. However, my original degree was in embedded systems.

@@ -53,7 +53,7 @@
 </script>
 
 <section class="my-7 py-3 grid grid-flow-row">
-    <header class="mb-3">
+    <header class="mb-3 block">
         <div class="flow items-center">
             <h2 class="m-0 inline-block">{project.name}</h2>
             {#if project["company-website"]}
