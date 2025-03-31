@@ -20,4 +20,6 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-Poor planning, vague requirements, or miscommunication between tech and management waste time and money. I help prevent exactly that – with technical project management that drives clear decisions, aligns teams, and ensures delivery. Whether it's launching a new product or streamlining an internal system, my approach combines structure with flexibility to keep projects moving forward without unnecessary overhead.
+Poor planning, vague requirements, or miscommunication between tech and management waste **time** and **money**. I help prevent exactly that – with technical **project management** that drives clear decisions, aligns teams, and ensures delivery.
+
+Whether it's launching a new product or streamlining an internal system, my approach combines structure with flexibility to keep projects moving forward without unnecessary overhead.

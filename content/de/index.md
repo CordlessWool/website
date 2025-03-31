@@ -20,4 +20,6 @@ experience: 2009-05-01
 layout: $layout/Intro.svelte
 ---
 
-Schlechte Planung, vage Anforderungen oder Kommunikationsprobleme zwischen Technik und Management kosten Zeit und Geld. Ich helfe, genau das zu vermeiden – mit technischem Projektmanagement, das klare Entscheidungen fördert, Teams ausrichtet und Ergebnisse liefert. Ob es um den Start eines neuen Produkts oder die Optimierung interner Systeme geht: Mein Ansatz verbindet Struktur mit Flexibilität, um Projekte effizient und ohne unnötigen Ballast voranzutreiben.
+Schlechte Planung, vage Anforderungen oder Kommunikationsprobleme zwischen Technik und Management kosten **Zeit** und **Geld**. Ich helfe, genau das zu vermeiden – mit technischem **Projektmanagement**, das klare Entscheidungen fördert, Teams ausrichtet und Ergebnisse liefert.
+
+Ob es um den Start eines neuen Produkts oder die Optimierung interner Systeme geht: Mein Ansatz verbindet Struktur mit Flexibilität, um Projekte effizient und ohne unnötigen Ballast voranzutreiben.
