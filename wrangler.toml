@@ -8,3 +8,6 @@ command = "pnpm run build"
 [site]
 bucket = "./dist/static"
 entry-point = "./"
+
+[assets]
+directory = "./dist/static"
