@@ -1,0 +1,10 @@
+name = "webiste"
+compatibility_date = "2025-04-03"
+type = "javascript"
+
+[build]
+command = "pnpm run build"
+
+[site]
+bucket = "./dist/static"
+entry-point = "./"
