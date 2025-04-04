@@ -1,9 +1,9 @@
-import { paraglide } from "@inlang/paraglide-vite";
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
 export default {
   source: "/content",
   plugins: [
-    paraglide({
+    paraglideVitePlugin({
       project: "./project.inlang", //Path to your inlang project
       outdir: "./__layout/lib/paraglide", //Where you want the generated files to be placed
     }),
