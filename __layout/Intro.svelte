@@ -4,7 +4,7 @@
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
 
-    import {  type Snippet } from "svelte";
+    import { type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
     import PolarChart from "./components/PolarChart.svelte";
