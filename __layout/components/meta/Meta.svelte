@@ -8,6 +8,7 @@
 
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     dl {
         @apply grid grid-flow-row grid-cols-2 gap-5 sm:text-nowrap;
     }

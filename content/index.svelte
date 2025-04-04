@@ -36,11 +36,13 @@
 </Base>
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
+
     main {
         @apply flex h-full flex-col items-center justify-center gap-3 p-3 md:p-7;
         @apply text-center;
         @apply flex-grow;
-        @apply max-w-screen-sm mx-auto;
+        @apply max-w-(--breakpoint-sm) mx-auto;
     }
 
     h2 {

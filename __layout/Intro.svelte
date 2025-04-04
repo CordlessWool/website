@@ -4,8 +4,6 @@
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
 
-    import '../app.css';
-    import TypeWriterQueue from "./components/TypeWriterQueue.svelte";
     import {  type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
@@ -133,9 +131,9 @@
 </Base>
 
 <style lang="postcss">
-
+    @reference "tailwindcss/theme";
     main {
-        @apply grid lg:grid-cols-5 gap-y-11 gap-x-20 max-w-screen-2xl mx-auto;
+        @apply grid lg:grid-cols-5 gap-y-11 gap-x-20 max-w-(--breakpoint-2xl) mx-auto;
     }
 
     .teaser {

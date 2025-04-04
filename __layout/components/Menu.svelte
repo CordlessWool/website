@@ -16,11 +16,11 @@
             class="flex flex-col justify-between w-[1.5rem] h-[1.5rem] transform transition-all duration-300 origin-center"
         >
             <div
-                class="bg-zinc-800 dark:bg-zinc-200 h-[3px] w-1/2 rounded transform transition-all duration-300 origin-right delay-75"
+                class="bg-zinc-800 dark:bg-zinc-200 h-[3px] w-1/2 rounded-sm transform transition-all duration-300 origin-right delay-75"
             ></div>
-            <div class="bg-zinc-800 dark:bg-zinc-200 h-[1px] rounded"></div>
+            <div class="bg-zinc-800 dark:bg-zinc-200 h-[1px] rounded-sm"></div>
             <div
-                class="bg-zinc-800 dark:bg-zinc-200 h-[3px] w-1/2 rounded self-end transform transition-all duration-300 origin-left delay-75"
+                class="bg-zinc-800 dark:bg-zinc-200 h-[3px] w-1/2 rounded-sm self-end transform transition-all duration-300 origin-left delay-75"
             ></div>
         </div>
     </button>
@@ -50,6 +50,7 @@
 </div>
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     button:not(.open) + .menu {
         @apply hidden md:flex;
     }

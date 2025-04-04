@@ -21,7 +21,7 @@
 </script>
 
 <Base {data}>
-    <main class="pad max-w-screen-lg mx-auto">
+    <main class="pad max-w-(--breakpoint-lg) mx-auto">
         <div class="border-b-2 pb-12 border-zinc-400">
             {@render children()}
         </div>

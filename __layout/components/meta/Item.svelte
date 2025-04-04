@@ -1,4 +1,6 @@
 <script lang="ts">
+    import type { Snippet } from "svelte";
+
     type Props = {
         label: string;
         content?: string | string[];
@@ -22,7 +24,7 @@
 </div>
 
 <style lang="postcss">
-
+    @reference "tailwindcss/theme";
     div {
         @apply flex flex-wrap gap-x-1 content-start;
     }
