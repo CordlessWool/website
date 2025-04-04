@@ -16,7 +16,7 @@
         <dd>{@render children()}</dd>
     {:else if typeof content === 'string'}
         <dd>{content}</dd>
-    {:else}
+    {:else if Array.isArray(content)}
         {#each content as item}
             <dd>{item}</dd>
         {/each}
@@ -34,7 +34,7 @@
     }
 
     dt {
-        @apply text-xs text-zinc-500 w-full;
+        @apply text-xs text-zinc-600 w-full;
     }
 
     .list dd {
@@ -42,7 +42,7 @@
     }
 
     dd {
-        @apply text-sm  text-zinc-700;
+        @apply text-sm  text-zinc-800;
         @apply after:content-[',_'] last-of-type:after:content-[''];
     }
 
