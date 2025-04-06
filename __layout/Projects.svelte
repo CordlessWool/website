@@ -8,6 +8,7 @@
     type Props = {
         data: {
             locale: string;
+            company: string;
             title: string;
             meta: string;
             projects: Project[];
@@ -37,6 +38,9 @@
 
 
 <style lang="postcss">
+    main {
+        margin: 0 auto;
+    }
     li {
         display: block;
         page-break-inside: avoid;
