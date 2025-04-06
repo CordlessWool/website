@@ -5,5 +5,5 @@ type = "javascript"
 [build]
 command = "pnpm run build"
 
-[assets]
-directory = "./dist/static"
+[site]
+bucket = "./dist/static
