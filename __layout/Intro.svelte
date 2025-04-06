@@ -39,6 +39,11 @@
         }[];
         preferred_roles: string[];
         email: string;
+        radarcharts: {
+          labels: string[],
+          data: number[],
+          html: string
+          }[]
       };
     }
     const { data, children }: Props = $props();
