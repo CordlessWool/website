@@ -1,4 +1,4 @@
-name = "webiste"
+name="website"
 compatibility_date = "2025-04-03"
 type = "javascript"
 
@@ -6,4 +6,4 @@ type = "javascript"
 command = "pnpm run build"
 
 [site]
-bucket = "./dist/static
+bucket="./dist/static"
