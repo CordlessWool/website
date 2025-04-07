@@ -8,7 +8,7 @@ name: Wolfgang Rathgeb
 role: Freiberufler
 degree: Master of Engineering
 location: Berlin, Moabit
-email: W.Rathgeb@dropanote.de
+email: wr@dropanote.de
 preferred_roles:
   - Teamleitung
   - Projektmanagement
