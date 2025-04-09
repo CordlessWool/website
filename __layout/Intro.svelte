@@ -17,7 +17,6 @@
         company: string;
         image: string;
         alt: string;
-        descriptions: [string, ...string[]];
         name: string;
         role: string;
         degree: string;

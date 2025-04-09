@@ -19,7 +19,7 @@
     };
 
     const { data, children, light }: Props = $props();
-    const { locale, title, company } = $state(data);
+    const { locale, title, page_title } = $state(data);
 </script>
 
 <svelte:head>
@@ -29,9 +29,9 @@
 </svelte:head>
 
 {#if light}
-    <HeaderSmall {company} />
+    <HeaderSmall {page_title} />
 {:else}
-    <Header {locale} {company} />
+    <Header {locale} {page_title} />
 {/if}
 
     {@render children()}

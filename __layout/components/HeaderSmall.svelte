@@ -1,7 +1,7 @@
 <script lang="ts">
     import ToogleTheme from "./ToggleTheme.svelte";
 
-    const { company } = $props();
+    const { page_title } = $props();
 </script>
 
 <nav
@@ -9,7 +9,7 @@
     aria-label="main navigation"
 >
     <div class="text-xl grow font-bold my-3">
-        {company}
+        {page_title}
     </div>
     <ul class="flex text-xl items-center">
         <li aria-label="button" class="light clickable button">
