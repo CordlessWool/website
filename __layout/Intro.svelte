@@ -66,6 +66,8 @@
                 <Image
                     class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    height="2000"
+                    width="2000"
                     images={ image }
                     alt={ alt }
                 />

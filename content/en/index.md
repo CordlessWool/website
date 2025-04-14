@@ -1,7 +1,7 @@
 ---
 title: Efficient IT Project Management & Web Development
 subtitle: Successfully managing and delivering projects – with deep technical expertise
-image: $assets/wolfgang-rathgeb.jpeg
+image: $assets/wolfgang-rathgeb2.jpeg
 alt: The author Wolfgang Rathgeb
 meta: hi, my name is Wolfgang Rathgeb and I am a freelancing Software Engineer specialising in JavaScript / TypeScript. However, my original degree was in embedded systems.
 name: Wolfgang Rathgeb
