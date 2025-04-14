@@ -3,6 +3,7 @@
     import { Meta, Item } from "./components/meta";
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
+    import Image from 'embodi/Image.svelte';
 
     import {  type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
@@ -61,12 +62,12 @@
                 </h2>
             </div>
 
-            <div class="justify-self-center self-center row-span-2 my-3 md:my-10">
-                <img
+            <div class="justify-self-center self-center row-span-2 my-3">
+                <Image
                     class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
-                    sizes="400em, 600em, 100vw"
-                    src={ image }
-                    alt="{ alt }"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    images={ image }
+                    alt={ alt }
                 />
             </div>
             <ul class="flex flex-row gap-4 col-auto content-center justify-center md:justify-start">

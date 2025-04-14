@@ -1,7 +1,7 @@
 ---
 title: Effizientes IT-Projektmanagement & Webentwicklung
 subtitle: Projekte erfolgreich steuern und umsetzen – mit technischem Know-how
-image: /images/wolfgang-rathgeb.webp
+image: $assets/wolfgang-rathgeb.jpeg
 alt: Der Author Wolfgang Rathgeb
 meta: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript/TypeScript Umfeld und habe ursprünglich technische Informatik studiert.
 name: Wolfgang Rathgeb
