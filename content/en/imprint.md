@@ -1,8 +1,9 @@
 ---
 layout: $layout2/markdownOnly
+title: Imprint
 ---
 
-# Impressum
+# Imprint
 
 Wolfgang Rathgeb\
 Siemensstr. 14\

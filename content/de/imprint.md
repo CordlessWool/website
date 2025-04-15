@@ -1,5 +1,6 @@
 ---
 layout: $layout2/markdownOnly
+title: Impressum
 ---
 
 # Impressum
