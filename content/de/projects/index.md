@@ -7,7 +7,7 @@ format:
     options:
       year: "numeric"
       month: "short"
-layout: $layout/Projects.svelte
+layout: $layout2/projects
 ---
 
 Hier finden Sie eine Liste meiner Projekte, die ich in den vergangenen Jahren umgesetzt habe. Dabei handelt es sich um eine Mischung aus privaten, beruflichen und Studienprojekten.

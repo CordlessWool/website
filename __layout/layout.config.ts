@@ -53,4 +53,9 @@ const intro = defineLayout({
     }),
 });
 
-export const layouts = { intro };
+const projects = defineLayout({
+  component: "./Projects.svelte",
+  schema: ({ v }) => v.record(v.string(), v.any()),
+});
+
+export const layouts = { intro, projects };
