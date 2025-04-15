@@ -17,7 +17,7 @@ preferred_techs:
   - TypeScript
   - Vite/Rollup
 experience: 2009-05-01
-layout: $layout/Intro.svelte
+layout: $layout2/intro
 ---
 
 Schlechte Planung, vage Anforderungen oder Kommunikationsprobleme zwischen Technik und Management kosten **Zeit** und **Geld**. Ich helfe, genau das zu vermeiden – mit technischem **Projektmanagement**, das klare Entscheidungen fördert, Teams ausrichtet und Ergebnisse liefert.
