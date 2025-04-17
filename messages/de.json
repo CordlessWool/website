@@ -1,6 +1,7 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "Intro",
+  "blog": "Blog",
   "skills": "Fähigkeiten",
   "projects": "Projekte",
   "since": "seit",
