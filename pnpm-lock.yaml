@@ -24,8 +24,8 @@ importers:
         specifier: ^4.4.8
         version: 4.4.8
       embodi:
-        specifier: 0.11.6
-        version: 0.11.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.26.3)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+        specifier: 0.11.8
+        version: 0.11.8(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.26.3)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
@@ -1071,8 +1071,8 @@ packages:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
 
-  embodi@0.11.6:
-    resolution: {integrity: sha512-6xPA6QlkPNGN5zUldMQ0Qerq19VckhA1P9D2mrSdT/VvEVcXmEqj9JfvFd37mLd/Q8Xpm5OtNey3UQrMnLuQRw==}
+  embodi@0.11.8:
+    resolution: {integrity: sha512-+JxhbIt4TC9FRNML9MJ7+r75IcMkpJPJOThI3ZS5kxQkUdD07W4xLlAD4XTQAeeVICALNG1zifgs4ziWIj8yjw==}
     hasBin: true
     peerDependencies:
       svelte: ^5.23.0
@@ -2408,7 +2408,7 @@ snapshots:
 
   detect-libc@2.0.3: {}
 
-  embodi@0.11.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.26.3)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
+  embodi@0.11.8(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.26.3)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
       '@loom-io/converter': 0.12.11(@loom-io/core@0.12.11)
       '@loom-io/core': 0.12.11
