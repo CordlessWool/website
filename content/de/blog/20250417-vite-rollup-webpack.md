@@ -93,12 +93,12 @@ export default defineConfig({
 
 ## Für Libraries: [tsup](https://tsup.egoist.dev) als leichtgewichtige Lösung
 
-Nicht jedes Projekt braucht ein komplexes Setup. Für kleinere TypeScript-Packages oder Tools reicht oft ein simpler Bundler – wie [`[tsup](https://tsup.egoist.dev)`](<https://[tsup](https://tsup.egoist.dev).egoist.dev/>).
+Nicht jedes Projekt braucht ein komplexes Setup. Für kleinere TypeScript-Packages oder Tools reicht oft ein simpler Bundler – wie [tsup](https://tsup.egoist.dev).
 
 Mit einem einzigen Befehl lässt sich ein modernes Package inkl. Typdefinitionen erzeugen:
 
 ```bash
-npx [tsup](https://tsup.egoist.dev) src/index.ts --format esm,cjs --dts
+npx tsup src/index.ts --format esm,cjs --dts
 ```
 
 [tsup](https://tsup.egoist.dev) basiert auf esbuild, ist blitzschnell und benötigt kaum Konfiguration – ideal für Libraries, die schnell in Produktion gehen sollen.
@@ -135,8 +135,8 @@ Das bedeutet:
 
 Vite und Rollup haben sich als moderne Alternativen zu Webpack etabliert – mit klaren Vorteilen für Performance, Wartbarkeit und Entwicklerfreundlichkeit. Beide Tools bauen aufeinander auf, ergänzen sich gut und ermöglichen Teams, Build-Prozesse gezielt an ihre Anforderungen anzupassen.
 
-- **Vite** überzeugt durch schnelle Entwicklung und einfache Konfiguration
-- **Rollup** bietet maximale Kontrolle für komplexe Build-Setups
+- **[Vite](https://vitejs.dev)** überzeugt durch schnelle Entwicklung und einfache Konfiguration
+- **[Rollup](https://rollupjs.org)** bietet maximale Kontrolle für komplexe Build-Setups
 - **[tsup](https://tsup.egoist.dev)** ist ideal für kleine bis mittlere TypeScript-Libraries
 
 **Wer heute noch mit Webpack arbeitet, verschenkt oft Zeit, Übersicht und Zufriedenheit im Team.**

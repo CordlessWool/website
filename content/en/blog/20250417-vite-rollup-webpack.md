@@ -134,14 +134,14 @@ According to the [Rolldown documentation](https://rolldown.rs/guide/), the bundl
 
 Vite and Rollup have established themselves as modern alternatives to Webpack – with clear benefits for performance, maintainability and developer happiness. They complement each other and let teams tailor their build process precisely to their needs.
 
-- **Vite** – rapid development and minimal configuration
-- **Rollup** – maximum control for complex builds
-- **tsup** – perfect for small to medium TypeScript libraries
+- **[Vite](https://vitejs.dev)** – rapid development and minimal configuration
+- **[Rollup](https://rollupjs.org)** – maximum control for complex builds
+- **[tsup](https://tsup.egoist.dev)** – perfect for small to medium TypeScript libraries
 
 Teams still using Webpack often waste time, clarity and team morale – and with Rolldown on the horizon, the toolchain could become even faster and more unified.
 
 ---
 
-Do you plan to migrate to Vite or Rollup, need plugin development support, or want to modernise an outdated set‑up?
+**Do you plan to migrate to Vite or Rollup, need plugin development support, or want to modernise an outdated set‑up?**
 
 → _Feel free to reach out – I help teams with migrations, tooling strategies and bespoke build solutions._
