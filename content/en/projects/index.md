@@ -1,12 +1,6 @@
 ---
 title: Projects
 meta: Beside my freelancing work I doing some project by my own, here you will find a list of all my projects.
-format:
-  date:
-    locale: "en-GB"
-    options:
-      year: "numeric"
-      month: "numeric"
 layout: $layout2/projects
 ---
 

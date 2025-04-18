@@ -27,7 +27,7 @@
     <ul
         class="menu text-xl md:text-base gap-y-7 items-center flex-col md:flex-row md:divide-y-0 absolute justify-center md:justify-end md:relative top-0 right-0 h-full w-full bg-teal-400 dark:bg-teal-600 md:bg-inherit md:dark:bg-inherit"
     >
-        {#each [[m.about(), ""], [m.projects(), "/projects"]] as [text, link]}
+        {#each [[m.about(), ""], [m.projects(), "/projects"], [m.blog(), "/blog"]] as [text, link]}
             {#if (link === "" && ($page.url === `/${locale}` || $page.url === `/${locale}/`)) || (`/${locale}${link}/` === $page.url && link != "")}
                 <li>
                     <span

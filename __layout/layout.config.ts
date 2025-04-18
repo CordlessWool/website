@@ -63,4 +63,20 @@ const markdownOnly = defineLayout({
   schema: ({ v }) => v.record(v.string(), v.any()),
 });
 
-export const layouts = { intro, projects, markdownOnly };
+const blogOverview = defineLayout({
+  component: "./BlogOverview.svelte",
+  schema: ({ v }) => v.record(v.string(), v.any()),
+});
+
+const blogPost = defineLayout({
+  component: "./BlogPost.svelte",
+  schema: ({ v }) => v.record(v.string(), v.any()),
+});
+
+export const layouts = {
+  intro,
+  projects,
+  markdownOnly,
+  blogOverview,
+  blogPost,
+};

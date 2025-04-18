@@ -1,2 +1,7 @@
 locale: de
-page_title: Wolfgang Rathgeb
+format:
+  date:
+    locale: "de-DE"
+    options:
+      year: "numeric"
+      month: "short"

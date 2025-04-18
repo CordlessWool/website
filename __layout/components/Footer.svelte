@@ -1,7 +1,6 @@
 <script lang="ts">
     import * as m from "../lib/paraglide/messages.js";
     const currentYear = new Date().getFullYear();
-
     const { locale } = $props();
 </script>
 
@@ -30,8 +29,8 @@
             >
         </a>
     </li>
-    <li class="light clickable button"><a href="/de">DE</a></li>
-    <li class="light clickable button"><a href="/en">EN</a></li>
+    <li class="light clickable button"><a hreflang="de" href="/de">DE</a></li>
+    <li class="light clickable button"><a hreflang="en" href="/en">EN</a></li>
     <li class="light clickable button">
         <a href="/{locale}/imprint/">{m.imprint()}</a>
     </li>

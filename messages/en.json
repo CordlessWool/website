@@ -1,6 +1,7 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "Intro",
+  "blog": "Blog",
   "skills": "Skills",
   "projects": "Projects",
   "since": "since",
@@ -25,5 +26,6 @@
   "link_to": "Link to",
   "freelancermap_title": "Profile of Wolfgang Rathgeb on www.freelancermap.de",
   "write_more": "write more",
-  "schedule_call": "Schedule a call"
+  "schedule_call": "Schedule a call",
+  "blog_post_overview": "Blog Overview"
 }
