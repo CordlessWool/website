@@ -11,11 +11,14 @@
 
 <Base {data}>
     <main class="markdown">
-        <a class="!text-zinc-500 dark:!text-zinc-400 text-md" href="/{data.locale}/blog"><ChevronLeft class="inline" />{m.blog_post_overview()}</a>
-        <header class="mb-11 pb-3 border-b-2 border-zinc-300 dark:border-zinc-600">
-            <h1 class="!mb-0">{data.title}</h1>
-            <p class="publish-date !mt-0">Published on: {formatDate(data.published)}</p>
-        </header>
+                <header class="mb-11 pb-3 border-b-2 border-zinc-300 dark:border-zinc-600 flex flex-col md:flex-row md:items-center md:justify-between">
+                    <a class="flex items-center text-md !text-zinc-500 dark:!text-zinc-400" href="/{data.locale}/blog">
+                        <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
+                    </a>
+                    <div class="mt-2 md:mt-0 text-sm text-gray-600 dark:text-gray-400">
+                        <span>Published on: {formatDate(data.published)}</span>
+                    </div>
+                </header>
         {#if data.updated}
             <p class="update-date">Updated on: {formatDate(data.updated)}</p>
         {/if}

@@ -14,6 +14,15 @@ tags:
   - blog
 ---
 
+# Vite und Rollup verstehen – moderne Toolchains mit Zukunft
+
+Vite hat sich in den letzten Jahren zu einem der beliebtesten Build‑Tools im Frontend‑Ökosystem entwickelt. Besonders im Vergleich zu Webpack oder klassischen Rollup‑Set‑ups verspricht Vite kürzere Entwicklungszyklen, weniger Konfiguration – und eine angenehm moderne Entwickler‑Erfahrung.
+Wenn du nach **Vite vs Webpack** suchst, findest du hier die wichtigsten Fakten.
+
+Doch wie schlagen sich Vite und Rollup im Alltag? Was unterscheidet sie wirklich – und wo liegen ihre Stärken im Vergleich zu Webpack, das in vielen Unternehmen immer noch der Standard ist?
+
+---
+
 ## Vite & Rollup – zwei Tools, eine gemeinsame Basis
 
 **[Vite](https://vitejs.dev)** richtet sich an moderne Frontend-Projekte, bei denen kurze Entwicklungszyklen, Hot Reloading und geringe Einstiegshürden im Fokus stehen. Es basiert auf zwei leistungsstarken Bausteinen:
