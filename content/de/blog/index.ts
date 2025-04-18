@@ -1,7 +1,6 @@
 import { collections } from "$embodi/collections?locale=de&only=blog";
 
 export const load = ({ data }) => {
-  console.log({ collections: collections[0].data });
   const posts = collections.map((posts) => {
     return {
       title: posts.data.title,
