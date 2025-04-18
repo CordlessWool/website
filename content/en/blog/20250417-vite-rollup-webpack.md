@@ -1,8 +1,17 @@
 ---
-meta-title: Vite vs Webpack – Modern Toolchain with Rollup and an Outlook on Rolldown
-meta-description: Why Vite and Rollup are replacing Webpack – performance, developer experience, migration tips and a look at Rolldown.
-keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build Tools, JavaScript Bundler, tsup, Migration, Developer Experience
-canonical: https://example.com/blog/vite-vs-webpack-rollup
+title: Vite vs Webpack – Modern Toolchain with Rollup and an Outlook on Rolldown
+description: Why Vite and Rollup are replacing Webpack – performance, developer experience, migration tips and a look at Rolldown.
+meta:
+  keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build Tools, JavaScript Bundler, tsup, Migration, Developer Experienc
+published: 2025-05-17
+layout: $layout2/blogPost
+tags:
+  - vite
+  - webpack
+  - rollup
+  - bundler
+  - build-tools
+  - blog
 ---
 
 # Understanding Vite and Rollup – Modern Toolchains with a Future

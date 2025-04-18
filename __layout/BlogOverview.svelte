@@ -1,5 +1,6 @@
 <script>
     import Base from "./components/Base.svelte";
+    import BlogPostTile from "./components/BlogPostTile.svelte";
 
 
 
@@ -8,17 +9,12 @@
 
 <Base {data}>
     <main class="pad max-w-(--breakpoint-lg) mx-auto">
-        <div class="border-b-2 pb-12 border-zinc-400">
+        <div class=" pb-12 ">
             {@render children()}
         </div>
-        <ul class="divide-y-2 div divide-zinc-400 print:divide-y-0">
-            {#each data.posts as item}
-                <a href={item.url}>
-                    <li class="py-4">
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </li>
-                </a>
+        <ul class="print:divide-y-0">
+            {#each data.posts as post}
+                <BlogPostTile {...post} format={data.format} />
             {/each}
         </ul>
     </main>

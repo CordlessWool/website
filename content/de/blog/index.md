@@ -1,7 +1,10 @@
 ---
 layout: $layout2/blogOverview
+meta:
+  title: Softwareentwicklung, Technologie und modernes IT-Management
+  description: Persönliche Erfahrungen und Einblicke zu Softwareentwicklung, aktuellen Technologietrends und modernen IT-Management-Ansätzen.
 ---
 
-# Software und IT-Management
+# Softwareentwicklung, Technologie und modernes IT-Management
 
-Im Altag stößt man auf eine Vielzahl von Herausforderungen. Hier gebe ich einen Enblick in Themen die mich oft beschäftigen und mit denen ich mich auseinander gesetzt habe.
+Im Alltag begegne ich immer wieder neuen technischen und organisatorischen Herausforderungen. Hier teile ich persönliche Erfahrungen, gebe Einblicke in Technologien, die mich begeistern, und reflektiere über Ansätze, die gutes IT-Management in der Praxis ermöglichen.

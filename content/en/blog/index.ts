@@ -1,4 +1,4 @@
-import { collections } from "$embodi/collections?locale=de&only=blog";
+import { collections } from "$embodi/collections?locale=en&only=blog";
 
 export const load = ({ data }) => {
   console.log({ collections: collections[0].data });

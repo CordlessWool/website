@@ -38,14 +38,11 @@ body {
 
 main {
     @apply px-3 md:px-7 lg:px-11;
+    @apply mx-auto;
 }
 
 header {
     @apply print:hidden;
-}
-
-main {
-    @apply mx-2 md:mx-16 sm:mx-8 lg:mx-24;
 }
 
 footer {
@@ -101,12 +98,12 @@ small {
 }
 
 .markdown a {
-    @apply text-teal-800 dark:text-teal-300;
+    @apply text-teal-800 dark:text-teal-300 transition-colors duration-200;
 }
 
 .markdown a:hover,
 .markdown a:focus {
-    @apply underline;
+    @apply underline underline-offset-4;
 }
 
 .markdown p {

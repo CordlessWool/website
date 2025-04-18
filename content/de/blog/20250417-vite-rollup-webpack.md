@@ -3,9 +3,8 @@ title: Vite vs Webpack – Moderne Toolchain mit Rollup und Ausblick auf Rolldow
 description: Warum Vite und Rollup Webpack ablösen – Performance, Developer Experience, Migrationstipps und ein Blick auf Rolldown.
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build-Tools, JavaScript Bundler, tsup, Migration, Developer Experience
-  canonical: https://dropanote.de/blog/20250517-vite-webpack-rollup
 published: 2025-05-17
-layout: $layout2/markdownOnly
+layout: $layout2/blogPost
 tags:
   - vite
   - webpack
