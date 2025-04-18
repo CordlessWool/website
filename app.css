@@ -94,7 +94,7 @@ small {
  */
 
 .markdown {
-    @apply hyphens-auto max-w-5xl;
+    @apply hyphens-auto;
 }
 
 .markdown a {

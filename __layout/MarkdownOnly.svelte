@@ -4,7 +4,7 @@
 </script>
 
 <Base {data}>
-    <main class="markdown">
+    <main class="markdown max-w-4xl w-full">
         {@render children()}
     </main>
 </Base>
