@@ -11,7 +11,9 @@
     aria-label="main navigation"
 >
     <div class="text-xl grow font-bold my-3">
-        {page_title}
+        <a href="/{locale}/">
+            {page_title}
+        </a>
     </div>
     <ul class="flex text-xl items-center">
         <li aria-label="button" class="light clickable button">

@@ -111,7 +111,7 @@
                   data: [...r.data],
                 }]
               }}
-              scale={[53, 100]}
+              scale={[40, 100]}
             />
             <section class="markdown lg:col-span-3 -my-5">
                 {@html r.html}
