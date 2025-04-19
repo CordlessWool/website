@@ -12,10 +12,10 @@
 <Base {data}>
     <main>
         <header>
-            <a class="flex items-center text-md !text-zinc-500 dark:!text-zinc-400" href="/{data.locale}/blog">
+            <a class="flex items-center text-md !text-zinc-600 dark:!text-zinc-400" href="/{data.locale}/blog">
                 <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
             </a>
-            <div class="text-sm text-gray-600 dark:text-gray-400 justify-self-end">
+            <div class="text-sm text-zinc-600 dark:text-zinc-400 justify-self-end">
                 <span>Published on: {formatDate(data.published)}</span>
                 {#if data.updated}
                     <span class="update-date">Updated on: {formatDate(data.updated)}</span>
