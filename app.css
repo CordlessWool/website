@@ -1,6 +1,6 @@
 @import "tailwindcss";
-
-@config './tailwind.config.js';
+@import "./font.css";
+@config "./tailwind.config.js";
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -21,8 +21,7 @@
 }
 
 :root {
-    font-family: "Courier New", ui-monospace, monospace;
-    @apply text-lg;
+    font-family: "Source Code Pro", ui-monospace, monospace;
     @apply bg-zinc-100 text-zinc-800;
     @apply dark:bg-zinc-800 dark:text-zinc-200;
     @apply leading-relaxed;
