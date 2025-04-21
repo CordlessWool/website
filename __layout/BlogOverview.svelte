@@ -8,8 +8,8 @@
 </script>
 
 <Base {data}>
-    <main class="pad max-w-(--breakpoint-lg) mx-auto">
-        <div class=" pb-12 ">
+    <main>
+        <div class="pb-12">
             {@render children()}
         </div>
         <ul class="print:divide-y-0">
@@ -24,16 +24,10 @@
 <style lang="postcss">
     @reference "tailwindcss/theme";
     main {
-        margin: 0 auto;
+        @apply mx-auto max-w-7xl;
     }
-    li {
-        display: block;
-        page-break-inside: avoid;
+    ul {
+        @apply grid lg:grid-cols-2 gap-4;
     }
 
-    h2 {
-        @apply text-lg;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
 </style>
