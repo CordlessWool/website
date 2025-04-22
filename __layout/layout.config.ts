@@ -26,7 +26,7 @@ const intro = defineLayout({
       preferred_techs: v.array(v.string()),
       preferred_roles: v.array(v.string()),
       locale: v.string(),
-      meta: v.string(),
+      meta: v.record(v.string(), v.any()),
       socials: v.array(
         v.object({
           name: v.string(),

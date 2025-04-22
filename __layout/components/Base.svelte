@@ -48,14 +48,14 @@
       return data.meta ? data.meta[tag] : undefined;
     }
 
-    const getLanguageLink = (link: string, lang: string) => link.replace(/^\/(en|de)\//, `/${lang}/`);
+    const getLanguageLink = (link: string, lang: string) => new URL(link.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
 
 </script>
 
 <svelte:head>
     <title>{getMeta('title')}</title>
-    <link rel="alternate" href={getLanguageLink($page.url, 'en')} hreflang="en" />
-    <link rel="alternate" href={getLanguageLink($page.url, 'de')} hreflang="de" />
+    <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
+    <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
     {#if hasMeta('description')}
         <meta name="description" content={getMeta('description')} />
     {/if}

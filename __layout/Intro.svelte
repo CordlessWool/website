@@ -25,7 +25,7 @@
         experience: string;
         preferred_techs: string[];
         locale: string;
-        meta: string;
+        meta: Record<string, any>;
         socials: {
           name: string;
           link: string;
