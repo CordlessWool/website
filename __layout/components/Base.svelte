@@ -1,6 +1,7 @@
 <script lang="ts">
     import Header from "./Header.svelte";
     import HeaderSmall from "./HeaderSmall.svelte";
+    import { page } from '$embodi/stores';
 
     import Footer from "./Footer.svelte";
 
@@ -46,10 +47,15 @@
       }
       return data.meta ? data.meta[tag] : undefined;
     }
+
+    const getLanguageLink = (link: string, lang: string) => link.replace(/^\/(en|de)\//, `/${lang}/`);
+
 </script>
 
 <svelte:head>
     <title>{getMeta('title')}</title>
+    <link rel="alternate" href={getLanguageLink($page.url, 'en')} hreflang="en" />
+    <link rel="alternate" href={getLanguageLink($page.url, 'de')} hreflang="de" />
     {#if hasMeta('description')}
         <meta name="description" content={getMeta('description')} />
     {/if}
