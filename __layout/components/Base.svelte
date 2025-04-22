@@ -62,6 +62,7 @@
     {#if hasMeta('keywords')}
         <meta name="keywords" content={getMeta('keywords')} />
     {/if}
+    <script defer src="https://umami.dropanote.de/script.js" data-website-id="70e54aec-eeb9-4399-8970-484c57461414"></script>
     <!-- <link rel="stylesheet" href='../../app.css'> -->
 </svelte:head>
 
