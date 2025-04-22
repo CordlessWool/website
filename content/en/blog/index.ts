@@ -2,7 +2,7 @@ import { collections } from "$embodi/collections?locale=en&only=blog";
 
 export const load = ({ data }) => {
   const posts = collections
-    .filter((post) => post.data.published !== null)
+    .filter((post) => post.data.published != null)
     .map((posts) => {
       return {
         title: posts.data.title,

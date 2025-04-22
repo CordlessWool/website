@@ -1,7 +1,7 @@
 /* Regular Weight */
 @font-face {
     font-family: "Source Code Pro";
-    src: url("/fonts/source-code-pro/SourceCodePro-Regular.otf.woff2")
+    src: url("/fonts/source-code-pro/subset-SourceCodePro-Regular.woff2")
         format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -19,7 +19,7 @@
 /* Bold Weight */
 @font-face {
     font-family: "Source Code Pro";
-    src: url("/fonts/source-code-pro/SourceCodePro-Semibold.otf.woff2")
+    src: url("/fonts/source-code-pro/subset-SourceCodePro-Semibold.woff2")
         format("woff2");
     font-weight: bold;
     font-style: normal;
@@ -29,7 +29,7 @@
 /* Italic Style */
 @font-face {
     font-family: "Source Code Pro";
-    src: url("/fonts/source-code-pro/SourceCodePro-It.otf.woff2")
+    src: url("/fonts/source-code-pro/subset-SourceCodePro-It.woff2")
         format("woff2");
     font-weight: normal;
     font-style: italic;
@@ -47,7 +47,7 @@
 /* Bold Italic Style */
 @font-face {
     font-family: "Source Code Pro";
-    src: url("/fonts/source-code-pro/SourceCodePro-SemiboldIt.otf.woff2")
+    src: url("/fonts/source-code-pro/subset-SourceCodePro-SemiboldIt.woff2")
         format("woff2");
     font-weight: bold;
     font-style: italic;
