@@ -1,6 +1,7 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
     import ProjectTile, {type Project, type Format} from "./components/ProjectTile.svelte";
+    import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
 
 
@@ -26,23 +27,20 @@
         <div class="border-b-2 pb-12 border-zinc-400">
             {@render children()}
         </div>
-        <ul class="divide-y-2 div divide-zinc-400 print:divide-y-0">
+        <Timeline>
             {#each data.projects as item}
-                <li class="py-4">
+                <TimeItem time={item.start || item.date}>
                     <ProjectTile project={item} format={data.format} />
-                </li>
+                </TimeItem>
             {/each}
-        </ul>
+        </Timeline>
     </main>
 </Base>
 
 
 <style lang="postcss">
+    @reference "tailwindcss/theme";
     main {
-        margin: 0 auto;
-    }
-    li {
-        display: block;
-        page-break-inside: avoid;
+        @apply mx-auto;
     }
 </style>
