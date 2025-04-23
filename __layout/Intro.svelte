@@ -51,7 +51,7 @@
 </script>
 
 <Base {data}>
-    <main class="pad">
+    <main>
         <section class="teaser order-first">
             <div class="typewriter md:m-5 md:ml-0 ">
                 <h1 class="">
@@ -64,6 +64,7 @@
 
             <div class="justify-self-center self-center row-span-2 my-3">
                 <Image
+                    fetchpriority="high"
                     class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     height="2000"

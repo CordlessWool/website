@@ -10,7 +10,6 @@
     "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
   },
   "devDependencies": {
-    "@calcom/embed-react": "^1.5.2",
     "@inlang/paraglide-js": "2.0.10",
     "@tailwindcss/postcss": "^4.1.4",
     "@tailwindcss/vite": "^4.1.4",
