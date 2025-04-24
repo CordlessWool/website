@@ -1,5 +1,6 @@
 <script lang="ts">
-    const { children, ...props } = $props();
+
+    const { children,...props } = $props();
 </script>
 
 <dl {...props}>
@@ -10,6 +11,6 @@
 <style lang="postcss">
     @reference "tailwindcss/theme";
     dl {
-        @apply grid grid-flow-row grid-cols-2 gap-5 sm:text-nowrap;
+        @apply grid grid-flow-row grid-cols-2 gap-3 sm:text-nowrap;
     }
 </style>
