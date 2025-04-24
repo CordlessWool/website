@@ -12,8 +12,6 @@ frameworks:
 databases:
   - Apache Cassandra
   - Redis
-tools:
-
 others:
   - here maps API
   - Linux Server
