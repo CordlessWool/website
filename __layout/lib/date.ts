@@ -6,3 +6,8 @@ export const age = (date: Date | string) => {
 
   return Math.abs(age.getUTCFullYear() - 1970);
 };
+
+export type DateFormatDefinition = {
+  locale: string;
+  options: Intl.DateTimeFormatOptions;
+};

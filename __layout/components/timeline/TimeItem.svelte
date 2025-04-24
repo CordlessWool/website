@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
     import { CheckCheck } from 'lucide-svelte';
+    import type { DateFormatDefinition } from "__layout/lib/date";
 
     type Props = {
         time:
@@ -9,12 +10,7 @@
                   start: Date;
                   end: Date;
               };
-        format: {
-            date: {
-              locale: string;
-              options: Intl.DateTimeFormatOptions;
-            };
-        }
+        format: DateFormatDefinition;
         children: Snippet;
         minor?: Snippet;
     };
@@ -24,7 +20,7 @@
     const formatDate = (date: Date | string | { start: Date, end: Date }): string => {
       if(typeof date === 'string' || date instanceof Date) {
         date = new Date(date);
-        return date.toLocaleDateString(format.date.locale, format.date.options);
+        return date.toLocaleDateString(format.locale, format.options);
       } else {
         return `${formatDate(date.start)} - ${formatDate(date.end)}`
       }

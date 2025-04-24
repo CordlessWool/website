@@ -4,6 +4,7 @@
     import ProjectMain, { type Project } from "./components/ProjectMain.svelte";
     import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
+    import type { DateFormatDefinition } from "./lib/date";
 
 
 
@@ -14,7 +15,9 @@
             title: string;
             meta: string;
             projects: Project[];
-            format: Format;
+            format: {
+                date: DateFormatDefinition
+            };
             [x: string]: unknown;
         }
         children: Snippet
@@ -39,7 +42,7 @@
         </div>
         <Timeline>
             {#each data.projects as item}
-                <TimeItem time={dateFromProject(item)} format={data.format} >
+                <TimeItem time={dateFromProject(item)} format={data.format.date} >
                     <ProjectMain project={item}/>
                     {#snippet minor()}
                         <ProjectMinor project={item} />
