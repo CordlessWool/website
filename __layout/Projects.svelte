@@ -1,6 +1,7 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
-    import ProjectTile, {type Project, type Format} from "./components/ProjectTile.svelte";
+    import ProjectMinor from "./components/ProjectMinor.svelte";
+    import ProjectMain, { type Project } from "./components/ProjectMain.svelte";
     import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
 
@@ -20,17 +21,29 @@
     };
 
     const { data, children }: Props = $props();
+
+    const dateFromProject = (project: { start: Date, end: Date, date: Date }) => {
+      const { start, end, date } = project;
+      if( end) {
+        return { start: start || date, end };
+      } else {
+        return start || date;
+      }
+    }
 </script>
 
 <Base {data}>
-    <main class="pad max-w-(--breakpoint-lg) mx-auto">
-        <div class="border-b-2 pb-12 border-zinc-400">
+    <main class="max-w-7xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             {@render children()}
         </div>
         <Timeline>
             {#each data.projects as item}
-                <TimeItem time={item.start || item.date}>
-                    <ProjectTile project={item} format={data.format} />
+                <TimeItem time={dateFromProject(item)} format={data.format} >
+                    <ProjectMain project={item}/>
+                    {#snippet minor()}
+                        <ProjectMinor project={item} />
+                    {/snippet}
                 </TimeItem>
             {/each}
         </Timeline>

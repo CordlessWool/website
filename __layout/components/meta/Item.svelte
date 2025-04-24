@@ -1,16 +1,17 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
+    import type { HTMLAttributes } from "svelte/elements";
 
     type Props = {
         label: string;
         content?: string | string[];
         children?: Snippet;
-    };
+    } & HTMLAttributes<HTMLDivElement>;
 
-    const { label, content, children }: Props = $props();
+    const { label, content, children, ...props }: Props = $props();
 </script>
 
-<div class:list={Array.isArray(content)}>
+<div {...props} class:list={Array.isArray(content)}>
     <dt>{label}</dt>
     {#if children}
         <dd>{@render children()}</dd>
@@ -49,4 +50,5 @@
     :global(.dark) dd {
         @apply text-zinc-300;
     }
+
 </style>
