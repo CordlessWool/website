@@ -21,8 +21,8 @@ importers:
         specifier: ^4.4.9
         version: 4.4.9
       embodi:
-        specifier: 0.11.10
-        version: 0.11.10(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.28.2)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+        specifier: 0.11.11
+        version: 0.11.11(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.28.2)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       lucide-svelte:
         specifier: ^0.501.0
         version: 0.501.0(svelte@5.28.2)
@@ -973,6 +973,9 @@ packages:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
 
+  camel-case@4.1.2:
+    resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
+
   chai@5.2.0:
     resolution: {integrity: sha512-mCuXncKXk5iCLhfhwTc0izo0gtEmpz5CtG2y8GiOINBlMVS6v8TMRc5TaLWKS6692m9+dVVfzgeVxR5UxWHTYw==}
     engines: {node: '>=12'}
@@ -988,6 +991,10 @@ packages:
   chokidar@4.0.3:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
+
+  clean-css@5.3.3:
+    resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
+    engines: {node: '>= 10.0'}
 
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
@@ -1006,6 +1013,10 @@ packages:
   color@4.2.3:
     resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
     engines: {node: '>=12.5.0'}
+
+  commander@10.0.1:
+    resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
+    engines: {node: '>=14'}
 
   commander@11.1.0:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
@@ -1059,8 +1070,11 @@ packages:
     resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
     engines: {node: '>=8'}
 
-  embodi@0.11.10:
-    resolution: {integrity: sha512-5Wvyg5TC9WmY4PXP4f3vWPnZSca31ArIWVg0XD0v9dYCL5YpeSWq2mmr37DiNnZ4iubcY6cCSd1jWNcPwNU10A==}
+  dot-case@3.0.4:
+    resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
+
+  embodi@0.11.11:
+    resolution: {integrity: sha512-dozATlZhj0z3lHYRfkIaoel89c0C+2DgzmgRz6vhkvPSZ5wstdtbYxYHEOA/S8VNJ8vPTh3XMjZ9maAWECm0wg==}
     hasBin: true
     peerDependencies:
       svelte: ^5.23.0
@@ -1135,6 +1149,11 @@ packages:
   has-own-prop@2.0.0:
     resolution: {integrity: sha512-Pq0h+hvsVm6dDEa8x82GnLSYHOzNDt7f0ddFa3FqcQlgzEiptPqL+XrOJNavjOzSYiYWIrgeVYYgGlLmnxwilQ==}
     engines: {node: '>=8'}
+
+  html-minifier-terser@7.2.0:
+    resolution: {integrity: sha512-tXgn3QfqPIpGl9o+K5tpcj3/MN4SfLtsx2GWwBC3SSd0tXQGyF3gsSqad8loJgKZGM3ZxbYDd5yhiBIdWpmvLA==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    hasBin: true
 
   human-id@4.1.1:
     resolution: {integrity: sha512-3gKm/gCSUipeLsRYZbbdA1BD83lBoWUkZ7G9VFrhWPAU76KwYo5KR8V28bpoPm/ygy0x5/GCbpRQdY7VLYCoIg==}
@@ -1262,6 +1281,9 @@ packages:
   loupe@3.1.3:
     resolution: {integrity: sha512-kkIp7XSkP78ZxJEsSxW3712C6teJVoeHHwgo9zJ380de7IYyJ2ISlxojcH2pC5OFLewESmnRi/+XCDIEEVyoug==}
 
+  lower-case@2.0.2:
+    resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
+
   lucide-svelte@0.501.0:
     resolution: {integrity: sha512-I/Z/iiTxPMX/JsyhhP2W8h+M6xF2w/7RMSxoSYme6WYZpb2mn9+wvP4IrvfyNtvnvYww+wvG0liEim07jSUoLQ==}
     peerDependencies:
@@ -1292,8 +1314,17 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  no-case@3.0.4:
+    resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
+
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
+
+  param-case@3.0.4:
+    resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
+
+  pascal-case@3.1.2:
+    resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
 
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
@@ -1330,6 +1361,10 @@ packages:
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
+
+  relateurl@0.2.7:
+    resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
+    engines: {node: '>= 0.10'}
 
   repeat-string@1.6.1:
     resolution: {integrity: sha512-PV0dzCYDNfRi1jCDbJzpW7jNNDRuCOG/jI5ctQcGKt/clZD+YcPS3yIlWuTJMmESC8aevCFmWJy5wjAFgNqN6w==}
@@ -2313,6 +2348,11 @@ snapshots:
 
   cac@6.7.14: {}
 
+  camel-case@4.1.2:
+    dependencies:
+      pascal-case: 3.1.2
+      tslib: 2.8.1
+
   chai@5.2.0:
     dependencies:
       assertion-error: 2.0.1
@@ -2332,6 +2372,10 @@ snapshots:
       readdirp: 4.1.2
     optional: true
 
+  clean-css@5.3.3:
+    dependencies:
+      source-map: 0.6.1
+
   clsx@2.1.1: {}
 
   color-convert@2.0.1:
@@ -2349,6 +2393,8 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
+
+  commander@10.0.1: {}
 
   commander@11.1.0: {}
 
@@ -2381,7 +2427,12 @@ snapshots:
 
   detect-libc@2.0.4: {}
 
-  embodi@0.11.10(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.28.2)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
+  dot-case@3.0.4:
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.8.1
+
+  embodi@0.11.11(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(sass@1.80.4)(svelte@5.28.2)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
       '@loom-io/converter': 0.12.11(@loom-io/core@0.12.11)
       '@loom-io/core': 0.12.11
@@ -2392,6 +2443,7 @@ snapshots:
       '@modyfi/vite-plugin-yaml': 1.1.1(rollup@4.40.0)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))
       '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.80.4)(terser@5.39.0)(yaml@2.7.1))
       front-matter: 4.0.2
+      html-minifier-terser: 7.2.0
       markdown-it: 14.1.0
       minimist: 1.2.8
       pipe-and-combine: 0.7.11
@@ -2522,6 +2574,16 @@ snapshots:
 
   has-own-prop@2.0.0: {}
 
+  html-minifier-terser@7.2.0:
+    dependencies:
+      camel-case: 4.1.2
+      clean-css: 5.3.3
+      commander: 10.0.1
+      entities: 4.5.0
+      param-case: 3.0.4
+      relateurl: 0.2.7
+      terser: 5.39.0
+
   human-id@4.1.1: {}
 
   immutable@4.3.7:
@@ -2616,6 +2678,10 @@ snapshots:
 
   loupe@3.1.3: {}
 
+  lower-case@2.0.2:
+    dependencies:
+      tslib: 2.8.1
+
   lucide-svelte@0.501.0(svelte@5.28.2):
     dependencies:
       svelte: 5.28.2
@@ -2647,8 +2713,23 @@ snapshots:
 
   nanoid@3.3.11: {}
 
+  no-case@3.0.4:
+    dependencies:
+      lower-case: 2.0.2
+      tslib: 2.8.1
+
   node-addon-api@7.1.1:
     optional: true
+
+  param-case@3.0.4:
+    dependencies:
+      dot-case: 3.0.4
+      tslib: 2.8.1
+
+  pascal-case@3.1.2:
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.8.1
 
   pathe@1.1.2: {}
 
@@ -2674,6 +2755,8 @@ snapshots:
 
   readdirp@4.1.2:
     optional: true
+
+  relateurl@0.2.7: {}
 
   repeat-string@1.6.1: {}
 
@@ -2818,8 +2901,7 @@ snapshots:
 
   tosource@2.0.0-alpha.3: {}
 
-  tslib@2.8.1:
-    optional: true
+  tslib@2.8.1: {}
 
   typescript@5.8.3: {}
 
