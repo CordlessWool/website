@@ -41,9 +41,4 @@
         </li>
         <li class="light sm:ml-7 text-nowrap">© {currentYear}</li>
     </ul>
-    <script
-        defer
-        src="https://umami.dropanote.de/script.js"
-        data-website-id="70e54aec-eeb9-4399-8970-484c57461414"
-    ></script>
 </footer>
