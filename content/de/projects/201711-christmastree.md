@@ -1,7 +1,7 @@
 ---
 name: Christmas tree
-date: 2018-11-11
-end: 2019-02-23
+date: 2017-11-11
+end: 2018-02-23
 links:
   - name: GitLab
     link: https://gitlab.com/CordlessWool/christmas-tree

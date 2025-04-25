@@ -1,7 +1,7 @@
 ---
 name: Locating in a Museum
-date: 2018-03-18
-end: 2018-06-03
+date: 2017-04-01
+end: 2017-06-03
 links:
   - name: GitHub
     link: https://github.com/CordlessWool/time_sync_master_slave
