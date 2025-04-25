@@ -17,9 +17,9 @@ tools:
   - Docker
   - Docker-Compose
   - BitBucket
-  - Jenkings
+  - Jenkins
 databases:
-  - OracleD
+  - OracleDB
 roles:
   - technische Projetleitung
 typewriter:
@@ -33,16 +33,13 @@ Bei **Materna** leitete ich die **technische Weiterentwicklung** eines digitalen
 
 ---
 
-Bei Materna war ich als technischer Projektleiter an der Digitalisierung eines Antragsverfahrens für Agrarsubventionen beteiligt. Ziel war es, ein über mehrere Jahre gewachsenes System technisch und strukturell zukunftsfähig aufzustellen – ohne dabei den laufenden Betrieb zu stören.
+Im Projekt übernahm ich die technische Leitung eines über Jahre gewachsenen Systems zur Abwicklung von Agrarsubventionen. Ich startete mit einer schnellen Einarbeitung in eine wenig verbreitete Softwarelösung und baute darauf auf, um Strukturen zu modernisieren und Prozesse nachhaltig zu verbessern.
 
-Bei Materna war ich als technischer Projektleiter an der Digitalisierung eines Antragsverfahrens für Agrarsubventionen beteiligt. Ziel war es, ein über mehrere Jahre gewachsenes System technisch und strukturell zukunftsfähig aufzustellen – ohne dabei den laufenden Betrieb zu stören.
+> _"Du hast mich positiv überrascht. Am Anfang dachte ich mir lass den Jungspund reden, als du erzählt hast, was du vorhast und was du planst."_
+> -- Projektleiter
 
-Ich übernahm das Projekt von einem sehr erfahrenen Kollegen kurz vor dem Ruhestand. Die Zusammenarbeit verlief auf Augenhöhe – und hinterließ Eindruck:
+Ich führte regelmäßige Code-Reviews ein, verbesserte die interne Kommunikation und schuf Raum für technische Qualität – ohne jemanden abzuhängen. Besonders wichtig war mir, das gesamte Team auf dem Weg mitzunehmen.
 
-> "Als du erzählt hast, was du alles vorhast, dachte ich: Lass den Jungspund mal reden. Aber du hast mich positiv überrascht."
+Gleichzeitig vermittelte ich zwischen Fachbereich, Management und technischer Betreuung. Ich machte technische Anforderungen verständlich und half dabei, fachliche Vorgaben präzise umzusetzen – bis hin zur Unterstützung beim Deployment.
 
-Inhaltlich lag mein Schwerpunkt darauf, Ordnung in gewachsene Strukturen zu bringen und nachhaltige Prozesse zu etablieren. Ich führte regelmäßige Code-Reviews ein, verbesserte die Zusammenarbeit im Team und schuf Raum für Wartung und technische Qualität – ohne jemanden abzuhängen.
-
-Gleichzeitig übernahm ich beim Kunden eine vermittelnde Rolle zwischen Fachbereich, Management und technischer Betreuung. Technische Anforderungen machte ich verständlich, fachliche Vorgaben konkret und sorgte so für eine reibungslosere Zusammenarbeit – bis hin zur Unterstützung beim Deployment.
-
-Was bleibt: ein robusteres System, ein eingespielteres Team und das gute Gefühl, gemeinsam etwas bewegt zu haben – mit Blick für Details und für Menschen.
+Ergebnis: ein stabileres System, reibungslosere Abläufe und ein Team, das wieder mit mehr Klarheit arbeiten konnte.

@@ -6,7 +6,7 @@ tags:
   - offer
 ---
 
-> Die Basis allen Handelns ist Wissen und Erfahrung.
+> _Die Basis allen Handelns ist Wissen und Erfahrung._
 
 Damit Du schneller und effizienter an Dein Ziel kommst, unterstütze ich Dich und Dein Team mit **individuellen Trainings und Coachings**.
 Ich biete eine langfristige Begleitung mit der Möglichkeit, bei Fragen jederzeit auf mich zukommen zu können.

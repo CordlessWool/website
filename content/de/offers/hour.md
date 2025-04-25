@@ -6,7 +6,7 @@ tags:
   - offer
 ---
 
-> Schaffa Schaffa Häusle baua
+> _Schaffa Schaffa Häusle baua_
 
 Wenn einem mal wieder alles über den Kopf wächst, braucht man einfach ein wenig Unterstützung bei der Umsetzung von Projekten.
 

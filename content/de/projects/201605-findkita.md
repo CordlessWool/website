@@ -12,7 +12,7 @@ frameworks:
 databases:
   - Apache Cassandra
   - Redis
-others:
+other:
   - here maps API
   - Mapbox API
   - Linux Server

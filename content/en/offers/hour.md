@@ -6,7 +6,7 @@ tags:
   - offer
 ---
 
-> Schaffa Schaffa Häusle baua
+> _Schaffa Schaffa Häusle baua_
 
 When you're in over your head again, you simply need a little support with the implementation of projects.
 
