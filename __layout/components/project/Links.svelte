@@ -1,12 +1,12 @@
 <script lang="ts">
-    let { project } = $props();
+    let { project, ...props } = $props();
 
     const compareNames = (a: string, b: string) => {
         return a.toLowerCase() === b.toLowerCase();
     };
 </script>
 
-<div class="flex flex-col gap-5 mx-3">
+<div {...props}>
     {#each project.links as link}
         <a
             href={link.link}
@@ -29,3 +29,11 @@
         </a>
     {/each}
 </div>
+
+<style lang="postcss">
+    @reference "tailwindcss/theme";
+
+    div {
+        @apply flex flex-col gap-5 mx-3;
+    }
+</style>

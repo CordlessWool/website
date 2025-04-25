@@ -39,6 +39,7 @@
             </div>
             <div class="meta">
                 <Meta class="lg:!grid-cols-1">
+                    {#if data.company}
                     <Item label={m.company()}>
                         {#if data['company-website']}
                             <a class="text-xl link" href={data['company-website']} target="_blank" rel="noopener noreferrer">
@@ -48,7 +49,8 @@
                             <span class="text-xl">{data.company}</span>
                         {/if}
                     </Item>
-                    <Item label={m.from()} content={formatDate(data.start || data.end)} />
+                    {/if}
+                    <Item label={m.from()} content={formatDate(data.start ?? data.date)} />
                     {#if data.end}
                         <Item label={m.to()} content={formatDate(data.end)} />
                     {/if}
@@ -57,7 +59,7 @@
 
                 </Meta>
                 <Tech project={data} class="lg:!grid-cols-1" />
-                <Links project={data} />
+                <Links class="!flex-row" project={data} />
             </div>
         </article>
 
