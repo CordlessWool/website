@@ -73,10 +73,16 @@ const blogPost = defineLayout({
   schema: ({ v }) => v.record(v.string(), v.any()),
 });
 
+const ProjectPage = defineLayout({
+  component: "./ProjectPage.svelte",
+  schema: ({ v }) => v.record(v.string(), v.any()),
+});
+
 export const layouts = {
   intro,
   projects,
   markdownOnly,
   blogOverview,
   blogPost,
+  ProjectPage,
 };

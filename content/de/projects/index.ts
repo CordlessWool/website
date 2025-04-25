@@ -1,11 +1,22 @@
 import { collections } from "$embodi/collections?locale=de&only=project";
 import type { LoadAction } from "embodi";
 
+function getFirstParagraph(html: string): string {
+  const firstParagraph = html.split("<hr>")[0];
+  return firstParagraph;
+}
+
+function hasFirstParagraph(html: string): boolean {
+  return html.split("<hr>").length > 1;
+}
+
 export const load: LoadAction = ({ data }) => {
   const projects = collections.map((project) => {
     return {
       ...project.data,
-      html: project.html,
+      url: project.url,
+      html: getFirstParagraph(project.html),
+      showPageLink: hasFirstParagraph(project.html),
     };
   });
   return { ...data, projects };

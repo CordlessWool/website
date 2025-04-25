@@ -1,7 +1,6 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
-    import ProjectMinor from "./components/ProjectMinor.svelte";
-    import ProjectMain, { type Project } from "./components/ProjectMain.svelte";
+    import { TimelineMinor, TimelineMain } from "./components/project";
     import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
     import type { DateFormatDefinition } from "./lib/date";
@@ -43,9 +42,9 @@
         <Timeline>
             {#each data.projects as item}
                 <TimeItem time={dateFromProject(item)} format={data.format.date} >
-                    <ProjectMain project={item}/>
+                    <TimelineMain project={item}/>
                     {#snippet minor()}
-                        <ProjectMinor project={item} />
+                        <TimelineMinor project={item} />
                     {/snippet}
                 </TimeItem>
             {/each}

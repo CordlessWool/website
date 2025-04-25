@@ -1,6 +1,10 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
+  type Props = {
+    children: () => any;
+  } & HTMLAttributes<HTMLDListElement>;
 
-    const { children,...props } = $props();
+    const { children, ...props }: Props = $props();
 </script>
 
 <dl {...props}>
@@ -11,6 +15,6 @@
 <style lang="postcss">
     @reference "tailwindcss/theme";
     dl {
-        @apply grid grid-flow-row grid-cols-2 gap-3 sm:text-nowrap;
+        @apply grid grid-flow-row gap-3 grid-cols-2 sm:text-nowrap;
     }
 </style>

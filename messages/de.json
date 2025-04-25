@@ -2,6 +2,12 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "Intro",
   "blog": "Blog",
+  "company": "Firma",
+  "contact": "Kontakt",
+  "time": "Zeit",
+  "from": "von",
+  "to": "bis",
+  "duration": "Dauer",
   "skills": "Fähigkeiten",
   "projects": "Projekte",
   "since": "seit",
@@ -27,5 +33,6 @@
   "freelancermap_title": "Profil von Wolfgang Rathgeb auf www.freelancermap.de",
   "write_more": "schreib weiter",
   "schedule_call": "Termin vereinbaren",
-  "blog_post_overview": "Blog Übersicht"
+  "blog_post_overview": "Blog Übersicht",
+  "project_overview": "Projekt Übersicht"
 }
