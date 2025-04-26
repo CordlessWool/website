@@ -67,6 +67,10 @@ small {
     @apply text-sm;
 }
 
+a {
+    @apply outline-none border-2 border-dotted border-transparent focus:border-teal-500 rounded-md;
+}
+
 /**
  * Markdown styles
  */
@@ -142,7 +146,9 @@ small {
 }
 
 .social-icon {
-    @apply cursor-pointer border-2 hover:text-teal-600 dark:hover:text-teal-500 border-hidden focus:border-teal-600 focus:border-dotted;
+    @apply outline-none;
+    @apply rounded-md p-1;
+    @apply cursor-pointer border-2 hover:text-teal-600 dark:hover:text-teal-500 border-transparent focus:border-teal-600 focus:border-dotted;
 }
 
 blockquote {
@@ -161,7 +167,9 @@ blockquote p {
 }
 
 .button {
-    @apply p-2;
+    @apply cursor-pointer;
+    @apply p-1;
+    @apply outline-none border-2 border-dotted border-transparent focus:border-teal-500 rounded-md;
 }
 
 .light.clickable {

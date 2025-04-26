@@ -34,6 +34,6 @@
     @reference "tailwindcss/theme";
 
     div {
-        @apply flex flex-col gap-5 mx-3;
+        @apply flex flex-col gap-2 mx-1;
     }
 </style>

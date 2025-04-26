@@ -8,6 +8,6 @@
     };
 </script>
 
-<button onclick={toggleLanguage} aria-label="switch language">
+<button class="button" onclick={toggleLanguage} aria-label="switch language">
     <i class="ri-translate-2"></i>
 </button>

@@ -16,10 +16,10 @@
         </a>
     </div>
     <ul class="flex text-xl items-center">
-        <li aria-label="button" class="light clickable button">
+        <li aria-label="button" class="light clickable">
             <ToogleTheme />
         </li>
-        <li class="light clickable button">
+        <li class="light clickable">
             <ToggleLang />
         </li>
     </ul>

@@ -29,6 +29,9 @@
     button, a {
         @apply cursor-pointer;
         @apply py-3 px-5 text-center block border-2 border-solid rounded-md  hover:bg-teal-400 border-teal-500;
+        &:focus {
+            @apply outline-none border-dotted;
+        }
     }
 
     :global(.dark) {
@@ -36,6 +39,7 @@
             @apply border-teal-500 hover:bg-teal-900;
         }
     }
+
 
     .small {
         @apply py-1 px-3;

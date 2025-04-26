@@ -45,7 +45,7 @@
     </script>
 </svelte:head>
 
-<button aria-label="button" use:darkLightModeAction>
+<button class="button" aria-label="button" use:darkLightModeAction>
     <i class="ri-moon-fill dark:hidden block"></i>
     <i class="ri-sun-fill hidden dark:block"></i>
 </button>
