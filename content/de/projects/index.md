@@ -1,6 +1,7 @@
 ---
-title: Projekte
-meta: Neben meiner freiberuflichen Tätigkeit bin ich auch an anderen Projekten beteiligt. Eine Übersicht aller meiner Projekte finden Sie hier.
+meta:
+  title: Projekte & Jobs von Wolfgang Rathgeb
+  description: Neben meiner freiberuflichen Tätigkeit bin ich auch an anderen Projekten beteiligt. Eine Übersicht aller meiner Projekte finden Sie hier.
 layout: $layout2/projects
 ---
 

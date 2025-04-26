@@ -1,6 +1,7 @@
 ---
-title: Projects
-meta: Beside my freelancing work I doing some project by my own, here you will find a list of all my projects.
+meta:
+  title: Projects & Jobs of Wolfgang Rathgeb
+  description: Beside my freelancing work I doing some project by my own, here you will find a list of all my projects.
 layout: $layout2/projects
 ---
 
