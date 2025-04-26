@@ -1,10 +1,9 @@
 ---
 title: shrtn.io - Link Shortener
-date: 2025-01-01
-start: 2025-01-01
+date: 2025-01-24
 links:
   - name: Github
-    link: https://github.com/username/link-shortener
+    link: https://github.com/CordlessWool/shrtn
   - name: Website shrtn.io
     link: https://shrtn.io/
     icon: pages-fill
