@@ -1,13 +1,17 @@
 <script lang="ts">
-    const toggleLanguage = () => {
-        const url = new URL(window.location.href);
+    import { page } from "$embodi/stores";
+
+    const switchLanguage = (_url: string) => {
+        const url = new URL(_url, "https://dropanote.de");
         const language = url.pathname.split("/")[1];
         const newLanguage = language === "en" ? "de" : "en";
-        url.pathname = url.pathname.replace(language, newLanguage);
-        window.location.href = url.href;
+        return {
+            href: url.pathname.replace(language, newLanguage),
+            hreflang: newLanguage,
+        };
     };
 </script>
 
-<button class="button" onclick={toggleLanguage} aria-label="switch language">
+<a {...switchLanguage($page.url)} class="button" aria-label="switch language">
     <i class="ri-translate-2"></i>
-</button>
+</a>
