@@ -28,9 +28,13 @@
             redirected, please select a language.
         </p>
         <div>
-            <a href="https://dropanote.de/de">Deutsch</a>
+            <a class="button" href="https://dropanote.de/de" hreflang="de"
+                >Deutsch</a
+            >
             /
-            <a href="https://dropanote.de/en">English</a>
+            <a class="button" href="https://dropanote.de/en" hreflang="en"
+                >English</a
+            >
         </div>
     </main>
 </Base>
