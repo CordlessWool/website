@@ -62,3 +62,11 @@
         <Button class="w-max justify-self-end" small href={project.url}>Weiterlesen</Button>
     {/if}
 </section>
+
+<style lang="postcss">
+    @reference "tailwindcss/theme";
+
+    span {
+        @apply text-xl;
+    }
+</style>

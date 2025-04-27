@@ -25,12 +25,6 @@
             <a class="flex items-center text-md !text-zinc-600 dark:!text-zinc-400" href="/{data.locale}/projects">
                 <ChevronLeft class="mr-2 inline" />{m.project_overview()}
             </a>
-            <div class="text-sm text-zinc-600 dark:text-zinc-400 justify-self-end">
-                <span>Published on: {formatDate(data.date)}</span>
-                {#if data.updated}
-                    <span class="update-date">Updated on: {formatDate(data.updated)}</span>
-                {/if}
-            </div>
         </header>
         <article>
             <div class="markdown max-w-xl">
@@ -50,7 +44,7 @@
                         {/if}
                     </Item>
                     {/if}
-                    <Item label={m.from()} content={formatDate(data.start ?? data.date)} />
+                        <Item label={m.from()} content={formatDate(data.start ?? data.date)} />
                     {#if data.end}
                         <Item label={m.to()} content={formatDate(data.end)} />
                     {/if}
