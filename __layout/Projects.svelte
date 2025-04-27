@@ -36,7 +36,7 @@
 </script>
 
 <Base {data}>
-    <main class="max-w-7xl mx-auto">
+    <main class="max-w-(--breakpoint-2xl) mx-auto">
         <div class="max-w-5xl mx-auto">
             {@render children()}
         </div>
