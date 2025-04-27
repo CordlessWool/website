@@ -1,7 +1,7 @@
 ---
 meta:
-  title: Projects & Jobs of Wolfgang Rathgeb
-  description: Beside my freelancing work I doing some project by my own, here you will find a list of all my projects.
+  title: Projects & Jobs - Wolfgang Rathgeb
+  description: "Projects that show what I deliver: reliable solutions, cleanly implemented and thoughtfully designed – for clients, products, and personal ideas."
 layout: $layout2/projects
 ---
 

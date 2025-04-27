@@ -1,10 +1,10 @@
 ---
 meta:
-  title: Projekte & Jobs von Wolfgang Rathgeb
-  description: Neben meiner freiberuflichen Tätigkeit bin ich auch an anderen Projekten beteiligt. Eine Übersicht aller meiner Projekte finden Du hier.
+  title: Projekte & Jobs - Wolfgang Rathgeb
+  description: "Projekte, die zeigen, was ich liefere: zuverlässige Lösungen, sauber umgesetzt und klar gedacht – für Kunden, Produkte und eigene Ideen."
 layout: $layout2/projects
 ---
 
 # Projekte & Jobs
 
-Hier findest Du eine Liste meiner Projekte, die ich in den vergangenen Jahren umgesetzt habe. Dabei handelt es sich um eine Mischung aus privaten, beruflichen und Studienprojekten.
+Ob eigene Produkte, Kundenaufträge oder technische Konzepte – die folgenden Projekte zeigen, was ich liefere: zuverlässige Lösungen, sauber umgesetzt und klar gedacht. Wenn Du nach jemandem suchst, der nicht nur entwickelt, sondern mitdenkt, bist Du hier richtig.
