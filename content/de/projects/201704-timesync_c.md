@@ -10,6 +10,7 @@ languages:
   - Python
 tools:
   - Raspberry PI
+type: study
 tags: project
 ---
 

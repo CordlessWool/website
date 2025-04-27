@@ -37,8 +37,7 @@ roles:
   - Scrum Master
   - Architecture
   - Software Engineer
-typewriter:
-  remove-letters: 599
+type: work
 tags: project
 ---
 

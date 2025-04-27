@@ -23,6 +23,7 @@ databases:
 roles:
   - Technical Project Lead
 layout: $layout2/ProjectPage
+type: work
 tags:
   - project
 ---

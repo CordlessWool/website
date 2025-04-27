@@ -14,8 +14,6 @@ frameworks:
 tools:
   - Webdav
   - Nextcloud
-typewriter:
-  remove-letters: 394
 tags: project
 ---
 

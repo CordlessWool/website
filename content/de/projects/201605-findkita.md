@@ -17,8 +17,7 @@ other:
   - Mapbox API
   - Linux Server
   - Docker
-typewriter:
-  remove-letters: 420
+type: business
 tags: project
 ---
 

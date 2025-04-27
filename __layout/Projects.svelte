@@ -4,6 +4,7 @@
     import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
     import type { DateFormatDefinition } from "./lib/date";
+    import { Wrench, BriefcaseBusiness, CheckCheck, GraduationCap, Check } from 'lucide-svelte';
 
 
 
@@ -45,6 +46,20 @@
                     <TimelineMain project={item}/>
                     {#snippet minor()}
                         <TimelineMinor project={item} />
+                    {/snippet}
+                    {#snippet icon()}
+                        {#if item.type === 'work' || item.type === 'business'}
+                            <BriefcaseBusiness />
+                        {:else if item.type === 'study'}
+                            <GraduationCap />
+                        {:else if item.end}
+                            <CheckCheck />
+                        {:else if item.released}
+                            <Check />
+                        {:else}
+                            <Wrench />
+                        {/if}
+
                     {/snippet}
                 </TimeItem>
             {/each}

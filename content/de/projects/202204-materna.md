@@ -22,8 +22,7 @@ databases:
   - OracleDB
 roles:
   - technische Projetleitung
-typewriter:
-  remove-letters: 2000
+type: work
 layout: $layout2/ProjectPage
 tags:
   - project

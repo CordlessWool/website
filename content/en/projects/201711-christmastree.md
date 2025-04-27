@@ -10,6 +10,7 @@ languages:
   - C (Embedded)
 tools:
   - Xilinx FPGA
+type: study
 tags: project
 ---
 

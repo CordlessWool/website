@@ -10,8 +10,7 @@ languages:
   - C (Embedded)
 tools:
   - Xilinx FPGA
-typewriter:
-  remove-letters: 340
+type: study
 tags: project
 ---
 

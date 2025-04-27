@@ -1,6 +1,7 @@
 ---
 title: shrtn.io - Link Shortener
 date: 2025-01-24
+released: 205-01-30
 links:
   - name: Github
     link: https://github.com/CordlessWool/shrtn

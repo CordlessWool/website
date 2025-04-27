@@ -13,9 +13,10 @@
         format: DateFormatDefinition;
         children: Snippet;
         minor?: Snippet;
+        icon?: Snippet;
     };
 
-    let { time, format, children, minor }: Props = $props();
+    let { time, format, children, minor, icon }: Props = $props();
 
     const formatDate = (date: Date | string | { start: Date, end: Date }): string => {
       if(typeof date === 'string' || date instanceof Date) {
@@ -30,7 +31,11 @@
 <li class="timeline-item">
     <hr />
     <div class="icon">
-        <CheckCheck class="max-md:w-3 max-md:h-3" />
+        {#if icon}
+            {@render icon()}
+        {:else}
+            <CheckCheck />
+        {/if}
     </div>
     <time>
         {formatDate(time)}
@@ -62,6 +67,10 @@
     div.icon {
         @apply col-start-2 row-start-2 row-span-1 justify-self-center;
         @apply border-2 rounded-full p-1;
+
+        :global(svg) {
+            @apply max-md:w-5 max-md:h-5;
+        }
     }
 
     time {

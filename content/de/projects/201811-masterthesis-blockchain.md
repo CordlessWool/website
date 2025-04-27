@@ -3,6 +3,7 @@ title: "Masterthesis: Blockchain und ähnliche Technologien"
 date: 2018-09-01
 end: 2019-03-31
 layout: $layout2/ProjectPage
+type: study
 tags: project
 ---
 

@@ -16,8 +16,7 @@ others:
   - here maps API
   - Linux Server
   - Docker
-typewriter:
-  remove-letters: 322
+type: business
 tags: project
 ---
 

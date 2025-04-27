@@ -17,5 +17,6 @@ databases:
   - Redis
   - Neo4j
   - MongoDB
+type: study
 tags: project
 ---

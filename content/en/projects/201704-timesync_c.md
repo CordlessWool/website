@@ -10,8 +10,7 @@ languages:
   - Python
 tools:
   - Raspberry PI
-typewriter:
-  remove-letters: 357
+type: study
 tags: project
 ---
 
