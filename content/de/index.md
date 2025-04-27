@@ -4,7 +4,7 @@ subtitle: Projekte erfolgreich steuern und umsetzen – mit technischem Know-how
 image: $assets/wolfgang-rathgeb3.jpeg
 alt: Der Author Wolfgang Rathgeb
 meta:
-  description: hi, ich bin Wolfgang Rathgeb ein freiberuflicher Software Engineer im JavaScript/TypeScript Umfeld und habe ursprünglich technische Informatik studiert.
+  description: Ich verbinde Entwicklung und Projektmanagement zu durchdachten IT-Lösungen – klar, zuverlässig und mit Blick auf das große Ganze. So entstehen Webanwendungen, die technisch und organisatorisch überzeugen.
 name: Wolfgang Rathgeb
 role: Freiberufler
 degree: Master of Engineering

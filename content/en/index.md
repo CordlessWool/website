@@ -4,7 +4,7 @@ subtitle: Successfully managing and delivering projects – with deep technical 
 image: $assets/wolfgang-rathgeb3.jpeg
 alt: The author Wolfgang Rathgeb
 meta:
-  description: hi, my name is Wolfgang Rathgeb and I am a freelancing Software Engineer specialising in JavaScript / TypeScript. However, my original degree was in embedded systems.
+  description: "I combine development and project management into well-thought-out IT solutions – clear, reliable, and with the bigger picture in mind. The result: web applications that work technically and organizationally."
 name: Wolfgang Rathgeb
 role: Freelancer
 degree: Master of Engineering
