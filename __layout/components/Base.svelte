@@ -14,6 +14,7 @@
             title: string;
             description: string;
             company: string;
+            canonical?: string;
             meta?: {
               title?: stirng;
               description?: string;
@@ -49,11 +50,12 @@
     }
 
     const getLanguageLink = (link: string, lang: string) => new URL(link.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
-
+    const fullUrl = (link: string) => new URL(link, 'https://dropanote.de').toString();
 </script>
 
 <svelte:head>
     <title>{getMeta('title')}</title>
+    <link rel="canonical" href={data.canonical ?? fullUrl($page.url)} />
     {#if $page.url.includes('/en/') || $page.url.includes('/de/')}
         <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
         <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
