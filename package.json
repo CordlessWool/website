@@ -14,7 +14,7 @@
     "@tailwindcss/postcss": "^4.1.4",
     "@tailwindcss/vite": "^4.1.4",
     "chart.js": "^4.4.9",
-    "embodi": "0.11.11",
+    "embodi": "0.11.12",
     "globby": "^14.1.0",
     "lucide-svelte": "^0.501.0",
     "postcss": "^8.5.3",
