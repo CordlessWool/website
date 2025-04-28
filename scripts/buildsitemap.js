@@ -43,9 +43,9 @@ async function generate() {
     });
   }
 
-  // sitemap.end();
+  sitemap.end();
   await streamToPromise(sitemap);
   console.log("✅ sitemap.xml erstellt mit hreflang");
 }
 
-generate();
+generate().catch(console.error);
