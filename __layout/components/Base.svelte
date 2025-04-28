@@ -54,8 +54,10 @@
 
 <svelte:head>
     <title>{getMeta('title')}</title>
-    <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
-    <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
+    {#if $page.url.includes('/en/') || $page.url.includes('/de/')}
+        <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
+        <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
+    {/if}
     {#if hasMeta('description')}
         <meta name="description" content={getMeta('description')} />
     {/if}

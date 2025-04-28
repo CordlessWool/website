@@ -31,10 +31,10 @@
             </a>
         </li>
         <li class="light clickable button">
-            <a hreflang="de" href="/de">DE</a>
+            <a hreflang="de" href="/de/">DE</a>
         </li>
         <li class="light clickable button">
-            <a hreflang="en" href="/en">EN</a>
+            <a hreflang="en" href="/en/">EN</a>
         </li>
         <li class="light clickable button">
             <a href="/{locale}/imprint/">{m.imprint()}</a>
