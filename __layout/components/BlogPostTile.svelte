@@ -10,10 +10,8 @@
     };
 </script>
 
-<li
-    class="py-4 border rounded-lg p-4 hover:border-teal-500 hover:shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900/25 hover:ring-2 hover:ring-teal-500 transition duration-300 cursor-pointer"
->
-    <a href={url} class="no-underline text-current">
+<li>
+    <a href={url}>
         <div class="flex flex-col">
             <h2 class="text-lg font-bold mb-2 !mt-0">{title}</h2>
             <p class="mb-4">{description}</p>
@@ -26,3 +24,18 @@
         </div>
     </a>
 </li>
+
+<style lang="postcss">
+    @reference 'tailwindcss/theme';
+
+    li {
+        @apply py-4 border rounded-lg p-4 hover:border-teal-500 hover:shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900/25 hover:ring-2 hover:ring-teal-500 transition duration-300 cursor-pointer;
+        &:focus-within {
+            @apply outline-none border-dotted;
+        }
+    }
+
+    a {
+        @apply border-none outline-none no-underline;
+    }
+</style>

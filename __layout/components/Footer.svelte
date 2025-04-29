@@ -8,11 +8,12 @@
     <ul
         class="flex flex-wrap gap-x-3 text-sm justify-center items-center mt-11 mb-3"
     >
-        <li class="light clickable w-[118px]">
+        <li class="light clickable">
             <!--freelancermap-Badge White-->
             <a
                 href="https://www.freelancermap.de/profil/wolfgang-rathgeb"
                 target="_blank"
+                class="block w-[118px] h-[18px]"
                 aria-label="freelancermap"
                 title={m.freelancermap_title()}
             >
@@ -30,15 +31,22 @@
                 >
             </a>
         </li>
-        <li class="light clickable button">
+        <li class="light clickable">
             <a hreflang="de" href="/de/">DE</a>
         </li>
-        <li class="light clickable button">
+        <li class="light clickable">
             <a hreflang="en" href="/en/">EN</a>
         </li>
-        <li class="light clickable button">
+        <li class="light clickable">
             <a href="/{locale}/imprint/">{m.imprint()}</a>
         </li>
         <li class="light sm:ml-7 text-nowrap">© {currentYear}</li>
     </ul>
 </footer>
+
+<style lang="postcss">
+    @reference 'tailwindcss/theme';
+    a {
+        @apply p-1 box-content;
+    }
+</style>
