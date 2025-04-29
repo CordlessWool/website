@@ -29,7 +29,7 @@
     @reference 'tailwindcss/theme';
 
     li {
-        @apply py-4 border rounded-lg p-4 hover:border-teal-500 hover:shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900/25 hover:ring-2 hover:ring-teal-500 transition duration-300 cursor-pointer;
+        @apply px-5 py-7 border rounded-lg hover:border-teal-500 hover:shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900/25 hover:ring-2 hover:ring-teal-500 transition duration-300 cursor-pointer;
         &:focus-within {
             @apply outline-none border-dotted;
         }
