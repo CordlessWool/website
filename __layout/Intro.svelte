@@ -156,6 +156,8 @@
     .offers {
         @apply col-span-full;
         @apply grid gap-7 grid-cols-1 sm:grid-cols-[repeat(auto-fill,_minmax(410px,_1fr))];
-
+        :global(blockquote) {
+            @apply max-w-md;
+        }
     }
 </style>
