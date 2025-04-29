@@ -3,7 +3,7 @@
     import ToggleLang from "./ToggleLang.svelte";
     import ToogleTheme from "./ToggleTheme.svelte";
 
-    const { page_title, locale } = $props();
+    const { page_title, ref, locale } = $props();
 </script>
 
 <nav
@@ -20,7 +20,7 @@
             <ToogleTheme />
         </li>
         <li class="light clickable">
-            <ToggleLang />
+            <ToggleLang {ref} />
         </li>
     </ul>
     <Menu {locale} />

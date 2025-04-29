@@ -12,6 +12,7 @@
         data: {
             locale: string;
             title: string;
+            ref?: string;
             description: string;
             company: string;
             canonical?: string;
@@ -26,7 +27,7 @@
     };
 
     const { data, children, light }: Props = $props();
-    const { locale, title, page_title } = $state(data);
+    const { locale, title, ref, page_title } = $state(data);
 
     const hasMeta = (tag: string) => {
       if(tag === 'title') {
@@ -56,7 +57,15 @@
 <svelte:head>
     <title>{getMeta('title')}</title>
     <link rel="canonical" href={data.canonical ?? fullUrl($page.url)} />
-    {#if $page.url.includes('/en/') || $page.url.includes('/de/')}
+    {#if ref}
+        {#if locale === 'de'}
+            <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
+            <link rel="alternate" hreflang="en" href={fullUrl(data.ref)} />
+        {:else}
+            <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'de')} />
+            <link rel="alternate" hreflang="de" href={fullUrl(data.ref)} />
+        {/if}
+    {:else if $page.url.includes('/en/') || $page.url.includes('/de/')}
         <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
         <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
     {/if}
@@ -72,7 +81,7 @@
 {#if light}
     <HeaderSmall {page_title} />
 {:else}
-    <Header {locale} {page_title} />
+    <Header {locale} {ref} {page_title} />
 {/if}
 
     {@render children()}
