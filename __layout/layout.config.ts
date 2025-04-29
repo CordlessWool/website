@@ -5,6 +5,7 @@ const intro = defineLayout({
   schema: ({ v, e }) =>
     v.objectAsync({
       title: v.string(),
+      canonical: v.optional(v.string()),
       subtitle: v.string(),
       page_title: v.string(),
       image: v.pipe(

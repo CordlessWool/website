@@ -6,15 +6,14 @@
     "dev": "embodi dev",
     "test": "vitest",
     "build": "embodi generate && node ./scripts/buildsitemap.js",
-    "preview": "embodi preview",
-    "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+    "preview": "embodi preview"
   },
   "devDependencies": {
     "@inlang/paraglide-js": "2.0.10",
     "@tailwindcss/postcss": "^4.1.4",
     "@tailwindcss/vite": "^4.1.4",
     "chart.js": "^4.4.9",
-    "embodi": "0.11.12",
+    "embodi": "0.12.0",
     "globby": "^14.1.0",
     "lucide-svelte": "^0.501.0",
     "postcss": "^8.5.3",
