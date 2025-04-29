@@ -2,6 +2,11 @@
 title: "Beyond AI – How Teams Really Become Productive"
 description: AI alone doesn’t build productive teams. This article explores how trust, team autonomy and a learning culture drive real efficiency in software development.
 ref: /de/blog/20250429-effizienz-entwicklerteams-ki/
+hero:
+  image: $assets/team-pair-programming.jpg
+  alt: Teamarbeit steigert die Effizienz in Softwareprojekten.
+  photographer: "@charlesdeluvio"
+  photographer_link: https://unsplash.com/@charlesdeluvio
 meta:
   keywords:
     - developer team productivity

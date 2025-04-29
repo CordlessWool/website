@@ -1,8 +1,10 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
     import { ChevronLeft } from 'lucide-svelte';
+    import Image from 'embodi/Image.svelte';
     import * as m from './lib/paraglide/messages.js'
     const { data, children } = $props();
+    const { hero } = data;
     const formatDate = (date) => {
         date = new Date(date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
@@ -21,10 +23,26 @@
                     <span class="update-date">Updated on: {formatDate(data.updated)}</span>
                 {/if}
             </div>
-
-        </header>
+              </header>
 
         <article class="blog-post markdown">
+            {#if hero}
+                <figure>
+                    <Image
+                        fetchpriority="high"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        height="2000"
+                        width="2000"
+                        images={ hero.image }
+                        alt={ hero.alt }
+                    />
+                    {#if hero.photographer_link}
+                        <figcaption><a href={hero.photographer_link} rel="noopener noreferrer" target="_blank" >{hero.photographer}</a></figcaption>
+                    {:else if hero.photographer}
+                        <figcaption>{hero.photographer}</figcaption>
+                    {/if}
+                </figure>
+            {/if}
             {@render children()}
         </article>
     </main>
@@ -47,7 +65,24 @@
     header {
         @apply flex flex-row items-center justify-between flex-wrap;
         @apply text-nowrap w-full;
-        @apply mb-11 pb-3 border-b-2 border-zinc-300 dark:border-zinc-600;
+        @apply mb-5 pb-3 border-b-2 border-zinc-300 dark:border-zinc-600;
+    }
+
+    figure {
+        @apply relative mb-11;
+        max-width: 100vw;
+        @media (min-width: 768px) {
+            width: calc(100% + (var(--spacing) * 10));
+            margin-inline: calc(var(--spacing) * -5);
+        }
+        @media (min-width: 1024px) {
+            width: calc(100% + (var(--spacing) * 80));
+            margin-inline: calc(var(--spacing) * -40);
+        }
+        figcaption, figcaption a {
+            @apply absolute bottom-1 right-1 w-max;
+            @apply text-sm text-zinc-500 px-1 no-underline;
+        }
     }
 
     .markdown :global(pre) {

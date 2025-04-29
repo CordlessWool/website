@@ -71,7 +71,28 @@ const blogOverview = defineLayout({
 
 const blogPost = defineLayout({
   component: "./BlogPost.svelte",
-  schema: ({ v }) => v.record(v.string(), v.any()),
+  schema: ({ v, e }) =>
+    v.looseObjectAsync({
+      title: v.string(),
+      description: v.string(),
+      hero: v.optional(
+        v.objectAsync({
+          image: v.pipe(
+            v.string(),
+            e.image(
+              [500, 786, 1000, 1300, 2000].map((size) => ({
+                width: size,
+                format: "webp",
+                quality: 70,
+              })),
+            ),
+          ),
+          alt: v.string(),
+          photographer: v.optional(v.string()),
+          photographer_link: v.optional(v.string()),
+        }),
+      ),
+    }),
 });
 
 const ProjectPage = defineLayout({
