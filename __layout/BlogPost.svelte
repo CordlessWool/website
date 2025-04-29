@@ -69,8 +69,12 @@
     }
 
     figure {
-        @apply relative mb-11;
-        max-width: 100vw;
+        :global(img) {
+            @apply object-cover;
+            @apply max-h-[61vh];
+        }
+        @apply relative mb-11 max-w-screen ;
+        @apply object-cover;
         @media (min-width: 768px) {
             width: calc(100% + (var(--spacing) * 10));
             margin-inline: calc(var(--spacing) * -5);
