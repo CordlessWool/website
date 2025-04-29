@@ -22,7 +22,7 @@
     light
 >
     <main>
-        <h2>You wanna <b>drop a note</b>?</h2>
+        <h1>You wanna <b>drop a note</b>?</h1>
         <p>
             You should be automatically redirected. If you are not automatically
             redirected, please select a language.
@@ -49,7 +49,7 @@
         @apply max-w-(--breakpoint-sm) mx-auto;
     }
 
-    h2 {
+    h1 {
         @apply text-3xl font-normal;
     }
 

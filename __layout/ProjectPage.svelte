@@ -22,7 +22,7 @@
 <Base {data}>
     <main>
         <header>
-            <a class="flex items-center text-md !text-zinc-600 dark:!text-zinc-400" href="/{data.locale}/projects">
+            <a class="flex items-center text-md !text-zinc-600 dark:!text-zinc-400" href="/{data.locale}/projects/">
                 <ChevronLeft class="mr-2 inline" />{m.project_overview()}
             </a>
         </header>
