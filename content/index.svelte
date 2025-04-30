@@ -28,11 +28,11 @@
             redirected, please select a language.
         </p>
         <div>
-            <a class="button" href="https://dropanote.de/de" hreflang="de"
+            <a class="button" href="https://dropanote.de/de/" hreflang="de"
                 >Deutsch</a
             >
             /
-            <a class="button" href="https://dropanote.de/en" hreflang="en"
+            <a class="button" href="https://dropanote.de/en/" hreflang="en"
                 >English</a
             >
         </div>

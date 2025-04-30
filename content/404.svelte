@@ -27,11 +27,11 @@
             The page you are looking for does not exist. Get back on tracks.
         </div>
         <div>
-            <a class="button" href="https://dropanote.de/de" hreflang="de"
+            <a class="button" href="https://dropanote.de/de/" hreflang="de"
                 >Deutsch</a
             >
             /
-            <a class="button" href="https://dropanote.de/en" hreflang="en"
+            <a class="button" href="https://dropanote.de/en/" hreflang="en"
                 >English</a
             >
         </div>
