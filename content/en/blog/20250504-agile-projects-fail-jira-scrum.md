@@ -1,6 +1,7 @@
 ---
 title: "Waterfall in Jira – Why So Many Agile Projects Fail"
 description: Many teams claim to work agile – but still deliver like in the waterfall model. This article uncovers typical patterns of fake agility, how to spot them, and how real agile can work.
+ref: /de/blog/20250504-warum-agile-projekte-scheitern-scrum-jira
 hero:
   image: $assets/there-is-no-time-for-this.jpg
   alt: There is no time for this.
