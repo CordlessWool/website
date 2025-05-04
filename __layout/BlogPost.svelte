@@ -30,9 +30,9 @@
                 <figure>
                     <Image
                         fetchpriority="high"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        height="2000"
-                        width="2000"
+                        sizes="(max-width: 768px) 100vw, 1000"
+                        width="1000"
+                        hight="700"
                         images={ hero.image }
                         alt={ hero.alt }
                     />
