@@ -1,6 +1,11 @@
 ---
 title: "Wasserfall in Jira – Warum viele agile Projekte scheitern"
 description: Viele Teams arbeiten angeblich agil – aber liefern wie im Wasserfall. Dieser Artikel zeigt typische Fehlentwicklungen, woran man Schein-Agilität erkennt und wie echte Agilität gelingen kann.
+hero:
+  image: $assets/there-is-no-time-for-this.jpg
+  alt: There is no time for this.
+  photographer: "@Maximalfocus"
+  photographer_link: https://unsplash.com/@maximalfocus?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 meta:
   keywords:
     - agile Projekte
