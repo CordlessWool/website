@@ -9,7 +9,19 @@
         date = new Date(date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
     };
+    console.log({hero})
 </script>
+
+<svelte:head>
+    <!-- Open Graph (für LinkedIn, Facebook, etc.) -->
+    <meta property="og:title" content={data.title} />
+    <meta property="og:description" content={data.description} />
+    {#if hero}
+        <meta property="og:image" content={hero.image[0]} />
+    {/if}
+    <!-- <meta property="og:url" content="https://deine-domain.tld/agile-projekte-scheitern" /> -->
+    <meta property="og:type" content="article" />
+</svelte:head>
 
 <Base {data}>
     <main>
