@@ -1,5 +1,5 @@
 ---
-name: Lokalisierung im Museum
+title: Lokalisierung im Museum
 date: 2017-04-01
 end: 2017-06-03
 links:

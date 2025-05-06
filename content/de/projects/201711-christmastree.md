@@ -1,5 +1,5 @@
 ---
-name: Christmas tree
+title: Christmas tree
 date: 2017-11-11
 end: 2018-02-23
 links:

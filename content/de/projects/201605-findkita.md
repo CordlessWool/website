@@ -1,5 +1,5 @@
 ---
-name: Find-Kita
+title: Find-Kita
 date: 2016-05-26
 end: 2017-02-17
 languages:

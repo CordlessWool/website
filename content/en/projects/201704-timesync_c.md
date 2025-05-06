@@ -1,5 +1,5 @@
 ---
-name: Locating in a Museum
+title: Locating in a Museum
 date: 2017-04-01
 end: 2017-06-03
 links:

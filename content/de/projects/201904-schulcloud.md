@@ -1,5 +1,5 @@
 ---
-name: Lernplattform für Schulen
+title: Lernplattform für Schulen
 date: 2019-04-01
 end: 2021-05-31
 company: Hasso Plattner Institute
