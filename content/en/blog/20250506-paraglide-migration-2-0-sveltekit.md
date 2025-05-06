@@ -1,10 +1,9 @@
 ---
 title: "Paraglide 2.0 Migration – From Framework Glue to Clean Abstraction"
 description: A hands-on guide for upgrading to Paraglide.js 2.0 with real-world examples, gotchas, and improved i18n architecture.
-ref: /de/blog/20250506-paraglide-migration-2-0-sv
 hero:
   image: $assets/paraglide-migration.jpg
-  alt: There is no time for this.
+  alt: Paraglide
   photographer: "@Vincentiu Solomon"
   photographer_link: https://unsplash.com/@vincentiu
 meta:
@@ -44,10 +43,13 @@ If you're here just for the code, feel free to skip ahead.
 
 ## TL;DR
 
-- ✓ Paraglide 2.0 drops framework-specific packages — use the new Vite plugin.
-- → You’ll need to clean up old imports, configs, and the `<ParaglideJS>` wrapper.
-- ! Language switching now requires `data-sveltekit-reload` or a manual `setLocale()`.
-- \>\> Overall: Fewer moving parts, more clarity — but less convenience in some spots. Otherwise, buckle up: here’s what it took to get Paraglide 2.0 running cleanly in production.
+✓ Paraglide 2.0 drops framework-specific packages — use the new Vite plugin.
+
+→ You’ll need to clean up old imports, configs, and the `<ParaglideJS>` wrapper.
+
+! Language switching now requires `data-sveltekit-reload` or a manual `setLocale()`.
+
+\>\> Overall: Fewer moving parts, more clarity — but less convenience in some spots. Otherwise, buckle up: here’s what it took to get Paraglide 2.0 running cleanly in production.
 
 ---
 
@@ -259,9 +261,11 @@ If you forget this step, SvelteKit might continue rendering the page in the prev
 
 Here are a few things that caught me off guard or took more time than expected:
 
-- ~> Removing `<ParaglideJS>` breaks existing localization logic — you’ll need to rebuild it manually.
-- ! Missing `data-sveltekit-reload` can lead to language switches silently failing.
-- \# Key renaming (`languageTags` → `locales`, etc.) touches a lot of files — don’t underestimate it.
+~> Removing `<ParaglideJS>` breaks existing localization logic — you’ll need to rebuild it manually.
+
+! Missing `data-sveltekit-reload` can lead to language switches silently failing.
+
+\# Key renaming (`languageTags` → `locales`, etc.) touches a lot of files — don’t underestimate it.
 
 ---
 
