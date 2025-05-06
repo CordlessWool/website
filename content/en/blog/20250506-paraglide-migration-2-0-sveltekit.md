@@ -5,8 +5,8 @@ ref: /de/blog/20250506-paraglide-migration-2-0-sv
 hero:
   image: $assets/paraglide-migration.jpg
   alt: There is no time for this.
-  photographer: "@Maximalfocus"
-  photographer_link: https://unsplash.com/@maximalfocus?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+  photographer: "@Vincentiu Solomon"
+  photographer_link: https://unsplash.com/@vincentiu
 meta:
   keywords:
     - paraglide
@@ -30,34 +30,63 @@ tags:
   - blog
 ---
 
-From time to time it is neccassery to bring all dependencies to the newest version. Most of them are easly updated, paraglide.js definitly not.
+# Paraglide 2.0 Migration – From Framework Glue to Clean Abstraction
 
-I like paraglide.js specialy with the focus of minimalitc. They keep this kredo also for the documentation, so searching for details solutions is a pain.
+From time to time, it's necessary to bring all dependencies up to date. Most of them update easily. Paraglide.js? Definitely not.
 
-This is also a good point of Paraglide.js 2.0, the documentation feels more understandable and complete, but there are still some details missing.
+This post is not just a dry migration guide — it’s also about the headaches, surprises, and a few decisions you’ll have to make if you’re already deep into a SvelteKit project like I am with [shrtn.io](https://shrtn.io). And while we’re at it: Paraglide’s approach to minimalism still makes me smile — even if it makes the docs a bit too... minimal at times.
 
-If you started with the documenation of paraglide.js 2.0 you can probably jump to the end of this article.
+That said, version 2.0 is a huge step forward. The documentation is better, the architecture is more maintainable, and the framework independence finally feels real. But not everything is an upgrade — especially not the developer experience when removing some of the SvelteKit-specific helpers.
 
-The documenation follows the update of shrtn.io and easy to self host link shortener based on SvelteKit
+If you're here just for the code, feel free to skip ahead.
+
+---
+
+## TL;DR
+
+- ✓ Paraglide 2.0 drops framework-specific packages — use the new Vite plugin.
+- → You’ll need to clean up old imports, configs, and the `<ParaglideJS>` wrapper.
+- ! Language switching now requires `data-sveltekit-reload` or a manual `setLocale()`.
+- \>\> Overall: Fewer moving parts, more clarity — but less convenience in some spots. Otherwise, buckle up: here’s what it took to get Paraglide 2.0 running cleanly in production.
+
+---
+
+## What's New in Paraglide 2.0
+
+Paraglide 2.0 brings several core changes and improvements:
+
+- **Updated to the inlang SDK v2**, now with support for variants (e.g. pluralization).
+- **Unified API**, works across frameworks without the need for framework-specific bindings.
+- **Supports all major i18n strategies**, including cookie, URL, domain, local storage, and session-based resolution.
+
+### Additional Improvements
+
+- **Nested message keys**: Organize translations in structured hierarchies.
+- **Auto-imports**: Translation keys accessed via `m.key` no longer require a manual import.
+- **Flexible key naming**: Supports arbitrary key names (even emojis) via `m["🍌"]()`.
+- **Incremental migration**: You can gradually adopt Paraglide 2.0 in existing projects.
+- **Multi-tenancy support**: Routing can now vary by domain.
+- **Compiler API exposed**: Enables advanced automation or custom tooling.
+- **Customizable routing strategies**: Choose or mix strategies like cookie or URL.
+- **Experimental per-locale bundle splitting**: Potential for reduced bundle sizes.
+- **Framework-agnostic SSR middleware**: Works with SvelteKit, Next.js, and others.
+
+---
 
 ## Step 1: Native Vite Plugin
 
-Paraglide.js now includes a platform agnotistic vite function, this makes it easier to include it to any framework, without a native parglide dependecy, like my website dropanote.de (based on embodi).
+[Paraglide.js](https://inlang.com/m/gerre34r/library-inlang-paraglideJs) now ships with a framework-agnostic Vite plugin. No more need for framework-specific packages like `@inlang/paraglide-sveltekit`. I’m also using it in production on [dropanote.de](https://dropanote.de), my own personal website built with embodi — which had no specific Paraglide framework plugin. So having a framework-agnostic plugin is a real win here.
 
-So first we update you paraglide dependecy in package json or install it. At the same time you can remove the sveltekit dependencie `@inlang/paraglide-sveltekit` included in your `package.json`.
-
-Installation:
+Install the new package and remove the old SvelteKit-specific dependency:
 
 ```bash
 pnpm add @inlang/paraglide-js
-# or if you updated your package.json
-pnpm install
+pnpm remove @inlang/paraglide-sveltekit
 ```
 
-Vite-Config erweitern:
+Update your `vite.config.ts`:
 
 ```ts
-// vite.config.ts
 import { paraglideVitePlugin } from "@inlang/paraglide-js/vite";
 import { defineConfig } from "vitest/config";
 import { sveltekit } from "@sveltejs/kit/vite";
@@ -73,56 +102,72 @@ export default defineConfig({
     tailwindcss(),
     sveltekit(),
   ],
-
   test: {
     include: ["src/**/*.{test,spec}.{js,ts}"],
   },
 });
 ```
 
-Like the Plugin from `@inlang/paraglide-sveltekit` it take an source and ourput dir, to let vite handle the compilation. These could be used for all frameworks now.
+The `strategy` option defines the language resolution order. This is new in Paraglide 2.0.
 
-`strategy` is an optional parameter and just tells paraglide in which order it should check the language. This is a new feature of paraglide.js 2.0 ([docs](https://inlang.com/m/gerre34r/library-inlang-paraglideJs/strategy#strategy))
+And yes — this plugin now works across frameworks. That’s actually a big win if you’re aiming for portability or want to reduce tech-specific glue code.
 
-## Step 2: New naming convention
+---
 
-There is some base changes in naming attributes.
-Let's start with the config file `project.inlang/settings.json`
+## Step 2: New Naming Convention
+
+Paraglide 2.0 introduces a few opinionated renamings. You’ll need to touch both the config and your code.
+
+Update `project.inlang/settings.json`:
 
 ```diff
 {
-
-	"$schema": "https://inlang.com/schema/project-settings",
--	"sourceLanguageTag": "en",
-+ "baseLocale: "en",
--	"languageTags": ["en", "de"],
+  "$schema": "https://inlang.com/schema/project-settings",
+- "sourceLanguageTag": "en",
++ "baseLocale": "en",
+- "languageTags": ["en", "de"],
 + "locales": ["en", "de"],
-	"modules": [
--		"https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@latest/dist/index.js",
--		"https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@latest/dist/index.js",
--		"https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-without-source@latest/dist/index.js",
--		"https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@latest/dist/index.js",
--		       "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@latest/dist/index.js"
-+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
-+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js"
-	],
-	"plugin.inlang.messageFormat": {
--		"pathPattern": "./messages/{languageTag}.json"
+- "modules": [
+-   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@latest/dist/index.js",
+-   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@latest/dist/index.js",
+-   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-without-source@latest/dist/index.js",
+-   "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@latest/dist/index.js",
+-   "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@latest/dist/index.js"
+- ],
++ "modules": [
++   "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
++   "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js"
++ ],
+  "plugin.inlang.messageFormat": {
+-   "pathPattern": "./messages/{languageTag}.json"
 +   "pathPattern": "./messages/{locale}.json"
-	}
-
-
+  }
 }
-
 ```
 
-Important here are the changes of `languageTags` to `locale` and `sourceLanguageTag` to `baseLocale`. These naming convention goes on in the code. If you used the `languageTag` function before you have to replace it with `getLocale`.
+Also update your imports:
+
+```ts
+// Before:
+import { languageTag } from "$paraglide/runtime";
+
+// After:
+import { getLocale } from "@inlang/paraglide-js";
+```
+
+The renaming makes things more consistent — and since you're upgrading anyway, now’s a good time for a bit of cleanup. A few search-and-replace rounds, maybe a lint check, and you're done.
+
+---
 
 ## Step 3: Remove `i18n.ts`
 
-The file `src/lib/i18n.ts` could be complete deleted. These trigger some other changes, because it is often imported.
+Yep, it’s gone. Delete `src/lib/i18n.ts`. If that sounds harmless — it’s not. This file was probably imported across your app.
 
-Let's start with `hooks.server.ts`. Replace `i18n.handle()` with:
+Here’s how to replace its functionality:
+
+### `hooks.server.ts`
+
+Replace `i18n.handle()` with:
 
 ```ts
 import { paraglideMiddleware } from "$lib/paraglide/server";
@@ -133,16 +178,13 @@ const paraglideHandle: Handle = ({ event, resolve }) =>
     ({ request: localizedRequest, locale }) => {
       event.request = localizedRequest;
       return resolve(event, {
-        transformPageChunk: ({ html }) => {
-          //take a look, what you are using in the app.html as lang placeholder
-          return html.replace("%lang%", locale);
-        },
+        transformPageChunk: ({ html }) => html.replace("%lang%", locale),
       });
     },
   );
 ```
 
-The `i18n.reroute()` in `hookts` could be replace with:
+Replace `i18n.reroute()` with:
 
 ```ts
 import type { Reroute } from "@sveltejs/kit";
@@ -153,66 +195,84 @@ export const reroute: Reroute = (request) => {
 };
 ```
 
-How I mentioned, the framework specitic code will be removed. This is one of the more bad parts. You can not use the `ParaglideJS` component in you `+layout.ts` anymore and I couldn't find a replacement for it.
+### `+layout.svelte`
 
-Update your `+layout.ts`:
+The `<ParaglideJS>` component is gone too. RIP.
 
-```ts
-  <script lang="ts">
--  	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
--  	import { i18n } from '$lib/i18n';
-
-  	import '../app.css';
-  	import Footer from '$lib/comp/Footer.svelte';
-  	let { children } = $props();
-  </script>
-
+```diff
 - <ParaglideJS {i18n}>
-  	{@render children()}
-
-  	<Footer />
+    {@render children()}
 - </ParaglideJS>
 ```
 
-This component was caring about the links and the localization. Now you have to do it by your own and this one of the biggest disappointments in this upgrade and feels like a step back. You can use `localizeHref` or `localizeUrl` to do this.
-
-Example:
+This one hurts. The wrapper used to handle links and localization. Now, you're on your own — you’ll need to wrap links with `localizeHref()` or `localizeUrl()`.
 
 ```ts
 import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
 import { localizeHref } from "$lib/paraglide/runtime";
 
-export const load = (() => {
+export const load: PageServerLoad = () => {
   redirect(302, localizeHref("/"));
-}) satisfies PageServerLoad;
+};
 ```
 
-## Step 4: Redirect to an other language
+This works — but doesn’t feel like progress. What used to be automatic now needs to be handled manually, and that includes setting up language-aware routing and keeping link consistency across layouts. It adds responsibility without offering much in return, at least not immediately.
 
-If you do not need different URLs you can just do it in JavaScript
+---
+
+## Step 4: Language Switching
+
+To switch languages manually — for example, in a language selector or after clicking a custom flag icon:
 
 ```ts
 import { setLocale } from "$lib/paraglide/runtime";
 setLocale("en");
 ```
 
-This is how SvelteKit to it in the new Demo for Paraglide.js.
-The only solution I found write now for links, is to do a hard reload on the links if this mean it is a language switch.
+If you want to support language switching via links — especially in a way that SvelteKit recognizes during navigation — make sure to include the `data-sveltekit-reload` attribute. Without it, the routing won’t fully reset, and language state might not update as expected:
 
-```
+```svelte
 <a
-	data-sveltekit-reload
-	rel="alternate"
-	hreflang="en"
-	href={localizeHref(page.url.pathname, { locale: 'en' })}>EN</a
->
+  data-sveltekit-reload
+  rel="alternate"
+  hreflang="en"
+  href={localizeHref(page.url.pathname, { locale: 'en' })}>
+  EN
+</a>
 <a
-	data-sveltekit-reload
-	rel="alternate"
-	hreflang="de"
-	href={localizeHref(page.url.pathname, { locale: 'de' })}>DE</a
->
+  data-sveltekit-reload
+  rel="alternate"
+  hreflang="de"
+  href={localizeHref(page.url.pathname, { locale: 'de' })}>
+  DE
+</a>
 ```
 
-An other solution will be to prevent the default behaver and use `setLocale()`. But do not forget to switch it in the href.
+Or use `setLocale()` and a `preventDefault()` if you want to stay in SPA-land — just make sure the updated locale is reflected in the URL as well, or the app might not behave as expected when reloading or sharing links.
+
+If you forget this step, SvelteKit might continue rendering the page in the previous language even after `setLocale()` is called, especially after navigation or reloads. In short: `data-sveltekit-reload` ensures your intent is fully respected. Your call.
+
+---
+
+## Migration Notes & Pitfalls
+
+Here are a few things that caught me off guard or took more time than expected:
+
+- ~> Removing `<ParaglideJS>` breaks existing localization logic — you’ll need to rebuild it manually.
+- ! Missing `data-sveltekit-reload` can lead to language switches silently failing.
+- \# Key renaming (`languageTags` → `locales`, etc.) touches a lot of files — don’t underestimate it.
+
+---
+
+## Conclusion
+
+The upgrade to Paraglide.js 2.0 brings fewer files, fewer dependencies, and more architectural clarity. But with that comes less convenience — especially if you relied on the opinionated SvelteKit integrations.
+
+Still, it’s worth the switch. You’ll end up with:
+
+- a framework-independent i18n system
+- strong type safety
+- and less vendor lock-in
+
+Paraglide isn’t doing the magic for you anymore. Whether that’s a good thing depends on what you value: convenience or control. You now need to be more explicit — which can feel tedious, but also results in code that's easier to reason about and maintain in the long run.
