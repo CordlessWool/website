@@ -5,6 +5,7 @@
     import type { Snippet } from "svelte";
     import type { DateFormatDefinition } from "./lib/date";
     import { Wrench, BriefcaseBusiness, CheckCheck, GraduationCap, Check } from 'lucide-svelte';
+    import IntroText from "./components/IntroText.svelte";
 
 
 
@@ -37,9 +38,9 @@
 
 <Base {data}>
     <main class="max-w-(--breakpoint-2xl) mx-auto">
-        <div class="max-w-5xl mx-auto">
+        <IntroText>
             {@render children()}
-        </div>
+        </IntroText>
         <Timeline>
             {#each data.projects as item}
                 <TimeItem time={dateFromProject(item)} format={data.format.date} >

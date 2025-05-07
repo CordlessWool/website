@@ -55,10 +55,14 @@
     @reference "tailwindcss/theme";
     li {
         @apply grid items-center content-center;
-        grid-template: calc(var(--spacing) * 17) auto auto auto / 0 auto 1fr;
+        grid-template: auto auto auto auto / 0 auto 1fr;
         @media ( min-width: 768px ) {
-            grid-template: calc(var(--spacing) * 17) auto auto auto / 1fr auto 1fr;
+            grid-template: auto auto auto auto / 1fr auto 1fr;
         }
+
+    }
+
+    li:first-of-type {
 
     }
 
@@ -115,7 +119,7 @@
         @apply col-start-2 justify-self-center;
 
         &:first-child {
-            @apply row-start-1;
+            @apply row-start-1 h-11;
         }
 
         &:last-child {
