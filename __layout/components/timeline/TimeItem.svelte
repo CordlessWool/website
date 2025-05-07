@@ -32,7 +32,6 @@
     }
 
     const isDisabled = (filter: string[]) => {
-      console.log({category, filter})
       if(typeof category === 'string') {
         return filter.includes(category);
       } else if(Array.isArray(category)) {
