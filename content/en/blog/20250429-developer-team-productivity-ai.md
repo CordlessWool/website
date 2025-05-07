@@ -18,7 +18,7 @@ meta:
     - AI in software development
 published: 2025-04-29
 layout: $layout2/blogPost
-slug: developer-team-productivity-ai
+category: management
 tags:
   - Team Culture
   - Software Development

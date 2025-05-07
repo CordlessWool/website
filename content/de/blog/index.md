@@ -3,6 +3,13 @@ layout: $layout2/blogOverview
 meta:
   title: Softwareentwicklung, Technologie und modernes IT-Management
   description: Persönliche Erfahrungen und Einblicke zu Softwareentwicklung, aktuellen Technologietrends und modernen IT-Management-Ansätzen.
+timefilter:
+  label: "Interessen:"
+  options:
+    - - management
+      - Management
+    - - dev
+      - Development
 ---
 
 # Softwareentwicklung, Technologie und modernes IT-Management

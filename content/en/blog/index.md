@@ -3,6 +3,13 @@ layout: $layout2/blogOverview
 meta:
   title: Software Development, Technology, and Modern IT Management
   description: Personal insights and experiences about software development, technology trends, and modern IT management practices.
+timefilter:
+  label: "Focus:"
+  options:
+    - - management
+      - Management
+    - - dev
+      - Development
 ---
 
 # Software Development, Technology, and Modern IT Management

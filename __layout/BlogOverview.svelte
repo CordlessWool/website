@@ -13,10 +13,11 @@
     <main>
         <IntroText {children} />
         <Timeline>
-            <Filter options={[['management', 'Management'], ['dev', 'Development']]} />
-
+            {#snippet filter()}
+                <Filter storageId="blogposttimelinefilter" class="max-w-5xl mx-auto" {...data.timefilter} />
+            {/snippet}
             {#each data.posts as post (post)}
-                <TimeItem time={post.published} format={data.format.date} disableOn={post.category}>
+                <TimeItem time={post.published} format={data.format.date} category={post.category}>
                     <TimelineMain {post} />
                     {#snippet minor()}
                         <TimelineMinor {post} />

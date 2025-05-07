@@ -12,6 +12,7 @@ meta:
     - Digital Sovereignty
 published: 2025-04-22
 layout: $layout2/blogPost
+category: management
 tags:
   - Cloud
   - GDPR

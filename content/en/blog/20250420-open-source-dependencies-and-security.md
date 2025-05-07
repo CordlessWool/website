@@ -10,6 +10,9 @@ meta:
     - business open source investment
 published: 2025-04-20
 layout: $layout2/blogPost
+category:
+  - dev
+  - management
 tags:
   - Open Source
   - IT Security

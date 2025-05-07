@@ -1,18 +1,26 @@
 <script lang="ts">
     import type { ChangeEventHandler } from "svelte/elements";
     import { getTimeContext } from "./context.svelte";
+    import type { HTMLAttributes } from "svelte/elements";
+    import { onMount } from "svelte";
 
     let {
         options,
+        label,
         onchange,
+        storageId,
+        ...props
     }: {
         options: [string, string][];
+        label: string;
+        storageId?: string;
         onchange: (list: string[]) => unknown;
-    } = $props();
-
-    let selected: string[] = $state([]);
+    } & HTMLAttributes<HTMLDivElement> = $props();
 
     let { filter } = getTimeContext();
+    onMount(() => {
+        $filter = readStorage();
+    });
 
     const onInputChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         const element = event.target as HTMLInputElement;
@@ -21,13 +29,28 @@
         }
 
         if (element.checked) {
-            selected.push(element.name);
+            filter.update((all) => [...all, element.name]);
         } else {
-            selected = selected.filter((s) => s !== element.name);
+            $filter = $filter.filter((s) => s !== element.name);
         }
-        onchange?.(selected);
-        $filter = selected;
-        console.log(filter);
+        onchange?.($filter);
+        writeStorage($filter);
+    };
+
+    const writeStorage = (data: Array<string>) => {
+        if (storageId) {
+            localStorage.setItem(storageId, JSON.stringify(data));
+        }
+    };
+
+    const readStorage = (): Array<string> => {
+        if (storageId) {
+            const str = localStorage.getItem(storageId);
+            if (str) {
+                return JSON.parse(str);
+            }
+        }
+        return [];
     };
 
     const safeId = (str: string) =>
@@ -40,23 +63,27 @@
     const getId = (str: string) => `timelinefilter-${safeId(str)}`;
 </script>
 
-<ul>
-    {#each options as option}
-        {@const id = getId(option[0])}
-        <li>
-            <input
-                {id}
-                hidden
-                type="checkbox"
-                onchange={onInputChange}
-                name={option[0]}
-            />
-            <label for={id}>
-                {option[1]}
-            </label>
-        </li>
-    {/each}
-</ul>
+<div {...props}>
+    <span>{label}</span>
+    <ul>
+        {#each options as option}
+            {@const id = getId(option[0])}
+            <li>
+                <input
+                    {id}
+                    hidden
+                    type="checkbox"
+                    checked={$filter.includes(option[0])}
+                    onchange={onInputChange}
+                    name={option[0]}
+                />
+                <label for={id}>
+                    {option[1]}
+                </label>
+            </li>
+        {/each}
+    </ul>
+</div>
 
 <style lang="postcss">
     @reference "tailwindcss/theme";

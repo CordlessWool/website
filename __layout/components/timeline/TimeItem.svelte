@@ -15,10 +15,10 @@
         children: Snippet;
         minor?: Snippet;
         icon?: Snippet;
-        disableOn?: string[] | string;
+        category?: string[] | string;
     };
 
-    let { time, format, children, minor, disableOn, icon }: Props = $props();
+    let { time, format, children, minor, category, icon }: Props = $props();
 
     let { filter } = getTimeContext();
 
@@ -32,12 +32,11 @@
     }
 
     const isDisabled = (filter: string[]) => {
-      console.log({disableOn, filter})
-      if(typeof disableOn === 'string') {
-        return filter.includes(disableOn);
-      } else if(Array.isArray(disableOn)) {
-        console.log(disableOn.some((d) => filter.includes(d)))
-        return disableOn.some((d) => filter.includes(d))
+      console.log({category, filter})
+      if(typeof category === 'string') {
+        return filter.includes(category);
+      } else if(Array.isArray(category)) {
+        return category.every((d) => filter.includes(d))
       }
     }
 

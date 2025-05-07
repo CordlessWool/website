@@ -9,6 +9,7 @@ export const load = ({ data }) => {
         description: posts.data.description,
         url: posts.url,
         published: posts.data.published,
+        category: posts.data.category,
         updated: posts.data.updated,
         tags: posts.data.tags.filter((tag) => tag !== "blog"),
       };
