@@ -8,7 +8,7 @@ export default {
     paraglideVitePlugin({
       project: "./project.inlang", //Path to your inlang project
       outdir: "./__layout/lib/paraglide", //Where you want the generated files to be placed
-      strategy: ["url"],
+      strategy: ["url", "baseLocale"],
     }),
   ],
 };
