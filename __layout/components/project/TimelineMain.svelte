@@ -27,6 +27,7 @@
 
 <script lang="ts">
     import Button from '../Button.svelte';
+    import * as m from "../../lib/paraglide/messages.js";
 
     type Props = {
         project: Project;
@@ -59,7 +60,9 @@
         {@html project.html}
     </div>
     {#if project.showPageLink}
-        <Button class="w-max justify-self-end" small href={project.url}>Weiterlesen</Button>
+        <div class="flex direct">
+        <Button class="w-max" small href={project.url}>{m.continue()}</Button>
+        </div>
     {/if}
 </section>
 

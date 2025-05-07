@@ -2,10 +2,16 @@
     import type { Snippet } from "svelte";
     import type { HTMLAttributes } from "svelte/elements";
 
-    type Props = {
+    type Props = ({
         children: Snippet;
         small?: true;
-    } & (HTMLAttributes<HTMLButtonElement> | HTMLAttributes<HTMLAnchorElement>);
+    }
+    & HTMLAttributes<HTMLButtonElement>)
+    | ({
+        children: Snippet;
+        small?: true;
+    }
+    & HTMLAttributes<HTMLAnchorElement>);
 
     const { children, small, ...props }: Props = $props();
 </script>

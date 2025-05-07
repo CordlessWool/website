@@ -2,9 +2,9 @@
     let { children } = $props();
 </script>
 
-<ul>
+<ol>
     {@render children()}
-</ul>
+</ol>
 
 <style lang="postcss">
     @reference "tailwindcss/theme";

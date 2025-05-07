@@ -62,11 +62,6 @@
 
     }
 
-    li:first-of-type {
-
-    }
-
-
 
     div.icon {
         @apply col-start-2 row-start-2 row-span-1 justify-self-center;
@@ -92,6 +87,10 @@
 
     div.minor {
         @apply col-start-3 row-start-4 justify-end-safe text-right;
+        :global(.direct) {
+        direction: rtl;
+        }
+
     }
 
     @media ( min-width: 768px ) {
@@ -100,22 +99,31 @@
         }
         li:nth-child(even) {
             @apply text-right;
+
             time {
                 @apply col-start-1;
             }
             div.main {
                 @apply col-start-1;
+                :global(.direct) {
+                 direction: rtl;
+                }
             }
             div.minor {
                 @apply col-start-3 text-left;
+                :global(.direct) {
+                direction: ltr;
+                }
             }
+
+
         }
     }
 
 
 
     hr {
-        @apply block h-full w-1 border-l-2 md:border-l-4;
+        @apply block h-full w-1 border-2;
         @apply col-start-2 justify-self-center;
 
         &:first-child {

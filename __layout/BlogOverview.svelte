@@ -1,7 +1,9 @@
 <script>
     import Base from "./components/Base.svelte";
+    import { TimelineMain, TimelineMinor } from "./components/blog";
     import BlogPostTile from "./components/BlogPostTile.svelte";
     import IntroText from "./components/IntroText.svelte";
+    import { TimeItem, Timeline } from "./components/timeline";
 
     const { data, children } = $props();
 </script>
@@ -9,11 +11,16 @@
 <Base {data}>
     <main>
         <IntroText {children} />
-        <ul class="print:divide-y-0">
+        <Timeline>
             {#each data.posts as post}
-                <BlogPostTile {...post} format={data.format} />
+                <TimeItem time={post.published} format={data.format.date}>
+                    <TimelineMain {post} />
+                    {#snippet minor()}
+                        <TimelineMinor {post} />
+                    {/snippet}
+                </TimeItem>
             {/each}
-        </ul>
+        </Timeline>
     </main>
 </Base>
 

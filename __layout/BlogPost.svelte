@@ -3,6 +3,7 @@
     import { ChevronLeft } from 'lucide-svelte';
     import Image from 'embodi/Image.svelte';
     import * as m from './lib/paraglide/messages.js'
+    import { TagList } from "./components/blog/index.js";
     const { data, children } = $props();
     const { hero } = data;
     const formatDate = (date) => {
@@ -34,9 +35,11 @@
                     <span class="update-date">Updated on: {formatDate(data.updated)}</span>
                 {/if}
             </div>
-              </header>
+
+        </header>
 
         <article class="blog-post markdown">
+            <TagList tags={data.tags.filter((tag) => tag !== 'blog')} />
             {#if hero}
                 <figure>
                     <Image

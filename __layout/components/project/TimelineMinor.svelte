@@ -9,3 +9,9 @@
     <Links {project} />
     <Tech {project} />
 </div>
+
+<style>
+    div {
+        direction: ltr;
+    }
+</style>
