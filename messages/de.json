@@ -36,5 +36,8 @@
   "blog_post_overview": "Blog Übersicht",
   "project_overview": "Projekt Übersicht",
   "continue": "Fortfahren",
-  "read": "Lesen"
+  "continue_reading": "Weiterlesen",
+  "read": "Lesen",
+  "switch_theme": "Theme wechsel",
+  "switch_lang": "Spreche wecheln"
 }

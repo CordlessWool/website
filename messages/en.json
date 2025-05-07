@@ -30,5 +30,8 @@
   "blog_post_overview": "Blog Overview",
   "project_overview": "Project Overview",
   "continue": "Continue",
-  "read": "Read"
+  "continue_reading": "Continue",
+  "read": "Read",
+  "switch_theme": "Switch Theme",
+  "switch_lang": "Switch language"
 }

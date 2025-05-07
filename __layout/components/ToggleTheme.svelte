@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Action } from "svelte/action";
     import { THEME, themeStore } from "$layout/lib/theme";
+    import * as m from "../lib/paraglide/messages.js";
 
     const darkLightModeAction: Action = (node) => {
         const getTheme = () => {
@@ -45,7 +46,12 @@
     </script>
 </svelte:head>
 
-<button class="button" aria-label="button" use:darkLightModeAction>
+<button
+    class="button"
+    aria-label="button"
+    title={m.switch_theme()}
+    use:darkLightModeAction
+>
     <i class="ri-moon-fill dark:hidden block"></i>
     <i class="ri-sun-fill hidden dark:block"></i>
 </button>

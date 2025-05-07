@@ -162,7 +162,7 @@ blockquote {
 
 .button {
     @apply cursor-pointer;
-    @apply p-1;
+    @apply p-2;
     @apply outline-none border-2 border-dotted border-transparent focus:border-teal-500 rounded-md;
 }
 
