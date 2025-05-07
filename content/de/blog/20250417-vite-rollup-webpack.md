@@ -5,6 +5,7 @@ meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build-Tools, JavaScript Bundler, tsup, Migration, Developer Experience
 published: 2025-04-17
 layout: $layout2/blogPost
+category: dev
 tags:
   - vite
   - webpack

@@ -3,17 +3,20 @@
     import { TimelineMain, TimelineMinor } from "./components/blog";
     import BlogPostTile from "./components/BlogPostTile.svelte";
     import IntroText from "./components/IntroText.svelte";
-    import { TimeItem, Timeline } from "./components/timeline";
+    import { TimeItem, Timeline, Filter } from "./components/timeline";
 
     const { data, children } = $props();
+
 </script>
 
 <Base {data}>
     <main>
         <IntroText {children} />
         <Timeline>
-            {#each data.posts as post}
-                <TimeItem time={post.published} format={data.format.date}>
+            <Filter options={[['management', 'Management'], ['dev', 'Development']]} />
+
+            {#each data.posts as post (post)}
+                <TimeItem time={post.published} format={data.format.date} disableOn={post.category}>
                     <TimelineMain {post} />
                     {#snippet minor()}
                         <TimelineMinor {post} />

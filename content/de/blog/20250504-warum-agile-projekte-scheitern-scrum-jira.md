@@ -18,6 +18,7 @@ meta:
     - agile Transformation
 published: 2025-05-04
 layout: $layout2/blogPost
+category: management
 tags:
   - Agilität
   - Projektmanagement

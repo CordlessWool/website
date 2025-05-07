@@ -2,6 +2,7 @@
     import type { Snippet } from "svelte";
     import { CheckCheck } from 'lucide-svelte';
     import type { DateFormatDefinition } from "__layout/lib/date";
+    import { getTimeContext } from "./context.svelte";
 
     type Props = {
         time:
@@ -14,9 +15,12 @@
         children: Snippet;
         minor?: Snippet;
         icon?: Snippet;
+        disableOn?: string[] | string;
     };
 
-    let { time, format, children, minor, icon }: Props = $props();
+    let { time, format, children, minor, disableOn, icon }: Props = $props();
+
+    let { filter } = getTimeContext();
 
     const formatDate = (date: Date | string | { start: Date, end: Date }): string => {
       if(typeof date === 'string' || date instanceof Date) {
@@ -26,9 +30,20 @@
         return `${formatDate(date.start)} - ${formatDate(date.end)}`
       }
     }
+
+    const isDisabled = (filter: string[]) => {
+      console.log({disableOn, filter})
+      if(typeof disableOn === 'string') {
+        return filter.includes(disableOn);
+      } else if(Array.isArray(disableOn)) {
+        console.log(disableOn.some((d) => filter.includes(d)))
+        return disableOn.some((d) => filter.includes(d))
+      }
+    }
+
 </script>
 
-<li class="timeline-item">
+<li class="timeline-item" class:dis={isDisabled($filter)}>
     <hr />
     <div class="icon">
         {#if icon}
@@ -60,6 +75,10 @@
             grid-template: auto auto auto auto / 1fr auto 1fr;
         }
 
+        &.dis {
+            @apply opacity-30;
+        }
+
     }
 
 
@@ -69,7 +88,9 @@
 
         :global(svg) {
             @apply max-md:w-5 max-md:h-5;
+
         }
+
     }
 
     time {
@@ -137,7 +158,7 @@
 
     }
 
-    li:first-child hr:first-child {
+    li:first-of-type hr:first-child {
         @apply hidden border-0;
     }
 

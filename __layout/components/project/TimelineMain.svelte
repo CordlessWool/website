@@ -61,7 +61,7 @@
     </div>
     {#if project.showPageLink}
         <div class="flex direct">
-        <Button class="w-max" small href={project.url}>{m.continue()}</Button>
+        <Button class="w-max" small href={project.url}>{m.continue_reading()}</Button>
         </div>
     {/if}
 </section>

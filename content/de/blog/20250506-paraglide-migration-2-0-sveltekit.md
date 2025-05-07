@@ -20,6 +20,7 @@ meta:
     - entwicklererfahrung
 published: 2025-05-06
 layout: $layout2/blogPost
+category: dev
 tags:
   - JavaScript
   - Migration

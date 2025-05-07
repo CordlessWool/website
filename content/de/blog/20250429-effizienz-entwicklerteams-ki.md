@@ -18,6 +18,7 @@ meta:
     - KI in der Softwareentwicklung
 published: 2025-04-29
 layout: $layout2/blogPost
+category: management
 tags:
   - Teamkultur
   - Softwareentwicklung
