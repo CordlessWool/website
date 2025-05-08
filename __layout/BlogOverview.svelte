@@ -4,6 +4,7 @@
     import BlogPostTile from "./components/BlogPostTile.svelte";
     import IntroText from "./components/IntroText.svelte";
     import { TimeItem, Timeline, Filter } from "./components/timeline";
+    import { Blend, Users, Code, Asterisk } from '@lucide/svelte';
 
     const { data, children } = $props();
 
@@ -21,6 +22,17 @@
                     <TimelineMain {post} />
                     {#snippet minor()}
                         <TimelineMinor {post} />
+                    {/snippet}
+                    {#snippet icon()}
+                        {#if Array.isArray(post.category)}
+                            <Blend />
+                        {:else if post.category === 'dev'}
+                            <Code />
+                        {:else if post.category === 'management'}
+                            <Users />
+                        {:else}
+                            <Asterisk />
+                        {/if}
                     {/snippet}
                 </TimeItem>
             {/each}
