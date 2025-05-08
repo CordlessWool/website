@@ -10,6 +10,8 @@
         date = new Date(date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
     };
+
+    console.log(hero.image[0]);
 </script>
 
 <svelte:head>
@@ -17,7 +19,7 @@
     <meta property="og:title" content={data.title} />
     <meta property="og:description" content={data.description} />
     {#if hero}
-        <meta property="og:image" content={hero.image[0]} />
+        <meta property="og:image" content={hero.image[0].src} />
     {/if}
     <!-- <meta property="og:url" content="https://deine-domain.tld/agile-projekte-scheitern" /> -->
     <meta property="og:type" content="article" />

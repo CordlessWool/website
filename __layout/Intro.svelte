@@ -16,7 +16,11 @@
         title: string;
         subtitle: string;
         company: string;
-        image: string;
+        image: {
+          image: Array<{
+            src: string
+          }>
+        };
         alt: string;
         name: string;
         role: string;
@@ -49,6 +53,17 @@
     const { data, children }: Props = $props();
     const { title, subtitle, image, alt, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
 </script>
+
+<svelte:head>
+    <!-- Open Graph (für LinkedIn, Facebook, etc.) -->
+    <meta property="og:title" content={data.title} />
+    <meta property="og:description" content={data.meta.description} />
+    {#if image}
+        <meta property="og:image" content={image.image[0].src} />
+    {/if}
+    <!-- <meta property="og:url" content="https://deine-domain.tld/agile-projekte-scheitern" /> -->
+    <meta property="og:type" content="page" />
+</svelte:head>
 
 <Base {data}>
     <main>
