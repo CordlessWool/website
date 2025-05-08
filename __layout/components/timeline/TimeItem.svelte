@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
-    import { CheckCheck } from 'lucide-svelte';
+    import { CheckCheck } from '@lucide/svelte';
     import type { DateFormatDefinition } from "__layout/lib/date";
     import { getTimeContext } from "./context.svelte";
 

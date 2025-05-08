@@ -1,6 +1,6 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
-    import { ChevronLeft } from 'lucide-svelte';
+    import { ChevronLeft } from '@lucide/svelte';
     import * as m from './lib/paraglide/messages.js'
     import { Tech, Links } from "./components/project";
     import type { Snippet } from "svelte";

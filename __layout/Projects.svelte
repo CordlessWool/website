@@ -4,7 +4,7 @@
     import { Timeline, TimeItem } from "./components/timeline";
     import type { Snippet } from "svelte";
     import type { DateFormatDefinition } from "./lib/date";
-    import { Wrench, BriefcaseBusiness, CheckCheck, GraduationCap, Check } from 'lucide-svelte';
+    import { Wrench, BriefcaseBusiness, CheckCheck, GraduationCap, Check } from '@lucide/svelte';
     import IntroText from "./components/IntroText.svelte";
 
 

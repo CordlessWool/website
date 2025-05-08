@@ -1,6 +1,6 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
-    import { ChevronLeft } from 'lucide-svelte';
+    import { ChevronLeft } from '@lucide/svelte';
     import Image from 'embodi/Image.svelte';
     import * as m from './lib/paraglide/messages.js'
     import { TagList } from "./components/blog/index.js";

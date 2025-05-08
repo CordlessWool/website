@@ -15,7 +15,7 @@
     "chart.js": "^4.4.9",
     "embodi": "0.12.2",
     "globby": "^14.1.0",
-    "lucide-svelte": "^0.501.0",
+    "@lucide/svelte": "^0.508.0",
     "postcss": "^8.5.3",
     "sharp": "^0.34.1",
     "sitemap": "^8.0.0",
