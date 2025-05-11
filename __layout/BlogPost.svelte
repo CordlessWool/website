@@ -10,8 +10,6 @@
         date = new Date(date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
     };
-
-    console.log(hero.image[0]);
 </script>
 
 <svelte:head>
