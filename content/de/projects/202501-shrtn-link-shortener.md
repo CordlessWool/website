@@ -15,10 +15,17 @@ frameworks:
   - SvelteKit
   - tailwindcss
   - sveltekit-superforms
+  - valibot
+  - drizzle orm
 tools:
   - Docker
+  - Bun
+  - Cloudflare Worker
+  - Cloudflare Pages
 database:
   - SQLite
+  - Tursor
+  - Cloudflare D1
 tags: project
 ---
 
