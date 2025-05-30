@@ -12,12 +12,13 @@
         data: {
             locale: string;
             title: string;
+            page_title: string;
             ref?: string;
             description: string;
             company: string;
             canonical?: string;
             meta?: {
-              title?: stirng;
+              title?: string;
               description?: string;
               keywords?: string;
             };
@@ -27,7 +28,7 @@
     };
 
     const { data, children, light }: Props = $props();
-    const { locale, title, ref, page_title } = $state(data);
+    const { locale, ref, title, page_title } = $state(data);
 
     const hasMeta = (tag: string) => {
       if(tag === 'title') {
@@ -79,9 +80,9 @@
 </svelte:head>
 
 {#if light}
-    <HeaderSmall {page_title} />
+    <HeaderSmall pageTitle={page_title} />
 {:else}
-    <Header {locale} {ref} {page_title} />
+    <Header {locale} {ref} pageTitle={page_title} />
 {/if}
 
     {@render children()}

@@ -3,7 +3,7 @@
     import ToggleLang from "./ToggleLang.svelte";
     import ToogleTheme from "./ToggleTheme.svelte";
 
-    const { page_title, ref, locale } = $props();
+    const { pageTitle, ref, locale } = $props();
 </script>
 
 <nav
@@ -12,7 +12,7 @@
 >
     <div class="text-xl grow font-bold my-3">
         <a href="/{locale}/">
-            {page_title}
+            {pageTitle}
         </a>
     </div>
     <ul class="flex text-xl items-center">

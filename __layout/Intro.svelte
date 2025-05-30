@@ -164,7 +164,7 @@
         @apply grid md:grid-cols-2 sm:grid-cols-1 grid-flow-row mb-7 items-start justify-around w-full lg:max-w-5xl mx-auto;
 
         h1, h2 {
-            @apply md:text-left text-center
+            @apply md:text-left text-center;
         }
     }
 
