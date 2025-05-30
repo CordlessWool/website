@@ -17,7 +17,7 @@
     "globby": "^14.1.0",
     "sharp": "^0.34.2",
     "sitemap": "^8.0.0",
-    "svelte": "~5.28.7",
+    "svelte": "~5.32.2",
     "tailwindcss": "^4.1.8",
     "terser": "^5.40.0",
     "typescript": "^5.8.3",
