@@ -9,22 +9,22 @@
     "preview": "embodi preview"
   },
   "devDependencies": {
-    "@inlang/paraglide-js": "^2.0.12",
-    "@tailwindcss/postcss": "^4.1.4",
-    "@tailwindcss/vite": "^4.1.4",
+    "@inlang/paraglide-js": "^2.0.13",
+    "@lucide/svelte": "^0.511.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8",
     "chart.js": "^4.4.9",
     "embodi": "0.12.2",
     "globby": "^14.1.0",
-    "@lucide/svelte": "^0.508.0",
-    "postcss": "^8.5.3",
-    "sharp": "^0.34.1",
+    "postcss": "^8.5.4",
+    "sharp": "^0.34.2",
     "sitemap": "^8.0.0",
-    "svelte": "^5.28.2",
-    "tailwindcss": "^4.1.4",
-    "terser": "^5.39.0",
+    "svelte": "^5.33.10",
+    "tailwindcss": "^4.1.8",
+    "terser": "^5.40.0",
     "typescript": "^5.8.3",
-    "valibot": "^1.0.0",
-    "vite": "^6.3.3",
+    "valibot": "^1.1.0",
+    "vite": "^6.3.5",
     "vitest": "^2.1.9"
   }
 }
