@@ -39,6 +39,8 @@ Der Artikel zeigt den Aufbau eines funktionierenden Fedora CoreOS Systems von Gr
 
 CoreOS funktioniert anders als traditionelle Linux-Installationen – alles wird vorab definiert, statt nachträglich konfiguriert. Einmal verstanden ist der Ansatz überzeugend.
 
+---
+
 **TL;DR - Schnellreferenz:**
 
 1. **Ignition-File erstellen:** YAML-Datei mit SSH-Key schreiben (`config.bu`)
@@ -47,6 +49,8 @@ CoreOS funktioniert anders als traditionelle Linux-Installationen – alles wird
 4. **IP-Adresse finden:** `ip addr show | grep "inet " | grep -v 127.0.0.1` (Linux)
 5. **CoreOS ISO booten** und installieren: `sudo coreos-installer install /dev/sda --ignition-url http://IP:8000/config.ign --insecure-ignition`
 6. **Neustart** - CoreOS ist fertig konfiguriert
+
+---
 
 ## Das Ignition-File erstellen
 
