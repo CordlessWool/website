@@ -19,6 +19,7 @@ meta:
     - migration guide
     - developer experience
 published: 2025-05-06
+updatedAt: 2025-06-03
 layout: $layout2/blogPost
 category: dev
 tags:
@@ -152,10 +153,10 @@ Also update your imports:
 
 ```ts
 // Before:
-import { languageTag } from "$paraglide/runtime";
+import { languageTag } from "$lib/paraglide/runtime";
 
 // After:
-import { getLocale } from "@inlang/paraglide-js";
+import { getLocale } from "$lib/paraglide/runtime";
 ```
 
 The renaming makes things more consistent — and since you're upgrading anyway, now’s a good time for a bit of cleanup. A few search-and-replace rounds, maybe a lint check, and you're done.

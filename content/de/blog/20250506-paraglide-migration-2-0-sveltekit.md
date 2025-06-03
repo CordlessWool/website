@@ -19,6 +19,7 @@ meta:
     - migrationsleitfaden
     - entwicklererfahrung
 published: 2025-05-06
+updatedAt: 2025-06-03
 layout: $layout2/blogPost
 category: dev
 tags:
@@ -141,10 +142,10 @@ Im Code ist ebenfalls Handarbeit nötig – insbesondere bei Stellen, an denen `
 
 ```ts
 // vorher:
-import { languageTag } from "$paraglide/runtime";
+import { languageTag } from "$lib/paraglide/runtime";
 
 // neu:
-import { getLocale } from "@inlang/paraglide-js";
+import { getLocale } from "$lib/paraglide/runtime";
 ```
 
 Gezieltes Suchen und Ersetzen reicht meist aus. Dynamische Stellen wie Middleware oder Stores nicht vergessen.

@@ -32,7 +32,7 @@
             <div class="text-sm text-zinc-600 dark:text-zinc-400 justify-self-end">
                 <span>Published on: {formatDate(data.published)}</span>
                 {#if data.updated}
-                    <span class="update-date">Updated on: {formatDate(data.updated)}</span>
+                    <span class="update-date">Updated on: {formatDate(data.updatedAt)}</span>
                 {/if}
             </div>
 
