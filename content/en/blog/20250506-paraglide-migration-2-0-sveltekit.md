@@ -1,6 +1,6 @@
 ---
-title: "Paraglide 2.0 Migration – From Framework Glue to Clean Abstraction"
-description: A hands-on guide for upgrading to Paraglide.js 2.0 with real-world examples, gotchas, and improved i18n architecture.
+title: "Paraglide Vite Plugin: Migration Guide from 1.x to 2.0 (SvelteKit)"
+description: Complete guide for migrating Paraglide.js from 1.x to 2.0 using the new Vite plugin. SvelteKit-specific examples and troubleshooting included.
 hero:
   image: $assets/paraglide-migration.jpg
   alt: Paraglide
@@ -31,7 +31,7 @@ tags:
   - blog
 ---
 
-# Paraglide 2.0 Migration – From Framework Glue to Clean Abstraction
+# Paraglide Vite Plugin: Migration Guide from 1.x to 2.0
 
 From time to time, it's necessary to bring all dependencies up to date. Most of them update easily. Paraglide.js? Definitely not.
 
