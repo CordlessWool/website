@@ -52,19 +52,18 @@ jobs:
           path: dist/static
   cloudflare-deploy:
     runs-on: ubuntu-latest
-    needs: build
     permissions:
       contents: read
       deployments: write
     name: Publish to Cloudflare Pages
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          name: github-pages
-          path: ./dist/static
-      - name: Extract artifact
-        run: tar -xf artifact.tar
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      - run: pnpm install
+      - name: Build all for refernces
+        run: pnpm run build
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
