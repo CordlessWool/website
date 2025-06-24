@@ -1,4 +1,4 @@
-name = "webiste"
+name = "website"
 compatibility_date = "2025-04-03"
 [build]
 command = "pnpm run build"
