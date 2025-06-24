@@ -62,7 +62,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: github-pages
-          path: ./dist/static
+          path: ./
+      - name: Extract artifact
+        run: tar -xf artifact.tar
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
         with:
