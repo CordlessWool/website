@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./font.css";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
     font-family: "Source Code Pro", ui-monospace, monospace;
