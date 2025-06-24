@@ -66,8 +66,6 @@ jobs:
         with:
           version: latest
       - run: pnpm install
-      - name: Build all for refernces
-        run: pnpm run build
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
