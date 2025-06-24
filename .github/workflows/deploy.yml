@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   # Build job
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,20 +50,34 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/static
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+  cloudflare-deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: ./dist/static
+      - name: Extract artifact
+        run: tar -xf artifact.tar
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: "website"
-          directory: "./dist/static"
+          command: deploy
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
   # Deployment job
-  github-pages:
+  github-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build-and-deploy
+    needs: build
     runs-on: ubuntu-latest
     name: Deploy on Github Pages
     steps:
