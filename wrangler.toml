@@ -1,7 +1,3 @@
 name = "website"
 compatibility_date = "2025-04-03"
-[build]
-command = "pnpm run build"
-
-[assets]
-directory = "./dist/static"
+pages_build_output_dir = "./dist/static"

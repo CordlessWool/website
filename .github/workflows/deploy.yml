@@ -66,12 +66,13 @@ jobs:
         with:
           version: latest
       - run: pnpm install
+      - run: pnpm run build
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./dist/static --project-name=website
+          command: pages deploy
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
   # Deployment job
   github-deploy:
