@@ -68,7 +68,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: website
+          projectName: "website"
           directory: "./dist/static"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
   # Deployment job
