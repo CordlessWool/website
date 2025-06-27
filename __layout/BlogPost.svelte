@@ -39,7 +39,7 @@
         </header>
 
         <article class="blog-post markdown">
-            <TagList tags={data.tags.filter((tag) => tag !== 'blog')} />
+            <TagList class="extra-wide tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
             {#if hero}
                 <figure>
                     <Image
@@ -80,12 +80,36 @@
         @apply flex flex-row items-center justify-between flex-wrap;
         @apply text-nowrap w-full;
         @apply mb-5 pb-3 border-b-2 border-zinc-300 dark:border-zinc-600;
+
+    }
+
+    article :global(.extra-wide) {
+        @apply justify-center flex-nowrap text-nowrap;
+        @apply overflow-x-auto;
+
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+    }
+
+    article :global(.extra-wide) {
+        @media (min-width: 768px) {
+            width: calc(100% + (var(--spacing) * 10));
+            margin-inline: calc(var(--spacing) * -5);
+        }
+        @media (min-width: 1024px) {
+            width: calc(100% + (var(--spacing) * 80));
+            margin-inline: calc(var(--spacing) * -40);
+        }
     }
 
     figure {
         :global(img) {
             @apply object-cover;
-            @apply max-h-[61vh];
+            @apply max-h-[43vh];
         }
         @apply relative mb-11 max-w-screen ;
         @apply object-cover;
