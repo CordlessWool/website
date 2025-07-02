@@ -1,6 +1,6 @@
 ---
-title: "Wann ergibt Wasserfall noch Sinn? Die ehrliche Entscheidungshilfe"
-description: Wasserfall ist nicht tot - nur falsch angewendet. Drei klare Kriterien, wann sequenzielle Entwicklung besser funktioniert als Agilität.
+title: "Wasserfallmodell: Wann es tatsächlich funktioniert (3 ehrliche Kriterien)"
+description: 90% der Teams wählen die falsche Projektmethode. Diese 3 Fragen zeigen dir in 2 Minuten, ob Wasserfall oder Agile für dein Projekt richtig ist.
 ref: /en/blog/20250620-when-waterfall-project-management-makes-sense
 hero:
   image: $assets/wasserfall-entscheidung.jpg
@@ -31,7 +31,7 @@ tags:
   - blog
 ---
 
-# Wann ergibt Wasserfall noch Sinn? Die ehrliche Entscheidungshilfe
+# Wasserfallmodell: Wann es tatsächlich funktioniert (3 ehrliche Kriterien)
 
 "Wasserfall ist tot" - das hörst du in jedem Agile-Workshop. Aber dann sitzt du vor deinem nächsten Projekt und fragst dich: Macht iterative Entwicklung hier wirklich Sinn? Oder führt das nur zu endlosen Diskussionen und Scope-Creep?
 

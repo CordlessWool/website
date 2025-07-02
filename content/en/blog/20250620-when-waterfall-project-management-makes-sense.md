@@ -1,6 +1,6 @@
 ---
-title: "When Does Waterfall Still Make Sense? The Honest Decision Guide"
-description: Waterfall isn't dead - just misapplied. Three clear criteria when sequential development works better than agility.
+title: "Stop the Agile Hype: When Waterfall Actually Delivers Better Results"
+description: Your boss wants Agile, but your project needs Waterfall? 3 arguments that convince any manager.
 ref: /de/blog/20250620-wann-wasserfall-projektmanagement-sinnvoll
 hero:
   image: $assets/wasserfall-entscheidung.jpg
@@ -31,7 +31,7 @@ tags:
   - blog
 ---
 
-# When Does Waterfall Still Make Sense? The Honest Decision Guide
+# Stop the Agile Hype: When Waterfall Actually Delivers Better Results
 
 "Waterfall is dead" - you hear this in every Agile workshop. But then you sit with your next project and wonder: Does iterative development really make sense here? Or does it just lead to endless discussions and scope creep?
 
