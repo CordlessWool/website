@@ -136,7 +136,7 @@
         }
     }
 
-    .markdown :global(pre) {
+    .markdown :global(figure) {
         max-width: 100vw;
         @media (min-width: 768px) {
             width: calc(100% + (var(--spacing) * 10));

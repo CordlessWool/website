@@ -98,33 +98,102 @@ a.link:focus {
     @apply mt-1;
 }
 
-.markdown code {
-    @apply bg-zinc-50 dark:bg-zinc-900 py-1 px-2 rounded-md;
+figure[data-rehype-pretty-code-figure] {
+    @apply rounded-md overflow-hidden;
+
+    figcaption {
+        @apply text-sm text-zinc-500 dark:text-zinc-400 px-3 py-1;
+    }
+
+    pre {
+        @apply py-2 rounded-md overflow-auto relative px-3 border-solid border-zinc-600 border;
+    }
+
+    code {
+        @apply bg-transparent;
+    }
 }
 
-.markdown pre {
-    @apply bg-zinc-50 dark:bg-zinc-900 py-5 rounded-md overflow-auto relative px-7 mb-5;
+.markdown p code {
+    @apply bg-white dark:bg-black;
+    @apply py-1 px-2 rounded-md;
+    @apply text-sm;
 }
 
 .markdown pre code {
-    @apply font-mono text-sm bg-zinc-50 dark:bg-zinc-900 font-normal;
+    @apply font-mono text-sm font-normal;
     display: block;
 }
 
-.markdown pre code span {
+.markdown pre code {
+    /* Diff line styles */
+    .diff.remove {
+        @apply bg-red-600/15;
+    }
+
+    .diff.add {
+        @apply bg-lime-700/15;
+    }
+
+    /* Stronger background for better visibility */
+    /*.diff.remove {
+        background-color: rgba(248, 81, 73, 0.15);
+    }
+
+    .diff.add {
+        background-color: rgba(46, 160, 67, 0.15);
+    }
+    */
+
+    /* Word-level diff highlighting */
+    .word.diff.remove {
+        background-color: rgba(248, 81, 73, 0.3);
+        color: #f85149;
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+
+    .word.diff.add {
+        background-color: rgba(46, 160, 67, 0.3);
+        color: #2ea043;
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+
+    /* Code block container */
+    pre:has(.line.diff) {
+        border: 1px solid rgba(240, 246, 252, 0.1);
+        border-radius: 6px;
+    }
+
+    /* Optional: Add +/- indicators */
+    .diff.remove::before {
+        content: "- ";
+        @apply text-red-400;
+        font-weight: bold;
+    }
+
+    .diff.add::before {
+        content: "+ ";
+        @apply text-lime-600;
+        font-weight: bold;
+    }
+}
+
+/* .markdown pre code > span {
     display: block;
     counter-increment: linenumber;
     position: relative;
 }
 
-.markdown pre code span::before {
+.markdown pre code > span::before {
     content: counter(linenumber);
     position: absolute;
     left: -2.5em;
     width: 2em;
     text-align: right;
     color: #6b7280;
-}
+} */
 
 .markdown table {
     @apply w-full mt-4 mb-4 border-collapse;

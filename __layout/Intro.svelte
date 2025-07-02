@@ -111,8 +111,7 @@
             </Item>
             <Item label={m.location()} content={location} />
 
-
-                <Item label={m.current_tech()} content={preferred_techs} />
+            <Item label={m.current_tech()} content={preferred_techs} />
             <Item label={m.current_role()} content={preferred_roles} />
         </Meta>
 

@@ -113,27 +113,27 @@ Paraglide 2.0 bringt neue Bezeichner in die `settings.json`: `sourceLanguageTag`
 
 Update `project.inlang/settings.json`:
 
-```diff
+```json title="project.inlang/settings.json"
 {
   "$schema": "https://inlang.com/schema/project-settings",
-- "sourceLanguageTag": "en",
-+ "baseLocale": "en",
-- "languageTags": ["en", "de"],
-+ "locales": ["en", "de"],
-- "modules": [
--   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@latest/dist/index.js",
--   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@latest/dist/index.js",
--   "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-without-source@latest/dist/index.js",
--   "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@latest/dist/index.js",
--   "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@latest/dist/index.js"
-- ],
-+ "modules": [
-+   "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
-+   "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js"
-+ ],
+  "sourceLanguageTag": "en", // [!code --]
+  "baseLocale": "en", // [!code ++]
+  "languageTags": ["en", "de"], // [!code --]
+  "locales": ["en", "de"], // [!code ++]
+  "modules": [ // [!code --]
+    "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@latest/dist/index.js", // [!code --]
+    "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@latest/dist/index.js", // [!code --]
+    "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-without-source@latest/dist/index.js", // [!code --]
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@latest/dist/index.js", // [!code --]
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@latest/dist/index.js" // [!code --]
+  ], // [!code --]
+  "modules": [ // [!code ++]
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js", // [!code ++]
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js" // [!code ++]
+  ], // [!code ++]
   "plugin.inlang.messageFormat": {
--   "pathPattern": "./messages/{languageTag}.json"
-+   "pathPattern": "./messages/{locale}.json"
+    "pathPattern": "./messages/{languageTag}.json" // [!code --]
+    "pathPattern": "./messages/{locale}.json" // [!code ++]
   }
 }
 ```
@@ -192,10 +192,10 @@ export const reroute: Reroute = (request) => {
 
 Der Wrapper `<ParaglideJS>` entfällt. Bisher sorgte er automatisch für Sprachzustand und Link-Lokalisierung.
 
-```diff
-- <ParaglideJS {i18n}>
+```svelte title="+layout.svelte"
+  <ParaglideJS {i18n}> <!--  [!code --] -->
     {@render children()}
-- </ParaglideJS>
+  </ParaglideJS> <!--  [!code --] -->
 ```
 
 Die Lokalisierung von Links musst Du nun explizit selbst vornehmen – zum Beispiel mit `localizeHref()`:
