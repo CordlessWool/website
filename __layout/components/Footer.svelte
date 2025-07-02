@@ -32,10 +32,10 @@
             </a>
         </li>
         <li class="light clickable">
-            <a hreflang="de" href="/de/">DE</a>
+            <a hreflang="de" data-embodi-reload href="/de/">DE</a>
         </li>
         <li class="light clickable">
-            <a hreflang="en" href="/en/">EN</a>
+            <a hreflang="en" data-embodi-reload href="/en/">EN</a>
         </li>
         <li class="light clickable">
             <a href="/{locale}/imprint/">{m.imprint()}</a>

@@ -25,6 +25,7 @@
 
 <a
     {...switchLanguage($page.url, ref)}
+    data-embodi-reload
     class="button"
     aria-label="switch language"
     title={m.switch_lang()}
