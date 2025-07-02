@@ -1,5 +1,12 @@
 @import "tailwindcss";
-@import "./font.css";
+
+/* Regular + Bold */
+@import "@fontsource/source-code-pro/400.css";
+@import "@fontsource/source-code-pro/600.css";
+
+/* Wenn du auch Italic willst */
+/* @import "@fontsource/source-code-pro/400-italic.css";
+@import "@fontsource/source-code-pro/700-italic.css"; */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {

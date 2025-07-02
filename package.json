@@ -32,6 +32,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@fontsource/source-code-pro": "^5.2.6",
     "@icons-pack/svelte-simple-icons": "^6.0.0"
   }
 }
