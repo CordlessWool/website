@@ -2,7 +2,6 @@
 title: "Why is my development team getting slower?"
 description: "Your team suddenly takes twice as long for features? It's not laziness or incompetence. Here's the real reason and how to systematically solve the problem as a PM."
 ref: /de/blog/20250703-warum-wird-entwicklerteam-langsamer
-slug: "/en/blog/20250703-why-is-my-development-team-getting-slower"
 hero:
   image: $assets/messy-desk.jpg
   alt: Messy desk with stacked documents and chaos - metaphor for technical debt in code
@@ -21,6 +20,7 @@ meta:
     - improve development speed
     - increase team productivity
 published: 2025-07-03
+layout: $layout2/blogPost
 category: management
 tags:
   - Project Management
