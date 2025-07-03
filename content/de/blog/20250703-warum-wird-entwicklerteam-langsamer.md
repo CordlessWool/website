@@ -21,7 +21,7 @@ meta:
     - entwicklungsgeschwindigkeit verbessern
     - team produktivität steigern
 published: 2025-07-03
-category: projektmanagement
+category: management
 tags:
   - Projektmanagement
   - Tech Debt

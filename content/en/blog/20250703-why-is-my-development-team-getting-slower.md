@@ -21,7 +21,7 @@ meta:
     - improve development speed
     - increase team productivity
 published: 2025-07-03
-category: project-management
+category: management
 tags:
   - Project Management
   - Tech Debt
