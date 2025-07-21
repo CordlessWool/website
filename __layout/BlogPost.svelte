@@ -71,7 +71,7 @@
 
     main {
         @apply flex flex-col items-center justify-center;
-        @apply max-w-4xl w-full;
+        @apply max-w-7xl w-full;
     }
 
     article {
@@ -118,18 +118,11 @@
     figure {
         :global(img) {
             @apply object-cover;
-            @apply max-h-[41vh];
+            @apply max-h-[37vh];
         }
         @apply relative mb-7 mt-3 max-w-screen ;
         @apply object-cover;
-        /* @media (min-width: 768px) {
-            width: calc(100% + (var(--spacing) * 10));
-            margin-inline: calc(var(--spacing) * -5);
-        }
-        @media (min-width: 1024px) {
-            width: calc(100% + (var(--spacing) * 80));
-            margin-inline: calc(var(--spacing) * -40);
-        } */
+
         figcaption, figcaption a {
             @apply absolute bottom-1 right-1 w-max;
             @apply text-sm text-zinc-500 px-1 no-underline;
@@ -143,8 +136,8 @@
             margin-inline: calc(var(--spacing) * -5);
         }
         @media (min-width: 1024px) {
-            width: calc(100% + (var(--spacing) * 40));
-            margin-inline: calc(var(--spacing) * -20);
+            width: calc(100% + (var(--spacing) * 20));
+            margin-inline: calc(var(--spacing) * -10);
         }
     }
 </style>
