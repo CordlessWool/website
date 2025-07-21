@@ -3,7 +3,7 @@
     import { ChevronLeft } from '@lucide/svelte';
     import Image from 'embodi/Image.svelte';
     import * as m from './lib/paraglide/messages.js'
-    import { TagList } from "./components/blog/index.js";
+    import { TagList, Author } from "./components/blog/index.js";
     const { data, children } = $props();
     const { hero } = data;
     const formatDate = (date) => {
@@ -62,6 +62,7 @@
             <div class="markdown blog-post">
             {@render children()}
             </div>
+            <Author author={data.author} />
         </article>
     </main>
 </Base>

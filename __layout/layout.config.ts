@@ -92,6 +92,22 @@ const blogPost = defineLayout({
           photographer_link: v.optional(v.string()),
         }),
       ),
+      author: v.optional(
+        v.objectAsync({
+          name: v.string(),
+          photo: v.pipe(
+            v.string(),
+            e.image(
+              [256, 512].map((size) => ({
+                width: size,
+                format: "webp",
+                quality: 80,
+              })),
+            ),
+          ),
+          description: v.string(),
+        }),
+      ),
     }),
 });
 
