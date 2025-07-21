@@ -34,11 +34,12 @@
 <style lang="postcss">
     @reference 'tailwindcss';
     .author-bio {
-        @apply grid max-w-3xl gap-5 mx-auto my-23;
+        @apply grid max-w-3xl gap-5 mx-auto my-23 items-center;
         grid-template-columns: 1fr 200px;
     }
 
     .author-info {
+        @apply h-min;
     }
 
     .author-name {
