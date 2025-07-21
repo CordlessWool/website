@@ -17,7 +17,7 @@
     "@shikijs/transformers": "^3.7.0",
     "@tailwindcss/vite": "^4.1.10",
     "chart.js": "^4.5.0",
-    "embodi": "0.13.7",
+    "embodi": "0.13.8",
     "globby": "^14.1.0",
     "rehype-pretty-code": "^0.14.1",
     "sharp": "^0.34.2",

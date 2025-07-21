@@ -45,8 +45,8 @@
                     <figure>
                         <Image
                             fetchpriority="high"
-                            sizes="(max-width: 768px) 100vw, 1000"
-                            width="1000"
+                            sizes="(max-width: 1200px) 100vw"
+                            width="1200"
                             hight="700"
                             images={ hero.image }
                             alt={ hero.alt }
