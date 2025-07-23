@@ -61,10 +61,10 @@
     {#if ref}
         {#if locale === 'de'}
             <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
-            <link rel="alternate" hreflang="en" href={fullUrl(data.ref)} />
+            <link rel="alternate" hreflang="en" href={fullUrl(ref)} />
         {:else}
             <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
-            <link rel="alternate" hreflang="de" href={fullUrl(data.ref)} />
+            <link rel="alternate" hreflang="de" href={fullUrl(ref)} />
         {/if}
     {:else if $page.url.includes('/en/') || $page.url.includes('/de/')}
         <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
