@@ -98,10 +98,10 @@ const blogPost = defineLayout({
           photo: v.pipe(
             v.string(),
             e.image(
-              [256, 512].map((size) => ({
+              [192, 384].map((size) => ({
                 width: size,
                 format: "webp",
-                quality: 80,
+                quality: 70,
               })),
             ),
           ),

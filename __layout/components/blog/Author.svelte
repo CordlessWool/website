@@ -22,7 +22,7 @@
         <Image
             fetchpriority="low"
             class="rounded-full border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
-            sizes="(max-width: 256px) 100vw"
+            sizes="192px"
             height="256 "
             width="256"
             images={author.photo}
@@ -34,12 +34,15 @@
 <style lang="postcss">
     @reference 'tailwindcss';
     .author-bio {
-        @apply grid max-w-3xl gap-5 mx-auto my-23 items-center;
-        grid-template-columns: 1fr 200px;
+        @apply grid max-w-2xl grid-cols-1 md:grid-cols-3 gap-5 mx-auto my-23 justify-items-center items-center;
+    }
+
+    .author-photo {
+        @apply max-w-48 max-md:order-first;
     }
 
     .author-info {
-        @apply h-min;
+        @apply h-min text-center md:col-span-2;
     }
 
     .author-name {
