@@ -11,7 +11,7 @@ const intro = defineLayout({
       image: v.pipe(
         v.string(),
         e.image(
-          [500, 786, 1000, 1300, 2000].map((size) => ({
+          [375, 390, 412, 430, 512, 786, 824, 1024, 1300, 2000].map((size) => ({
             width: size,
             format: "webp",
             quality: 70,

@@ -25,12 +25,12 @@ body {
 }
 
 main {
-    @apply px-1 md:px-7 lg:px-11;
+    @apply px-2 md:px-7 lg:px-11;
     @apply mx-auto;
 }
 
 header {
-    @apply print:hidden;
+    @apply print:hidden px-1;
 }
 
 footer {
