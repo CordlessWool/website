@@ -1,7 +1,7 @@
 ---
 title: "Wasserfallmodell: Wann es tatsächlich funktioniert (3 ehrliche Kriterien)"
 description: 90% der Teams wählen die falsche Projektmethode. Diese 3 Fragen zeigen dir in 2 Minuten, ob Wasserfall oder Agile für dein Projekt richtig ist.
-ref: /en/blog/20250620-when-waterfall-project-management-makes-sense
+ref: /en/blog/20250620-when-waterfall-project-management-makes-sense/
 hero:
   image: $assets/wasserfall-entscheidung.jpg
   alt: Wasserfall vs Agile Entscheidung

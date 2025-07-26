@@ -1,8 +1,8 @@
 ---
 title: "Retrospectives That Don't Suck - 4 Rules for Effective Team Retros"
 description: 90% of all retrospectives are a waste of time. These 4 concrete rules turn frustrated teams into productive teams - without endless post-it sessions.
-ref: /de/blog/20250627-retrospektiven-die-wirkung-zeigen
-slug: /en/blog/20250627-retrospectives-that-show-impact
+ref: /de/blog/20250627-retrospektiven-die-wirkung-zeigen/
+slug: /en/blog/20250627-retrospectives-that-show-impact/
 hero:
   image: $assets/retrospektiven-wirkung.jpg
   alt: Successful Team Retrospective

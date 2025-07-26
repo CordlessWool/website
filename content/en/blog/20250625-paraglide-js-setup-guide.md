@@ -19,7 +19,6 @@ meta:
     - typescript i18n
     - i18n setup guide
 published: 2025-06-25
-updatedAt: 2025-06-25
 layout: $layout2/blogPost
 category: dev
 tags:

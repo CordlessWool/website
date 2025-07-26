@@ -1,7 +1,7 @@
 ---
 title: "Stop the Agile Hype: When Waterfall Actually Delivers Better Results"
 description: Your boss wants Agile, but your project needs Waterfall? 3 arguments that convince any manager.
-ref: /de/blog/20250620-wann-wasserfall-projektmanagement-sinnvoll
+ref: /de/blog/20250620-wann-wasserfall-projektmanagement-sinnvoll/
 hero:
   image: $assets/wasserfall-entscheidung.jpg
   alt: Wasserfall vs Agile Entscheidung

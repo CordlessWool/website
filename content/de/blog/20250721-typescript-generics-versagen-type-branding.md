@@ -1,7 +1,7 @@
 ---
 title: "Wenn TypeScript Generics versagen - Type Branding als Rettung"
 description: Wenn TypeScript Generics ihre Type-Information verlieren, scheinen type-sichere Pipelines unmöglich. Type Branding löst dieses Problem elegant. Erfahre, wie du generische Kontexte durch Function Composition erhältst.
-ref: /en/blog/20250721-typescript-type-branding-generic-functions
+ref: /en/blog/20250721-typescript-type-branding-generic-functions/
 hero:
   image: $assets/202506-generic-type-branding-typescript.png
   alt: TypeScript code showing type branding pattern

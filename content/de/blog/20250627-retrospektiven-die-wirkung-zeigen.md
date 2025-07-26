@@ -1,8 +1,8 @@
 ---
 title: "Retrospektiven, die nicht nerven - 4 Regeln für wirksame Team-Retros"
 description: 90% aller Retrospektiven sind Zeitverschwendung. Diese 4 konkreten Regeln machen aus frustrierten Teams produktive Teams - ohne endlose Post-It-Sessions.
-ref: /en/blog/20250627-retrospectives-that-show-impact
-slug: /de/blog/20250627-retrospektiven-die-wirkung-zeigen
+ref: /en/blog/20250627-retrospectives-that-show-impact/
+slug: /de/blog/20250627-retrospektiven-die-wirkung-zeigen/
 hero:
   image: $assets/retrospektiven-wirkung.jpg
   alt: Erfolgreiche Team Retrospektive

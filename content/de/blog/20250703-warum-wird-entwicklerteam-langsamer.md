@@ -1,7 +1,7 @@
 ---
 title: "Warum wird mein Entwicklerteam immer langsamer?"
 description: "Dein Team braucht für Features plötzlich doppelt so lange? Das liegt nicht an Faulheit oder Inkompetenz. Hier erfährst du den wahren Grund und wie du als PM das Problem systematisch löst."
-ref: /en/blog/20250703-why-is-my-development-team-getting-slower
+ref: /en/blog/20250703-why-is-my-development-team-getting-slower/
 hero:
   image: $assets/messy-desk.jpg
   alt: Unordentlicher Schreibtisch mit gestapelten Dokumenten und Chaos - Metapher für technische Schulden im Code

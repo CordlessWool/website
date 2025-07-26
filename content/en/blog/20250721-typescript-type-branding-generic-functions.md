@@ -1,7 +1,7 @@
 ---
 title: "How Type Branding Solved an 'Impossible' TypeScript Problem"
 description: Building type-safe object transformation pipelines in TypeScript seemed impossible until I discovered type branding. Learn how to preserve generic context through function composition.
-ref: /de/blog/20250721-typescript-generics-versagen-type-branding
+ref: /de/blog/20250721-typescript-generics-versagen-type-branding/
 hero:
   image: $assets/202506-generic-type-branding-typescript.png
   alt: TypeScript code showing type branding pattern
