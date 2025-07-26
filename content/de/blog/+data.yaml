@@ -2,3 +2,10 @@ author:
   name: Wolfgang Rathgeb
   photo: $assets/wolfgang-rathgeb3.jpeg
   description: Als Software Engineer und Team-Lead helfe ich Entwicklerteams dabei, produktiver zu werden und besser zusammenzuarbeiten. Mein Fokus liegt auf praktischen Lösungen für typische Team-Probleme - aus der täglichen Erfahrung, nicht aus der Theorie.
+format:
+  date:
+    locale: "de-DE"
+    options:
+      year: "numeric"
+      month: "2-digit"
+      day: "2-digit"
