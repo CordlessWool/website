@@ -1,6 +1,8 @@
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import embodiMarkdown from "@embodi/markdown";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
+
+import rehypeSlug from "rehype-slug";
 import { transformerNotationDiff } from "@shikijs/transformers";
 import rehypePrettyCode from "rehype-pretty-code";
 import tailwindcss from "@tailwindcss/vite";
@@ -12,6 +14,12 @@ export default {
     embodiMarkdown({
       remarkPlugins: [],
       rehypePlugins: [
+        [
+          rehypeSlug,
+          {
+            prefix: "section-",
+          },
+        ],
         [
           rehypePrettyCode,
           {
