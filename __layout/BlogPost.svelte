@@ -6,8 +6,8 @@
     import { TagList, Author } from "./components/blog/index.js";
     const { data, children } = $props();
     const { hero } = data;
-    const formatDate = (date) => {
-        date = new Date(date);
+    const formatDate = (_date: string) => {
+        const date = new Date(_date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
     };
 </script>
@@ -26,13 +26,16 @@
 <Base {data}>
     <main>
         <header>
-            <a class="flex items-center text-md !text-zinc-600 dark:!text-zinc-400" href="/{data.locale}/blog">
+            <a class="flex items-center text-md !text-zinc-700 dark:!text-zinc-300" href="/{data.locale}/blog">
                 <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
             </a>
-            <div class="text-sm text-zinc-600 dark:text-zinc-400 justify-self-end">
-                <span>Published on: {formatDate(data.published)}</span>
-                {#if data.updated}
-                    <span class="update-date">Updated on: {formatDate(data.updatedAt)}</span>
+            <div class="grid grid-cols-2 gap-x-2 text-xs text-zinc-600 dark:text-zinc-400 justify-self-end px-2">
+
+                    <span>Published on:</span>
+                    <time datetime={data.published}>{formatDate(data.published)}</time>
+                {#if data.updatedAt}
+                        <span>Updated on:</span>
+                        <time datetime={data.updatedAt}>{formatDate(data.updatedAt)}</time>
                 {/if}
             </div>
 
@@ -42,7 +45,7 @@
             <header>
                 <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
                 {#if hero}
-                    <figure>
+                    <figure class="hero">
                         <Image
                             fetchpriority="high"
                             sizes="(max-width: 1200px) 100vw"
@@ -77,24 +80,32 @@
 
     article {
         @apply w-full mx-2;
+
+        :global .toc {
+            @apply max-lg:hidden;
+        }
     }
 
     .blog-post {
         @apply max-w-2xl w-full m-auto;
     }
 
+    .hero {
+        @apply max-w-5xl w-full m-auto;
+    }
+
     main > header {
         --margin: calc(var(--spacing) * 7);
         @apply flex flex-row items-center justify-between flex-wrap;
         @apply text-nowrap;
-        @apply mb-5 pb-1 border-b-2 border-zinc-300 dark:border-zinc-600;
+        @apply pb-1 border-b-2 border-zinc-300 dark:border-zinc-600;
         margin-inline: var(--margin);
         width: calc(100% - var(--margin));
 
     }
 
     article :global(.tag-list) {
-         @apply justify-center;
+        @apply justify-center my-3;
         @media (max-width: 1024px) {
             @apply justify-center-safe flex-nowrap text-nowrap;
             @apply overflow-x-scroll;
