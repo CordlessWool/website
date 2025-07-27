@@ -13,7 +13,6 @@
     "@iconify-json/lucide": "^1.2.58",
     "@iconify-json/simple-icons": "^1.2.44",
     "@iconify/svelte": "^5.0.1",
-    "@iconify/tailwind4": "^1.0.6",
     "@inlang/paraglide-js": "^2.2.0",
     "@jsdevtools/rehype-toc": "^3.0.2",
     "@lucide/svelte": "^0.526.0",
