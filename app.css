@@ -4,6 +4,8 @@
 @import "@fontsource/source-code-pro/400.css";
 @import "@fontsource/source-code-pro/600.css";
 
+@plugin "@iconify/tailwind4";
+
 /* Wenn du auch Italic willst */
 /* @import "@fontsource/source-code-pro/400-italic.css";
 @import "@fontsource/source-code-pro/700-italic.css"; */
@@ -238,7 +240,7 @@ blockquote {
 
 .button {
     @apply cursor-pointer;
-    @apply p-2;
+    @apply p-2 block;
     @apply outline-none border-2 border-dotted border-transparent focus:border-teal-500 rounded-md;
 }
 

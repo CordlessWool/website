@@ -7,7 +7,7 @@ links:
     link: https://github.com/CordlessWool/shrtn
   - name: Website shrtn.io
     link: https://shrtn.io/
-    icon: pages-fill
+    icon: lucide:external-link
 languages:
   - TypeScript
   - Svelte

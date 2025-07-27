@@ -1,5 +1,6 @@
 <script lang="ts">
     import { page } from "$embodi/stores";
+    import { Languages } from "@lucide/svelte";
     import * as m from "../lib/paraglide/messages.js";
 
     let { ref } = $props();
@@ -30,5 +31,5 @@
     aria-label="switch language"
     title={m.switch_lang()}
 >
-    <i class="ri-translate-2"></i>
+    <Languages />
 </a>

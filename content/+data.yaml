@@ -2,11 +2,11 @@ locale: en
 page_title: Wolfgang Rathgeb
 socials:
   - name: GitHub
-    icon: github-fill
+    icon: github
     link: https://github.com/CordlessWool
   - name: Stack Overflow
-    icon: stack-overflow-fill
+    icon: stackoverflow
     link: https://stackoverflow.com/users/6565711/cordlesswool
   - name: LinkedIn
-    icon: linkedin-box-fill
+    icon: linkedin
     link: https://www.linkedin.com/in/wolfgang-rathgeb/

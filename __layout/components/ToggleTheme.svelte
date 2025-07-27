@@ -2,6 +2,7 @@
     import type { Action } from "svelte/action";
     import { THEME, themeStore } from "$layout/lib/theme";
     import * as m from "../lib/paraglide/messages.js";
+    import { Moon, Sun } from "@lucide/svelte";
 
     const darkLightModeAction: Action = (node) => {
         const getTheme = () => {
@@ -52,6 +53,6 @@
     title={m.switch_theme()}
     use:darkLightModeAction
 >
-    <i class="ri-moon-fill dark:hidden block"></i>
-    <i class="ri-sun-fill hidden dark:block"></i>
+    <Moon class="dark:hidden block" />
+    <Sun class="dark:block hidden" />
 </button>

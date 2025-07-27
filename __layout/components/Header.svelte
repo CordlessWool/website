@@ -15,7 +15,7 @@
             {pageTitle}
         </a>
     </div>
-    <ul class="flex text-xl items-center">
+    <ul class="flex items-center">
         <li aria-label="button" class="light clickable">
             <ToogleTheme />
         </li>

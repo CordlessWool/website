@@ -9,6 +9,7 @@
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
     import PolarChart from "./components/PolarChart.svelte";
+    import SocialIcon from './components/SocialIcon.svelte';
 
     type Props = {
       children: Snippet;
@@ -88,16 +89,23 @@
                     alt={ alt }
                 />
             </div>
-            <ul class="flex flex-row gap-4 col-auto content-center justify-center md:justify-start">
+            <ul class="flex flex-row gap-7 col-auto content-center justify-center md:justify-start">
                 {#each socials as social}
-                    <li title="{ social.name }" class="social-icon">
-                    <a href="{ social.link }" aria-label="{m.link_to()} { social.name }" target="_blank" rel="external">
-                        <i class="ri-{ social.icon } ri-2x"></i>
-                    </a>
+                    <li>
+                        <SocialIcon
+                            href={ social.link }
+                            title="{m.link_to()} { social.name }"
+                            target="_blank"
+                            rel="external"
+                            icon={social.icon}
+                            />
+
                     </li>
                 {/each}
             </ul>
+
         </section>
+
         <Meta class="lg:col-span-3">
             <Item label={m.name()}  content={name} />
             <Item label={m.occupation()} content={role} />
@@ -153,7 +161,7 @@
 </Base>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     main {
         @apply grid lg:grid-cols-5 gap-y-11 gap-x-20 max-w-(--breakpoint-2xl) mx-auto;
     }

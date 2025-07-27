@@ -9,7 +9,7 @@ links:
     link: https://github.com/hpi-schul-cloud/
   - name: Website dBildungcloud
     link: https://dbildungscloud.de/
-    icon: pages-fill
+    icon: lucide:house
 languages:
   - JavaScript
   - HTML

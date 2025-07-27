@@ -26,7 +26,7 @@
 <Base {data}>
     <main>
         <header>
-            <a class="flex items-center text-md !text-zinc-700 dark:!text-zinc-300" href="/{data.locale}/blog">
+            <a class="flex items-center text-md !text-zinc-700 dark:!text-zinc-300" href="/{data.locale}/blog/">
                 <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
             </a>
             <div class="grid grid-cols-2 gap-x-2 text-xs text-zinc-600 dark:text-zinc-400 justify-self-end px-2">

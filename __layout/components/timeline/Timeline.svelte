@@ -1,7 +1,11 @@
 <script lang="ts">
     import { initTimeContext } from "./context.svelte";
+    type Props = {
+        children: any;
+        filter?: (item: any) => boolean;
+    };
 
-    let { children, filter } = $props();
+    let { children, filter }: Props = $props();
 
     initTimeContext();
 </script>

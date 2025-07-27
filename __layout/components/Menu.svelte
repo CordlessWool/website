@@ -3,6 +3,17 @@
     import { page } from "$embodi/stores";
     const { locale } = $props();
     let isOpen = $state(false);
+
+    const isCurrent = (link: string, url: string | URL) => {
+        const _url = new URL(url, "https://dropanote.de");
+        const path = _url.pathname;
+        return (
+            (link === "" &&
+                (path === `/${locale}` || path === `/${locale}/`)) ||
+            ((`/${locale}${link}/` === path || `/${locale}${link}` === path) &&
+                link != "")
+        );
+    };
 </script>
 
 <div class="flex justify-self-end top-0 z-10">
@@ -28,15 +39,16 @@
         class="menu text-xl md:text-base gap-y-7 items-center flex-col md:flex-row md:divide-y-0 absolute justify-center md:justify-end md:relative top-0 right-0 h-full w-full bg-teal-400 dark:bg-teal-600 md:bg-inherit md:dark:bg-inherit"
     >
         {#each [[m.about(), ""], [m.projects(), "/projects"], [m.blog(), "/blog"]] as [text, link]}
-            {#if (link === "" && ($page.url === `/${locale}` || $page.url === `/${locale}/`)) || (`/${locale}${link}/` === $page.url && link != "")}
+            {#if isCurrent(link, $page.url)}
                 <li>
                     <span
                         class="relative underline font-bold underline-offset-2 p-2"
-                        >{text}</span
                     >
+                        {text}
+                    </span>
                 </li>
             {:else}
-                <li class="">
+                <li>
                     <a
                         href="/{locale}{link}/"
                         class="relative hover:underline hover:font-bold focus:underline focus:font-bold underline-offset-2 p-2"
