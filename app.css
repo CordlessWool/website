@@ -10,7 +10,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    font-family: "Source Code Pro", ui-monospace, monospace;
+    font-family:
+        "Source Code Pro", Consolas, Menlo, Monaco, "Liberation Mono",
+        "Courier New", monospace;
     @apply bg-zinc-100 text-zinc-800;
     @apply dark:bg-zinc-800 dark:text-zinc-200;
     @apply leading-relaxed;
