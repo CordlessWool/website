@@ -1,5 +1,26 @@
 ---
 title: Lernplattform für Schulen
+meta:
+  description: Software Engineer, Scrum Master und Architekt bei der Entwicklung einer Lernplattform für Schulen am Hasso Plattner Institute. Fullstack-Entwicklung mit React, Vue.js, Node.js, DevOps-Optimierung und Team-Leadership während der Corona-Skalierung für drei Bundesländer.
+  keywords:
+    - Software Engineer
+    - Scrum Master
+    - Fullstack Entwicklung
+    - React
+    - Vue.js
+    - Node.js
+    - DevOps
+    - CI/CD
+    - Team Leadership
+    - Lernplattform
+    - Schulen
+    - Hasso Plattner Institute
+    - dbildungscloud
+    - JavaScript
+    - Architektur
+    - Legacy Code
+    - Mentoring
+    - Agile
 date: 2019-04-01
 end: 2021-05-31
 company: Hasso Plattner Institute

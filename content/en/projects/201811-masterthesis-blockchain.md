@@ -1,5 +1,18 @@
 ---
 title: "Master Thesis: Blockchain and Related Technologies"
+meta:
+  description: "Master thesis exploring blockchain technologies for securing digital purchasing groups and building trust in collaborative buying communities through decentralized systems."
+  keywords:
+    - blockchain technology
+    - master thesis
+    - purchasing groups
+    - digital security
+    - cryptocurrency
+    - decentralized systems
+    - trust systems
+    - collaborative buying
+    - blockchain scalability
+    - distributed ledger
 date: 2018-09-01
 end: 2019-03-31
 layout: $layout2/ProjectPage
@@ -7,7 +20,7 @@ type: study
 tags: project
 ---
 
-In my master’s thesis, I explored how purchasing groups can be digitally secured in a binding way – that is, groups of people who join forces to order products together, often to access better prices or to obtain items that are otherwise unavailable individually.
+In my master's thesis, I explored how purchasing groups can be digitally secured in a binding way – that is, groups of people who join forces to order products together, often to access better prices or to obtain items that are otherwise unavailable individually.
 
 ---
 

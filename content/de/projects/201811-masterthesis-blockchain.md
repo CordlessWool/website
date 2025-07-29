@@ -1,5 +1,19 @@
 ---
 title: "Masterthesis: Blockchain und ähnliche Technologien"
+meta:
+  description: "Masterarbeit über digitale Absicherung von Einkaufsgemeinschaften durch Blockchain-Technologien. Analyse von dezentralen Systemen für vertrauensvolle Gruppenbestellungen und kollektive Beschaffung."
+  keywords:
+    - Blockchain
+    - Einkaufsgemeinschaften
+    - Masterarbeit
+    - dezentrale Systeme
+    - Kryptowährung
+    - digitale Absicherung
+    - Vertrauen
+    - Skalierbarkeit
+    - Gruppenbestellungen
+    - kollektive Beschaffung
+    - Technologie-Evaluierung
 date: 2018-09-01
 end: 2019-03-31
 layout: $layout2/ProjectPage

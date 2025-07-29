@@ -1,5 +1,23 @@
 ---
 title: Learning Platform for Schools
+meta:
+  description: Fullstack Software Engineer project at Hasso Plattner Institute - Learning platform for German schools scaled during COVID-19. React, Node.js, Scrum Master, DevOps, team leadership experience.
+  keywords:
+    - learning platform development
+    - school software engineer
+    - fullstack developer React Node.js
+    - COVID-19 education technology
+    - Scrum Master experience
+    - German education platform
+    - Hasso Plattner Institute
+    - team leadership software
+    - DevOps CI/CD optimization
+    - legacy code modernization
+    - Vue.js frontend development
+    - MongoDB PostgreSQL Redis
+    - Docker deployment
+    - agile software development
+    - technical mentoring
 date: 2019-04-01
 end: 2021-05-31
 company: Hasso Plattner Institute

@@ -5,7 +5,7 @@
     import { age } from "./lib/date.js";
     import Image from 'embodi/Image.svelte';
 
-    import {  type Snippet } from "svelte";
+    import { type Snippet } from "svelte";
     import Card from "./components/Card.svelte";
     import Calcom from "./components/Calcom.svelte";
     import PolarChart from "./components/PolarChart.svelte";

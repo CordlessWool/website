@@ -1,5 +1,22 @@
 ---
 title: Digital Transformation in the Public Sector
+meta:
+  description: Technical Project Lead experience modernizing agricultural subsidy applications in public sector. Digital transformation project using Java, Spring Boot, and Oracle DB at Materna SE.
+  keywords:
+    - digital transformation
+    - public sector modernization
+    - technical project lead
+    - agricultural subsidy applications
+    - Java development
+    - Spring Boot
+    - Oracle database
+    - government technology
+    - legacy system modernization
+    - team leadership
+    - Materna SE
+    - JSP development
+    - Docker containerization
+    - Jenkins CI/CD
 date: 2022-04-01
 end: 2023-12-31
 company: Materna SE
@@ -41,4 +58,4 @@ I took over from a seasoned project lead close to retirement.
 
 My approach focused on building long-term maintainability into the project: introducing code reviews, improving communication, and encouraging quality-focused routines – all without leaving anyone behind.
 
-At the same time, I acted as a bridge between technical teams, the client’s management, and domain experts. By translating between tech and business, I helped align expectations and supported the team through to deployment.
+At the same time, I acted as a bridge between technical teams, the client's management, and domain experts. By translating between tech and business, I helped align expectations and supported the team through to deployment.

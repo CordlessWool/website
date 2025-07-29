@@ -5,3 +5,6 @@ command = "pnpm run build"
 
 [assets]
 directory = "./dist/static"
+
+[observability.logs]
+enabled = true

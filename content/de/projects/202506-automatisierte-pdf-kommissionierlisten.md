@@ -1,5 +1,20 @@
 ---
 title: Automatisierte PDF-Generierung für Kommissionierlisten
+meta:
+  description: Entwicklung einer automatisierten Microservice-Lösung für die PDF-Generierung von Kommissionierlisten bei HAKRO GmbH. Transformation von JSON-Daten in professionelle, strukturierte PDFs mit intelligenter Gruppierung und optimierter Benutzerfreundlichkeit für Lageroperationen.
+  keywords:
+    - PDF-Generierung
+    - Automatisierung
+    - Kommissionierlisten
+    - Microservice
+    - Warehouse Management
+    - SvelteKit
+    - Puppeteer
+    - Lagerverwaltung
+    - Dokumentenautomatisierung
+    - API Integration
+    - TypeScript
+    - HAKRO
 date: 2025-06-15
 end: 2025-07-15
 company: HAKRO GmbH

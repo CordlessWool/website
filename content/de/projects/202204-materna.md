@@ -1,5 +1,23 @@
 ---
 title: Digitalisierung der öffentlichen Hand
+meta:
+  description: Technische Projektleitung für digitales Agrarsubventionssystem bei Materna SE. Modernisierung legacy System, nachhaltige Prozessverbesserung, Code-Reviews und Teamführung mit Java, Spring Boot und JavaScript.
+  keywords:
+    - Technische Projektleitung
+    - Digitalisierung öffentliche Hand
+    - Agrarsubventionen System
+    - Legacy System Modernisierung
+    - Java Enterprise Development
+    - Spring Boot
+    - Code Review Prozesse
+    - Team Leadership
+    - Materna SE
+    - JavaScript Development
+    - Oracle Database
+    - Software Architektur
+    - Projektmanagement IT
+    - Behördensoftware
+    - Enterprise Java
 date: 2022-04-01
 end: 2023-12-31
 company: Materna SE

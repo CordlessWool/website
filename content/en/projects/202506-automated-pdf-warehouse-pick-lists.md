@@ -5,6 +5,22 @@ end: 2025-07-15
 company: HAKRO GmbH
 company-website: https://www.hakro.com/
 ref: /de/projects/202506-automatisierte-pdf-kommissionierlisten/
+meta:
+  description: Developed automated PDF generation microservice for HAKRO GmbH warehouse pick lists using TypeScript, SvelteKit, and Puppeteer. Transforms JSON data into professional PDFs with intelligent grouping and consistent branding.
+  keywords:
+    - automated PDF generation
+    - warehouse pick lists
+    - document automation
+    - microservice development
+    - TypeScript
+    - SvelteKit
+    - Puppeteer
+    - JSON to PDF
+    - warehouse management
+    - document formatting
+    - API integration
+    - Node.js
+    - Docker
 languages:
   - TypeScript
   - JavaScript
