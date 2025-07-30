@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
-/* Regular + Bold */
-@import "@fontsource/source-code-pro/latin-400.css";
-@import "@fontsource/source-code-pro/latin-600.css";
-
-/* Wenn du auch Italic willst */
-/* @import "@fontsource/source-code-pro/400-italic.css";
-@import "@fontsource/source-code-pro/700-italic.css"; */
 @custom-variant dark (&:where(.dark, .dark *));
-
+/* font is loaded in base.css */
 :root {
     font-family:
         "Source Code Pro", Consolas, Menlo, Monaco, "Liberation Mono",

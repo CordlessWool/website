@@ -4,6 +4,10 @@
     import { page } from '$embodi/stores';
 
     import Footer from "./Footer.svelte";
+    import '@fontsource/source-code-pro/latin-400.css';
+    import '@fontsource/source-code-pro/latin-600.css';
+    import sourceSansProWoff2400 from '@fontsource/source-code-pro/files/source-code-pro-latin-400-normal.woff2?url';
+    import sourceSansProWoff2600 from '@fontsource/source-code-pro/files/source-code-pro-latin-600-normal.woff2?url';
 
     import '../../app.css';
 
@@ -57,6 +61,8 @@
 <svelte:head>
     <title>{getMeta('title')}</title>
     <link rel="canonical" href={data.canonical ?? fullUrl($page.url)} />
+    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2400} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2600} crossorigin="anonymous" />
     {#if ref}
         {#if locale === 'de'}
             <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
