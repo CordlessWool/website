@@ -65,7 +65,7 @@
 </li>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     li {
         @apply grid items-center content-center;
         grid-template: auto auto auto auto / 0 auto 1fr;

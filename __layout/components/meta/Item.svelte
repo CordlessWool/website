@@ -25,7 +25,7 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     div {
         @apply flex flex-wrap gap-x-1 content-start;
     }

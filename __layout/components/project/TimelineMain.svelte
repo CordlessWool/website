@@ -67,7 +67,7 @@
 </section>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
 
     span {
         @apply text-xl;

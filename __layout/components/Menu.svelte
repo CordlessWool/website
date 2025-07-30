@@ -62,7 +62,7 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     button:not(.open) + .menu {
         @apply hidden md:flex;
     }

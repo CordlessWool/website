@@ -31,7 +31,7 @@
 
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     button, a {
         @apply cursor-pointer;
         @apply py-3 px-5 text-center block border-2 border-solid rounded-md  hover:bg-teal-400 border-teal-500;

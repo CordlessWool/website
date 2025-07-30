@@ -86,7 +86,7 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
 
     ul {
         @apply flex gap-3;

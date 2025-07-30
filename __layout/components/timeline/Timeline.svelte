@@ -16,7 +16,7 @@
 </ol>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     ol {
         @apply mt-7;
     }

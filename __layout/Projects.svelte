@@ -70,7 +70,7 @@
 
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     main {
         @apply mx-auto;
     }

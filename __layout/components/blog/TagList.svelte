@@ -11,7 +11,7 @@
 </ul>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     ul {
         @apply flex flex-wrap gap-3 list-none m-0;
     }

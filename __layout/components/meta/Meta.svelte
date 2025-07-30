@@ -13,7 +13,7 @@
 
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     dl {
         @apply grid grid-flow-row gap-3 grid-cols-2 sm:text-nowrap;
     }

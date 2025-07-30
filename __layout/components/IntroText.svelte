@@ -7,7 +7,7 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     div {
         @apply max-w-5xl mx-auto pb-7;
     }

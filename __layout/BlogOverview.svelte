@@ -41,7 +41,7 @@
 </Base>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     main {
         @apply mx-auto max-w-7xl;
     }

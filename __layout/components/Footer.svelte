@@ -45,7 +45,7 @@
 </footer>
 
 <style lang="postcss">
-    @reference 'tailwindcss/theme';
+    @reference 'tailwindcss';
     a {
         @apply p-1 box-content;
     }

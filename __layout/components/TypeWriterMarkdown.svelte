@@ -32,7 +32,7 @@
 {/if}
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     button.write-more {
         @apply inline-block text-sm bg-zinc-300 rounded-lg px-3 hover:bg-zinc-200;
     }

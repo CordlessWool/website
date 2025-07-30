@@ -41,7 +41,7 @@
 </section>
 
 <style lang="postcss">
-    @reference "tailwindcss/theme";
+    @reference "tailwindcss";
     section {
         @apply grid gap-7;
         grid-template-rows: 1fr auto;
