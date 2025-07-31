@@ -1,10 +1,9 @@
 ---
+title: Einmal mit allem, bitte!
 price: Auf Anfrage
 tags:
   - offer
 ---
-
-## Einmal mit allem, bitte!
 
 Keine Lust auf technisches Blabla?
 

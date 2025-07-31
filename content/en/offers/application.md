@@ -1,10 +1,9 @@
 ---
+title: Once with everything, please!
 price: On request
 tags:
   - offer
 ---
-
-## Once with everything, please!
 
 Not in the mood for technical blah-blah?
 
