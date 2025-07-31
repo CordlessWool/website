@@ -61,8 +61,6 @@
 <svelte:head>
     <title>{getMeta('title')}</title>
     <link rel="canonical" href={data.canonical ?? fullUrl($page.url)} />
-    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2400} crossorigin="anonymous" />
-    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2600} crossorigin="anonymous" />
     {#if ref}
         {#if locale === 'de'}
             <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
@@ -82,6 +80,8 @@
         <meta name="keywords" content={getMeta('keywords')} />
     {/if}
     <!-- <link rel="stylesheet" href='../../app.css'> -->
+    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2400} crossorigin="anonymous" />
+    <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2600} crossorigin="anonymous" />
 </svelte:head>
 
 {#if light}

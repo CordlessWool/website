@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
+    import { SiGithub, SiGitlab, SiNpm } from "@icons-pack/svelte-simple-icons";
+    import { ExternalLink } from "@lucide/svelte";
 
     let { project, ...props } = $props();
 
@@ -19,16 +20,14 @@
             data-umami-event="project-link-click"
             data-umami-event-id={link.name}
         >
-            {#if link.icon}
-                <Icon icon={link.icon} />
-            {:else if compareNames(link.name, "github")}
-                <Icon icon="simple-icons:github" />
+            {#if compareNames(link.name, "github")}
+                <SiGithub />
             {:else if compareNames(link.name, "gitlab")}
-                <Icon icon="simple-icons:gitlab" />
+                <SiGitlab />
             {:else if compareNames(link.name, "npm")}
-                <Icon icon="simple-icons:npm" />
-            {:else if compareNames(link.name, "website")}
-                <Icon icon="lucide:house" />
+                <SiNpm />
+            {:else}
+                <ExternalLink />
             {/if}
         </a>
     {/each}
