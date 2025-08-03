@@ -11,7 +11,7 @@ meta:
     - Vendor Lock-in
     - Digitale Souveränität
 published: 2025-04-22
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Cloud

@@ -1,5 +1,5 @@
 ---
-layout: $layout2/markdownOnly
+layout: $layout/MarkdownOnly.svelte
 title: Impressum
 ---
 

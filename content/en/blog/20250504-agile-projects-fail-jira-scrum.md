@@ -17,7 +17,7 @@ meta:
     - waterfall sprints
     - agile transformation
 published: 2025-05-04
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Agility

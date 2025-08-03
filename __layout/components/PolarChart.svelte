@@ -2,7 +2,7 @@
     lang="ts"
     generics="TType extends ChartType = ChartType, TData = DefaultDataPoint<TType>, TLabel= unknown "
 >
-    import { themeStore, THEME } from "$layout/lib/theme";
+    import { themeStore, THEME } from "$layout-internal/lib/theme";
 
     import type {
         ChartData,

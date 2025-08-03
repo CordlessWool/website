@@ -19,7 +19,7 @@ meta:
     - i18next alternative
     - paraglide js
 published: 2025-07-26
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 ref: /de/blog/20250726-warum-ich-i18next-durch-paraglide-js-ersetzt-habe/
 category: dev
 tags:

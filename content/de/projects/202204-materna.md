@@ -41,7 +41,7 @@ databases:
 roles:
   - technische Projetleitung
 type: work
-layout: $layout2/ProjectPage
+layout: $layout/ProjectPage.svelte
 tags:
   - project
 ---

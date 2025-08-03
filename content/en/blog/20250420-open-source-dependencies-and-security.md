@@ -9,7 +9,7 @@ meta:
     - open source security
     - business open source investment
 published: 2025-04-20
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category:
   - dev
   - management

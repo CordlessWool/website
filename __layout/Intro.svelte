@@ -3,7 +3,7 @@
     import { Meta, Item } from "./components/meta";
     import Base from "./components/Base.svelte";
     import { age } from "./lib/date.js";
-    import Image from 'embodi/Image.svelte';
+    import { Image } from '@embodi/image/client';
 
     import { type Snippet } from "svelte";
     import Card from "./components/Card.svelte";

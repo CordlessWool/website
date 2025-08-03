@@ -18,7 +18,7 @@ preferred_techs:
   - TypeScript
   - Vite/Rollup
 experience: 2009-05-01
-layout: $layout2/intro
+layout: $layout/Intro.svelte
 ---
 
 Poor planning, vague requirements, or miscommunication between tech and management waste **time** and **money**. I help prevent exactly that – with technical **project management** that drives clear decisions, aligns teams, and ensures delivery.

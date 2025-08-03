@@ -20,7 +20,7 @@ meta:
     - python http server
     - coreos-installer
 published: 2025-05-30
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: dev
 tags:
   - Linux

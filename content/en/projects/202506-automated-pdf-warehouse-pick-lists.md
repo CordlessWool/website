@@ -35,7 +35,7 @@ tools:
   - Azure DevOps
 roles:
   - Software Engineer
-layout: $layout2/ProjectPage
+layout: $layout/ProjectPage.svelte
 type: work
 tags: project
 ---

@@ -9,6 +9,7 @@
     "preview": "embodi preview"
   },
   "devDependencies": {
+    "@embodi/image": "^0.1.2",
     "@embodi/markdown": "^0.2.1",
     "@inlang/paraglide-js": "^2.2.0",
     "@jsdevtools/rehype-toc": "^3.0.2",
@@ -18,7 +19,7 @@
     "@shikijs/transformers": "^3.9.1",
     "@tailwindcss/vite": "^4.1.11",
     "chart.js": "^4.5.0",
-    "embodi": "0.14.3",
+    "embodi": "0.14.4",
     "globby": "^14.1.0",
     "rehype-pretty-code": "^0.14.1",
     "rehype-slug": "^6.0.0",

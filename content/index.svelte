@@ -1,5 +1,5 @@
 <script>
-    import Base from "$layout/components/Base.svelte";
+    import Base from "$layout-internal/components/Base.svelte";
 
     const { data } = $props();
 </script>

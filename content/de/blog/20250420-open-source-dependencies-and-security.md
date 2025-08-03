@@ -9,7 +9,7 @@ meta:
     - Open Source Investition
     - Open-Source-Abhängigkeiten
 published: 2025-04-20
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category:
   - dev
   - management

@@ -20,7 +20,7 @@ meta:
     - entwicklungsmethoden
     - team management
 published: 2025-06-20
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Projektmanagement

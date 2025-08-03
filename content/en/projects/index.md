@@ -2,7 +2,7 @@
 meta:
   title: Projects & Jobs - Wolfgang Rathgeb
   description: "Projects that show what I deliver: reliable solutions, cleanly implemented and thoughtfully designed – for clients, products, and personal ideas."
-layout: $layout2/projects
+layout: $layout/Projects.svelte
 ---
 
 # Projects & Jobs

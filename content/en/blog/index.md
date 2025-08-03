@@ -1,5 +1,5 @@
 ---
-layout: $layout2/blogOverview
+layout: $layout/BlogOverview.svelte
 meta:
   title: Software Development, Technology, and Modern IT Management
   description: Personal insights and experiences about software development, technology trends, and modern IT management practices.

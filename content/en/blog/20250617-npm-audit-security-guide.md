@@ -19,7 +19,7 @@ meta:
     - node.js security
     - supply chain security
 published: 2025-06-17
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: dev
 tags:
   - JavaScript
