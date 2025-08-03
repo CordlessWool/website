@@ -5,8 +5,19 @@ import { ImageFiles, loadImage, storeImage } from "@embodi/image";
 export const schema: DataSchema = v.looseObject({
   title: v.string(),
   description: v.string(),
-  hero: ImageFiles,
-  author: ImageFiles,
+  hero: v.optional(
+    v.object({
+      image: ImageFiles,
+      alt: v.string(),
+      photographer: v.optional(v.string()),
+      photographer_link: v.optional(v.string()),
+    }),
+  ),
+  author: v.object({
+    name: v.string(),
+    photo: ImageFiles,
+    description: v.string(),
+  }),
 });
 
 const transformHeroImage = async ({
@@ -28,7 +39,7 @@ const transformHeroImage = async ({
   );
 
   return [
-    await storeImage({ image, path: data.hero, helper, original: true }),
+    await storeImage({ image, path, helper, original: true }),
     ...versions,
   ];
 };
@@ -52,7 +63,7 @@ const transformAuthorImage = async ({
   );
 
   return [
-    await storeImage({ image, path: data.hero, helper, original: true }),
+    await storeImage({ image, path, helper, original: true }),
     ...versions,
   ];
 };
@@ -61,19 +72,27 @@ export const enrich: EnrichAction = async (elements) => {
   const { data, helper } = elements;
 
   return {
-    ...elements,
+    html: elements.html,
     data: {
       ...data,
-      hero: transformHeroImage({
-        path: data.hero,
-        widths: [375, 390, 412, 430, 512, 824, 1024, 2048],
-        helper,
-      }),
-      author: transformAuthorImage({
-        path: data.author.photo,
-        widths: [192, 384],
-        helper,
-      }),
+      hero: data.hero
+        ? {
+            ...data.hero,
+            image: await transformHeroImage({
+              path: data.hero.image,
+              widths: [375, 390, 412, 430, 512, 824, 1024, 2048],
+              helper,
+            }),
+          }
+        : undefined,
+      author: {
+        ...data.author,
+        photo: await transformAuthorImage({
+          path: data.author.photo,
+          widths: [192, 384],
+          helper,
+        }),
+      },
     },
   };
 };

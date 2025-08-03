@@ -54,7 +54,7 @@
       return data.meta ? data.meta[tag] : undefined;
     }
 
-    const getLanguageLink = (link: string, lang: string) => new URL(link.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
+    const getLanguageLink = (link: URL, lang: string) => new URL(link.pathname.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
     const fullUrl = (link: string) => new URL(link, 'https://dropanote.de').toString();
 </script>
 

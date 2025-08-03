@@ -45,12 +45,12 @@ export const schema: DataSchema = v.object({
 
 export const enrich: EnrichAction = async (elements) => {
   const { data, helper } = elements;
-  const image = loadImage(data.hero, helper);
+  const image = loadImage(data.image, helper);
   const webp = image.autoOrient().webp({ quality: 70 });
   const versions = await Promise.all(
     [375, 390, 412, 430, 512, 786, 824, 1024, 1300, 2000].map(async (width) => {
       const version = webp.resize({ width });
-      return await storeImage({ image: version, path: data.hero, helper });
+      return await storeImage({ image: version, path: data.image, helper });
     }),
   );
 
@@ -58,8 +58,8 @@ export const enrich: EnrichAction = async (elements) => {
     ...elements,
     data: {
       ...data,
-      hero: [
-        await storeImage({ image, path: data.hero, helper, original: true }),
+      image: [
+        await storeImage({ image, path: data.image, helper, original: true }),
         ...versions,
       ],
     },
