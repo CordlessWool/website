@@ -17,7 +17,7 @@ meta:
     - Teamentwicklung IT
     - KI in der Softwareentwicklung
 published: 2025-04-29
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Teamkultur

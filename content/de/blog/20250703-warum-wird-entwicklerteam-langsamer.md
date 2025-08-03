@@ -20,7 +20,7 @@ meta:
     - entwicklungsgeschwindigkeit verbessern
     - team produktivität steigern
 published: 2025-07-03
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Projektmanagement

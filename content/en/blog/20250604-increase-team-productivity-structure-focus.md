@@ -20,7 +20,7 @@ meta:
     - agile teams
     - development team
 published: 2025-06-04
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Team Culture

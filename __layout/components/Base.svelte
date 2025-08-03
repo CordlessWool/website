@@ -54,13 +54,13 @@
       return data.meta ? data.meta[tag] : undefined;
     }
 
-    const getLanguageLink = (link: string, lang: string) => new URL(link.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
+    const getLanguageLink = (link: URL, lang: string) => new URL(link.pathname.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
     const fullUrl = (link: string) => new URL(link, 'https://dropanote.de').toString();
 </script>
 
 <svelte:head>
     <title>{getMeta('title')}</title>
-    <link rel="canonical" href={data.canonical ?? fullUrl($page.url)} />
+    <link rel="canonical" href={data.canonical ?? $page.url.toString()} />
     {#if ref}
         {#if locale === 'de'}
             <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
@@ -69,7 +69,7 @@
             <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
             <link rel="alternate" hreflang="de" href={fullUrl(ref)} />
         {/if}
-    {:else if $page.url.includes('/en/') || $page.url.includes('/de/')}
+    {:else if $page.url.pathname.includes('/en/') || $page.url.pathname.includes('/de/')}
         <link rel="alternate" hreflang="de" href={getLanguageLink($page.url, 'de')} />
         <link rel="alternate" hreflang="en" href={getLanguageLink($page.url, 'en')} />
     {/if}

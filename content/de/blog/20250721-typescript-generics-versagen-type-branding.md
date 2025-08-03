@@ -19,7 +19,7 @@ meta:
     - typescript entwicklung
     - pipe and combine
 published: 2025-07-21
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: dev
 tags:
   - TypeScript

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Base from "./components/Base.svelte";
     import { ChevronLeft } from '@lucide/svelte';
-    import Image from 'embodi/Image.svelte';
+    import { Image } from '@embodi/image/client';
     import * as m from './lib/paraglide/messages.js'
     import { TagList, Author } from "./components/blog/index.js";
     const { data, children } = $props();

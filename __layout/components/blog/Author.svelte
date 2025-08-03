@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Image from "embodi/Image.svelte";
+    import { Image } from "@embodi/image/client";
     type Props = {
         author: {
             name: string;

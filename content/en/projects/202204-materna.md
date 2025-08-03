@@ -39,7 +39,7 @@ databases:
   - Oracle DB
 roles:
   - Technical Project Lead
-layout: $layout2/ProjectPage
+layout: $layout/ProjectPage.svelte
 type: work
 tags:
   - project

@@ -17,7 +17,7 @@ meta:
     - software project collaboration
     - AI in software development
 published: 2025-04-29
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: management
 tags:
   - Team Culture

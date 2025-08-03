@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Action } from "svelte/action";
-    import { THEME, themeStore } from "$layout/lib/theme";
+    import { THEME, themeStore } from "$layout-internal/lib/theme";
     import * as m from "../lib/paraglide/messages.js";
     import { Moon, Sun } from "@lucide/svelte";
 

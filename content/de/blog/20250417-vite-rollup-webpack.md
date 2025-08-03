@@ -4,7 +4,7 @@ description: Warum Vite und Rollup Webpack ablösen – Performance, Developer E
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build-Tools, JavaScript Bundler, tsup, Migration, Developer Experience
 published: 2025-04-17
-layout: $layout2/blogPost
+layout: $layout/BlogPost.svelte
 category: dev
 tags:
   - vite
