@@ -81,18 +81,40 @@
     article {
         @apply w-full mx-2;
 
-        :global .toc {
-            @apply max-lg:hidden;
-        }
     }
 
     .blog-post {
-        @apply max-w-2xl w-full m-auto;
+        @apply mx-auto;
+        @apply lg:flex lg:flex-row-reverse gap-5;
+        :global {
+            .content {
+                @apply mx-auto px-2 lg:mx-0;
+                @apply max-w-2xl;
+            }
+            .toc {
+                @apply max-w-96;
+                @apply max-lg:hidden;
+                @apply mx-1 my-13;
+                @apply self-start sticky top-5;
+                > ol {
+                    @apply list-none m-0;
+                }
+                ol {
+                    @apply text-zinc-600 dark:text-zinc-400;
+                }
+
+                a:not(:hover, :focus) {
+                    @apply no-underline text-zinc-700 dark:text-zinc-300;
+
+                }
+            }
+        }
     }
 
     .hero {
         @apply max-w-5xl w-full m-auto;
     }
+
 
     main > header {
         --margin: calc(var(--spacing) * 7);
@@ -146,14 +168,14 @@
     }
 
     .markdown :global(figure) {
-        /* max-width: 100vw; */
+
         @media (min-width: 768px) {
-            width: calc(100% + (var(--spacing) * 10));
-            margin-inline: calc(var(--spacing) * -5);
+            width: calc(100% + (var(--spacing) * 2));
+            margin-inline: calc(var(--spacing) * -1);
         }
-        @media (min-width: 1024px) {
-            width: calc(100% + (var(--spacing) * 20));
-            margin-inline: calc(var(--spacing) * -10);
+        @media (min-width: 1280px) {
+            width: calc(100% + (var(--spacing) * 6));
+            margin-inline: calc(var(--spacing) * -3);
         }
     }
 </style>

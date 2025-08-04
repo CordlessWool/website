@@ -1,6 +1,12 @@
 import * as v from "valibot";
 import type { DataSchema, EnrichAction, LayoutEvent } from "embodi/layout";
 import { ImageFiles, loadImage, storeImage } from "@embodi/image";
+import { unified } from "unified";
+import parse from "rehype-parse";
+import slug from "rehype-slug";
+import toc from "@jsdevtools/rehype-toc";
+import wrap from "rehype-wrap";
+import stringify from "rehype-stringify";
 
 export const schema: DataSchema = v.looseObject({
   title: v.string(),
@@ -68,11 +74,21 @@ const transformAuthorImage = async ({
   ];
 };
 
-export const enrich: EnrichAction = async (elements) => {
-  const { data, helper } = elements;
+const addToc = (html: string) => {
+  const processor = unified()
+    .use(parse)
+    .use(slug)
+    .use(wrap, { wrapper: "div.content" })
+    .use(toc, { position: "beforebegin", headings: ["h1", "h2"] })
+    .use(stringify);
+  return processor.process(html);
+};
 
+export const enrich: EnrichAction = async (elements) => {
+  const { data, html, helper } = elements;
+  if (!html) throw new Error("Missing HTML content");
   return {
-    html: elements.html,
+    html: (await addToc(html)).toString(),
     data: {
       ...data,
       hero: data.hero
