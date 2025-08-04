@@ -43,13 +43,20 @@ export const schema: DataSchema = v.object({
   ),
 });
 
+const calcCircleBuffer = (size: number) =>
+  Buffer.from(
+    `<svg><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="white"/></svg>`,
+  );
+
 export const enrich: EnrichAction = async (elements) => {
   const { data, helper } = elements;
   const image = loadImage(data.image, helper);
-  const webp = image.autoOrient().webp({ quality: 70 });
+  const webp = image.autoOrient().webp({ quality: 80 });
   const versions = await Promise.all(
-    [375, 390, 412, 430, 512, 786, 824, 1024, 1300, 2000].map(async (width) => {
-      const version = webp.resize({ width });
+    [388, 412, 430, 512, 776, 786, 824, 1024, 1300, 2000].map(async (width) => {
+      const version = webp
+        .resize({ width, height: width })
+        .composite([{ input: calcCircleBuffer(width), blend: "dest-in" }]);
       return await storeImage({ image: version, path: data.image, helper });
     }),
   );

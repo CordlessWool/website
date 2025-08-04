@@ -83,8 +83,8 @@
                     fetchpriority="high"
                     class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 512px"
-                    height="2000"
-                    width="2000"
+                    height="512"
+                    width="512"
                     images={ image }
                     alt={ alt }
                 />

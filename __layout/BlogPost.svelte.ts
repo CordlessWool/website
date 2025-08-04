@@ -1,6 +1,7 @@
 import * as v from "valibot";
 import type { DataSchema, EnrichAction, LayoutEvent } from "embodi/layout";
 import { ImageFiles, loadImage, storeImage } from "@embodi/image";
+import sharp from "sharp";
 import { unified } from "unified";
 import parse from "rehype-parse";
 import slug from "rehype-slug";
@@ -39,13 +40,23 @@ const transformHeroImage = async ({
   const webp = image.autoOrient().webp({ quality: 70 });
   const versions = await Promise.all(
     widths.map(async (width) => {
-      const version = webp.resize({ width });
+      const version = webp.resize(width, Math.floor(width * 0.4), {
+        fit: "cover",
+        kernel: sharp.kernel.mitchell,
+      });
       return await storeImage({ image: version, path, helper });
     }),
   );
 
   return [
-    await storeImage({ image, path, helper, original: true }),
+    await storeImage({
+      image: image
+        .autoOrient()
+        .resize(1200, Math.floor(1200 * 0.4), { fit: "cover" }),
+      path,
+      helper,
+      original: true,
+    }),
     ...versions,
   ];
 };
@@ -60,16 +71,27 @@ const transformAuthorImage = async ({
   helper: LayoutEvent["helper"];
 }) => {
   const image = loadImage(path, helper);
-  const webp = image.autoOrient().webp({ quality: 70 });
+  const webp = image.autoOrient().webp({ quality: 75 });
   const versions = await Promise.all(
     widths.map(async (width) => {
-      const version = webp.resize({ width });
+      const version = webp.resize({
+        width,
+        fit: "cover",
+      });
       return await storeImage({ image: version, path, helper });
     }),
   );
 
   return [
-    await storeImage({ image, path, helper, original: true }),
+    await storeImage({
+      image: image.autoOrient().resize({
+        width: widths[0],
+        fit: "cover",
+      }),
+      path,
+      helper,
+      original: true,
+    }),
     ...versions,
   ];
 };
