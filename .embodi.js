@@ -5,6 +5,7 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 import rehypeSlug from "rehype-slug";
 import { transformerNotationDiff } from "@shikijs/transformers";
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeMermaid from "rehype-mermaid";
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
@@ -20,6 +21,7 @@ export default {
             prefix: "section-",
           },
         ],
+        [rehypeMermaid],
         [
           rehypePrettyCode,
           {
