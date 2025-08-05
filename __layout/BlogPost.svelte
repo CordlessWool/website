@@ -100,11 +100,15 @@
                     @apply list-none m-0;
                 }
                 ol {
-                    @apply text-zinc-600 dark:text-zinc-400;
+                    @apply text-zinc-500 ;
+
                 }
 
                 a:not(:hover, :focus) {
-                    @apply no-underline text-zinc-700 dark:text-zinc-300;
+                    @apply no-underline text-zinc-600;
+                    :global(.dark) & {
+                        @apply text-zinc-400;
+                    }
 
                 }
             }

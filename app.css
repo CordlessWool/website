@@ -74,7 +74,10 @@ a {
 
 .markdown a,
 a.link {
-    @apply text-teal-800 dark:text-teal-300 transition-colors duration-200 underline underline-offset-4 decoration-dotted;
+    @apply text-teal-700  transition-colors duration-200 underline underline-offset-4 decoration-dotted;
+    :global(.dark) & {
+        @apply text-teal-300;
+    }
 }
 
 .markdown a:hover,
@@ -82,7 +85,10 @@ a.link {
 .markdown a:focus-visible,
 a.link:hover,
 a.link:focus {
-    @apply text-teal-900 dark:text-teal-200 focus:no-underline;
+    @apply text-teal-800  focus:no-underline;
+    :global(.dark) & {
+        @apply text-teal-200;
+    }
 }
 
 .markdown p {
