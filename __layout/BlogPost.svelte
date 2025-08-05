@@ -112,7 +112,58 @@
 
                 }
             }
+
+            /* Universal Mermaid styling */
+            .flowchart {
+              background: transparent !important;
+              @apply mx-auto my-7;
+              font-family: system-ui, -apple-system, sans-serif;
+            }
+
+            /* Ensure text is always readable */
+            .flowchart .node .label text,
+            .flowchart .edgeLabel text {
+              fill: #1f2937 !important;
+              font-weight: 500;
+            }
+
+            /* Consistent node styling */
+            .flowchart .node rect,
+            .flowchart .node polygon {
+              fill: var(--color-teal-500) !important;
+              stroke: var(--color-zinc-500) !important;
+              stroke-width: 2px !important;
+              rx: 6px !important;
+              ry: 6px !important;
+              filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+            }
+
+            /* Edge styling */
+            .flowchart .edgePath .path {
+              stroke: var(--color-zinc-500) !important;
+              stroke-width: 2px !important;
+            }
+
+            /* Edge labels */
+
+            .flowchart .edgeLabel p  {
+                @apply bg-zinc-50!  text-zinc-700!;
+                :global(.dark) & {
+                    @apply bg-transparent! text-zinc-300!;
+                }
+            }
+
+            /* Edge labels */
+            .flowchart .edgeLabel rect {
+              fill: #ffffff !important;
+              stroke: #e5e7eb !important;
+              stroke-width: 2px !important;
+              opacity: 0.95 !important;
+            }
         }
+
+
+
     }
 
     .hero {

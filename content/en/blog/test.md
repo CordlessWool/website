@@ -114,11 +114,6 @@ flowchart TD
     F -->|Yes| D
     F -->|No| L[Create PDF]
 
-    style A fill:#e1f5fe
-    style H fill:#e1f5fe
-    style L fill:#c8e6c9
-    style E fill:#fff3e0
-    style F fill:#fff3e0
 ```
 
 The process is simple: add elements one by one to the content area, then check if everything still fits. If not, remove the last item and start a new page. The browser handles all the complex layout calculations - text wrapping, margins, spacing - and you just measure the final result.

@@ -21,7 +21,32 @@ export default {
             prefix: "section-",
           },
         ],
-        [rehypeMermaid],
+        [
+          rehypeMermaid,
+          {
+            strategy: "inline-svg",
+            dark: false,
+            mermaidConfig: {
+              theme: "base",
+              themeVariables: {
+                // primaryColor: "#e5e7eb",
+                // primaryTextColor: "#374151",
+                // primaryBorderColor: "#6366f1",
+                lineColor: "#6b7280",
+                // background: "transparent",
+                // mainBkg: "#f3f4f6",
+                // secondaryColor: "#d1d5db",
+                // tertiaryColor: "#e5e7eb",
+                edgeLabelBackground: "transparent",
+                // clusterBkg: "#f3f4f6",
+                // clusterBorder: "#9ca3af",
+                // defaultLinkColor: "#6b7280",
+                // titleColor: "#374151",
+                // nodeTextColor: "#374151",
+              },
+            },
+          },
+        ],
         [
           rehypePrettyCode,
           {
