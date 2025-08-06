@@ -11,7 +11,7 @@ meta:
     - Puppeteer PDF
     - browser-basierte Messung
     - variable Inhalte PDF
-    - SvelteKit PDF
+    - SvelteKit PDF Generierung
     - React PDF Generierung
     - Vue PDF Generierung
     - dynamische Seitenumbrüche
