@@ -28,6 +28,8 @@ export default {
             dark: false,
             mermaidConfig: {
               theme: "base",
+              layout: "dagre",
+              look: "classic",
               themeVariables: {
                 // primaryColor: "#e5e7eb",
                 // primaryTextColor: "#374151",

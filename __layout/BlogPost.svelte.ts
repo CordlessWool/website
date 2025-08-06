@@ -106,11 +106,49 @@ const addToc = (html: string) => {
   return processor.process(html);
 };
 
+const findAndReplaceImageInHTML = async (
+  html: string,
+  widths: number[],
+  helper: LayoutEvent["helper"],
+) => {
+  const regex = /<img[^>]+src="(\$assets\/[^"]+)" alt="([^"]+)"[^>]*>/g;
+  const images = [];
+  let match;
+  while ((match = regex.exec(html)) !== null) {
+    const src = match[1];
+    const image = loadImage(src, helper);
+    const webp = image.autoOrient().webp({ quality: 80 });
+    const versions = await Promise.all(
+      widths.map(async (width) => {
+        const version = webp.resize({
+          width,
+          fit: "cover",
+        });
+        return await storeImage({ image: version, path: src, helper });
+      }),
+    );
+    images.push(...versions);
+    const defaultVersion = await storeImage({ image, path: src, helper });
+    html = html.replace(
+      match[0],
+      `<picture><source srcset="${versions.map((v) => `${v.src} ${v.width}w`).join(", ")}" type="image/webp"><img src="${defaultVersion.src}" alt="${match[2]}" /></picture>`,
+    );
+  }
+  return html;
+};
+
 export const enrich: EnrichAction = async (elements) => {
   const { data, html, helper } = elements;
   if (!html) throw new Error("Missing HTML content");
+
+  let modified = (await addToc(html)).toString();
+  modified = await findAndReplaceImageInHTML(
+    modified,
+    [388, 512, 786, 1024],
+    helper,
+  );
   return {
-    html: (await addToc(html)).toString(),
+    html: modified,
     data: {
       ...data,
       hero: data.hero

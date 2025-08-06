@@ -121,28 +121,28 @@
             }
 
             /* Ensure text is always readable */
-            .flowchart .node .label text,
+            /*.flowchart .node .label text,
             .flowchart .edgeLabel text {
               fill: #1f2937 !important;
               font-weight: 500;
-            }
+            }*/
 
             /* Consistent node styling */
             .flowchart .node rect,
             .flowchart .node polygon {
-              fill: var(--color-teal-500) !important;
-              stroke: var(--color-zinc-500) !important;
-              stroke-width: 2px !important;
-              rx: 6px !important;
-              ry: 6px !important;
-              filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+              fill: var(--color-zinc-100) !important;
+              stroke: var(--color-zinc-700) !important;
+              stroke-width: 1px !important;
+              /*rx: 6px !important;
+              ry: 6px !important;*/
+              filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
             }
 
             /* Edge styling */
-            .flowchart .edgePath .path {
+            /*.flowchart .edgePath .path {
               stroke: var(--color-zinc-500) !important;
               stroke-width: 2px !important;
-            }
+            }*/
 
             /* Edge labels */
 
@@ -154,12 +154,12 @@
             }
 
             /* Edge labels */
-            .flowchart .edgeLabel rect {
+            /*.flowchart .edgeLabel rect {
               fill: #ffffff !important;
               stroke: #e5e7eb !important;
               stroke-width: 2px !important;
               opacity: 0.95 !important;
-            }
+            }*/
         }
 
 
