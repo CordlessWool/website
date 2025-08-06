@@ -1,5 +1,5 @@
 ---
-title: "From Webpage to Production PDFs: A Different Approach to Document Generation"
+title: "Dynamic PDF Generation: Variable Content and Reliable Page Breaks"
 description: "How browser-based measurement solved what CSS print media couldn't: reliable page breaks for variable-length content. SvelteKit + Puppeteer approach for complex PDF generation."
 ref: /de/blog/20250805-dynamische-pdf-generierung-puppeteer
 hero:
@@ -30,7 +30,7 @@ tags:
   - blog
 ---
 
-# From Webpage to Production PDFs: A Different Approach to Document Generation
+# Dynamic PDF Generation: Variable Content and Reliable Page Breaks
 
 In the mind of a developer grown up with responsive webpages, PDF generation is also a mindset challenge – a PDF is totally fixed. You design for infinite scroll, flexible containers, and content that adapts to any screen size.
 
