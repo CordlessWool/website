@@ -24,7 +24,7 @@ tags:
   - JavaScript
   - PDF Generation
   - Puppeteer
-  - Browser Automation
+  - Automation
   - Document Generation
   - Developer Experience
   - blog
