@@ -96,14 +96,16 @@ const transformAuthorImage = async ({
   ];
 };
 
-const addToc = (html: string) => {
+const addToc = async (html: string): Promise<string> => {
   const processor = unified()
-    .use(parse)
-    .use(slug)
+    .use(parse, { fragment: true })
+    .use(slug, {
+      prefix: "section-",
+    })
     .use(wrap, { wrapper: "div.content" })
     .use(toc, { position: "beforebegin", headings: ["h1", "h2"] })
     .use(stringify);
-  return processor.process(html);
+  return String(await processor.process(html));
 };
 
 const findAndReplaceImageInHTML = async (
@@ -141,7 +143,7 @@ export const enrich: EnrichAction = async (elements) => {
   const { data, html, helper } = elements;
   if (!html) throw new Error("Missing HTML content");
 
-  let modified = (await addToc(html)).toString();
+  let modified = await addToc(html);
   modified = await findAndReplaceImageInHTML(
     modified,
     [388, 512, 786, 1024],
