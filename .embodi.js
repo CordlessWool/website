@@ -9,6 +9,7 @@ import rehypeMermaid from "rehype-mermaid";
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
+  origin: "https://dropanote.de",
   source: "/content",
   plugins: [
     tailwindcss(),
