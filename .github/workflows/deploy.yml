@@ -67,6 +67,7 @@ jobs:
         with:
           version: latest
       - run: pnpm install
+      - run: pnpm exec playwright install
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
