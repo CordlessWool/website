@@ -48,7 +48,7 @@ Doch es gibt eine Methode, diese beiden Welten zu verbinden: flexible Webentwick
 
 [Direkt zur Herausforderung](#section-die-herausforderung-komplexität-aus-der-praxis) oder [zur Lösung](#section-die-lösung-browser-basierte-messung).
 
-## Die Geschichte: Von persönlicher Frustration zur echten Herausforderung
+## Wie alles begann: Vom CV-Problem zur Lösung
 
 Lebensläufe in verschiedenen Sprachen aktualisieren - das nervt seit Jahren. Besonders, weil die gleichen Informationen auch auf der Website gepflegt werden und jedes Jahr kommt eine neue Plattform dazu, auf der wieder alles eingegeben werden muss.
 
@@ -60,7 +60,7 @@ Also wurden neue Ansätze erdacht, komplett von vorne angefangen und nach Tools 
 
 Alle Ansätze wirkten komplex und die Angst, sich zu verzetteln, war groß. Dann kam ein neuer Kunde - und der wollte genau das. Die Nervosität wegen der unausgegorenen Ideen war da, aber es stand schon ewig auf der Todo-Liste. Also wurde es gewagt - und es wurde eine richtig spannende Herausforderung, die definitiv machbar war.
 
-## Die Herausforderung: Komplexität aus der Praxis
+## Die Anforderungen: Ein Kundenprojekt
 
 Der Auftrag kam zur perfekten Zeit. Der Kunde brauchte automatisierte PDF-Generierung für Kommissionierlisten im Lager - **hunderte täglich**. Der Inhalt variierte von 3 bis **über 100 Artikeln**, mit standortbasierter Gruppierung und null Toleranz für hässliche oder langsame Ausgaben.
 
@@ -76,7 +76,7 @@ Traditionelle Print-Ansätze waren völlig ungeeignet. Jedes PDF wäre strukture
 
 Aber das Timing war perfekt - ich hatte monatelang daran gedacht und jetzt drückte ein echter Kunde aufs Tempo.
 
-## Die Lösung: Browser-basierte Messung
+## Die Lösung: Messen statt berechnen
 
 Die Idee ist einfach: messen statt berechnen. Anstatt Schrifthöhen zu berechnen und Zeilenumbrüche zu raten, den Browser machen lassen, was er am besten kann - Content rendern - und dann das Ergebnis messen.
 
@@ -88,7 +88,7 @@ Bei komplexen Dokumenten wird das völlig unhandhabbar. Jede kleine CSS-Anpassun
 
 Der browser-basierte Ansatz räumt damit komplett auf. Der Browser rechnet alles selbst - Abstände, Schriften, Zeilenumbrüche - und stellt die Messergebnisse zur Verfügung. Margin hinzufügen? Einfach CSS-Klasse setzen. Das Messsystem passt sich automatisch an.
 
-## Die Architektur
+## Der Tech Stack: SvelteKit und Puppeteer
 
 **SvelteKit** übernimmt in der Implementierung die Dokumentstruktur, aber der Ansatz funktioniert mit jedem Framework - **React**, **Vue** oder auch komplett ohne Framework. Die Messlogik ist framework-unabhängig, wobei schnellere Frameworks auch schnellere PDF-Generierung bedeuten, da alles auf echtem DOM-Rendering basiert.
 
@@ -118,7 +118,7 @@ const pdf = await page.pdf({
 await browser.close();
 ```
 
-## So funktioniert die Messung
+## Die Implementierung
 
 Jede Seite ist erstmal nur ein Rahmen für verschiedene Elemente. Manche sind fest (Header, Footer), andere sind Inhaltsbereiche, die sich über mehrere Seiten erstrecken können. Wenn ein Inhaltsbereich merkt, dass neue Elemente nicht mehr passen, erstellt er automatisch eine neue Seite. Der Trick: Browser rendern lassen, dann messen.
 
@@ -151,11 +151,11 @@ Dazu kommt: man ist auf primitives Styling beschränkt. Ich wollte aber modernes
 
 Mein Ansatz dreht beide Probleme um: Browser übernimmt Layout und Styling, ich messe das Ergebnis. Ob 3 oder 300 Lager-Artikel - der Browser rendert normal und ich prüfe nur "passt das noch?"
 
-## Von Frustration zur Produktion
+## Das Ergebnis: Produktion statt Frust
 
 Was als Lebenslauf-Frustration anfing, ist heute ein Produktionssystem, das täglich hunderte Kommissionierlisten generiert. Die PDFs laufen nahtlos durch die Druck-Pipeline des Kunden und das Lagerpersonal bekommt professionelle Dokumente, mit denen sie arbeiten können.
 
-![PDF Beispiel]($assets/dynamic-pdf-generation-puppeteer.png)
+![Vereinfachtes Beispiel einer dynamisch generierten PDF mit variablen Inhalten]($assets/dynamic-pdf-generation-puppeteer.png)
 
 **Wann sich der Ansatz lohnt:**
 

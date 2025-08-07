@@ -1,6 +1,6 @@
 ---
 title: "Dynamic PDF Generation: Variable Content and Reliable Page Breaks"
-description: "How browser-based measurement solved what CSS print media couldn't: reliable page breaks for variable-length content. SvelteKit + Puppeteer approach for complex PDF generation."
+description: "How browser-based measurement solved what CSS print media couldn't: reliable page breaks for variable-length content. A production-ready approach using modern web technologies."
 ref: /de/blog/20250805-dynamische-pdf-generierung-puppeteer
 hero:
   image: $assets/dynamic-pdf-generation-puppeteer.png
@@ -86,7 +86,7 @@ With complex document structures, this becomes unmanageable. Every styling tweak
 
 The browser-based approach eliminates this entirely. The browser handles all styling calculations internally - margins, padding, font rendering, line breaks - and I just measure the final rendered result. Want to add a margin? Just add the CSS class. The measurement system automatically adapts to whatever the browser renders.
 
-## The Architecture
+## The Tech Stack: SvelteKit and Puppeteer
 
 **SvelteKit** handles the document structure in my implementation, but this approach works with any framework - **React**, **Vue**, or even plain HTML. The core measurement logic is framework-agnostic, though faster-rendering frameworks will generate PDFs quicker since the approach relies on actual DOM rendering.
 
@@ -153,7 +153,7 @@ My approach flips both problems: let the browser handle layout and styling natur
 
 What started as my frustration with printing my CV has become a production system generating hundreds of warehouse pick lists daily. The PDFs integrate seamlessly into the customer's printing pipeline, and warehouse staff get professional documents they can actually use.
 
-![PDF Example]($assets/dynamic-pdf-generation-puppeteer.png)
+![Simplified example of dynamic PDF generation with variable content]($assets/dynamic-pdf-generation-puppeteer.png)
 
 **When This Approach Makes Sense:**
 
