@@ -20,6 +20,7 @@ meta:
     - python http server
     - coreos-installer
 published: 2025-05-30
+updatedAt: 2025-08-08
 layout: $layout/BlogPost.svelte
 category: dev
 tags:
@@ -67,9 +68,22 @@ passwd:
     - name: core
       ssh_authorized_keys:
         - "ssh-rsa AAAAB3NzaC1yc2EAAAA... your-public-key"
+systemd:
+  units:
+    - name: docker.service
+      enabled: true
 ```
 
-That's it. Three lines of configuration define SSH access for the default user `core`. The `variant: fcos` specifies that this is for Fedora CoreOS, the version determines the schema. CoreOS comes with the `core` user already preconfigured – it just needs an SSH key.
+This configuration defines SSH access for the default user `core` and ensures Docker starts automatically on boot. The `variant: fcos` specifies that this is for Fedora CoreOS, the version determines the schema. CoreOS comes with the `core` user already preconfigured – it just needs an SSH key.
+
+**Why enable Docker?** Docker is available on CoreOS and the `docker` command works, but containers don't run properly until you enable the Docker service permanently. Without the `systemd` section, you'd have to nudge Docker after each reboot. The Ignition approach permanently enables it from the start.
+
+Alternatively, you can enable Docker manually later:
+
+```bash
+# Enable Docker permanently after installation
+sudo systemctl enable --now docker
+```
 
 This YAML file (with `.bu` extension) is then converted with Butane to a `.ign` JSON file that CoreOS understands.
 
@@ -99,6 +113,14 @@ The result is a `config.ign` file in JSON format that Ignition understands:
       {
         "name": "core",
         "sshAuthorizedKeys": ["ssh-rsa AAAAB3NzaC1yc2EAAAA... your-public-key"]
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "enabled": true,
+        "name": "docker.service"
       }
     ]
   }
@@ -195,6 +217,25 @@ sudo systemctl reboot
 After reboot, the software is available. The system remains stable and can be easily rolled back if there are problems.
 
 Most software runs as containers – CoreOS is optimized for that. Only system tools like `vim` or `docker-compose` are installed directly.
+
+## Docker vs Podman on CoreOS
+
+CoreOS ships with both Docker and Podman pre-installed. Both work fine, but they have different philosophies:
+
+**Docker:** Traditional container runtime. Requires a daemon. Works with all existing docker-compose files and tutorials.
+
+**Podman:** Rootless containers by default. No daemon required. Better systemd integration. More aligned with CoreOS security principles.
+
+For this guide, we use Docker because most people are familiar with it. If you prefer Podman:
+
+```bash
+# Enable Podman socket for docker-compose compatibility
+sudo systemctl enable --now podman.socket
+# Or install podman-compose
+sudo rpm-ostree install podman-compose
+```
+
+Both can run the same container images. Choose based on your preference and existing tooling.
 
 ## Why Fedora CoreOS?
 

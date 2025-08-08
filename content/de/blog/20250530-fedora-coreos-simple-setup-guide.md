@@ -20,6 +20,7 @@ meta:
     - python http server
     - coreos-installer
 published: 2025-05-30
+updatedAt: 2025-08-08
 layout: $layout/BlogPost.svelte
 category: dev
 tags:
@@ -67,9 +68,22 @@ passwd:
     - name: core
       ssh_authorized_keys:
         - "ssh-rsa AAAAB3NzaC1yc2EAAAA... dein-public-key"
+systemd:
+  units:
+    - name: docker.service
+      enabled: true
 ```
 
-Das war's. Drei Zeilen Konfiguration definieren SSH-Zugang für den Standard-User `core`. Der `variant: fcos` gibt an, dass es sich um Fedora CoreOS handelt, die Version bestimmt das Schema. CoreOS kommt mit dem User `core` bereits vorkonfiguriert – er braucht nur noch einen SSH-Key.
+Diese Konfiguration definiert SSH-Zugang für den Standard-User `core` und sorgt dafür, dass Docker automatisch beim Boot startet. Der `variant: fcos` gibt an, dass es sich um Fedora CoreOS handelt, die Version bestimmt das Schema. CoreOS kommt mit dem User `core` bereits vorkonfiguriert – er braucht nur noch einen SSH-Key.
+
+**Warum Docker aktivieren?** Docker ist verfügbar und der `docker` Befehl funktioniert auch, aber Container laufen nicht richtig bis der Service permanent aktiviert ist. Ohne den `systemd`-Abschnitt müsstest Du nach jedem Neustart Docker wieder anstupsen. Da Du CoreOS wahrscheinlich eh für Container verwendest, ist es praktischer das gleich mitzumachen.
+
+Alternativ kannst Du Docker auch nachträglich aktivieren:
+
+```bash
+# Docker nachträglich permanent aktivieren
+sudo systemctl enable --now docker
+```
 
 Diese YAML-Datei (mit `.bu` Endung) wird dann mit Butane zu einer `.ign` JSON-Datei konvertiert, die CoreOS versteht.
 
@@ -101,6 +115,14 @@ Das Ergebnis ist eine `config.ign` Datei mit dem JSON-Format, das Ignition verst
         "sshAuthorizedKeys": ["ssh-rsa AAAAB3NzaC1yc2EAAAA... dein-public-key"]
       }
     ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "enabled": true,
+        "name": "docker.service"
+      }
+    ]
   }
 }
 ```
@@ -125,7 +147,7 @@ python3 -m http.server 8000
 python -m SimpleHTTPServer 8000
 ```
 
-Die IP-Adresse des Rechners findest du je nach System:
+Die IP-Adresse des Rechners findest Du je nach System:
 
 ```bash
 # Linux
@@ -195,6 +217,25 @@ sudo systemctl reboot
 Nach dem Reboot ist die Software verfügbar. Das System bleibt dabei stabil und lässt sich bei Problemen einfach zurückrollen.
 
 Die meiste Software läuft als Container – CoreOS ist dafür optimiert. Nur System-Tools wie `vim` oder `docker-compose` werden direkt installiert.
+
+## Docker vs Podman auf CoreOS
+
+CoreOS kommt mit Docker und Podman vorinstalliert. Beide funktionieren gut, haben aber unterschiedliche Philosophien:
+
+**Docker:** Klassische Container-Runtime. Braucht einen Daemon. Funktioniert mit allen bestehenden docker-compose Files und Tutorials.
+
+**Podman:** Rootlose Container standardmäßig. Kein Daemon nötig. Bessere systemd Integration. Mehr im Einklang mit CoreOS Sicherheitsprinzipien.
+
+Für diesen Guide verwenden wir Docker, weil es die meisten kennen. Falls Du Podman bevorzugst:
+
+```bash
+# Podman Socket für docker-compose Kompatibilität
+sudo systemctl enable --now podman.socket
+# Oder podman-compose installieren
+sudo rpm-ostree install podman-compose
+```
+
+Beide können die gleichen Container-Images laufen lassen. Wähle je nach Vorliebe und vorhandenen Tools.
 
 ## Warum Fedora CoreOS?
 
