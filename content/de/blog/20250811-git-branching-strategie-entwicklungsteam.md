@@ -24,7 +24,9 @@ meta:
     - risikotoleranz
 published: 2025-08-11
 layout: $layout/BlogPost.svelte
-category: dev
+category:
+  - dev
+  - management
 tags:
   - Git
   - Team Culture
