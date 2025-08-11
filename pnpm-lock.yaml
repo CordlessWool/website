@@ -28,8 +28,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       '@lucide/svelte':
-        specifier: ^0.536.0
-        version: 0.536.0(svelte@5.38.0)
+        specifier: ^0.539.0
+        version: 0.539.0(svelte@5.38.0)
       '@rehype-pretty/transformers':
         specifier: ^0.13.2
         version: 0.13.2
@@ -552,8 +552,8 @@ packages:
       '@loom-io/core':
         optional: true
 
-  '@lucide/svelte@0.536.0':
-    resolution: {integrity: sha512-YAeoWU+0B/RriFZZ3wHno1FMkbrVrFdityuo2B0YuphD0vtJWXStzZkWLGVhT3jMb7zhugmhayIg+gI4+AZu1g==}
+  '@lucide/svelte@0.539.0':
+    resolution: {integrity: sha512-OWhw4BhHO+owmOE/ijSNLnw/flbW2/DsLzMHAeM8oEjLsO0xE6glX0ADCDwxKItTs5ZJYssfyGNXxMXrea173w==}
     peerDependencies:
       svelte: ^5
 
@@ -2947,7 +2947,7 @@ snapshots:
       '@loom-io/converter': 0.12.11(@loom-io/core@0.12.11)
       '@loom-io/core': 0.12.11
 
-  '@lucide/svelte@0.536.0(svelte@5.38.0)':
+  '@lucide/svelte@0.539.0(svelte@5.38.0)':
     dependencies:
       svelte: 5.38.0
 

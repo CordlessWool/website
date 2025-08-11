@@ -13,7 +13,7 @@
     "@embodi/markdown": "^0.3.0",
     "@inlang/paraglide-js": "^2.2.0",
     "@jsdevtools/rehype-toc": "^3.0.2",
-    "@lucide/svelte": "^0.536.0",
+    "@lucide/svelte": "^0.539.0",
     "@rehype-pretty/transformers": "^0.13.2",
     "@shikijs/rehype": "^3.9.2",
     "@shikijs/transformers": "^3.9.2",
