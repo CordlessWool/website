@@ -122,6 +122,10 @@ figure[data-rehype-pretty-code-figure] {
     }
 }
 
+:not(figure[data-rehype-pretty-code-figure]) pre {
+    @apply overflow-scroll;
+}
+
 .markdown p code {
     @apply bg-white dark:bg-black;
     @apply py-1 px-2 rounded-md;
