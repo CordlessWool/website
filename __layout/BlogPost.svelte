@@ -211,12 +211,14 @@
     figure.hero {
         @apply max-w-5xl w-full m-auto;
         @apply max-h-[37vh];
+        @apply overflow-hidden;
+        @apply relative my-3 max-w-screen ;
+        @apply object-cover;
 
         :global(img) {
-            @apply object-cover h-full;
+            @apply object-cover;
         }
-        @apply relative mb-7 mt-3 max-w-screen ;
-        @apply object-cover;
+
 
         figcaption, figcaption a {
             @apply absolute bottom-1 right-1 w-max;
