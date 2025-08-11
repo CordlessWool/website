@@ -6,6 +6,8 @@ import rehypeSlug from "rehype-slug";
 import { transformerNotationDiff } from "@shikijs/transformers";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeMermaid from "rehype-mermaid";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
@@ -14,8 +16,15 @@ export default {
   plugins: [
     tailwindcss(),
     embodiMarkdown({
-      remarkPlugins: [],
+      settings: { allowDangerousHtml: true },
+      remarkPlugins: [remarkGfm],
       rehypePlugins: [
+        [
+          rehypeRaw,
+          {
+            passThrough: ["br"],
+          },
+        ],
         [
           rehypeSlug,
           {
