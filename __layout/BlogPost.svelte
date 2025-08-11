@@ -167,7 +167,7 @@
     }
 
     .hero {
-        @apply max-w-5xl w-full m-auto;
+
     }
 
 
@@ -208,10 +208,12 @@
         }
     }
 
-    figure {
+    figure.hero {
+        @apply max-w-5xl w-full m-auto;
+        @apply max-h-[37vh];
+
         :global(img) {
-            @apply object-cover;
-            @apply max-h-[37vh];
+            @apply object-cover h-full;
         }
         @apply relative mb-7 mt-3 max-w-screen ;
         @apply object-cover;

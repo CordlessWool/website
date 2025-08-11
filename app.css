@@ -123,7 +123,7 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 :not(figure[data-rehype-pretty-code-figure]) code {
-    @apply overflow-scroll;
+    @apply overflow-auto;
 }
 
 .markdown code {
