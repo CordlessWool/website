@@ -2,7 +2,7 @@
 title: "Die richtige Git-Branching-Strategie für Entwicklungsteams"
 description: "Teams wählen Git Flow oft, weil es professionell klingt – nicht weil sie analysiert haben, ob es ihre Probleme löst. Wie man Git-Workflows basierend auf Testqualität, Team-Struktur und Risikotoleranz auswählt – inklusive eines vereinfachten Ansatzes für häufige Koordinationsprobleme."
 slug: "20250811-git-branching-strategie-entwicklungsteam"
-ref: /en/blog/20250112-choosing-git-branching-strategy-team
+ref: /en/blog/20250811-choosing-git-branching-strategy-team/
 hero:
   image: $assets/simple-git-flow.jpeg
   alt: Git Kraken Branch Darstellung
@@ -34,32 +34,6 @@ tags:
   - Team Leadership
   - Workflow
   - blog
----
-
----
-
-title: "Die richtige Git-Branching-Strategie für Entwicklungsteams"
-description: "Teams wählen Git Flow oft, weil es professionell klingt – nicht weil sie analysiert haben, ob es ihre Probleme löst. Wie man Git-Workflows basierend auf Testqualität, Team-Struktur und Risikotoleranz auswählt – inklusive eines vereinfachten Ansatzes für häufige Koordinationsprobleme."
-slug: "20250811-git-branching-strategie-entwicklungsteam"
-ref: /en/blog/20250112-choosing-git-branching-strategy-team
-hero:
-image: $assets/simple-git-flow.jpeg
-alt: Git Kraken Branch Darstellung
-meta:
-keywords: - git workflow - git branching strategie - entwicklungsteam - team koordination - workflow auswahl - git flow - github flow - trunk-based development - team produktivität - entwickler erfahrung - team struktur - workflow evolution - vereinfachter git flow - testqualität - risikotoleranz
-published: 2025-08-11
-layout: $layout/BlogPost.svelte
-category: dev
-tags:
-
-- Git
-- Team Culture
-- Developer Experience
-- Project Management
-- Team Leadership
-- Workflow
-- blog
-
 ---
 
 # Die richtige Git-Branching-Strategie für Entwicklungsteams
