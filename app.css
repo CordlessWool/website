@@ -107,14 +107,14 @@ a.link:focus {
 }
 
 figure[data-rehype-pretty-code-figure] {
-    @apply rounded-md overflow-hidden pb-5;
+    @apply relative rounded-md overflow-hidden pb-5;
 
     figcaption {
         @apply text-sm text-zinc-500 dark:text-zinc-400 px-3 py-1;
     }
 
     pre {
-        @apply py-3 rounded-md overflow-auto relative px-3 border-solid border-zinc-600 border;
+        @apply rounded-md overflow-auto relative border-solid border-zinc-600 border;
     }
 
     code {
@@ -122,18 +122,13 @@ figure[data-rehype-pretty-code-figure] {
     }
 }
 
-:not(figure[data-rehype-pretty-code-figure]) pre {
+:not(figure[data-rehype-pretty-code-figure]) code {
     @apply overflow-scroll;
 }
 
-.markdown p code {
-    @apply bg-white dark:bg-black;
-    @apply py-1 px-2 rounded-md;
+.markdown code {
+    @apply py-5 px-2 rounded-md;
     @apply text-sm;
-}
-
-.markdown pre {
-    @apply pt-3 pb-5;
 }
 
 .markdown pre code {
