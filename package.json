@@ -9,8 +9,8 @@
     "preview": "embodi preview"
   },
   "devDependencies": {
-    "@embodi/image": "^0.1.2",
-    "@embodi/markdown": "^0.3.0",
+    "@embodi/image": "^0.2.0",
+    "@embodi/markdown": "^0.4.0",
     "@inlang/paraglide-js": "^2.2.0",
     "@jsdevtools/rehype-toc": "^3.0.2",
     "@lucide/svelte": "^0.539.0",
@@ -19,7 +19,7 @@
     "@shikijs/transformers": "^3.9.2",
     "@tailwindcss/vite": "^4.1.11",
     "chart.js": "^4.5.0",
-    "embodi": "0.15.4",
+    "embodi": "0.16.1",
     "globby": "^14.1.0",
     "playwright": "^1.54.2",
     "rehype-mermaid": "^3.0.0",
@@ -33,13 +33,13 @@
     "sharp": "^0.34.3",
     "shiki": "^3.9.2",
     "sitemap": "^8.0.0",
-    "svelte": "^5.38.0",
+    "svelte": "^5.38.1",
     "tailwindcss": "^4.1.11",
     "terser": "^5.43.1",
     "typescript": "^5.9.2",
     "unified": "^11.0.5",
     "valibot": "^1.1.0",
-    "vite": "^6.3.5",
+    "vite": "^7.1.1",
     "vitest": "^3.2.4"
   },
   "dependencies": {
