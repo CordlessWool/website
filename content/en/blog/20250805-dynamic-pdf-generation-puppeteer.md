@@ -1,42 +1,44 @@
 ---
-title: "Dynamic PDF Generation: Variable Content and Reliable Page Breaks"
-description: "How browser-based measurement solved what CSS print media couldn't: reliable page breaks for variable-length content. A production-ready approach using modern web technologies."
+title: "Professional PDF Document Generation with HTML/CSS: Variable Content Without Absolute Positioning"
+description: "Learn how to generate professional PDF documents with variable content using HTML/CSS instead of manual positioning. Modern alternative to PDFKit and jsPDF using browser-based measurement."
 ref: /de/blog/20250805-dynamische-pdf-generierung-puppeteer
 hero:
   image: $assets/dynamic-pdf-generation-puppeteer.png
   alt: Browser-based PDF generation with variable content
 meta:
   keywords:
-    - PDF generation
-    - Puppeteer PDF
-    - browser-based measurement
+    - PDF document generation
+    - HTML CSS PDF generation
+    - PDFKit alternative
+    - jsPDF alternative
     - variable content PDF
-    - SvelteKit PDF generation
-    - React PDF generation
-    - Vue PDF generation
-    - dynamic page breaks
-    - CSS print media
+    - browser-based PDF
     - document generation
+    - PDF without absolute positioning
+    - HTML to PDF documents
+    - dynamic PDF creation
+    - business document generation
+    - professional PDF generation
 published: 2025-08-05
+updatedAt: 2025-08-17
 layout: $layout/BlogPost.svelte
 category: dev
 tags:
   - JavaScript
   - PDF Generation
   - Puppeteer
-  - Automation
   - Document Generation
   - Developer Experience
   - blog
 ---
 
-# Dynamic PDF Generation: Variable Content and Reliable Page Breaks
+# Professional PDF Document Generation with HTML/CSS: Variable Content Without Absolute Positioning
 
-In the mind of a developer grown up with responsive webpages, PDF generation is also a mindset challenge – a PDF is totally fixed. You design for infinite scroll, flexible containers, and content that adapts to any screen size.
+Modern interface design and generating PDFs with common tools like jsPDF and PDFKit feels like two different worlds. Having to set every position manually is a design nightmare, especially for simple changes like adding more space between elements.
 
-PDF generation flips everything: exact page dimensions, manual positioning, content that must fit within rigid boundaries. And here's the kicker – you often don't know how much content you'll have until runtime. Will this document be 1 page or 10?
+The challenge gets worse when content length varies: How many pages do I need for 300 items versus 30?
 
-I'll take you on my journey to bridge these two worlds: keeping the dynamic, flexible thinking of web development while working within the constraints of print formats.
+On web pages, this isn't a problem - the browser handles rendering and positioning elegantly. So why not use the full power of HTML and CSS to generate PDFs in a nice and easy way?
 
 **TL;DR:**
 
@@ -46,23 +48,11 @@ I'll take you on my journey to bridge these two worlds: keeping the dynamic, fle
 - **Performance**: 3-4 seconds for 6-page PDFs with hundreds of data points
 - **Best for**: Complex, data-driven documents with unpredictable lengths
 
-[Skip to the challenge](#section-the-challenge-real-world-complexity) for requirements, or jump to [the solution](#section-the-solution-browser-based-measurement) for implementation details.
-
-## The Story: From Personal Frustration to Production Challenge
-
-I've been frustrated with updating CVs in different languages for years. Especially when I add some of the information also to my website and with every year there is a new platform to enter this data.
-
-For myself my website is the main source, but all the recruiters and companies still want to have a PDF. So why not just put the project overview page into a PDF? I didn't think it would be so complicated. I tried to handle it with `@pages`, `page-break-before` - you name it. But the result was ugly all the time. My webpage is responsive, but the design is not thought for printing it.
-
-So I developed new ideas, set a completely new starting point and searched for tools to solve it. I read a lot of docs about existing PDF generating tools, but often didn't find what I was searching for – a flexible design easy to add elements. I wanted to have a design where I just add elements like on a webpage and they flow from each page to the other.
-
-All ideas I had seemed to be complex and I feared the rabbit hole I could get stuck in. But then I got a new customer and they requested exactly this. I still was nervous about unfinished thoughts, but I had it on my list for months or years, so I decided to do it and it was a fun challenge that definitely turned out to be possible.
-
 ## The Challenge: Real-World Complexity
 
-That customer project request came at exactly the right time. They needed automated PDF generation for warehouse pick lists with **hundreds generated daily** - variable content from 3 to **100+ items**, location-based grouping, and zero tolerance for ugly output or slow generation.
+A customer requested me to create automated PDF generation for warehouse pick lists with **hundreds generated daily** - variable content from 3 to **100+ items**, location-based grouping, and zero tolerance for ugly output or slow generation.
 
-The requirements killed any hope of using CSS print media:
+The requirements killed any hope of using CSS print styles:
 
 - **Unknown content length** with wildly varying item counts
 - **Location-based grouping** where headers needed to stay with their content
