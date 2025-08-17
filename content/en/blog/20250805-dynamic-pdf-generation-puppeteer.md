@@ -48,7 +48,7 @@ On web pages, this isn't a problem - the browser handles rendering and positioni
 - **Performance**: 3-4 seconds for 6-page PDFs with hundreds of data points
 - **Best for**: Complex, data-driven documents with unpredictable lengths
 
-## The Challenge: Real-World Complexity
+## PDF Generation Example: Warehouse Pick Lists with Variable Content
 
 A customer requested me to create automated PDF generation for warehouse pick lists with **hundreds generated daily** - variable content from 3 to **100+ items**, location-based grouping, and zero tolerance for ugly output or slow generation.
 
@@ -64,7 +64,7 @@ Traditional "design for print" approaches were completely inadequate. Every PDF 
 
 But the timing was perfect - I had months of mental groundwork done, and now I had a real customer need pushing me to finally solve it.
 
-## The Solution: Browser-Based Measurement
+## HTML to PDF: Let the Browser Calculate Layout Instead of Manual Positioning
 
 The breakthrough came from a simple realization: stop trying to predict layout and start measuring actual results. Instead of calculating font heights and estimating line breaks, let the browser do what it does best - render content - then measure what actually happened.
 
@@ -76,7 +76,7 @@ With complex document structures, this becomes unmanageable. Every styling tweak
 
 The browser-based approach eliminates this entirely. The browser handles all styling calculations internally - margins, padding, font rendering, line breaks - and I just measure the final rendered result. Want to add a margin? Just add the CSS class. The measurement system automatically adapts to whatever the browser renders.
 
-## The Tech Stack: SvelteKit and Puppeteer
+## Tech Stack: Puppeteer PDF Generation with Any Framework
 
 **SvelteKit** handles the document structure in my implementation, but this approach works with any framework - **React**, **Vue**, or even plain HTML. The core measurement logic is framework-agnostic, though faster-rendering frameworks will generate PDFs quicker since the approach relies on actual DOM rendering.
 
@@ -106,7 +106,7 @@ const pdf = await page.pdf({
 await browser.close();
 ```
 
-## How the Measurement Works
+## PDF Page Layout Process: Add Elements Until They Don't Fit
 
 Every page starts as a frame where you add different elements. Some are fixed (headers, footers), others are content areas that can span multiple pages. When a content area detects that new items won't fit, it triggers the creation of a new page. The key insight: let the browser render everything first, then measure the results.
 
@@ -131,7 +131,7 @@ All content gets preprocessed into complete elements before rendering. For the p
 
 Performance is solid: 3-4 seconds for a 6-page PDF with hundreds of data points. Not lightning fast, but completely acceptable for production use with only one process running.
 
-## The Problem with Traditional Libraries
+## Why Traditional PDF Libraries Fail for Variable Content
 
 Traditional PDF libraries like jsPDF and PDFKit use absolute positioning - every element needs exact x and y coordinates. For variable content lengths, this means manual calculations: How tall is this text block? Where should the next element go? What if this table has 3 rows versus 30?
 
@@ -139,7 +139,7 @@ Plus, you're stuck with basic styling. I wanted full CSS support - flexbox, grid
 
 My approach flips both problems: let the browser handle layout and styling naturally, then measure the results. Whether it's 3 warehouse items or 300, the browser renders normally and I just check "does this fit?"
 
-## From Frustration to Production
+## When to Use Browser-Based PDF Generation vs. Other Alternatives
 
 What started as my frustration with printing my CV has become a production system generating hundreds of warehouse pick lists daily. The PDFs integrate seamlessly into the customer's printing pipeline, and warehouse staff get professional documents they can actually use.
 

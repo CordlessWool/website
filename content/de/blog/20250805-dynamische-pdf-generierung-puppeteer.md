@@ -48,7 +48,7 @@ Bei Webseiten ist das kein Problem - der Browser übernimmt Rendering und Positi
 - **Performance**: 3-4 Sekunden für 6-seitige PDFs mit hunderten Datenpunkten
 - **Passt für**: Komplexe, datengetriebene Dokumente mit unvorhersagbaren Längen
 
-## Die Herausforderung: Komplexität aus der Praxis
+## PDF-Generierung Beispiel: Kommissionierlisten mit variablen Inhalten
 
 Ein Kunde beauftragte mich mit der Erstellung einer automatisierten PDF-Generierung für Kommissionierlisten im Lager - **hunderte täglich**. Der Inhalt variierte von 3 bis **über 100 Artikeln**, mit standortbasierter Gruppierung und null Toleranz für hässliche oder langsame Ausgaben.
 
@@ -64,7 +64,7 @@ Traditionelle Print-Ansätze waren völlig ungeeignet. Jedes PDF wäre strukture
 
 Aber das Timing war perfekt - ich hatte monatelang daran gedacht und jetzt drückte ein echter Kunde aufs Tempo.
 
-## Die Lösung: Browser-basierte Messung
+## HTML zu PDF: Browser berechnen lassen statt manuelle Positionierung
 
 Die Idee ist einfach: messen statt berechnen. Anstatt Schrifthöhen zu berechnen und Zeilenumbrüche zu raten, den Browser machen lassen, was er am besten kann - Content rendern - und dann das Ergebnis messen.
 
@@ -76,7 +76,7 @@ Bei komplexen Dokumenten wird das völlig unhandhabbar. Jede kleine CSS-Anpassun
 
 Der browser-basierte Ansatz räumt damit komplett auf. Der Browser rechnet alles selbst - Abstände, Schriften, Zeilenumbrüche - und stellt die Messergebnisse zur Verfügung. Margin hinzufügen? Einfach CSS-Klasse setzen. Das Messsystem passt sich automatisch an.
 
-## Der Tech Stack: SvelteKit und Puppeteer
+## Tech Stack: Puppeteer PDF-Generierung mit beliebigem Framework
 
 **SvelteKit** übernimmt in der Implementierung die Dokumentstruktur, aber der Ansatz funktioniert mit jedem Framework - **React**, **Vue** oder auch komplett ohne Framework. Die Messlogik ist framework-unabhängig, wobei schnellere Frameworks auch schnellere PDF-Generierung bedeuten, da alles auf echtem DOM-Rendering basiert.
 
@@ -106,7 +106,7 @@ const pdf = await page.pdf({
 await browser.close();
 ```
 
-## Die Implementierung
+## PDF Seitenlayout Prozess: Elemente hinzufügen bis sie nicht mehr passen
 
 Jede Seite ist erstmal nur ein Rahmen für verschiedene Elemente. Manche sind fest (Header, Footer), andere sind Inhaltsbereiche, die sich über mehrere Seiten erstrecken können. Wenn ein Inhaltsbereich merkt, dass neue Elemente nicht mehr passen, erstellt er automatisch eine neue Seite. Der Trick: Browser rendern lassen, dann messen.
 
@@ -131,7 +131,7 @@ Alle Inhalte werden vorher in vollständige Elemente aufgeteilt. Bei den Kommiss
 
 Die Performance stimmt: 3-4 Sekunden für ein 6-seitiges PDF mit hunderten Datenpunkten. Nicht blitzschnell, aber völlig in Ordnung für Produktivumgebungen mit einem laufenden Prozess.
 
-## Das Problem mit klassischen PDF-Bibliotheken
+## Warum klassische PDF-Bibliotheken bei variablen Inhalten versagen
 
 Klassische PDF-Bibliotheken wie jsPDF und PDFKit arbeiten mit absoluter Positionierung - jedes Element braucht exakte x- und y-Koordinaten. Bei variablen Inhalten heißt das: manuelle Berechnungen. Wie hoch wird dieser Textblock? Wo kommt das nächste Element hin? Was passiert bei 3 statt 30 Tabellenzeilen?
 
@@ -139,7 +139,7 @@ Dazu kommt: man ist auf primitives Styling beschränkt. Ich wollte aber modernes
 
 Mein Ansatz dreht beide Probleme um: Browser übernimmt Layout und Styling, ich messe das Ergebnis. Ob 3 oder 300 Lager-Artikel - der Browser rendert normal und ich prüfe nur "passt das noch?"
 
-## Das Ergebnis: Produktion statt Frust
+## Wann browser-basierte PDF-Generierung vs. andere Alternativen nutzen
 
 Was als Lebenslauf-Frustration anfing, ist heute ein Produktionssystem, das täglich hunderte Kommissionierlisten generiert. Die PDFs laufen nahtlos durch die Druck-Pipeline des Kunden und das Lagerpersonal bekommt professionelle Dokumente, mit denen sie arbeiten können.
 
