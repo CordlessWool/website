@@ -20,6 +20,7 @@ meta:
     - Business Dokumentenerstellung
     - professionelle PDF Generierung
 published: 2025-08-05
+updatedAt: 2025-08-17
 layout: $layout/BlogPost.svelte
 category: dev
 tags:
