@@ -113,6 +113,13 @@
                 }
             }
 
+            svg[aria-roledescription="quadrantChart"] {
+                .labels text, .title text {
+                    :global(.dark) & {
+                        fill: var(--color-zinc-100);
+                    }
+                }
+            }
             /* Universal Mermaid styling */
             .flowchart {
               background: transparent !important;
