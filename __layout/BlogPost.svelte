@@ -5,7 +5,7 @@
     import * as m from './lib/paraglide/messages.js'
     import { TagList, Author } from "./components/blog/index.js";
     const { data, children } = $props();
-    const { hero } = data;
+    const { hero } = $state(data);
     const formatDate = (_date: string) => {
         const date = new Date(_date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
