@@ -19,7 +19,7 @@
     "@shikijs/transformers": "^3.12.0",
     "@tailwindcss/vite": "^4.1.12",
     "chart.js": "^4.5.0",
-    "embodi": "0.16.1",
+    "embodi": "0.16.3",
     "globby": "^14.1.0",
     "playwright": "^1.55.0",
     "rehype-mermaid": "^3.0.0",
