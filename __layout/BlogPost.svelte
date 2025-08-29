@@ -5,7 +5,6 @@
     import * as m from './lib/paraglide/messages.js'
     import { TagList, Author } from "./components/blog/index.js";
     const { data, children } = $props();
-    const { hero } = $state(data);
     const formatDate = (_date: string) => {
         const date = new Date(_date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
@@ -16,8 +15,8 @@
     <!-- Open Graph (für LinkedIn, Facebook, etc.) -->
     <meta property="og:title" content={data.title} />
     <meta property="og:description" content={data.description} />
-    {#if hero}
-        <meta property="og:image" content={hero.image[0].src} />
+    {#if data.hero}
+        <meta property="og:image" content={data.hero.image[0].src} />
     {/if}
     <!-- <meta property="og:url" content="https://deine-domain.tld/agile-projekte-scheitern" /> -->
     <meta property="og:type" content="article" />
@@ -44,20 +43,20 @@
         <article>
             <header>
                 <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
-                {#if hero}
+                {#if data.hero}
                     <figure class="hero">
                         <Image
                             fetchpriority="high"
                             sizes="(max-width: 1200px) 100vw"
                             width="1200"
                             hight="700"
-                            images={ hero.image }
-                            alt={ hero.alt }
+                            images={ data.hero.image }
+                            alt={ data.hero.alt }
                         />
-                        {#if hero.photographer_link}
-                            <figcaption><a href={hero.photographer_link} rel="noopener noreferrer" target="_blank" >{hero.photographer}</a></figcaption>
-                        {:else if hero.photographer}
-                            <figcaption>{hero.photographer}</figcaption>
+                        {#if data.hero.photographer_link}
+                            <figcaption><a href={data.hero.photographer_link} rel="noopener noreferrer" target="_blank" >{data.hero.photographer}</a></figcaption>
+                        {:else if data.hero.photographer}
+                            <figcaption>{data.hero.photographer}</figcaption>
                         {/if}
                     </figure>
                 {/if}
