@@ -15,7 +15,7 @@ export const schema: DataSchema = v.looseObject({
   hero: v.optional(
     v.object({
       image: ImageFiles,
-      alt: v.string(),
+      alt: v.optional(v.string()),
       photographer: v.optional(v.string()),
       photographer_link: v.optional(v.string()),
     }),
