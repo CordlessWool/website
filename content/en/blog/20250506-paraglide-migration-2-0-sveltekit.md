@@ -1,5 +1,5 @@
 ---
-title: "Paraglide Vite Plugin: Migration Guide from 1.x to 2.0 (SvelteKit)"
+title: "SvelteKit Paraglide 2.0 Migration: Complete Guide from 1.x"
 description: Complete guide for migrating Paraglide.js from 1.x to 2.0 using the new Vite plugin. SvelteKit-specific examples and troubleshooting included.
 hero:
   image: $assets/paraglide-migration.jpg
@@ -31,7 +31,7 @@ tags:
   - blog
 ---
 
-# Paraglide Vite Plugin: Migration Guide from 1.x to 2.0
+# SvelteKit Paraglide 2.0 Migration: Complete Guide from 1.x
 
 From time to time, it's necessary to bring all dependencies up to date. Most of them update easily. Paraglide.js? Definitely not.
 
