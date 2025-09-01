@@ -19,7 +19,7 @@ meta:
     - migration guide
     - developer experience
 published: 2025-05-06
-updatedAt: 2025-06-03
+updatedAt: 2025-09-01
 layout: $layout/BlogPost.svelte
 category: dev
 tags:
