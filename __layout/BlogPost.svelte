@@ -51,7 +51,7 @@
                             width="1200"
                             hight="700"
                             images={ data.hero.image }
-                            alt={ data.hero.alt }
+                            alt={ data.hero.alt ?? "" }
                         />
                         {#if data.hero.photographer_link}
                             <figcaption><a href={data.hero.photographer_link} rel="noopener noreferrer" target="_blank" >{data.hero.photographer}</a></figcaption>
