@@ -62,7 +62,7 @@ export default {
         [
           rehypePrettyCode,
           {
-            theme: "github-dark",
+            theme: "github-dark-high-contrast",
             transformers: [
               transformerNotationDiff(),
               transformerCopyButton({
