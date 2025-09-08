@@ -1,6 +1,6 @@
 ---
-title: "Professionelle PDF-Dokumentenerstellung mit HTML/CSS: Variable Inhalte ohne absolute Positionierung"
-description: "Lerne professionelle PDF-Dokumente mit variablen Inhalten mittels HTML/CSS erstellen - moderne Alternative zu PDFKit und jsPDF mit browser-basierter Messung."
+title: "Professionelle PDF-Dokumentenerstellung mit Svelte/React/Vue: Variable Inhalte ohne absolute Positionierung"
+description: "Lerne professionelle PDF-Dokumente mit variablen Inhalten mittels Svelte/React/Vue erstellen - moderne Alternative zu PDFKit und jsPDF mit browser-basierter Messung."
 ref: /en/blog/20250805-dynamic-pdf-generation-puppeteer
 hero:
   image: $assets/dynamic-pdf-generation-puppeteer.png
@@ -32,7 +32,7 @@ tags:
   - blog
 ---
 
-# Professionelle PDF-Dokumentenerstellung mit HTML/CSS: Variable Inhalte ohne absolute Positionierung
+# Professionelle PDF-Dokumentenerstellung mit Svelte/React/Vue: Variable Inhalte ohne absolute Positionierung
 
 Modernes Interface-Design und PDF-Generierung mit gängigen Tools wie jsPDF und PDFKit fühlen sich an wie zwei verschiedene Welten. Jede Position manuell setzen zu müssen ist ein Design-Albtraum, besonders wenn man einfache Änderungen wie mehr Abstand zwischen Elementen vornehmen will.
 
