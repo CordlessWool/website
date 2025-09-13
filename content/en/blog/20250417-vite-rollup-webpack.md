@@ -1,5 +1,5 @@
 ---
-title: Vite vs Webpack – Modern Toolchain with Rollup and an Outlook on Rolldowns
+title: "Vite and Rollup: Why Teams are Leaving Webpack Behind"
 description: Why Vite and Rollup are replacing Webpack – performance, developer experience, migration tips and a look at Rolldown.
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build Tools, JavaScript Bundler, tsup, Migration, Developer Experienc
@@ -15,7 +15,7 @@ tags:
   - blog
 ---
 
-# Understanding Vite and Rollup – Modern Toolchains with a Future
+# Vite and Rollup: Why Teams are Leaving Webpack Behind
 
 Vite has emerged as one of the most popular build tools in the frontend ecosystem in recent years. Compared with Webpack or classical Rollup set‑ups, Vite promises shorter development cycles, less configuration – and a pleasantly modern developer experience.
 If you are searching for **Vite vs Webpack**, this post gives you the key facts.

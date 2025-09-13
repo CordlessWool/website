@@ -1,5 +1,5 @@
 ---
-title: Vite vs Webpack – Moderne Toolchain mit Rollup und Ausblick auf Rolldown
+title: "Vite und Rollup: Der Wechsel weg von Webpack"
 description: Warum Vite und Rollup Webpack ablösen – Performance, Developer Experience, Migrationstipps und ein Blick auf Rolldown.
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build-Tools, JavaScript Bundler, tsup, Migration, Developer Experience
@@ -15,7 +15,7 @@ tags:
   - blog
 ---
 
-# Vite und Rollup verstehen – moderne Toolchains mit Zukunft
+# Vite und Rollup: Der Wechsel weg von Webpack
 
 Vite hat sich in den letzten Jahren zu einem der beliebtesten Build‑Tools im Frontend‑Ökosystem entwickelt. Besonders im Vergleich zu Webpack oder klassischen Rollup‑Set‑ups verspricht Vite kürzere Entwicklungszyklen, weniger Konfiguration – und eine angenehm moderne Entwickler‑Erfahrung.
 Wenn du nach **Vite vs Webpack** suchst, findest du hier die wichtigsten Fakten.
