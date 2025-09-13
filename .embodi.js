@@ -20,12 +20,6 @@ export default {
       remarkPlugins: [remarkGfm],
       rehypePlugins: [
         [
-          rehypeRaw,
-          {
-            passThrough: ["br"],
-          },
-        ],
-        [
           rehypeSlug,
           {
             prefix: "section-",
@@ -70,6 +64,12 @@ export default {
                 feedbackDuration: 3000,
               }),
             ],
+          },
+        ],
+        [
+          rehypeRaw,
+          {
+            passThrough: ["br"],
           },
         ],
       ],
