@@ -33,7 +33,7 @@ tags:
 
 # tsup vs Vite/Rollup: Einfachheit vs. Flexibilität
 
-Vite und Rollup sind zu recht zwei bedeutende Größen unter den JavaScript Build-Tools geworden, manchmal ist es aber sinnvoll auf einfachere Lösungen wie tsup zu setzen. Im Grunde ist die Frage nicht, welcher JavaScript Bundler "besser" oder schneller ist. Viel wichtiger ist welcher passt zu den Anforderungen ohne das Projekt unnötig komplex zu machen.
+[Vite](https://vite.dev/) und [Rollup](https://rollupjs.org/introduction/) sind zu recht zwei bedeutende Größen unter den JavaScript Build-Tools geworden, manchmal ist es aber sinnvoll auf einfachere Lösungen wie [tsup](https://tsup.egoist.dev/#what-can-it-bundle) zu setzen. Im Grunde ist die Frage nicht, welcher JavaScript Bundler "besser" oder schneller ist. Viel wichtiger ist welcher passt zu den Anforderungen ohne das Projekt unnötig komplex zu machen.
 
 In diesem Artikel werden Vite und Rollup nicht weiter miteinander verglichen, da Vite Rollup für Production-Builds verwendet und dessen Plugin-Architektur teilt. Weitere Details zu diesen Technologien und deren Verhältnis kann in den Artikeln [Vite vs Rollup](/de/blog/20250908-vite-vs-rollup-welche-build-tool/) und [Vite vs Webpack](/de/blog/20250417-vite-rollup-webpack/) nachgelesen werden.
 
