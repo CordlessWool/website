@@ -69,7 +69,7 @@ a {
  */
 
 .markdown {
-    @apply hyphens-auto;
+    @apply hyphens-auto text-pretty;
 }
 
 .markdown a,
@@ -134,7 +134,7 @@ figure[data-rehype-pretty-code-figure] {
 
 .markdown code {
     @apply p-1 px-2 rounded-sm shadow-xs shadow-zinc-400 bg-zinc-50 dark:bg-zinc-900 dark:shadow-zinc-950;
-    @apply text-sm;
+    @apply text-sm hyphens-none text-nowrap;
 }
 
 .markdown pre code {

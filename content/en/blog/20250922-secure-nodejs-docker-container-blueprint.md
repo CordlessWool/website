@@ -163,8 +163,6 @@ In the previous steps, all steps run as the `root` user – this avoids permissi
 
 Docker loads individual stages from cache as long as none of the imported files show changes. This means no code in the stage gets executed. This is not always desired and can be bypassed with the `--no-cache` flag.
 
-To run everything from scratch, use the `--no-cache` flag when building:
-
 ```sh
 docker build --no-cache -t my-nodejs-container .
 ```
