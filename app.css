@@ -107,19 +107,24 @@ a.link:focus {
 }
 
 figure[data-rehype-pretty-code-figure] {
-    @apply relative rounded-md overflow-hidden pb-5;
-    @apply bg-zinc-950 rounded-lg border-zinc-600 border border-solid;
+    @apply relative overflow-hidden mb-3;
+    @apply bg-zinc-950 rounded-lg  shadow-lg shadow-zinc-500 dark:shadow-zinc-950;
+    @apply overflow-hidden;
 
     figcaption {
-        @apply text-sm text-zinc-500  dark:text-zinc-400 px-3 py-1;
+        @apply text-sm text-zinc-300  dark:text-zinc-400 px-3 py-1;
     }
 
     pre {
-        @apply rounded-lg overflow-auto relative bg-zinc-900;
+        @apply overflow-x-auto relative;
     }
 
     code {
-        @apply bg-transparent;
+        @apply p-3 bg-transparent bg-zinc-800 rounded-t-none rounded-b-lg;
+    }
+
+    button {
+        @apply cursor-pointer;
     }
 }
 
@@ -128,13 +133,8 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 .markdown code {
-    @apply py-3 px-5 rounded-md;
+    @apply p-1 px-2 rounded-sm shadow-xs shadow-zinc-400 bg-zinc-50 dark:bg-zinc-900 dark:shadow-zinc-950;
     @apply text-sm;
-}
-
-.markdown pre code {
-    @apply font-mono text-sm font-normal;
-    display: block;
 }
 
 .markdown pre code {

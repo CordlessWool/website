@@ -78,7 +78,7 @@
     }
 
     article {
-        @apply w-full mx-2;
+        @apply w-full mx-2 leading-7;
 
     }
 

@@ -43,7 +43,7 @@ This blueprint shows how to **build optimized production containers** that exclu
 
 This **Node.js production Docker** blueprint assumes your project uses build tools (Vite, Rollup, TypeScript, etc.) to compile code. Build tools are, alongside removing development dependencies, another simple step to reduce unnecessary code.
 
-```dockerfile title="Complete Dockerfile"
+```dockerfile title="Production-ready Node.js Dockerfile Blueprint"
 FROM node:lts AS base
 WORKDIR /usr/src/app
 

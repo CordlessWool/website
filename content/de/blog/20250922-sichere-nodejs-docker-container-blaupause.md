@@ -40,7 +40,7 @@ Diese Blaupause zeigt, wie du **Produktionscontainer baust**, die Entwicklungsab
 
 In diesem Dockerfile gehen wir davon aus, dass das Projekt mithilfe eines Build-Tools (Vite, Rollup, TypeScript, etc.) übersetzt wird. Build-Tools sind neben dem Weglassen von Entwicklungsabhängigkeiten ein weiterer einfacher Schritt, unnötigen Code zu reduzieren.
 
-```dockerfile
+```dockerfile title="Production-ready Node.js Dockerfile Blueprint"
 FROM node:lts AS base
 WORKDIR /usr/src/app
 
