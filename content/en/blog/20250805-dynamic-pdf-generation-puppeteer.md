@@ -1,7 +1,7 @@
 ---
 title: "Professional PDF Document Generation with Svelte/React/Vue: Variable Content Without Absolute Positioning"
 description: "Learn how to generate professional PDF documents with variable content using Svelte/React/Vue instead of manual positioning. Modern alternative to PDFKit and jsPDF using browser-based measurement."
-ref: /de/blog/20250805-dynamische-pdf-generierung-puppeteer
+ref: /de/blog/20250805-dynamische-pdf-generierung-puppeteer/
 hero:
   image: $assets/dynamic-pdf-generation-puppeteer.png
   alt: Browser-based PDF generation with variable content

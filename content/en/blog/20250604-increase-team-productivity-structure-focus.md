@@ -1,7 +1,7 @@
 ---
 title: "Increase Team Productivity: Why Structure Matters More Than Focus"
 description: Context switching costs teams time - but isolation isn't the solution. Three strategic approaches for structured collaboration instead of chaos.
-ref: /de/blog/20250604-team-produktivitaet-steigern-struktur-focus
+ref: /de/blog/20250604-team-produktivitaet-steigern-struktur-focus/
 hero:
   image: $assets/team-productivity-structure.jpg
   alt: Team Productivity Through Structure

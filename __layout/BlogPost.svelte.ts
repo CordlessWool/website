@@ -12,6 +12,7 @@ import stringify from "rehype-stringify";
 export const schema: DataSchema = v.looseObject({
   title: v.string(),
   description: v.string(),
+  ref: v.optional(v.pipe(v.string(), v.endsWith("/"))),
   hero: v.optional(
     v.object({
       image: ImageFiles,

@@ -108,13 +108,14 @@ a.link:focus {
 
 figure[data-rehype-pretty-code-figure] {
     @apply relative rounded-md overflow-hidden pb-5;
+    @apply bg-zinc-950 rounded-lg border-zinc-600 border border-solid;
 
     figcaption {
-        @apply text-sm text-zinc-500 dark:text-zinc-400 px-3 py-1;
+        @apply text-sm text-zinc-500  dark:text-zinc-400 px-3 py-1;
     }
 
     pre {
-        @apply rounded-md overflow-auto relative border-solid border-zinc-600 border;
+        @apply rounded-lg overflow-auto relative bg-zinc-900;
     }
 
     code {
@@ -127,7 +128,7 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 .markdown code {
-    @apply py-5 px-2 rounded-md;
+    @apply py-3 px-5 rounded-md;
     @apply text-sm;
 }
 
