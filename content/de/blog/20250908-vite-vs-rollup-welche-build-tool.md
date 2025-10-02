@@ -1,5 +1,5 @@
 ---
-title: "Vite vs. Rollup: Wann welche Build Tool Sinn ergibt"
+title: "Vite vs. Rollup: Wann welches Build Tool Sinn ergibt"
 description: "Vite nutzt Rollup für Builds, glänzt aber bei der Webentwicklung. Erfahre wann du Vite vs Rollup wählen solltest, mit echten Beispielen und Migration-Hinweisen."
 ref: /en/blog/20250908-vite-vs-rollup-build-tools/
 hero:
@@ -31,7 +31,7 @@ tags:
   - blog
 ---
 
-# Vite vs. Rollup: Wann welche Build Tool Sinn ergibt
+# Vite vs. Rollup: Wann welches Build Tool Sinn ergibt
 
 Webpack dominierte jahrelang das Bundling von Anwendungen, während Rollup seine Nische in der Bibliotheks- und Webentwicklung fand. Vite revolutionierte das Spiel, indem es Rollups saubere Production-Builds mit blitzschneller Entwicklung kombinierte.
 
