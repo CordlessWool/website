@@ -1,6 +1,7 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "Intro",
+  "author": "Autor",
   "blog": "Blog",
   "company": "Firma",
   "contact": "Kontakt",

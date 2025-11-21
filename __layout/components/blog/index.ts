@@ -2,3 +2,4 @@ export { default as TimelineMain } from "./TimelineMain.svelte";
 export { default as TimelineMinor } from "./TimelineMinor.svelte";
 export { default as TagList } from "./TagList.svelte";
 export { default as Author } from "./Author.svelte";
+export { default as AuthorSmall } from "./AuthorSmall.svelte";

@@ -108,7 +108,7 @@ a.link:focus {
 
 figure[data-rehype-pretty-code-figure] {
     @apply relative overflow-hidden mb-3;
-    @apply bg-zinc-950 rounded-lg  shadow-lg shadow-zinc-500 dark:shadow-zinc-950;
+    @apply bg-zinc-950 rounded-lg   shadow-zinc-500 dark:shadow-zinc-950 ring-1 ring-zinc-200;
     @apply overflow-hidden;
 
     figcaption {
@@ -120,7 +120,7 @@ figure[data-rehype-pretty-code-figure] {
     }
 
     code {
-        @apply p-3 bg-transparent bg-zinc-800 rounded-t-none rounded-b-lg;
+        @apply px-3 py-5 bg-transparent bg-zinc-800 rounded-t-none rounded-b-lg;
     }
 
     button {

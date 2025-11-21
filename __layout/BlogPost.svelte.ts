@@ -8,6 +8,7 @@ import slug from "rehype-slug";
 import toc from "@jsdevtools/rehype-toc";
 import wrap from "rehype-wrap";
 import stringify from "rehype-stringify";
+import { remove } from "unist-util-remove";
 
 export const schema: DataSchema = v.looseObject({
   title: v.string(),
@@ -23,6 +24,7 @@ export const schema: DataSchema = v.looseObject({
   ),
   author: v.object({
     name: v.string(),
+    title: v.string(),
     photo: ImageFiles,
     description: v.string(),
   }),
@@ -97,6 +99,12 @@ const transformAuthorImage = async ({
   ];
 };
 
+function rehypeRemoveH1() {
+  return (tree: Node) => {
+    remove(tree, { tagName: "h1" });
+  };
+}
+
 const addToc = async (html: string): Promise<string> => {
   const processor = unified()
     .use(parse, { fragment: true })
@@ -105,6 +113,7 @@ const addToc = async (html: string): Promise<string> => {
     })
     .use(wrap, { wrapper: "div.content" })
     .use(toc, { position: "beforebegin", headings: ["h1", "h2"] })
+    .use(rehypeRemoveH1)
     .use(stringify);
   return String(await processor.process(html));
 };

@@ -14,6 +14,9 @@
 <aside class="author-bio">
     <div class="author-info">
         <span class="author-name">{author.name}</span>
+        <span class="author-title">
+            {author.title}
+        </span>
         <p class="author-description">
             {author.description}
         </p>
@@ -37,8 +40,16 @@
         @apply grid max-w-2xl grid-cols-1 md:grid-cols-3 gap-5 mx-auto my-23 justify-items-center items-center;
     }
 
+    .author-title {
+        @apply block text-lg font-bold my-1 text-zinc-600;
+    }
+
+    :global(.dark) .author-title {
+        @apply text-zinc-400;
+    }
+
     .author-photo {
-        @apply max-w-48 max-md:order-first;
+        @apply max-w-51 max-md:order-first;
     }
 
     .author-info {
@@ -46,7 +57,7 @@
     }
 
     .author-name {
-        @apply block text-3xl font-bold mb-3;
+        @apply block text-3xl font-bold my-1;
     }
 
     .author-description {

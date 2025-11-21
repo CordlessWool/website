@@ -3,11 +3,19 @@
     import { ChevronLeft } from '@lucide/svelte';
     import { Image } from '@embodi/image/client';
     import * as m from './lib/paraglide/messages.js'
-    import { TagList, Author } from "./components/blog/index.js";
+    import { TagList, Author, AuthorSmall } from "./components/blog/index.js";
     const { data, children } = $props();
     const formatDate = (_date: string) => {
         const date = new Date(_date);
         return date.toLocaleDateString(data.format.date.locale, data.format.date.options);
+    };
+
+    const addFirstTocLinkToH1 = (node: HTMLElement) => {
+        const h1TocNode = node.querySelector('.toc-level-1 a.toc-link-h1');
+        const h1Node = node.querySelector('h1');
+        if (h1Node && h1TocNode) {
+            h1Node.id = h1TocNode.getAttribute('href')?.slice(1);
+        }
     };
 </script>
 
@@ -23,7 +31,7 @@
 </svelte:head>
 
 <Base {data}>
-    <main>
+    <main use:addFirstTocLinkToH1>
         <header>
             <a class="flex items-center text-md !text-zinc-700 dark:!text-zinc-300" href="/{data.locale}/blog/">
                 <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
@@ -37,12 +45,14 @@
                         <time datetime={data.updatedAt}>{formatDate(data.updatedAt)}</time>
                 {/if}
             </div>
-
         </header>
 
         <article>
             <header>
-                <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
+                <div class="mx-auto max-w-5xl px-1">
+                <h1>{data.title}</h1>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">{data.description}</p>
+                </div>
                 {#if data.hero}
                     <figure class="hero">
                         <Image
@@ -60,6 +70,11 @@
                         {/if}
                     </figure>
                 {/if}
+                <div class="max-w-5xl mx-auto gap-11 lg:grid lg:my-2 grid-cols-[auto,1fr] items-center">
+                <TagList class="tag-list text-sm col-start-2" tags={data.tags.filter((tag) => tag !== 'blog')} />
+                <AuthorSmall class="col-start-1 row-start-1" author={data.author} />
+                </div>
+
             </header>
             <div class="markdown blog-post">
             {@render children()}
@@ -93,17 +108,18 @@
             .toc {
                 @apply max-w-96;
                 @apply max-lg:hidden;
-                @apply mx-1 my-13;
+                @apply mx-1;
                 @apply self-start sticky top-5;
                 > ol {
-                    @apply list-none m-0;
-                }
-                ol {
-                    @apply text-zinc-500 ;
+                    @apply list-none m-0 ;
 
                 }
 
-                a:not(:hover, :focus) {
+                .toc-link-h1 {
+                    @apply text-xl;
+                }
+
+                a:not(:hover, :focus), li {
                     @apply no-underline text-zinc-600;
                     :global(.dark) & {
                         @apply text-zinc-400;
