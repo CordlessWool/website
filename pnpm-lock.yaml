@@ -14,9 +14,6 @@ importers:
       '@icons-pack/svelte-simple-icons':
         specifier: ^6.5.0
         version: 6.5.0(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.43.14)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.80.4)(terser@5.44.1)(yaml@2.8.1)))(svelte@5.43.14)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.80.4)(terser@5.44.1)(yaml@2.8.1)))(svelte@5.43.14)
-      unist-util-remove:
-        specifier: ^4.0.0
-        version: 4.0.0
     devDependencies:
       '@embodi/image':
         specifier: ^0.2.0
@@ -105,6 +102,9 @@ importers:
       unified:
         specifier: ^11.0.5
         version: 11.0.5
+      unist-util-remove:
+        specifier: ^4.0.0
+        version: 4.0.0
       valibot:
         specifier: ^1.1.0
         version: 1.1.0(typescript@5.9.3)
