@@ -36,44 +36,68 @@ tags:
 
 # How SQLite Replaced PostgreSQL as My First Choice
 
-Like a lot of developers, I started with MySQL. But after a while in the NoSQL world and the evolution of PostgreSQL which added more and more NoSQL-like features, I made the switch. Suddenly, I didn't need separate NoSQL databases for most use cases - PostgreSQL could handle JSON documents, full-text search, and more. It felt like the perfect all-in-one solution.
-SQLite? That was just the database I used for local development, quick prototypes or local setups I used for private data. A nice tool for getting started, but nothing you'd run in production. Or so I thought.
-Then I worked with a customer who challenged that assumption. They convinced me to take a deeper look at SQLite - and I realized how much it had evolved in recent years. Not just in features, but in stability and production-readiness. SQLite was fighting its way out of the "dev database" niche.
-That project changed my default choice for new projects entirely.
+MySQL, NoSQL, and back to PostgreSQL – that's my journey through the database world in a nutshell. With the rise of NoSQL databases, systems like PostgreSQL added new features and evolved into NoSQL (not only SQL) databases themselves, becoming the perfect all-in-one solution.
+
+SQLite? I found it nice enough for Nextcloud at home when at most 3 users were active simultaneously. A nice tool for getting started, but nothing for production. Or so I thought, until a customer convinced me to use SQLite as the database for his software.
+
+I gave it a shot and refreshed my knowledge: While PostgreSQL and MySQL were trying to compete with NoSQL databases, SQLite was working on features important for production systems: Scaleability, Non-Blocking Writes, Performance.
 
 ## The Startup That Over-Engineered Too Early
 
-Sometimes we need others to show us the value in something we've overlooked. For me, that came from a migration project with a struggling startup.
-They were stuck in the mud with a niche tech stack - Clojure and an obscure database system I can barely remember the name of. Simple features took months instead of days. Developers with the right skills were impossible to find, and the user base was still small. They needed a radical change.
-We migrated to SvelteKit and SQLite. Simple. Fast. No complex infrastructure to manage. Working in pairs, we introduced the team to SvelteKit and got the new system live. It was significantly faster to work with and easier to maintain.
-But it was too late. The company had already burned through their runway fighting their complex tech stack. They shut down shortly after launch.
-The lesson hit hard: Start simple from day one. Complex tech stacks might sound impressive, but they kill iteration speed when you need it most.
+Sometimes we need others to show us the value in something we've overlooked.
+
+For me, that was said customer who had gotten completely stuck. The existing software was built on Clojure and an obscure database system whose name I can barely remember, and was completely stuck. Simple features took months instead of days. Developers with the right skills were impossible to find, and the user base was still tiny.
+
+The plan: We migrated to SvelteKit and SQLite. Simple. Fast. No complex infrastructure to manage and tons of developers in the market. Through pair programming, we introduced the team to SvelteKit and got the new system live. Features flowed easily and the system delivered more than enough performance.
+
+Unfortunately, it was already too late. Follow-up funding failed and too much money had already been burned through the overly complex system.
+
+The lesson: **Start simple from day one.** Complexity comes naturally and you have to adapt to it, but complexity to cover eventualities that may never occur is ultimately technical debt too. **The best code is code you don't need.**
 
 ## Why SQLite Became My Default Choice
 
-For anyone unfamiliar with SQLite: it's just a file and a library for your programming language of choice. No separate database server. No Docker container. No complex configuration. You add a dependency, point it at a file, and you're done.
-This simplicity is SQLite's greatest strength. While everyone else is setting up PostgreSQL instances, connection pools, and managing database servers, you're already building features.
-Performance is better than you'd expect. Because SQLite runs as an embedded library in your application, there's no network latency. Every query is a local file operation. The performance depends heavily on your SQLite library, but modern implementations are fast - Bun's native SQLite integration, for example, takes this to another level for JavaScript developers. For other languages, libsql offers excellent flexibility and performance.
-But here's what really matters: you can scale later if you need to. Most applications never reach the point where SQLite becomes a bottleneck. And if you do? Migration is straightforward. By then, you'll actually know your requirements instead of optimizing for theoretical problems.
-Stop thinking about scale before you have users to scale for. Start simple. Ship fast. Optimize when you have real data.
+For those unfamiliar with SQLite: it's just a file and a library for your preferred programming language. No separate database server. No Docker container. No complex configuration. You add a dependency, point to a file, and you're done.
+
+This simplicity is SQLite's greatest strength. While everyone else is setting up PostgreSQL instances, configuring connection pools, and managing database servers, you're already building features.
+
+Since SQLite runs as an embedded library in your application, network latency is completely eliminated. Every query is a local file operation. **Performance is better than you'd think.**
+
+Additionally, modern SQLite features like WAL (Write-Ahead Logging) mode handle concurrent reads and writes efficiently – it's not the single-threaded bottleneck many developers assume, and not comparable to direct file access.
+
+The library used is also a decisive factor, as it serves as the main link and handles all operations. Bun recognized this and is trying to significantly boost performance with its own implementation.
+
+Other libraries like libsql – which officially represents a compatible fork – take SQLite to a whole different level and even enable globally scaled systems.
+
+But no matter how good the stability or performance of the library is, one thing remains the deciding factor: SQLite's structure is so simple that migration to another SQL database always remains possible and easy. **SQLite gives you plenty of room to breathe until you reach that point.**
 
 ## SQLite in Production: Two Real-World Examples
 
-Shrtn is a URL shortener I built with one goal: keep it stupid simple. One Docker container. Mount a volume. Done. No Redis server to manage, no PostgreSQL to configure. The data model is dead simple - a table for links, some auth data, that's it. Could I have used Redis? Sure. But then I'd need a second container, more configuration, more things to maintain. SQLite keeps the entire deployment trivial while handling redirects without any issues.
-EmbodiCMS is a Git-based CMS where the actual content lives in Git repositories. SQLite stores the metadata - OAuth accounts, project info, article metadata for filtering and search. The database isn't holding critical content, just supporting data to make everything work. It's a natural architectural fit: Git handles version-controlled content, SQLite handles operational data. As the project grows, the database layer might expand, but right now it does exactly what's needed.
-Both projects prove the same point: SQLite works in production when you focus on solving real problems instead of theoretical scale.
+**Shrtn** is a URL shortener with one simple goal: to be as simple as possible. Start a single Docker container, mount a volume, done. No Redis server to manage, no PostgreSQL to configure. The data model is simple – one table for links, some auth data, that's it. Could I have used Redis? Sure. But then I would have needed a second container, more configuration, more maintenance overhead. SQLite keeps the entire deployment trivial and handles all redirects without issues.
+
+**EmbodiCMS** is a Git-based CMS where the actual content lives in Git repositories. SQLite stores the metadata – OAuth accounts, project information, article metadata for filtering and search. The database doesn't hold critical content, just supporting data to make everything work. It's a natural architectural fit: Git handles version-controlled content, SQLite handles the few operational data points. The project is in its early stages and sometimes I wonder about the future, but currently SQLite fulfills all requirements and then some.
+
+Both projects prove the same point: **SQLite works in production systems when you focus on real problems instead of theoretical scaling.**
 
 ## When PostgreSQL Is Actually the Better Choice
 
-Don't get me wrong - PostgreSQL is an excellent database. But most applications don't need its advanced features.
-If you need full-text search with trigrams, complex JSON querying, or document-like management similar to MongoDB, PostgreSQL delivers. These features exist for good reasons. Anyone who's tried implementing trigram search from scratch will appreciate having it built into the database.
-But here's the key: use SQLite until you have a proven need for these features. Most applications never hit SQLite's limitations. And if you do? You'll know exactly what your requirements are, making it much easier to choose the right database for your specific needs - whether that's PostgreSQL, MySQL, or something else entirely.
+Don't get me wrong – PostgreSQL is an excellent database. But most applications don't need a large palette of features.
+
+If you need full-text search with trigrams, complex JSON queries, or document management similar to MongoDB, PostgreSQL delivers. These features exist for good reasons. Anyone who has had to implement trigram search themselves will appreciate having it available directly in the database.
+
+But here's the key: **Use SQLite until you have a proven need for these features.** Most applications never hit SQLite's limits. And when you need to switch, you know exactly which features you're missing and which database system is best for you.
+
 Start with SQLite. Switch when you have real requirements, not theoretical ones.
 
 ## The Migration Path When You Outgrow SQLite
 
-Eventually, you might need to migrate away from SQLite. But here's the thing: SQLite's simplicity makes that migration straightforward.
-Because SQLite uses standard SQL with a simple structure, moving to PostgreSQL, MySQL, or any other SQL database is relatively painless. Tools like pgloader make it even easier - no manual dump wrangling required.
-To make migration smoother down the line, use SQLite's strict mode. Without it, SQLite doesn't validate data types against your schema, which can create headaches during migration. An ORM like Drizzle helps too - it abstracts away database-specific quirks and makes switching databases more mechanical.
-But here's the real benefit: by the time you need to migrate, you actually understand your requirements. You're not guessing about scale or features anymore. You know what broke, what's slow, and what you need. That makes choosing the right database much easier than trying to predict the future on day one.
-Start with SQLite. Migrate when you have evidence, not anxiety.
+Eventually, the time may come when you need to migrate away from SQLite. SQLite's simple, essentials-focused structure makes this migration remarkably straightforward.
+
+SQLite focuses on standard SQL and remains compatible at this level with other SQL databases like PostgreSQL, MySQL, OracleDB, or MSSQL. Tools like `pgloader` make it even easier – no manual dump wrangling required.
+
+To facilitate migration, you should use SQLite in strict mode from the start. Without it, SQLite doesn't validate against the schema and allows arbitrary values in fields. With proper data validation, this shouldn't be a problem, but the headaches aren't worth skipping this configuration.
+
+Additionally and in general, ORMs like Drizzle are extremely helpful for transferring structures, indexes, and other configurations to any SQL database system.
+
+When the actual time for migration arrives, you already have a much clearer picture of the application and aren't guessing anymore, but know exactly what's needed for which feature. You make an informed decision based on real production data, not architectural panic on day one.
+
+**Start with SQLite. Build your product. Migrate when you have evidence, not assumptions.** That's how you stay focused on building something people actually want to use.
