@@ -39,7 +39,7 @@
     @reference 'tailwindcss';
 
     aside {
-        @apply grid w-max mx-auto my-5 px-3 gap-3 items-center leading-none;
+        @apply grid w-max gap-3 items-center leading-none;
         grid-template-columns: auto 1fr;
     }
 

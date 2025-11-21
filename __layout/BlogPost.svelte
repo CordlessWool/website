@@ -70,8 +70,8 @@
                         {/if}
                     </figure>
                 {/if}
-                <div class="max-w-5xl mx-auto gap-11 lg:grid lg:my-2 grid-cols-[auto,1fr] items-center">
-                <TagList class="tag-list text-sm col-start-2" tags={data.tags.filter((tag) => tag !== 'blog')} />
+                <div class="max-w-5xl  mb-7 md:px-5 px-1 mx-auto gap-11 md:grid md:my-2 grid-cols-2 items-center justify-between">
+                <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
                 <AuthorSmall class="col-start-1 row-start-1" author={data.author} />
                 </div>
 
@@ -204,8 +204,10 @@
     }
 
     article :global(.tag-list) {
-        @apply justify-center my-3;
-        @media (max-width: 1024px) {
+        @apply my-3 col-start-2 justify-end;
+        @apply text-sm;
+
+        @media (max-width: 768px) {
             @apply justify-center-safe flex-nowrap text-nowrap;
             @apply overflow-x-scroll;
             @apply box-border;
