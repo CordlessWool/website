@@ -57,7 +57,7 @@
                     <figure class="hero">
                         <Image
                             fetchpriority="high"
-                            sizes="(max-width: 1200px) 100vw"
+                            sizes="(max-width: 1200px) 100vw, 1200px"
                             width="1200"
                             hight="700"
                             images={ data.hero.image }
