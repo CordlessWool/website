@@ -47,15 +47,11 @@
         });
 
         // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-        // `data-cal-link="freelance/catchup"`
-        // data-cal-namespace="catchup"
+        // `data-cal-link="drop-a-note/berlin-based-lead-software-engineer"`
+        // data-cal-namespace="berlin-based-lead-software-engineer"
         // `data-cal-config='{"layout":"month_view"}'`
 
-        Cal.ns.catchup("ui", {
-            cssVarsPerTheme: {
-                light: { "cal-brand": "#27272a" },
-                dark: { "cal-brand": "#f4f4f5" },
-            },
+        Cal.ns["berlin-based-lead-software-engineer"]("ui", {
             hideEventTypeDetails: true,
             layout: "month_view",
         });
