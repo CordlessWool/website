@@ -31,7 +31,7 @@
     };
 
     const { data, children, light }: Props = $props();
-    const { locale, ref, title, page_title } = $state(data);
+    const { locale, ref, page_title } = $state(data);
 
     const hasMeta = (tag: string) => {
       if(tag === 'title') {

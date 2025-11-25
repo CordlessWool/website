@@ -10,9 +10,9 @@
 >
     <div class="text-xl grow font-bold my-3 flex flex-row">
         <img src="/favicon/icon.svg" alt="Logo" class="w-8 h-8" />
-        <a href="/{locale}/">
+        <span>
             {pageTitle}
-        </a>
+        </span>
     </div>
     <ul class="flex text-xl items-center">
         <li aria-label="button" class="light clickable button">
