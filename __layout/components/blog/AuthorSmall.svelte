@@ -26,13 +26,13 @@
             alt={author.name}
         />
     </div>
-    <div class="author-info">
+    <dl class="author-info">
         <dt class="author-type">{m.author()}</dt>
         <dd class="author-name">{author.name}</dd>
         <dd class="author-title">
             {author.title}
         </dd>
-    </div>
+    </dl>
 </aside>
 
 <style lang="postcss">
