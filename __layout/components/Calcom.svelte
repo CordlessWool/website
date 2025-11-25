@@ -52,6 +52,10 @@
         // `data-cal-config='{"layout":"month_view"}'`
 
         Cal.ns["berlin-based-lead-software-engineer"]("ui", {
+            cssVarsPerTheme: {
+                light: { "cal-brand": "#27272A" },
+                dark: { "cal-brand": "#f4f4f5" },
+            },
             hideEventTypeDetails: true,
             layout: "month_view",
         });
