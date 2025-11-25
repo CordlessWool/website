@@ -41,13 +41,14 @@ const transformHeroImage = async ({
 }) => {
   const image = loadImage(path, helper);
   const webp = image.autoOrient().webp({ quality: 70 });
+  const webpPath = path.replace(/\.(jpg|jpeg|png)$/, ".webp");
   const versions = await Promise.all(
     widths.map(async (width) => {
       const version = webp.resize(width, Math.floor(width * 0.4), {
         fit: "cover",
         kernel: sharp.kernel.mitchell,
       });
-      return await storeImage({ image: version, path, helper });
+      return await storeImage({ image: version, path: webpPath, helper });
     }),
   );
 
@@ -75,13 +76,14 @@ const transformAuthorImage = async ({
 }) => {
   const image = loadImage(path, helper);
   const webp = image.autoOrient().webp({ quality: 75 });
+  const webpPath = path.replace(/\.(jpg|jpeg|png)$/, ".webp");
   const versions = await Promise.all(
     widths.map(async (width) => {
       const version = webp.resize({
         width,
         fit: "cover",
       });
-      return await storeImage({ image: version, path, helper });
+      return await storeImage({ image: version, path: webpPath, helper });
     }),
   );
 

@@ -57,7 +57,9 @@ export const enrich: EnrichAction = async (elements) => {
       const version = webp
         .resize({ width, height: width })
         .composite([{ input: calcCircleBuffer(width), blend: "dest-in" }]);
-      return await storeImage({ image: version, path: data.image, helper });
+      const webpPath = data.image.replace(/\.(jpg|jpeg|png)$/, ".webp");
+
+      return await storeImage({ image: version, path: webpPath, helper });
     }),
   );
 
