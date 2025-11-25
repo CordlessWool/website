@@ -41,10 +41,8 @@
                     }
                     p(cal, ar);
                 };
-        })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "berlin-based-lead-software-engineer", {
-            origin: "https://app.cal.com",
-        });
+        })(window, "https://cal.dropanote.de/embed/embed.js", "init");
+        Cal("init", "catchup", { origin: "https://cal.dropanote.de" });
 
         // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
         // `data-cal-link="freelance/catchup"`
@@ -56,7 +54,7 @@
                 light: { "cal-brand": "#27272a" },
                 dark: { "cal-brand": "#f4f4f5" },
             },
-            hideEventTypeDetails: true,
+            hideEventTypeDetails: false,
             layout: "month_view",
         });
     </script>
@@ -65,10 +63,11 @@
 
 <Button
     class="w-full"
-    data-cal-namespace="berlin-based-lead-software-engineer"
-    data-cal-link="drop-a-note/berlin-based-lead-software-engineer"
+    data-cal-namespace="catchup"
+    data-cal-link="freelance/catchup"
+    data-cal-origin="https://cal.dropanote.de"
     data-cal-config={{ layout: "month_view" }}
-    href="https://cal.com/drop-a-note/berlin-based-lead-software-engineer"
+    href="https://cal.dropanote.de/freelance/catchup"
     onclick={preventDefault}
     onenter={preventDefault}
     target="_blank"
