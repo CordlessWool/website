@@ -8,6 +8,7 @@
     class="w-full"
     href="https://cal.com/drop-a-note/berlin-based-lead-software-engineer"
     target="_blank"
+    data-umami-event="schedule-call"
 >
     <div class="flex flex-nowrap flex-row items-center justify-center">
         <span>{m.schedule_call()}</span>

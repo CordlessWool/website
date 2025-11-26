@@ -98,6 +98,7 @@
                             target="_blank"
                             rel="external"
                             icon={social.icon}
+                            data-umami-event="social-icon-{social.name}"
                             />
 
                     </li>
