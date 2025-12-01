@@ -58,7 +58,6 @@
                         <Image
                             class="w-full"
                             fetchpriority="high"
-                            loading="lazy"
                             sizes="(max-width: 1200px) 100vw, 1200px"
                             width="1200"
                             height="700"
