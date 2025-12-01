@@ -9,7 +9,7 @@
     import sourceSansProWoff2400 from '@fontsource/source-code-pro/files/source-code-pro-latin-400-normal.woff2?url';
     import sourceSansProWoff2600 from '@fontsource/source-code-pro/files/source-code-pro-latin-600-normal.woff2?url';
 
-    import '../../app.css';
+    import './app.css';
 
     type Props = {
         data: {
@@ -31,7 +31,7 @@
     };
 
     const { data, children, light }: Props = $props();
-    const { locale, ref, page_title } = $state(data);
+    const { locale, ref, page_title } = $derived(data);
 
     const hasMeta = (tag: string) => {
       if(tag === 'title') {

@@ -51,7 +51,7 @@
       };
     }
     const { data, children }: Props = $props();
-    const { title, subtitle, image, alt, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $state(data);
+    const { title, subtitle, image, alt, name, role, degree, location, experience, preferred_techs, preferred_roles, email, socials, offers, radarcharts: radars } = $derived(data);
 
   </script>
 
@@ -81,7 +81,7 @@
             <div class="justify-self-center self-center row-span-2 my-3">
                 <Image
                     fetchpriority="high"
-                    class="rounded-full w-80 border-4 shadow-lg shadow-zinc-400 border-teal-500 border-solid"
+                    class="rounded-full w-80 aspect-square border-4 shadow-lg shadow-zinc-400 dark:shadow-zinc-600 border-teal-500 border-solid"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 512px"
                     height="512"
                     width="512"

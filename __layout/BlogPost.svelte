@@ -33,7 +33,7 @@
 <Base {data}>
     <main use:addFirstTocLinkToH1>
         <header>
-            <a class="flex items-center text-md !text-zinc-700 dark:!text-zinc-300" href="/{data.locale}/blog/">
+            <a class="flex items-center text-md text-zinc-700! dark:text-zinc-300!" href="/{data.locale}/blog/">
                 <ChevronLeft class="mr-2 inline" />{m.blog_post_overview()}
             </a>
             <div class="grid grid-cols-2 gap-x-2 text-xs text-zinc-600 dark:text-zinc-400 justify-self-end px-2">
@@ -50,16 +50,18 @@
         <article>
             <header>
                 <div class="mx-auto max-w-5xl px-1">
-                <h1>{data.title}</h1>
-                <p class="text-sm text-zinc-600 dark:text-zinc-400">{data.description}</p>
+                    <h1>{data.title}</h1>
+                    <p class="text-sm text-zinc-600 dark:text-zinc-400">{data.description}</p>
                 </div>
                 {#if data.hero}
                     <figure class="hero">
                         <Image
+                            class="w-full"
                             fetchpriority="high"
+                            loading="lazy"
                             sizes="(max-width: 1200px) 100vw, 1200px"
                             width="1200"
-                            hight="700"
+                            height="700"
                             images={ data.hero.image }
                             alt={ data.hero.alt ?? "" }
                         />
@@ -70,9 +72,9 @@
                         {/if}
                     </figure>
                 {/if}
-                <div class="max-w-5xl  mb-7 md:px-5 px-1 mx-auto gap-11 md:grid md:my-2 grid-cols-2 items-center justify-between">
-                <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
-                <AuthorSmall class="col-start-1 row-start-1" author={data.author} />
+                <div class="max-w-5xl mb-7 md:px-5 px-1 mx-auto gap-11 md:grid md:my-2 grid-cols-2 items-center justify-between">
+                    <TagList class="tag-list" tags={data.tags.filter((tag) => tag !== 'blog')} />
+                    <AuthorSmall class="col-start-1 row-start-1" author={data.author} />
                 </div>
 
             </header>
@@ -98,7 +100,7 @@
     }
 
     .blog-post {
-        @apply mx-auto;
+        @apply mx-auto mt-7;
         @apply lg:flex lg:flex-row-reverse gap-5;
         :global {
             .content {
@@ -135,21 +137,13 @@
                     }
                 }
             }
-            /* Universal Mermaid styling */
+
             .flowchart {
               background: transparent !important;
               @apply mx-auto my-7;
               font-family: system-ui, -apple-system, sans-serif;
             }
 
-            /* Ensure text is always readable */
-            /*.flowchart .node .label text,
-            .flowchart .edgeLabel text {
-              fill: #1f2937 !important;
-              font-weight: 500;
-            }*/
-
-            /* Consistent node styling */
             .flowchart .node rect,
             .flowchart .node polygon {
               fill: var(--color-zinc-100) !important;
@@ -160,14 +154,6 @@
               filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
             }
 
-            /* Edge styling */
-            /*.flowchart .edgePath .path {
-              stroke: var(--color-zinc-500) !important;
-              stroke-width: 2px !important;
-            }*/
-
-            /* Edge labels */
-
             .flowchart .edgeLabel p  {
                 @apply bg-zinc-50!  text-zinc-700!;
                 :global(.dark) & {
@@ -175,23 +161,11 @@
                 }
             }
 
-            /* Edge labels */
-            /*.flowchart .edgeLabel rect {
-              fill: #ffffff !important;
-              stroke: #e5e7eb !important;
-              stroke-width: 2px !important;
-              opacity: 0.95 !important;
-            }*/
         }
 
 
 
     }
-
-    .hero {
-
-    }
-
 
     main > header {
         --margin: calc(var(--spacing) * 7);
@@ -233,8 +207,8 @@
     }
 
     figure.hero {
-        @apply max-w-5xl w-full m-auto;
-        @apply max-h-[37vh];
+        @apply w-full h-auto aspect-[1000/400] mx-auto;
+        @apply rounded-lg;
         @apply overflow-hidden;
         @apply relative my-3 max-w-screen ;
         @apply object-cover;
