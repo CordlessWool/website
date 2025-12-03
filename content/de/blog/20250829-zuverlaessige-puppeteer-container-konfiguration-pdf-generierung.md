@@ -37,7 +37,7 @@ Bei der Migration in den Container zeigte sich jedoch ein Rendering-Problem: Der
 
 ## Puppeteer-Container-Rendering-Probleme
 
-![Puppeteer PDF vergleich von zwei unterschiedlcihen Dockerfiles]($assets/puppeteer-pdf-compare-without-spacing.png)
+![Puppeteer PDF vergleich von zwei unterschiedlcihen Dockerfiles]($assets/puppeteer-pdf-compare-without-spacing.png "Vergleich mit offizieller Puppeteer (rechts)")
 
 Nach mehreren Recherchen, AI-Konversationen und Versuchen mit verschiedenen Konfigurationen ließ sich das Problem nicht beheben.
 

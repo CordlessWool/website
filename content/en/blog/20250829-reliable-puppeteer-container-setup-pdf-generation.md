@@ -37,7 +37,7 @@ But when I deployed with the container, all spacing disappeared - margins, paddi
 
 ## Puppeteer Container Spacing Issues
 
-![Puppeteer PDF output compare from differnt Dockerfile]($assets/puppeteer-pdf-compare-without-spacing.png)
+![Puppeteer PDF output compare from differnt Dockerfile]($assets/puppeteer-pdf-compare-without-spacing.png "Compare with official Puppeteer (right) container")
 
 I tried different Puppeteer configurations and researched the problem extensively. After multiple research sessions, AI conversations, and attempts with various configurations, nothing fixed the spacing issues.
 

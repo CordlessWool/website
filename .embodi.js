@@ -11,7 +11,7 @@ import remarkGfm from "remark-gfm";
 import tailwindcss from "@tailwindcss/vite";
 
 export default {
-  origin: "https://dropanote.de",
+  origin: "http://localhost:5173",
   source: "/content",
   plugins: [
     tailwindcss(),
