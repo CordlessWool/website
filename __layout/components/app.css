@@ -143,7 +143,7 @@ figure[data-rehype-pretty-image-figure] {
 
 figure[data-rehype-pretty-code-figure] {
     @apply relative overflow-hidden mb-3;
-    @apply rounded-lg ring-1 ring-zinc-200 bg-zinc-800;
+    @apply rounded-lg bg-zinc-900 shadow-xs shadow-zinc-400 dark:shadow-zinc-950;
     @apply overflow-hidden;
 
     figcaption {
@@ -155,7 +155,7 @@ figure[data-rehype-pretty-code-figure] {
     }
 
     code {
-        @apply p-3 pb-5 bg-transparent bg-zinc-800 rounded-t-none rounded-b-lg;
+        @apply p-3 pb-5 bg-transparent bg-zinc-900 rounded-t-none rounded-b-lg;
     }
 
     button {
@@ -169,7 +169,7 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 .markdown code {
-    @apply p-1 px-2 rounded-sm shadow-xs shadow-zinc-400 bg-zinc-50 dark:bg-zinc-900 dark:shadow-zinc-950;
+    @apply p-1 px-2 rounded-sm shadow-sm shadow-zinc-400 text-zinc-100 bg-zinc-900 dark:shadow-zinc-950;
     @apply text-sm hyphens-none text-nowrap;
 }
 
