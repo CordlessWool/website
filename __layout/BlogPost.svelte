@@ -57,7 +57,6 @@
                     <figure class="hero">
                         <Image
                             class="w-full"
-                            fetchpriority="high"
                             sizes="(max-width: 1200px) 100vw, 1200px"
                             width="1200"
                             height="700"

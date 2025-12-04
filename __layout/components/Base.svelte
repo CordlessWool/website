@@ -51,7 +51,7 @@
       } else if (tag === 'description') {
         return data.meta?.description ?? data.description;
       }
-      return data.meta ? data.meta[tag] : undefined;
+      return data.meta ? data.meta[tag as keyof typeof data.meta] : undefined;
     }
 
     const getLanguageLink = (link: URL, lang: string) => new URL(link.pathname.replace(/^\/(en|de)\//, `/${lang}/`), 'https://dropanote.de').toString();
@@ -79,9 +79,9 @@
     {#if hasMeta('keywords')}
         <meta name="keywords" content={getMeta('keywords')} />
     {/if}
-    <!-- <link rel="stylesheet" href='../../app.css'> -->
     <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2400} crossorigin="anonymous" />
     <link rel="preload" as="font" type="font/woff2" href={sourceSansProWoff2600} crossorigin="anonymous" />
+
 </svelte:head>
 
 {#if light}

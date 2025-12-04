@@ -143,7 +143,7 @@ Mein Ansatz dreht beide Probleme um: Browser übernimmt Layout und Styling, ich 
 
 Was als Lebenslauf-Frustration anfing, ist heute ein Produktionssystem, das täglich hunderte Kommissionierlisten generiert. Die PDFs laufen nahtlos durch die Druck-Pipeline des Kunden und das Lagerpersonal bekommt professionelle Dokumente, mit denen sie arbeiten können.
 
-![Vereinfachtes Beispiel einer dynamisch generierten PDF mit variablen Inhalten]($assets/dynamic-pdf-generation-puppeteer.png)
+![Vereinfachtes Beispiel einer dynamisch generierten PDF mit variablen Inhalten]($assets/dynamic-pdf-generation-puppeteer.png "Ein einfaches Beispiel für die dynamische PDF-Generierung mit variablen Inhalten.")
 
 **Wann sich der Ansatz lohnt:**
 

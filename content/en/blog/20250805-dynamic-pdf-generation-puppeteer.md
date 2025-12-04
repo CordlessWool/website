@@ -143,7 +143,7 @@ My approach flips both problems: let the browser handle layout and styling natur
 
 What started as my frustration with printing my CV has become a production system generating hundreds of warehouse pick lists daily. The PDFs integrate seamlessly into the customer's printing pipeline, and warehouse staff get professional documents they can actually use.
 
-![Simplified example of dynamic PDF generation with variable content]($assets/dynamic-pdf-generation-puppeteer.png)
+![Simplified example of dynamic PDF generation with variable content]($assets/dynamic-pdf-generation-puppeteer.png "A simple example of dynamic PDF generation with variable content. Much more is possible with this approach.")
 
 **When This Approach Makes Sense:**
 
