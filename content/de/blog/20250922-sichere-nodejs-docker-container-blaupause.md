@@ -1,6 +1,7 @@
 ---
 title: "Sichere produktionsreife Node.js Docker Container – Blaupause"
 description: "Vollständige Node.js Docker Blaupause für Produktionscontainer. Dev-Dependencies entfernen, Image-Größe reduzieren und Sicherheit erhöhen mit Multi-Stage-Builds."
+topic: Container
 ref: /en/blog/20250922-secure-nodejs-docker-container-blueprint/
 hero:
   image: $assets/container-ship-01.jpg

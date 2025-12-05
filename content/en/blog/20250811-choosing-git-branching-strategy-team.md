@@ -1,6 +1,7 @@
 ---
 title: "Choosing the Right Git Branching Strategy for Your Team"
 description: "Teams often choose Git Flow because it sounds serious, not because they analyzed whether it solves their problems. Learn how to choose git workflows based on testing maturity, team structure, and risk tolerance - including a simplified approach I invented for common coordination problems."
+topic: Git
 ref: /de/blog/20250811-git-branching-strategie-entwicklungsteam/
 hero:
   image: $assets/simple-git-flow.jpeg

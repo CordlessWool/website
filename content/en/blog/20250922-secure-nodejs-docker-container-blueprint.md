@@ -1,6 +1,7 @@
 ---
 title: "Secure Production-Ready Node.js Docker Container – Blueprint"
 description: "Complete Node.js Docker blueprint for production containers. Remove dev dependencies, reduce image size, and increase security with multi-stage builds. Ready-to-use Dockerfile included."
+topic: Container
 hero:
   image: $assets/container-ship-01.jpg
   photographer: "Ian Taylor"

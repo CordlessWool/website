@@ -1,6 +1,7 @@
 ---
 title: "Wie SQLite PostgreSQL als meine erste Wahl abgelöst hat"
 description: "Eine Startup-Migration hat mir gezeigt: Einfachheit schlägt vorzeitige Optimierung. Warum SQLite meine Standard-Wahl für neue Projekte wurde, wann PostgreSQL wirklich nötig ist und wie man migriert, wenn man herauswächst."
+topic: Database
 ref: /en/blog/20251120-sqlite-replaced-postgresql-first-choice/
 hero:
   image: $assets/datastorage-01.jpg

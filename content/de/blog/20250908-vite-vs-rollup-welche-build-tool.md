@@ -1,6 +1,7 @@
 ---
 title: "Vite vs. Rollup: Wann welches Build Tool Sinn ergibt"
-description: "Vite nutzt Rollup für Builds, glänzt aber bei der Webentwicklung. Erfahre wann du Vite vs Rollup wählen solltest, mit echten Beispielen und Migration-Hinweisen."
+description: "Vite nutzt Rollup für Production Builds, glänzt aber bei Web Apps mit HMR. Für Libraries sind Rollup oder tsup die bessere Wahl. Verstehe die Zusammenhänge und wähle das richtige Tool."
+topic: Build Tools
 ref: /en/blog/20250908-vite-vs-rollup-build-tools/
 hero:
   image: $assets/zebra-wiht-two-heads.jpg

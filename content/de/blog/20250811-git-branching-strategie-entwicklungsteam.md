@@ -1,6 +1,7 @@
 ---
 title: "Die richtige Git-Branching-Strategie für Entwicklungsteams"
 description: "Teams wählen Git Flow oft, weil es professionell klingt – nicht weil sie analysiert haben, ob es ihre Probleme löst. Wie man Git-Workflows basierend auf Testqualität, Team-Struktur und Risikotoleranz auswählt – inklusive eines vereinfachten Ansatzes für häufige Koordinationsprobleme."
+topic: Git
 ref: /en/blog/20250811-choosing-git-branching-strategy-team/
 hero:
   image: $assets/simple-git-flow.jpeg
