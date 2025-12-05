@@ -33,12 +33,14 @@ footer {
     @apply w-full mt-7 print:hidden;
 }
 
-h1 {
+h1,
+.h1 {
     @apply text-3xl font-bold;
     @apply mt-11 mb-5;
 }
 
-h2 {
+h2,
+.h2 {
     @apply text-2xl font-bold;
     @apply mt-11 mb-3;
 }

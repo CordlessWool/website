@@ -19,6 +19,7 @@ import { visit } from "unist-util-visit";
 import type { Node } from "unist";
 
 export const schema: DataSchema = v.looseObject({
+  topic: v.optional(v.string()),
   title: v.string(),
   description: v.string(),
   ref: v.optional(v.pipe(v.string(), v.endsWith("/"))),

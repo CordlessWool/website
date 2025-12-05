@@ -50,7 +50,12 @@
         <article>
             <header>
                 <div class="mx-auto max-w-5xl px-1">
-                    <h1>{data.title}</h1>
+                    <h1 class="flex flex-col items-start flex-nowrap">
+                        {#if data.topic}
+                            <span class="text-lg uppercase dark:text-teal-400 text-teal-700 mb-1">{data.topic}</span>
+                        {/if}
+                        <span>{data.title}</span>
+                    </h1>
                     <p class="text-sm text-zinc-600 dark:text-zinc-400">{data.description}</p>
                 </div>
                 {#if data.hero}
