@@ -1,5 +1,6 @@
 ---
 title: "Dein SvelteKit Bun Projekt läuft weiterhin auf Node.js"
+topic: "Architektur"
 description: "Warum SvelteKit mit Bun oft noch auf Node.js läuft - Adapter-Probleme, CORS-Fehler und wie du sicher zwischen Adaptern wechselst."
 slug: "20250831-sveltekit-bun-projekt-laeuft-weiterhin-auf-nodejs"
 ref: "/en/blog/20250831-sveltekit-bun-project-still-runs-on-nodejs/"

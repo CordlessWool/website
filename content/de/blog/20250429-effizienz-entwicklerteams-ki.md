@@ -1,5 +1,6 @@
 ---
 title: "Mehr als KI – Wie Teams wirklich produktiver werden"
+topic: "Produktivität"
 description: KI allein macht noch kein produktives Team. Dieser Artikel zeigt, wie Vertrauen, Mitbestimmung und gelebte Lernkultur die echte Produktivität in Entwicklerteams fördern.
 hero:
   image: $assets/team-pair-programming.jpg

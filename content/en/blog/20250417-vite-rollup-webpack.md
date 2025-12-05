@@ -1,5 +1,6 @@
 ---
 title: "Vite and Rollup: Why Teams are Leaving Webpack Behind"
+topic: "Build Tools"
 description: Why Vite and Rollup are replacing Webpack – performance, developer experience, migration tips and a look at Rolldown.
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build Tools, JavaScript Bundler, tsup, Migration, Developer Experienc

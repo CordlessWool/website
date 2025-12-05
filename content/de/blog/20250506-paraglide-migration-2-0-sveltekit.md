@@ -1,5 +1,6 @@
 ---
 title: "Paraglide.js in SvelteKit migrieren: Von 1.x auf 2.0"
+topic: "i18n"
 description: Vollständige Anleitung für die Migration von Paraglide.js von 1.x auf 2.0 mit dem neuen Vite Plugin. SvelteKit-spezifische Beispiele und Troubleshooting.
 hero:
   image: $assets/paraglide-migration.jpg

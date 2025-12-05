@@ -1,5 +1,6 @@
 ---
 title: "Fedora CoreOS Setup Guide – Ignition Files Without the Frustration"
+topic: "Container"
 description: Step-by-step guide for Fedora CoreOS installation with Ignition files. Python HTTP server, Butane conversion, and practical tips without detours.
 hero:
   image: $assets/fedora-coreos-logo.png

@@ -1,5 +1,6 @@
 ---
 title: "From Developer to Manager: Why Technical Excellence Isn't Enough"
+topic: "Engineering Culture"
 description: "Why promoting your best developer to team lead often backfires and how real leadership works in tech teams. Practical insights for successful team management."
 hero:
   image: $assets/lost-person.jpg

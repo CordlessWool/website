@@ -1,5 +1,6 @@
 ---
 title: "Vite und Rollup: Der Wechsel weg von Webpack"
+topic: "Build Tools"
 description: Warum Vite und Rollup Webpack ablösen – Performance, Developer Experience, Migrationstipps und ein Blick auf Rolldown.
 meta:
   keywords: Vite vs Webpack, Vite Rollup, Rolldown, Build-Tools, JavaScript Bundler, tsup, Migration, Developer Experience

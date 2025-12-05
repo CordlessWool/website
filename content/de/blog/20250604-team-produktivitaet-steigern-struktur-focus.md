@@ -1,5 +1,6 @@
 ---
 title: "Team Produktivität steigern: Warum Struktur wichtiger ist als Focus"
+topic: "Produktivität"
 description: Kontextwechsel kostet Teams Zeit - aber Isolation ist nicht die Lösung. Drei strategische Ansätze für strukturierte Zusammenarbeit statt Chaos.
 ref: /en/blog/20250604-increase-team-productivity-structure-focus/
 hero:

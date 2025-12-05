@@ -1,5 +1,6 @@
 ---
 title: "Beyond AI – How Teams Really Become Productive"
+topic: "Productivity"
 description: AI alone doesn’t build productive teams. This article explores how trust, team autonomy and a learning culture drive real efficiency in software development.
 ref: /de/blog/20250429-effizienz-entwicklerteams-ki/
 hero:

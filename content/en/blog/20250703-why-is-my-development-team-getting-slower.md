@@ -1,5 +1,6 @@
 ---
 title: "Why is my development team getting slower?"
+topic: "Productivity"
 description: "Your team suddenly takes twice as long for features? It's not laziness or incompetence. Here's the real reason and how to systematically solve the problem as a PM."
 ref: /de/blog/20250703-warum-wird-entwicklerteam-langsamer/
 hero:

@@ -1,5 +1,6 @@
 ---
 title: "Between Monolith and Microservices: Practical Architecture Patterns for Development Teams"
+topic: "Architecture"
 description: "Teams often choose between monolith or microservices, but the best solution lies in between. Discover Satellite Services Architecture and other practical patterns for development teams."
 ref: /de/blog/20250824-zwischen-monolith-microservices-software-architektur/
 hero:

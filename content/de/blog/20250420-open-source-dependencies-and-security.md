@@ -1,5 +1,6 @@
 ---
 title: "Open-Source-Abhängigkeit: Das unterschätzte Risiko für Unternehmen"
+topic: "Sicherheit"
 description: Unternehmen nutzen täglich Open-Source-Komponenten – oft ohne zu wissen, wie abhängig und angreifbar sie dadurch werden. Dieser Artikel klärt auf und zeigt Auswege.
 meta:
   keywords:

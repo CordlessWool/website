@@ -1,5 +1,6 @@
 ---
 title: "Paraglide.js Setup: Type-Safe i18n Without Framework Lock-in"
+topic: "i18n"
 description: Complete setup guide for Paraglide.js 2.0 with Vite plugin. Framework-agnostic i18n with zero runtime overhead, full TypeScript support, and automatic builds.
 hero:
   image: $assets/paraglide-setup.jpg

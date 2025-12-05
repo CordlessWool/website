@@ -1,5 +1,6 @@
 ---
 title: "Open Source Dependency: The Business Risk You Didn't See Coming"
+topic: "Security"
 description: Businesses rely on open-source components every day – often without realizing how deeply dependent and vulnerable they’ve become. This article explains the risks and offers a way forward.
 meta:
   keywords:

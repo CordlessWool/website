@@ -1,7 +1,7 @@
 ---
 title: "Professionelle PDFs mit SvelteKit und Puppeteer: CSS-Layouts statt absoluter Positionierung"
+topic: "PDF-Generierung"
 description: "Professionelle PDFs mit SvelteKit und Puppeteer generieren – mit CSS-Layouts statt manueller x/y-Positionierung. Browser-basierte Messung für variable Inhalte. Produktionserprobt mit hunderten Dokumenten täglich."
-topic: "PDF Generierung"
 ref: /en/blog/20250805-dynamic-pdf-generation-puppeteer/
 hero:
   image: $assets/dynamic-pdf-generation-puppeteer.png

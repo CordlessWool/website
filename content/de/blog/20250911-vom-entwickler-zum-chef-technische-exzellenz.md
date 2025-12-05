@@ -1,5 +1,6 @@
 ---
 title: "Vom Entwickler zum Chef: Warum technische Exzellenz nicht reicht"
+topic: "Unternehmenskultur"
 description: "Warum die Beförderung des besten Entwicklers zum Teamleiter oft scheitert und wie echte Führung in Tech-Teams funktioniert. Praktische Tipps für erfolgreiche Team-Führung."
 hero:
   image: $assets/lost-person.jpg

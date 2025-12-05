@@ -1,5 +1,6 @@
 ---
 title: "Out of the US Cloud – Into Digital Sovereignty?"
+topic: "Security"
 description: European businesses increasingly question their reliance on US cloud providers. This article explores legal, strategic, and technical reasons to consider European alternatives – and what to expect when migrating.
 meta:
   keywords:

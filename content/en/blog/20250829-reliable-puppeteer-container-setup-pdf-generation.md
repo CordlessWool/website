@@ -1,5 +1,6 @@
 ---
 title: "Reliable Puppeteer Container Setup for PDF Generation"
+topic: "PDF Generation"
 description: "Official Puppeteer containers have rendering issues that break PDF layouts. Here's a working Docker setup with Chromium that gives consistent results for production PDF generation."
 ref: /de/blog/20250829-zuverlaessige-puppeteer-container-konfiguration-pdf-generierung/
 hero:

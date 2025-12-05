@@ -1,5 +1,6 @@
 ---
 title: "Raus aus der US-Cloud – rein in die Souveränität?"
+topic: "Sicherheit"
 description: Unternehmen setzen häufig auf US-Cloudanbieter – oft ohne klare Strategie. Dieser Artikel zeigt, warum europäische Alternativen strategisch sinnvoll sind und wie eine Migration gelingen kann.
 meta:
   keywords:

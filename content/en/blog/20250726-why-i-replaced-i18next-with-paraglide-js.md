@@ -1,5 +1,6 @@
 ---
 title: "Why I Replaced i18next with Paraglide.js"
+topic: "i18n"
 description: "40KB just to handle translations? I discovered Paraglide.js reduces this to 2KB while enabling tree shaking and build-time optimization. Here's why I made the switch."
 hero:
   image: $assets/paraglide-switch-i18n.jpg

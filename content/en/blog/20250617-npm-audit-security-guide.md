@@ -1,5 +1,6 @@
 ---
 title: "Know Your Dealer: npm's Security Features You're Not Using"
+topic: "Security"
 description: "npm gave you security tools, you're just not using them. Learn how to use npm audit, npm outdated, and other built-in security features to make informed decisions about your dependencies."
 hero:
   image: $assets/npm-logo.png

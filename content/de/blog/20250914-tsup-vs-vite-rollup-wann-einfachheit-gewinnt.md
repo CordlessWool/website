@@ -1,5 +1,6 @@
 ---
 title: "tsup vs Vite/Rollup: Wann Einfachheit gewinnt"
+topic: "Build Tools"
 description: "Das richtige JavaScript Build-Tool für verschiedene Projekt-Anforderungen wählen. Vergleich von tsup mit Vite/Rollup für Anwendungen und Libraries. Inklusive Konfigurations-Beispiele und Entscheidungsframework."
 slug: 20250914-tsup-vs-vite-rollup-wann-einfachheit-gewinnt
 ref: /en/blog/20250914-tsup-vs-vite-rollup-when-simple-beats-complex/

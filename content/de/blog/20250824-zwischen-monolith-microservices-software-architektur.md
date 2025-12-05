@@ -1,5 +1,6 @@
 ---
 title: "Zwischen Monolith und Microservices: Praktische Software-Architektur-Patterns für moderne Anwendungen"
+topic: "Architektur"
 description: "Teams wählen oft zwischen Monolith oder Microservices, aber die beste Lösung liegt dazwischen. Entdecke Satellite Services Architecture und andere praktische Patterns für Entwicklungsteams."
 hero:
   image: $assets/grey-black-surface-texture.jpg
